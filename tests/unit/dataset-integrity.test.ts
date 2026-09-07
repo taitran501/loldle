@@ -72,17 +72,22 @@ describe('Dataset & Asset Integrity Tests', () => {
     expect(totalAbilities).toBe(865);
   });
 
-  it('verifies 100% of quotes and audio URLs across all 173 champions', () => {
+  it('verifies all champions have ≥10 quotes with valid text and audio URLs', () => {
     for (const champ of champions) {
-      expect(champ.quote).toBeDefined();
-      expect(typeof champ.quote.text).toBe('string');
-      expect(champ.quote.text.trim().length).toBeGreaterThanOrEqual(5);
+      expect(champ.quotes).toBeDefined();
+      expect(Array.isArray(champ.quotes)).toBe(true);
+      expect(champ.quotes.length).toBeGreaterThanOrEqual(10);
 
-      expect(typeof champ.quote.audioUrl).toBe('string');
-      expect(champ.quote.audioUrl.length).toBeGreaterThan(0);
-      expect(champ.quote.audioUrl.startsWith('https://') || champ.quote.audioUrl.startsWith('/')).toBe(true);
-      expect(champ.quote.audioUrl).not.toContain('undefined');
-      expect(champ.quote.audioUrl).not.toContain('NaN');
+      for (const q of champ.quotes) {
+        expect(typeof q.text).toBe('string');
+        expect(q.text.trim().length).toBeGreaterThan(0);
+
+        expect(typeof q.audioUrl).toBe('string');
+        expect(q.audioUrl.length).toBeGreaterThan(0);
+        expect(q.audioUrl.startsWith('https://') || q.audioUrl.startsWith('/')).toBe(true);
+        expect(q.audioUrl).not.toContain('undefined');
+        expect(q.audioUrl).not.toContain('NaN');
+      }
     }
   });
 

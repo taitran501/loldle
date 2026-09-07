@@ -216,7 +216,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
                   Quote Clue
                 </span>
                 <p className="text-sm sm:text-base italic font-serif text-[#f0e6d2] leading-relaxed">
-                  "{target.quote.text}"
+                  "{target.quotes?.[0]?.text}"
                 </p>
               </div>
             )}

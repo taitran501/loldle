@@ -16,6 +16,7 @@ interface SingleModeState {
   target: Champion;
   skin?: Skin;
   abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
+  quoteIndex?: number;
   guesses: Champion[];
   isSolved: boolean;
 }
@@ -96,6 +97,7 @@ export const App: React.FC = () => {
         target: result.champion,
         skin: result.skin,
         abilityKey: result.abilityKey || 'Q',
+        quoteIndex: result.quoteIndex ?? 0,
         guesses: [],
         isSolved: false,
       };
@@ -132,12 +134,16 @@ export const App: React.FC = () => {
       img.src = splashState.skin.splashFullUrl;
     }
     const quoteState = modeStates.quote;
-    if (quoteState?.target?.quote?.audioUrl) {
-      const audio = new Audio();
-      audio.preload = 'auto';
-      audio.src = quoteState.target.quote.audioUrl;
+    if (quoteState?.target?.quotes) {
+      const qi = quoteState.quoteIndex ?? 0;
+      const q = quoteState.target.quotes[qi] || quoteState.target.quotes[0];
+      if (q?.audioUrl) {
+        const audio = new Audio();
+        audio.preload = 'auto';
+        audio.src = q.audioUrl;
+      }
     }
-  }, [modeStates.ability?.target, modeStates.ability?.abilityKey, modeStates.splash?.skin?.splashFullUrl, modeStates.quote?.target?.quote?.audioUrl]);
+  }, [modeStates.ability?.target, modeStates.ability?.abilityKey, modeStates.splash?.skin?.splashFullUrl, modeStates.quote?.target?.id, modeStates.quote?.quoteIndex]);
 
   // Current mode state
   const currentState = modeStates[currentMode];
@@ -219,6 +225,7 @@ export const App: React.FC = () => {
         target: newState.champion,
         skin: newState.skin,
         abilityKey: newState.abilityKey || 'Q',
+        quoteIndex: newState.quoteIndex ?? 0,
         guesses: [],
         isSolved: false,
       },
@@ -314,6 +321,7 @@ export const App: React.FC = () => {
         {currentState && currentMode === 'quote' && (
           <QuoteMode
             target={currentState.target}
+            quoteIndex={currentState.quoteIndex ?? 0}
             guesses={currentState.guesses}
             onGuess={handleGuess}
             isSolved={currentState.isSolved}

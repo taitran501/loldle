@@ -1,8 +1,17 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+﻿import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { QuoteMode } from '../../src/components/modes/QuoteMode';
 import { Champion } from '../../src/types';
+
+// Helper to build a quotes array with at least 10 entries for a given text/url pair
+function makeQuotes(text: string, audioUrl: string) {
+  const base = [{ text, audioUrl }];
+  while (base.length < 10) {
+    base.push({ text: `Generic line ${base.length}`, audioUrl });
+  }
+  return base;
+}
 
 const mockTargetMundo: Champion = {
   id: 'DrMundo',
@@ -18,10 +27,10 @@ const mockTargetMundo: Champion = {
   releaseYear: 2009,
   iconUrl: '/assets/champions/DrMundo.png',
   abilities: [],
-  quote: {
-    text: 'Mundo!',
-    audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/36.ogg'
-  },
+  quotes: makeQuotes(
+    'Mundo!',
+    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/36.ogg'
+  ),
   emojis: ['💉', '💜', '🪓', '💪'],
   skins: []
 };
@@ -40,10 +49,10 @@ const mockTargetNilah: Champion = {
   releaseYear: 2022,
   iconUrl: '/assets/champions/Nilah.png',
   abilities: [],
-  quote: {
-    text: 'The world is a tapestry of joy and suffering. I shall embrace it all!',
-    audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/895.ogg'
-  },
+  quotes: makeQuotes(
+    'The world is a tapestry of joy and suffering. I shall embrace it all!',
+    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/895.ogg'
+  ),
   emojis: ['🌊', '💧', '⚔️', '😄'],
   skins: []
 };
@@ -62,10 +71,10 @@ const mockTargetAhri: Champion = {
   releaseYear: 2011,
   iconUrl: '/assets/champions/Ahri.png',
   abilities: [],
-  quote: {
-    text: "Don't you trust me?",
-    audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/103.ogg'
-  },
+  quotes: makeQuotes(
+    "Don't you trust me?",
+    'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/103.ogg'
+  ),
   emojis: ['🦊', '🔮', '💖', '💎'],
   skins: []
 };
@@ -84,7 +93,7 @@ const createMockChamp = (id: string, name: string): Champion => ({
   releaseYear: 2020,
   iconUrl: `/assets/champions/${id}.png`,
   abilities: [],
-  quote: { text: 'Test quote', audioUrl: 'https://example.com/audio.ogg' },
+  quotes: makeQuotes('Test quote', 'https://example.com/audio.ogg'),
   emojis: ['🎮', '⚔️', '🛡️', '✨'],
   skins: []
 });
@@ -119,6 +128,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetMundo}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={false}
@@ -134,6 +144,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetNilah}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={false}
@@ -148,6 +159,7 @@ describe('QuoteMode Component Tests', () => {
     const { rerender } = render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={false}
@@ -162,6 +174,7 @@ describe('QuoteMode Component Tests', () => {
     rerender(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[mockChamp1, mockChamp2, mockChamp3]}
         onGuess={vi.fn()}
         isSolved={false}
@@ -174,6 +187,7 @@ describe('QuoteMode Component Tests', () => {
     rerender(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[mockChamp1, mockChamp2, mockChamp3, mockChamp4]}
         onGuess={vi.fn()}
         isSolved={false}
@@ -188,6 +202,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={fiveGuesses}
         onGuess={vi.fn()}
         isSolved={false}
@@ -204,6 +219,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={true}
@@ -218,6 +234,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={true}
@@ -243,6 +260,7 @@ describe('QuoteMode Component Tests', () => {
     const { rerender } = render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={true}
@@ -258,6 +276,7 @@ describe('QuoteMode Component Tests', () => {
     rerender(
       <QuoteMode
         target={mockTargetNilah}
+        quoteIndex={0}
         guesses={[]}
         onGuess={vi.fn()}
         isSolved={true}
@@ -274,6 +293,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[mockTargetMundo, mockTargetAhri]}
         onGuess={onGuessMock}
         isSolved={true}
@@ -291,6 +311,7 @@ describe('QuoteMode Component Tests', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
+        quoteIndex={0}
         guesses={[mockTargetAhri]}
         onGuess={vi.fn()}
         isSolved={true}

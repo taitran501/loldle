@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+﻿import React, { useState, useRef, useEffect } from 'react';
 import { Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
 import { Volume2, VolumeX, Quote as QuoteIcon, CheckCircle, XCircle } from 'lucide-react';
 
 interface QuoteModeProps {
   target: Champion;
+  quoteIndex: number;
   guesses: Champion[];
   onGuess: (champion: Champion) => void;
   isSolved: boolean;
@@ -13,6 +14,7 @@ interface QuoteModeProps {
 
 export const QuoteMode: React.FC<QuoteModeProps> = ({
   target,
+  quoteIndex,
   guesses,
   onGuess,
   isSolved,
@@ -24,24 +26,29 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
   // Audio Hint unlocked after 5 guesses or on solve
   const isAudioUnlocked = guesses.length >= 5 || isSolved;
 
-  // Stop and reset audio if target champion or audio URL changes
+  // Resolve the active quote from the quotes array
+  const activeQuote = target.quotes?.[quoteIndex] ?? target.quotes?.[0] ?? null;
+  const audioUrl = activeQuote?.audioUrl ?? '';
+  const quoteText = activeQuote?.text ?? '';
+
+  // Stop and reset audio if target champion or active quote changes
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current = null;
     }
     setIsPlaying(false);
-  }, [target.id, target.quote.audioUrl]);
+  }, [target.id, audioUrl]);
 
   const handlePlayAudio = () => {
-    if (!target.quote.audioUrl) return;
+    if (!audioUrl) return;
 
-    // Always ensure audioRef matches the current target's audioUrl
-    if (!audioRef.current || audioRef.current.src !== target.quote.audioUrl) {
+    // Always ensure audioRef matches the current audio URL
+    if (!audioRef.current || audioRef.current.src !== audioUrl) {
       if (audioRef.current) {
         audioRef.current.pause();
       }
-      const audio = new Audio(target.quote.audioUrl);
+      const audio = new Audio(audioUrl);
       audio.onended = () => setIsPlaying(false);
       audio.onerror = () => setIsPlaying(false);
       audioRef.current = audio;
@@ -78,7 +85,7 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
         
         <div className="text-center relative z-10">
           <p className="text-xl sm:text-2xl font-serif italic font-semibold text-[#f0e6d2] leading-relaxed tracking-wide drop-shadow">
-            "{target.quote.text}"
+            &quot;{quoteText}&quot;
           </p>
 
           {/* Audio Hint Button */}
@@ -86,11 +93,12 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
             {isAudioUnlocked ? (
               <button
                 onClick={handlePlayAudio}
+                disabled={!audioUrl}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-all border shadow-lg ${
                   isPlaying
                     ? 'bg-amber-500 text-black border-amber-400 animate-pulse'
                     : 'bg-[#091428] text-[#c8aa6e] border-[#c8aa6e]/60 hover:bg-[#c8aa6e]/20'
-                }`}
+                } disabled:opacity-40 disabled:cursor-not-allowed`}
               >
                 {isPlaying ? <Volume2 className="w-5 h-5 animate-bounce" /> : <Volume2 className="w-5 h-5" />}
                 <span>{isPlaying ? 'Playing Voice...' : 'Listen to Voice Line'}</span>

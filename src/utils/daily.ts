@@ -21,7 +21,7 @@ export function getDailyTarget(
   champions: Champion[],
   mode: GameMode,
   dateStr = getTodayDateString()
-): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R' } {
+): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R'; quoteIndex?: number } {
   if (!champions.length) throw new Error('Champions list is empty');
 
   const seed = stringHash(`${dateStr}-${mode}`);
@@ -42,14 +42,20 @@ export function getDailyTarget(
     abilityKey = champion.abilities[abilityIndex].key;
   }
 
-  return { champion, skin, abilityKey };
+  let quoteIndex: number | undefined;
+  if (mode === 'quote' && champion.quotes && champion.quotes.length > 0) {
+    const quoteSeed = stringHash(`${dateStr}-quote-index`);
+    quoteIndex = quoteSeed % champion.quotes.length;
+  }
+
+  return { champion, skin, abilityKey, quoteIndex };
 }
 
 export function getRandomTarget(
   champions: Champion[],
   mode: GameMode,
   excludeIds: string[] = []
-): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R' } {
+): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R'; quoteIndex?: number } {
   const available = champions.filter(c => !excludeIds.includes(c.id));
   const pool = available.length > 0 ? available : champions;
 
@@ -68,5 +74,10 @@ export function getRandomTarget(
     abilityKey = champion.abilities[abilityIndex].key;
   }
 
-  return { champion, skin, abilityKey };
+  let quoteIndex: number | undefined;
+  if (mode === 'quote' && champion.quotes && champion.quotes.length > 0) {
+    quoteIndex = Math.floor(Math.random() * champion.quotes.length);
+  }
+
+  return { champion, skin, abilityKey, quoteIndex };
 }
