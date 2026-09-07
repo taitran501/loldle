@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
             <img
               src="/favicon.png"
               alt="LoLdle Emblem"
-              className="w-8 h-8 rounded-lg object-cover border border-[#c8aa6e]/60 shadow-[0_0_10px_rgba(200,170,110,0.4)]"
+              className="w-9 h-9 object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.5)] transition-transform hover:scale-110"
             />
             <h1 className="text-2xl sm:text-3xl font-bold tracking-wider text-[#f0e6d2] font-serif uppercase bg-gradient-to-b from-[#f0e6d2] to-[#c8aa6e] bg-clip-text text-transparent drop-shadow">
               LoLdle
