@@ -25,7 +25,7 @@ const mockTarget: Champion = {
   releaseYear: 2011,
   iconUrl: '/assets/champions/Ahri.png',
   abilities: [],
-  quote: { text: "Don't you trust me?", audioUrl: '' },
+  quotes: [{ text: "Don't you trust me?", audioUrl: '' }],
   emojis: ['🦊', '🔮', '💖', '💎'],
   skins: [mockSkin]
 };
@@ -55,7 +55,7 @@ describe('SplashMode Component Tests', () => {
     expect(img.src).toBe(mockSkin.splashFullUrl);
   });
 
-  it('starts at 4.6x scale and zooms out with incorrect guesses', () => {
+  it('starts at 3.5x scale and zooms out 0.25x with incorrect guesses reaching 1.0x in 10 tries', () => {
     const { rerender } = render(
       <SplashMode
         target={mockTarget}
@@ -68,9 +68,10 @@ describe('SplashMode Component Tests', () => {
     );
 
     let img = screen.getByAltText('Champion Splash Art');
-    expect(img.style.transform).toBe('scale(4.6)');
+    expect(img.style.transform).toBe('scale(3.5)');
+    expect(screen.getByText('Full view in 10 tries')).toBeInTheDocument();
 
-    // 1 wrong guess -> 4.6 - 0.24 = 4.36
+    // 1 wrong guess -> 3.5 - 0.25 = 3.25
     rerender(
       <SplashMode
         target={mockTarget}
@@ -82,9 +83,10 @@ describe('SplashMode Component Tests', () => {
       />
     );
     img = screen.getByAltText('Champion Splash Art');
-    expect(img.style.transform).toBe('scale(4.36)');
+    expect(img.style.transform).toBe('scale(3.25)');
+    expect(screen.getByText('Full view in 9 tries')).toBeInTheDocument();
 
-    // 2 wrong guesses -> 4.6 - 0.48 = 4.12
+    // 2 wrong guesses -> 3.5 - 0.5 = 3.0
     rerender(
       <SplashMode
         target={mockTarget}
@@ -96,7 +98,48 @@ describe('SplashMode Component Tests', () => {
       />
     );
     img = screen.getByAltText('Champion Splash Art');
-    expect(img.style.transform).toBe('scale(4.12)');
+    expect(img.style.transform).toBe('scale(3)');
+
+    // 10 wrong guesses -> reaches 1.0x full view
+    const tenGuesses = Array.from({ length: 10 }, (_, i) => ({
+      ...mockWrongChamp,
+      id: `Champ${i}`,
+      name: `Champ ${i}`,
+    }));
+    rerender(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkin}
+        guesses={tenGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+    img = screen.getByAltText('Champion Splash Art');
+    expect(img.style.transform).toBe('scale(1)');
+    expect(screen.getByText('Full view unlocked')).toBeInTheDocument();
+  });
+
+  it('displays region clue when player has 5 or more failed guesses', () => {
+    const fiveGuesses = Array.from({ length: 5 }, (_, i) => ({
+      ...mockWrongChamp,
+      id: `Champ${i}`,
+      name: `Champ ${i}`,
+    }));
+    render(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkin}
+        guesses={fiveGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    expect(screen.getByText(/Clue \(5 tries\): Region:/)).toBeInTheDocument();
+    expect(screen.getByText('Ionia')).toBeInTheDocument();
   });
 
   it('zooms to 1.0x full view and displays skin name upon victory', () => {

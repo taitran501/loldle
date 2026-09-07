@@ -21,10 +21,10 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   allChampions,
 }) => {
   // Continuous gradual zoom out with every guess:
-  // Starts at 4.6x magnification, smoothly stepping down with every incorrect guess
-  // until it naturally reaches full view (1.0x).
-  const INITIAL_SCALE = 4.6;
-  const STEP_PER_GUESS = 0.24;
+  // Starts at 3.5x magnification (previously 4.6x), stepping down 0.25x per guess
+  // reaching full view (1.0x) smoothly in 10 guesses instead of 15.
+  const INITIAL_SCALE = 3.5;
+  const STEP_PER_GUESS = 0.25;
 
   const rawScale = isSolved
     ? 1.0
@@ -75,6 +75,34 @@ export const SplashMode: React.FC<SplashModeProps> = ({
             }}
             className="w-full h-full object-cover select-none pointer-events-none"
           />
+        </div>
+
+        {/* Zoom Level Indicator & Progressive Clues */}
+        <div className="flex flex-col items-center gap-1.5 mt-2.5">
+          {!isSolved && (
+            <div className="flex items-center gap-2 text-xs text-[#a09b8c]">
+              <span>Zoom: <strong className="text-[#c8aa6e]">{currentScale}x</strong></span>
+              <span>•</span>
+              <span>
+                {guesses.length >= 10
+                  ? 'Full view unlocked'
+                  : `Full view in ${10 - guesses.length} ${10 - guesses.length === 1 ? 'try' : 'tries'}`}
+              </span>
+            </div>
+          )}
+
+          {/* Progressive Clue when stuck (after 5+ wrong guesses) */}
+          {guesses.length >= 5 && !isSolved && (
+            <div className="px-4 py-1.5 rounded-full bg-[#1e2328] border border-[#c8aa6e]/40 text-xs text-[#c8aa6e] flex items-center gap-1.5 animate-flip-in shadow-md">
+              <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>
+                Clue ({guesses.length} tries): Region: <strong className="text-[#f0e6d2]">{target.regions.join(', ')}</strong>
+                {guesses.length >= 8 && (
+                  <> • Role: <strong className="text-[#f0e6d2]">{target.positions.join(', ')}</strong></>
+                )}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Revealed Skin Name on Victory */}
