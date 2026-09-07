@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#091428] text-[#f0e6d2] font-sans antialiased min-h-screen selection:bg-[#c8aa6e]/30 selection:text-[#f0e6d2];
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(30, 35, 40, 0.8) 0%, rgba(10, 20, 40, 0.95) 70%),
+      radial-gradient(circle at 50% 100%, rgba(1, 10, 19, 1) 0%, rgba(9, 20, 40, 1) 100%);
+    background-attachment: fixed;
+  }
+}
+
+@keyframes flip-in {
+  0% {
+    transform: perspective(600px) rotateX(90deg) scale(0.92);
+    opacity: 0;
+  }
+  70% {
+    transform: perspective(600px) rotateX(-5deg) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(600px) rotateX(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-flip-in {
+  animation: flip-in 0.4s cubic-bezier(0.25, 1, 0.5, 1) both;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 20, 40, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #785a28;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c8aa6e;
+}

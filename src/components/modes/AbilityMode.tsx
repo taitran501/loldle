@@ -1,0 +1,236 @@
+import React, { useState, useEffect } from 'react';
+import { Champion } from '../../types';
+import { AutocompleteInput } from '../AutocompleteInput';
+import { CheckCircle, XCircle, Sparkles, SlidersHorizontal, RotateCw, Palette } from 'lucide-react';
+
+interface AbilityModeProps {
+  target: Champion;
+  targetAbilityKey: 'P' | 'Q' | 'W' | 'E' | 'R';
+  guesses: Champion[];
+  onGuess: (champion: Champion) => void;
+  isSolved: boolean;
+  allChampions: Champion[];
+}
+
+interface AbilityModifiers {
+  grayscale: boolean;
+  rotate: boolean;
+}
+
+const STORAGE_KEY = 'loldle_ability_modifiers';
+
+export const AbilityMode: React.FC<AbilityModeProps> = ({
+  target,
+  targetAbilityKey,
+  guesses,
+  onGuess,
+  isSolved,
+  allChampions,
+}) => {
+  const currentAbility = target.abilities.find(a => a.key === targetAbilityKey) || target.abilities[0];
+
+  // Key hint unlocked after 3 wrong guesses
+  const isKeyHintUnlocked = guesses.length >= 3 || isSolved;
+
+  // Challenge Modes / Modifiers cached in localStorage
+  const [modifiers, setModifiers] = useState<AbilityModifiers>(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : { grayscale: false, rotate: false };
+    } catch {
+      return { grayscale: false, rotate: false };
+    }
+  });
+
+  const [showSettings, setShowSettings] = useState(false);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(modifiers));
+    } catch (e) {
+      console.warn('Could not save modifiers to cache', e);
+    }
+  }, [modifiers]);
+
+  const toggleGrayscale = () => {
+    setModifiers(prev => ({ ...prev, grayscale: !prev.grayscale }));
+  };
+
+  const toggleRotate = () => {
+    setModifiers(prev => ({ ...prev, rotate: !prev.rotate }));
+  };
+
+  // Deterministic random orthogonal rotation (90°, 180°, or 270°) per round
+  const rotationAngle = React.useMemo(() => {
+    const seed = (target.numericId * 7 + (currentAbility?.key.charCodeAt(0) || 0)) % 3;
+    return [90, 180, 270][seed];
+  }, [target.id, currentAbility?.key]);
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [target.id, currentAbility?.key]);
+
+  return (
+    <div className="w-full flex flex-col items-center">
+      <div className="text-center mb-3">
+        <h2 className="text-xl sm:text-2xl font-bold font-serif text-[#f0e6d2]">
+          Ability Mode
+        </h2>
+        <p className="text-sm text-[#a09b8c] mt-1">
+          Which champion does this ability icon belong to?
+        </p>
+      </div>
+
+      {/* Challenger / Modifier Controls Bar */}
+      <div className="w-full max-w-md flex items-center justify-center px-2 mb-2">
+        <button
+          onClick={() => setShowSettings(prev => !prev)}
+          className={`flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold transition-all border ${
+            modifiers.grayscale || modifiers.rotate
+              ? 'bg-amber-500/20 text-amber-300 border-amber-500/60 shadow-[0_0_10px_rgba(245,158,11,0.2)]'
+              : 'bg-[#1e2328] text-[#a09b8c] border-[#785a28]/40 hover:text-[#f0e6d2]'
+          }`}
+        >
+          <SlidersHorizontal className="w-3.5 h-3.5" />
+          <span>Challenge Mode</span>
+        </button>
+      </div>
+
+      {/* Challenge Mode Settings Panel (Cached in localStorage) */}
+      {showSettings && (
+        <div className="w-full max-w-md bg-[#1e2328]/95 border border-[#c8aa6e]/50 rounded-xl p-3 mb-4 shadow-xl backdrop-blur animate-flip-in">
+          <div className="text-xs font-bold text-[#c8aa6e] uppercase tracking-wider mb-2">
+            Ability Modifiers (Cached):
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <label className="flex items-center gap-2 cursor-pointer text-xs text-[#f0e6d2] select-none hover:text-[#c8aa6e]">
+              <input
+                type="checkbox"
+                checked={modifiers.grayscale}
+                onChange={toggleGrayscale}
+                className="w-4 h-4 rounded bg-[#091428] border-[#785a28] text-amber-500 focus:ring-amber-500 accent-amber-500 cursor-pointer"
+              />
+              <Palette className="w-3.5 h-3.5 text-[#a09b8c]" />
+              <span>Black & White (Grayscale)</span>
+            </label>
+
+            <label className="flex items-center gap-2 cursor-pointer text-xs text-[#f0e6d2] select-none hover:text-[#c8aa6e]">
+              <input
+                type="checkbox"
+                checked={modifiers.rotate}
+                onChange={toggleRotate}
+                className="w-4 h-4 rounded bg-[#091428] border-[#785a28] text-amber-500 focus:ring-amber-500 accent-amber-500 cursor-pointer"
+              />
+              <RotateCw className="w-3.5 h-3.5 text-[#a09b8c]" />
+              <span>Rotate Icon</span>
+            </label>
+          </div>
+        </div>
+      )}
+
+      {/* Ability Icon Display */}
+      <div className="flex flex-col items-center my-3">
+        <div className="relative p-2 rounded-2xl bg-gradient-to-b from-[#c8aa6e]/60 via-[#785a28]/40 to-[#091428] shadow-[0_0_25px_rgba(200,170,110,0.3)]">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden bg-[#091428] border-2 border-[#c8aa6e] flex items-center justify-center relative">
+            {!imageLoaded && (
+              <div className="absolute inset-0 bg-[#1e2328] animate-pulse flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-[#c8aa6e]/40 animate-spin" />
+              </div>
+            )}
+            {currentAbility ? (
+              <img
+                key={`${target.id}-${currentAbility.key}`}
+                src={currentAbility.iconUrl}
+                alt="Ability Icon"
+                onLoad={() => setImageLoaded(true)}
+                onError={e => {
+                  const fallbackUrl = `https://cdn.communitydragon.org/latest/champion/${target.id}/ability-icon/${currentAbility.key.toLowerCase()}`;
+                  if (e.currentTarget.src !== fallbackUrl) {
+                    e.currentTarget.src = fallbackUrl;
+                  }
+                }}
+                style={{
+                  filter: modifiers.grayscale && !isSolved ? 'grayscale(100%) contrast(110%)' : 'none',
+                  transform: modifiers.rotate && !isSolved ? `rotate(${rotationAngle}deg)` : 'none',
+                  opacity: imageLoaded ? 1 : 0,
+                  transition: 'opacity 0.2s ease',
+                }}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <Sparkles className="w-12 h-12 text-[#c8aa6e]" />
+            )}
+          </div>
+        </div>
+
+        {/* Ability Key / Name Hint */}
+        <div className="mt-3">
+          {isSolved ? (
+            <div className="text-center">
+              <span className="text-emerald-400 font-bold text-sm block">
+                {currentAbility.name} ({currentAbility.key === 'P' ? 'Passive' : `Key: ${currentAbility.key}`})
+              </span>
+            </div>
+          ) : isKeyHintUnlocked ? (
+            <div className="bg-[#1e2328] px-4 py-1.5 rounded-full border border-[#c8aa6e]/50 text-xs font-semibold text-[#c8aa6e]">
+              Hint: This is the {currentAbility.key === 'P' ? 'Passive' : `[${currentAbility.key}]`} skill!
+            </div>
+          ) : (
+            <span className="text-xs text-[#a09b8c]">
+              Key hint unlocks after 3 guesses ({3 - guesses.length} left)
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Autocomplete Input */}
+      <AutocompleteInput
+        champions={allChampions}
+        guessedChampionIds={guesses.map(g => g.id)}
+        onSelectChampion={onGuess}
+        disabled={isSolved}
+        placeholder="Guess the champion..."
+      />
+
+      {/* Guess History */}
+      {guesses.length > 0 && (
+        <div className="w-full max-w-md flex flex-col gap-2 mt-4">
+          {guesses.map(guess => {
+            const isCorrect = guess.id === target.id;
+            return (
+              <div
+                key={guess.id}
+                className={`flex items-center justify-between px-4 py-2.5 rounded-xl border font-semibold text-sm transition-all animate-flip-in ${
+                  isCorrect
+                    ? 'bg-emerald-600/90 border-emerald-400 text-white shadow-[0_0_12px_rgba(5,150,105,0.4)]'
+                    : 'bg-[#1e2328] border-rose-600/60 text-[#a09b8c]'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <img
+                    src={guess.iconUrl}
+                    alt={guess.name}
+                    onError={e => {
+                      e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${guess.id}.png`;
+                    }}
+                    className="w-8 h-8 rounded-full border border-[#c8aa6e]/40 object-cover"
+                  />
+                  <span className={isCorrect ? 'text-white font-bold' : 'text-[#f0e6d2]'}>
+                    {guess.name}
+                  </span>
+                </div>
+                {isCorrect ? (
+                  <CheckCircle className="w-5 h-5 text-white" />
+                ) : (
+                  <XCircle className="w-5 h-5 text-rose-500" />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+};
