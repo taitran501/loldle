@@ -83,6 +83,19 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
         })}
       </div>
 
+      {/* Progressive Clue when stuck (after 4+ wrong guesses) */}
+      {guesses.length >= 4 && !isSolved && (
+        <div className="mb-4 px-4 py-1.5 rounded-full bg-[#1e2328] border border-[#c8aa6e]/40 text-xs text-[#c8aa6e] flex items-center gap-1.5 animate-flip-in shadow-md">
+          <HelpCircle className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+          <span>
+            Clue ({guesses.length} tries): Region: <strong className="text-[#f0e6d2]">{target.regions.join(', ')}</strong>
+            {guesses.length >= 6 && (
+              <> • Role: <strong className="text-[#f0e6d2]">{target.positions.join(', ')}</strong></>
+            )}
+          </span>
+        </div>
+      )}
+
       {/* Autocomplete Input */}
       <AutocompleteInput
         champions={allChampions}

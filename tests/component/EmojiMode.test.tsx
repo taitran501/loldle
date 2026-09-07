@@ -17,7 +17,7 @@ const mockTarget: Champion = {
   releaseYear: 2011,
   iconUrl: '/assets/champions/Ahri.png',
   abilities: [],
-  quote: { text: "Don't you trust me?", audioUrl: '' },
+  quotes: [{ text: "Don't you trust me?", audioUrl: '' }],
   emojis: ['🦊', '🔮', '💖', '💎'],
   skins: []
 };
@@ -118,5 +118,21 @@ describe('EmojiMode Component Tests', () => {
     const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
     expect(emojiImgs.length).toBe(4);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
+  });
+
+  it('displays region clue when player has 4 or more failed guesses', () => {
+    const champ4 = createMockChamp('Champ4', 'Champion Four');
+    render(
+      <EmojiMode
+        target={mockTarget}
+        guesses={[champ1, champ2, champ3, champ4]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    expect(screen.getByText(/Clue \(4 tries\): Region:/)).toBeInTheDocument();
+    expect(screen.getByText('Ionia')).toBeInTheDocument();
   });
 });
