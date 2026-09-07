@@ -9,7 +9,7 @@ describe('Performance & Latency Benchmark Tests', () => {
   const jsonPath = path.resolve(process.cwd(), 'public/data/champions.json');
   const champions: Champion[] = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
-  it('filters 169 champions in under 2ms per autocomplete search query', () => {
+  it('filters 173 champions in under 2ms per autocomplete search query', () => {
     const queries = ['ah', 'ak', 'dar', 'yas', 'lee', 'zed', 'lux', 'jhin', 'sam', 'ka'];
     const start = performance.now();
 

@@ -74,7 +74,7 @@ async function main() {
   for (const champ of champions) {
     // 1. Champion Avatar
     const avatarDest = path.join(CHAMPIONS_DIR, `${champ.id}.png`);
-    const avatarUrl = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${champ.id}.png`;
+    const avatarUrl = `https://ddragon.leagueoflegends.com/cdn/16.17.1/img/champion/${champ.id}.png`;
     const avatarFallback = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${champ.numericId}.png`;
 
     downloadQueue.push(async () => {

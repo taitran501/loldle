@@ -87,6 +87,7 @@ const ICONIC_QUOTES = {
   leona: "The dawn has arrived.",
   lillia: "Eep! Can I really help... or am I just dreaming?",
   lissandra: "I will bury the world in ice.",
+  locke: "Purge the shadow, salt the earth.",
   lucian: "Everybody dies. Some just need a little help.",
   lulu: "Pleased to meet you!",
   lux: "Tactical decision, summoner.",
@@ -94,6 +95,7 @@ const ICONIC_QUOTES = {
   malzahar: "Oblivion awaits.",
   maokai: "I would end this burden, but it always returns.",
   masteryi: "My blade is yours.",
+  mel: "Gold bends, but it does not break.",
   milio: "Adventure is out there, and I'm gonna find it!",
   missfortune: "Fortune doesn't favor fools.",
   mordekaiser: "Destiny. Domination. Deceit.",
@@ -177,6 +179,8 @@ const ICONIC_QUOTES = {
   yone: "One blade for the breath, one for the soul.",
   yorick: "I must dig.",
   yuumi: "You and me, we got this!",
+  yunara: "The age of retribution!",
+  zaahen: "I am the unsundered wrath.",
   zac: "I was made for this. Literally.",
   zed: "The unseen blade is the deadliest.",
   zeri: "Spark ready!",
@@ -262,6 +266,7 @@ const ICONIC_EMOJIS = {
   leona: ["☀️", "🛡️", "🗡️", "👑"],
   lillia: ["🦌", "🌸", "💤", "🎳"],
   lissandra: ["❄️", "🧊", "👑", "👁️"],
+  locke: ["✝️", "⛓️", "🕯️", "🌫️"],
   lucian: ["🔫", "🕶️", "💨", "🖤"],
   lulu: ["🧚", "🧁", "🪄", "🍄"],
   lux: ["🌈", "💡", "🪄", "👧"],
@@ -269,6 +274,7 @@ const ICONIC_EMOJIS = {
   malzahar: ["👾", "🔮", "🕳️", "🦂"],
   maokai: ["🌲", "🌳", "🌱", "🪵"],
   masteryi: ["🗡️", "🥽", "⚡", "🧘"],
+  mel: ["🪙", "🏛️", "✨", "👗"],
   milio: ["🔥", "🎒", "⚽", "🐸"],
   missfortune: ["🏴‍☠️", "🔫", "👒", "❤️"],
   mordekaiser: ["🔨", "👑", "🏰", "💀"],
@@ -350,6 +356,8 @@ const ICONIC_EMOJIS = {
   yone: ["🗡️", "👺", "💨", "👻"],
   yorick: ["⛏️", "👻", "⚰️", "👰"],
   yuumi: ["🐱", "📖", "🐟", "✨"],
+  yunara: ["🌸", "📿", "🏹", "👻"],
+  zaahen: ["🗡️", "🩸", "🏜️", "👁️"],
   zac: ["🟢", "🍮", "🎈", "🧪"],
   zed: ["🥷", "👥", "🗡️", "💀"],
   zeri: ["⚡", "🔫", "🛹", "👟"],
@@ -423,6 +431,42 @@ const NEW_CHAMPIONS_DATA = {
     range_type: ['Ranged'],
     regions: ['Camavor', 'Runeterra'],
     release_date: '2024-01-31'
+  },
+  yunara: {
+    gender: 'Female',
+    positions: ['Bottom'],
+    species: ['Human', 'Spirit'],
+    resource: 'Mana',
+    range_type: ['Ranged'],
+    regions: ['Ionia'],
+    release_date: '2025-07-16'
+  },
+  mel: {
+    gender: 'Female',
+    positions: ['Support', 'Middle'],
+    species: ['Human'],
+    resource: 'Mana',
+    range_type: ['Ranged'],
+    regions: ['Noxus', 'Piltover'],
+    release_date: '2025-01-23'
+  },
+  zaahen: {
+    gender: 'Male',
+    positions: ['Top', 'Middle'],
+    species: ['Darkin'],
+    resource: 'Mana',
+    range_type: ['Melee'],
+    regions: ['Shurima', 'Runeterra'],
+    release_date: '2025-11-19'
+  },
+  locke: {
+    gender: 'Male',
+    positions: ['Middle', 'Jungle'],
+    species: ['Human'],
+    resource: 'Mana',
+    range_type: ['Melee'],
+    regions: ['Demacia'],
+    release_date: '2026-06-24'
   }
 };
 

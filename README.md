@@ -18,7 +18,7 @@ Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized str
 - **Bundler:** Vite 6
 - **Styling:** Tailwind CSS v4, Lucide React
 - **Testing:** Vitest 5 (Unit & Component), Playwright (End-to-End), Testing Library
-- **Dataset & Assets:** Local static assets for champions (169) and abilities (845); CommunityDragon & Riot DDragon CDN for splash art and voice audio.
+- **Dataset & Assets:** Local static assets for champions (173) and abilities (865); CommunityDragon & Riot DDragon CDN for splash art and voice audio.
 
 ## Getting Started
 
@@ -70,8 +70,8 @@ pnpm test:load
 ```text
 public/
   assets/
-    abilities/         Pre-downloaded local ability icons (845 files)
-    champions/         Pre-downloaded local champion portraits (169 files)
+    abilities/         Pre-downloaded local ability icons (865 files)
+    champions/         Pre-downloaded local champion portraits (173 files)
   data/
     champions.json     Normalized champion database (stats, quotes, emojis, skins)
   favicon.ico          Multi-resolution icon (16x16, 32x32, 48x48)

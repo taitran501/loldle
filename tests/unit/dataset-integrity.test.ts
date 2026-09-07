@@ -9,8 +9,8 @@ describe('Dataset & Asset Integrity Tests', () => {
 
   const champions: Champion[] = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
 
-  it('contains exactly 169 champions in the dataset', () => {
-    expect(champions.length).toBe(169);
+  it('contains exactly 173 champions in the dataset', () => {
+    expect(champions.length).toBe(173);
   });
 
   it('has unique IDs, numericIds, and names for every champion', () => {
@@ -43,7 +43,7 @@ describe('Dataset & Asset Integrity Tests', () => {
     }
   });
 
-  it('verifies 100% of 169 local avatar static files exist on disk with valid size', () => {
+  it('verifies 100% of 173 local avatar static files exist on disk with valid size', () => {
     for (const champ of champions) {
       expect(champ.iconUrl).toBe(`/assets/champions/${champ.id}.png`);
       const filePath = path.resolve(process.cwd(), `public/assets/champions/${champ.id}.png`);
@@ -53,7 +53,7 @@ describe('Dataset & Asset Integrity Tests', () => {
     }
   });
 
-  it('verifies 100% of 845 local ability icons exist on disk with valid keys (P, Q, W, E, R)', () => {
+  it('verifies 100% of 865 local ability icons exist on disk with valid keys (P, Q, W, E, R)', () => {
     let totalAbilities = 0;
     for (const champ of champions) {
       expect(champ.abilities.length).toBe(5);
@@ -69,10 +69,10 @@ describe('Dataset & Asset Integrity Tests', () => {
         expect(stat.size).toBeGreaterThan(100);
       }
     }
-    expect(totalAbilities).toBe(845);
+    expect(totalAbilities).toBe(865);
   });
 
-  it('verifies 100% of quotes and audio URLs across all 169 champions', () => {
+  it('verifies 100% of quotes and audio URLs across all 173 champions', () => {
     for (const champ of champions) {
       expect(champ.quote).toBeDefined();
       expect(typeof champ.quote.text).toBe('string');
