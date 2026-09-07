@@ -13,9 +13,10 @@ interface EmojiModeProps {
 
 const getEmojiSvgUrl = (emoji: string): string => {
   try {
+    const hasZwj = emoji.includes('\u200d');
     const codePoints = Array.from(emoji)
       .map(char => char.codePointAt(0)!.toString(16))
-      .filter(cp => cp !== 'fe0f');
+      .filter(cp => hasZwj ? true : cp !== 'fe0f');
     return `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/${codePoints.join('-')}.svg`;
   } catch {
     return '';
