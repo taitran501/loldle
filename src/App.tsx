@@ -17,6 +17,7 @@ interface SingleModeState {
   skin?: Skin;
   abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
   quoteIndex?: number;
+  bonusWon?: boolean;
   guesses: Champion[];
   isSolved: boolean;
 }
@@ -184,9 +185,12 @@ export const App: React.FC = () => {
       });
 
       // Delay victory modal popup so player can see all tiles finish flipping green
-      setTimeout(() => {
-        setIsVictoryOpen(true);
-      }, 1600);
+      // For Ability mode, victory modal opens after secondary spell guess (or skip)
+      if (currentMode !== 'ability') {
+        setTimeout(() => {
+          setIsVictoryOpen(true);
+        }, 1600);
+      }
     }
   };
 
@@ -226,6 +230,7 @@ export const App: React.FC = () => {
         skin: newState.skin,
         abilityKey: newState.abilityKey || 'Q',
         quoteIndex: newState.quoteIndex ?? 0,
+        bonusWon: undefined,
         guesses: [],
         isSolved: false,
       },
@@ -337,6 +342,20 @@ export const App: React.FC = () => {
             onGuess={handleGuess}
             isSolved={currentState.isSolved}
             allChampions={champions}
+            onOpenVictory={() => setIsVictoryOpen(true)}
+            onBonusComplete={(_bonusKey, isCorrect) => {
+              setModeStates(prev => {
+                const abilityState = prev.ability;
+                if (!abilityState) return prev;
+                return {
+                  ...prev,
+                  ability: {
+                    ...abilityState,
+                    bonusWon: isCorrect,
+                  },
+                };
+              });
+            }}
           />
         )}
 
@@ -390,6 +409,8 @@ export const App: React.FC = () => {
           guessCount={currentState.guesses.length}
           isUnlimited={isUnlimited}
           streak={stats.currentStreak}
+          abilityKey={currentState.abilityKey}
+          bonusWon={currentState.bonusWon}
           onNextRound={handleNextRound}
           onShare={handleShare}
           onSelectMode={setCurrentMode}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
-import { CheckCircle, XCircle, Sparkles, SlidersHorizontal, RotateCw, Palette } from 'lucide-react';
+import { CheckCircle, XCircle, Sparkles, SlidersHorizontal, RotateCw, Palette, ArrowRight } from 'lucide-react';
 
 interface AbilityModeProps {
   target: Champion;
@@ -10,6 +10,8 @@ interface AbilityModeProps {
   onGuess: (champion: Champion) => void;
   isSolved: boolean;
   allChampions: Champion[];
+  onOpenVictory?: () => void;
+  onBonusComplete?: (bonusKey: 'P' | 'Q' | 'W' | 'E' | 'R', isCorrect: boolean) => void;
 }
 
 interface AbilityModifiers {
@@ -26,8 +28,36 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
   onGuess,
   isSolved,
   allChampions,
+  onOpenVictory,
+  onBonusComplete,
 }) => {
   const currentAbility = target.abilities.find(a => a.key === targetAbilityKey) || target.abilities[0];
+
+  // Bonus Spell Key Guessing state (secondary mini-quiz after solving champion)
+  const [selectedBonusKey, setSelectedBonusKey] = useState<'P' | 'Q' | 'W' | 'E' | 'R' | null>(null);
+
+  useEffect(() => {
+    setSelectedBonusKey(null);
+  }, [target.id, targetAbilityKey]);
+
+  const handleSelectBonusKey = (key: 'P' | 'Q' | 'W' | 'E' | 'R') => {
+    if (selectedBonusKey !== null) return;
+    setSelectedBonusKey(key);
+    const isBonusCorrect = key === targetAbilityKey;
+    onBonusComplete?.(key, isBonusCorrect);
+
+    // Smoothly trigger victory modal after 1200ms so player sees feedback
+    setTimeout(() => {
+      onOpenVictory?.();
+    }, 1200);
+  };
+
+  const handleSkipBonus = () => {
+    if (selectedBonusKey === null) {
+      setSelectedBonusKey(targetAbilityKey);
+    }
+    onOpenVictory?.();
+  };
 
   // Key hint unlocked after 3 wrong guesses
   const isKeyHintUnlocked = guesses.length >= 3 || isSolved;
@@ -165,13 +195,85 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
           </div>
         </div>
 
-        {/* Ability Key / Name Hint */}
-        <div className="mt-3">
+        {/* Ability Key / Name Hint or Bonus Guess */}
+        <div className="mt-3 w-full flex flex-col items-center">
           {isSolved ? (
-            <div className="text-center">
-              <span className="text-emerald-400 font-bold text-sm block">
-                {currentAbility.name} ({currentAbility.key === 'P' ? 'Passive' : `Key: ${currentAbility.key}`})
-              </span>
+            <div className="w-full max-w-sm bg-[#1e2328]/95 border border-[#785a28]/60 rounded-xl p-3 shadow-xl backdrop-blur text-center animate-flip-in">
+              {selectedBonusKey === null ? (
+                <>
+                  <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#c8aa6e] uppercase tracking-wider mb-2.5">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Bonus: Which spell key is this?</span>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2">
+                    {(['P', 'Q', 'W', 'E', 'R'] as const).map(key => (
+                      <button
+                        key={key}
+                        type="button"
+                        onClick={() => handleSelectBonusKey(key)}
+                        className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg font-bold text-sm bg-[#091428] border border-[#c8aa6e]/50 text-[#f0e6d2] hover:bg-[#c8aa6e]/20 hover:border-[#c8aa6e] hover:text-white transition-all active:scale-95 shadow-md flex items-center justify-center cursor-pointer"
+                      >
+                        {key}
+                      </button>
+                    ))}
+                  </div>
+
+                  <div className="mt-2.5 flex items-center justify-center">
+                    <button
+                      type="button"
+                      onClick={handleSkipBonus}
+                      className="text-[11px] text-[#a09b8c] hover:text-[#f0e6d2] transition-colors flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Skip / View results</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-2">
+                    {selectedBonusKey === targetAbilityKey ? (
+                      <span className="text-emerald-400 flex items-center gap-1">
+                        <CheckCircle className="w-3.5 h-3.5" /> Bonus Correct!
+                      </span>
+                    ) : (
+                      <span className="text-rose-400 flex items-center gap-1">
+                        <XCircle className="w-3.5 h-3.5" /> Bonus Missed!
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    {(['P', 'Q', 'W', 'E', 'R'] as const).map(key => {
+                      const isTarget = key === targetAbilityKey;
+                      const isSelected = key === selectedBonusKey;
+                      let btnClass = 'bg-[#091428] border-[#785a28]/40 text-[#a09b8c]/50 opacity-40';
+
+                      if (isTarget) {
+                        btnClass = 'bg-emerald-600/90 border-emerald-400 text-white shadow-[0_0_12px_rgba(5,150,105,0.4)] scale-105';
+                      } else if (isSelected && !isTarget) {
+                        btnClass = 'bg-rose-600/90 border-rose-400 text-white shadow-[0_0_12px_rgba(225,29,72,0.4)]';
+                      }
+
+                      return (
+                        <div
+                          key={key}
+                          className={`w-10 h-10 sm:w-11 sm:h-11 rounded-lg font-bold text-sm border flex items-center justify-center transition-all ${btnClass}`}
+                        >
+                          {key}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="pt-2 border-t border-[#785a28]/30">
+                    <span className="text-emerald-400 font-bold text-sm block">
+                      {currentAbility.name} ({currentAbility.key === 'P' ? 'Passive' : `Key: ${currentAbility.key}`})
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           ) : isKeyHintUnlocked ? (
             <div className="bg-[#1e2328] px-4 py-1.5 rounded-full border border-[#c8aa6e]/50 text-xs font-semibold text-[#c8aa6e]">

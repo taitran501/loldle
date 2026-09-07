@@ -23,7 +23,7 @@ const mockTarget: Champion = {
     { key: 'E', name: 'Charm', iconUrl: '/assets/abilities/Ahri_e.png' },
     { key: 'R', name: 'Spirit Rush', iconUrl: '/assets/abilities/Ahri_r.png' }
   ],
-  quote: { text: "Don't you trust me?", audioUrl: '' },
+  quotes: [{ text: "Don't you trust me?", audioUrl: '' }],
   emojis: ['🦊', '🔮', '💖', '💎'],
   skins: []
 };
@@ -112,7 +112,10 @@ describe('AbilityMode Component Tests', () => {
     expect(screen.getByText('Hint: This is the [Q] skill!')).toBeInTheDocument();
   });
 
-  it('displays full ability name when round is solved', () => {
+  it('displays bonus spell key prompt when round is solved and reveals ability name upon guessing', () => {
+    const onBonusCompleteMock = vi.fn();
+    const onOpenVictoryMock = vi.fn();
+
     render(
       <AbilityMode
         target={mockTarget}
@@ -121,10 +124,70 @@ describe('AbilityMode Component Tests', () => {
         onGuess={vi.fn()}
         isSolved={true}
         allChampions={allChamps}
+        onBonusComplete={onBonusCompleteMock}
+        onOpenVictory={onOpenVictoryMock}
       />
     );
 
+    // Prompt is visible
+    expect(screen.getByText('Bonus: Which spell key is this?')).toBeInTheDocument();
+
+    // 5 buttons are present
+    const qButton = screen.getByRole('button', { name: 'Q' });
+    expect(qButton).toBeInTheDocument();
+
+    // Guess the correct key
+    fireEvent.click(qButton);
+
+    expect(screen.getByText('Bonus Correct!')).toBeInTheDocument();
     expect(screen.getByText('Orb of Deception (Key: Q)')).toBeInTheDocument();
+    expect(onBonusCompleteMock).toHaveBeenCalledWith('Q', true);
+  });
+
+  it('handles incorrect bonus spell key guess and reveals correct answer', () => {
+    const onBonusCompleteMock = vi.fn();
+
+    render(
+      <AbilityMode
+        target={mockTarget}
+        targetAbilityKey="Q"
+        guesses={[mockTarget]}
+        onGuess={vi.fn()}
+        isSolved={true}
+        allChampions={allChamps}
+        onBonusComplete={onBonusCompleteMock}
+      />
+    );
+
+    // Click wrong key W
+    const wButton = screen.getByRole('button', { name: 'W' });
+    fireEvent.click(wButton);
+
+    expect(screen.getByText('Bonus Missed!')).toBeInTheDocument();
+    expect(screen.getByText('Orb of Deception (Key: Q)')).toBeInTheDocument();
+    expect(onBonusCompleteMock).toHaveBeenCalledWith('W', false);
+  });
+
+  it('allows skipping the bonus spell guess and reveals answer', () => {
+    const onOpenVictoryMock = vi.fn();
+
+    render(
+      <AbilityMode
+        target={mockTarget}
+        targetAbilityKey="Q"
+        guesses={[mockTarget]}
+        onGuess={vi.fn()}
+        isSolved={true}
+        allChampions={allChamps}
+        onOpenVictory={onOpenVictoryMock}
+      />
+    );
+
+    const skipButton = screen.getByRole('button', { name: /skip \/ view results/i });
+    fireEvent.click(skipButton);
+
+    expect(screen.getByText('Orb of Deception (Key: Q)')).toBeInTheDocument();
+    expect(onOpenVictoryMock).toHaveBeenCalled();
   });
 
   it('toggles Challenge Mode settings panel and saves modifiers to localStorage', () => {

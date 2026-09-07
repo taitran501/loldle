@@ -20,7 +20,7 @@ const mockTarget: Champion = {
     { key: 'P', name: 'Essence Theft', iconUrl: '/assets/abilities/Ahri_p.png' },
     { key: 'Q', name: 'Orb of Deception', iconUrl: '/assets/abilities/Ahri_q.png' }
   ],
-  quote: { text: "Don't you trust me?", audioUrl: 'https://example.com/ahri.ogg' },
+  quotes: [{ text: "Don't you trust me?", audioUrl: 'https://example.com/ahri.ogg' }],
   emojis: ['🦊', '🔮', '💖', '💎'],
   skins: [
     { id: 103000, num: 0, name: 'default', splashCenteredUrl: 'https://example.com/0.jpg', splashFullUrl: 'https://example.com/0.jpg' }
@@ -41,7 +41,7 @@ const createMockChamp = (id: string, name: string, year: number): Champion => ({
   releaseYear: year,
   iconUrl: `/assets/champions/${id}.png`,
   abilities: [],
-  quote: { text: 'Clue quote', audioUrl: '' },
+  quotes: [{ text: 'Clue quote', audioUrl: '' }],
   emojis: ['⚔️', '🛡️', '🗡️', '🔥'],
   skins: []
 });

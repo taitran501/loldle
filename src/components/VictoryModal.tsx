@@ -23,6 +23,8 @@ interface VictoryModalProps {
   guessCount: number;
   isUnlimited: boolean;
   streak: number;
+  abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
+  bonusWon?: boolean;
   onNextRound: () => void;
   onShare: () => void;
   onSelectMode: (mode: GameMode) => void;
@@ -37,6 +39,8 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
   guessCount,
   isUnlimited,
   streak,
+  abilityKey,
+  bonusWon,
   onNextRound,
   onShare,
   onSelectMode,
@@ -98,6 +102,19 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
             <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#f0e6d2] tracking-wide drop-shadow">
               {champion.name}
             </h3>
+            {mode === 'ability' && abilityKey && (
+              <div className="mt-1 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#091428]/85 border border-[#c8aa6e]/40 text-xs text-[#f0e6d2] backdrop-blur shadow-sm">
+                <Sparkles className="w-3 h-3 text-amber-400" />
+                <span>
+                  {champion.abilities.find(a => a.key === abilityKey)?.name || 'Ability'} ({abilityKey === 'P' ? 'Passive' : `Key: ${abilityKey}`})
+                </span>
+                {bonusWon !== undefined && (
+                  <span className={`font-bold ml-1 ${bonusWon ? 'text-emerald-400' : 'text-rose-400'}`}>
+                    {bonusWon ? '✓ Bonus' : '✗ Missed'}
+                  </span>
+                )}
+              </div>
+            )}
           </div>
         </div>
 
