@@ -10,6 +10,7 @@ import { EmojiMode } from './components/modes/EmojiMode';
 import { VictoryModal } from './components/VictoryModal';
 import { StatsModal } from './components/StatsModal';
 import { HelpModal } from './components/HelpModal';
+import { SurrenderModal } from './components/SurrenderModal';
 import { RefreshCw, Flag, Loader2, Sparkles } from 'lucide-react';
 
 interface SingleModeState {
@@ -18,6 +19,7 @@ interface SingleModeState {
   abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
   quoteIndex?: number;
   bonusWon?: boolean;
+  isSurrendered?: boolean;
   guesses: Champion[];
   isSolved: boolean;
 }
@@ -49,6 +51,7 @@ export const App: React.FC = () => {
   const [isStatsOpen, setIsStatsOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isVictoryOpen, setIsVictoryOpen] = useState(false);
+  const [isSurrenderModalOpen, setIsSurrenderModalOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   // Statistics
@@ -143,6 +146,12 @@ export const App: React.FC = () => {
         audio.preload = 'auto';
         audio.src = q.audioUrl;
       }
+      const secondQ = quoteState.target.quotes.find((item, idx) => idx !== qi && item.text !== q?.text);
+      if (secondQ?.audioUrl) {
+        const audio2 = new Audio();
+        audio2.preload = 'auto';
+        audio2.src = secondQ.audioUrl;
+      }
     }
   }, [modeStates.ability?.target, modeStates.ability?.abilityKey, modeStates.splash?.skin?.splashFullUrl, modeStates.quote?.target?.id, modeStates.quote?.quoteIndex]);
 
@@ -185,8 +194,8 @@ export const App: React.FC = () => {
       });
 
       // Delay victory modal popup so player can see all tiles finish flipping green
-      // For Ability mode, victory modal opens after secondary spell guess (or skip)
-      if (currentMode !== 'ability') {
+      // For Ability and Splash modes, victory modal opens after secondary bonus guess (or skip)
+      if (currentMode !== 'ability' && currentMode !== 'splash') {
         setTimeout(() => {
           setIsVictoryOpen(true);
         }, 1600);
@@ -194,27 +203,35 @@ export const App: React.FC = () => {
     }
   };
 
-  // Skip / Give Up in Unlimited Mode
+  // Skip / Give Up in Unlimited Mode - Open custom SurrenderModal
   const handleGiveUp = () => {
     if (!currentState || currentState.isSolved) return;
+    setIsSurrenderModalOpen(true);
+  };
 
-    if (window.confirm(`Give up? The answer was ${currentState.target.name}.`)) {
-      setModeStates(prev => ({
-        ...prev,
-        [currentMode]: {
-          ...currentState,
-          isSolved: true,
-        },
-      }));
-      setStats(prev => ({
-        ...prev,
-        played: prev.played + 1,
-        currentStreak: 0,
-      }));
-      setTimeout(() => {
-        setIsVictoryOpen(true);
-      }, 500);
-    }
+  // Confirmed Surrender
+  const handleConfirmSurrender = () => {
+    if (!currentState || currentState.isSolved) return;
+    setIsSurrenderModalOpen(false);
+
+    setModeStates(prev => ({
+      ...prev,
+      [currentMode]: {
+        ...currentState,
+        isSolved: true,
+        isSurrendered: true,
+      },
+    }));
+
+    setStats(prev => ({
+      ...prev,
+      played: prev.played + 1,
+      currentStreak: 0,
+    }));
+
+    setTimeout(() => {
+      setIsVictoryOpen(true);
+    }, 350);
   };
 
   // Next round in Unlimited Mode
@@ -231,6 +248,7 @@ export const App: React.FC = () => {
         abilityKey: newState.abilityKey || 'Q',
         quoteIndex: newState.quoteIndex ?? 0,
         bonusWon: undefined,
+        isSurrendered: false,
         guesses: [],
         isSolved: false,
       },
@@ -377,6 +395,20 @@ export const App: React.FC = () => {
             onGuess={handleGuess}
             isSolved={currentState.isSolved}
             allChampions={champions}
+            onOpenVictory={() => setIsVictoryOpen(true)}
+            onBonusComplete={(_selectedSkin, isCorrect) => {
+              setModeStates(prev => {
+                const splashState = prev.splash;
+                if (!splashState) return prev;
+                return {
+                  ...prev,
+                  splash: {
+                    ...splashState,
+                    bonusWon: isCorrect,
+                  },
+                };
+              });
+            }}
           />
         )}
       </main>
@@ -411,11 +443,19 @@ export const App: React.FC = () => {
           streak={stats.currentStreak}
           abilityKey={currentState.abilityKey}
           bonusWon={currentState.bonusWon}
+          isSurrendered={currentState.isSurrendered}
           onNextRound={handleNextRound}
           onShare={handleShare}
           onSelectMode={setCurrentMode}
         />
       )}
+
+      <SurrenderModal
+        isOpen={isSurrenderModalOpen}
+        onClose={() => setIsSurrenderModalOpen(false)}
+        onConfirm={handleConfirmSurrender}
+        streak={stats.currentStreak}
+      />
 
       <StatsModal
         isOpen={isStatsOpen}

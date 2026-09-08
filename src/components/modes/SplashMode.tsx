@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Champion, Skin } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
-import { CheckCircle, XCircle, Sparkles } from 'lucide-react';
+import { CheckCircle, XCircle, Sparkles, Search, ChevronDown, ArrowRight } from 'lucide-react';
 
 interface SplashModeProps {
   target: Champion;
@@ -10,6 +10,8 @@ interface SplashModeProps {
   onGuess: (champion: Champion) => void;
   isSolved: boolean;
   allChampions: Champion[];
+  onOpenVictory?: () => void;
+  onBonusComplete?: (selectedSkin: Skin, isCorrect: boolean) => void;
 }
 
 export const SplashMode: React.FC<SplashModeProps> = ({
@@ -19,10 +21,12 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   onGuess,
   isSolved,
   allChampions,
+  onOpenVictory,
+  onBonusComplete,
 }) => {
   // Continuous gradual zoom out with every guess:
-  // Starts at 3.5x magnification (previously 4.6x), stepping down 0.25x per guess
-  // reaching full view (1.0x) smoothly in 10 guesses instead of 15.
+  // Starts at 3.5x magnification, stepping down 0.25x per guess
+  // reaching full view (1.0x) smoothly in 10 guesses.
   const INITIAL_SCALE = 3.5;
   const STEP_PER_GUESS = 0.25;
 
@@ -31,11 +35,84 @@ export const SplashMode: React.FC<SplashModeProps> = ({
     : Math.max(1.0, INITIAL_SCALE - guesses.length * STEP_PER_GUESS);
   const currentScale = Math.round(rawScale * 100) / 100;
 
-  const [imageLoaded, setImageLoaded] = React.useState(false);
+  // Deterministic random focal point (X, Y in %) based on champion & skin IDs
+  // Ensures consistent framing per skin round across re-renders (20% - 80% range)
+  const { focalX, focalY } = useMemo(() => {
+    const seedStr = `${target.id}_${targetSkin.id}_${targetSkin.num || 0}`;
+    let hash = 0;
+    for (let i = 0; i < seedStr.length; i++) {
+      hash = (hash << 5) - hash + seedStr.charCodeAt(i);
+      hash |= 0;
+    }
+    const absHash = Math.abs(hash);
+    const x = 20 + (absHash % 61); // 20% to 80%
+    const y = 20 + (Math.floor(absHash / 61) % 61); // 20% to 80%
+    return { focalX: x, focalY: y };
+  }, [target.id, targetSkin.id, targetSkin.num]);
 
-  React.useEffect(() => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Bonus Skin Guessing state (secondary mini-quiz after solving champion)
+  const [selectedBonusSkin, setSelectedBonusSkin] = useState<Skin | null>(null);
+  const [skinQuery, setSkinQuery] = useState('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
     setImageLoaded(false);
+    setSelectedBonusSkin(null);
+    setSkinQuery('');
+    setIsDropdownOpen(false);
   }, [target.id, targetSkin.id]);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const handleSelectSkin = (skin: Skin) => {
+    if (selectedBonusSkin !== null) return;
+    setSelectedBonusSkin(skin);
+    setIsDropdownOpen(false);
+    const isBonusCorrect = skin.id === targetSkin.id || skin.name.toLowerCase() === targetSkin.name.toLowerCase();
+    onBonusComplete?.(skin, isBonusCorrect);
+
+    // Smoothly trigger victory modal after 1400ms so player sees feedback
+    setTimeout(() => {
+      onOpenVictory?.();
+    }, 1400);
+  };
+
+  const handleSkipBonus = () => {
+    if (selectedBonusSkin === null) {
+      setSelectedBonusSkin(targetSkin);
+      onBonusComplete?.(targetSkin, false);
+    }
+    onOpenVictory?.();
+  };
+
+  const filteredSkins = (target.skins || []).filter(s => {
+    const q = skinQuery.toLowerCase().replace(/[^a-z0-9]/g, '');
+    if (!q) return true;
+    const nameNorm = s.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return nameNorm.includes(q);
+  });
+
+  const handleSkinInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (filteredSkins.length > 0) {
+        handleSelectSkin(filteredSkins[0]);
+      }
+    } else if (e.key === 'Escape') {
+      setIsDropdownOpen(false);
+    }
+  };
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -49,7 +126,7 @@ export const SplashMode: React.FC<SplashModeProps> = ({
       </div>
 
       {/* Splash Art Viewport */}
-      <div className="relative my-3 flex flex-col items-center">
+      <div className="relative z-30 my-3 flex flex-col items-center">
         <div className="w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] rounded-2xl overflow-hidden border-2 border-[#c8aa6e]/80 shadow-[0_0_30px_rgba(200,170,110,0.25)] bg-[#091428] relative flex items-center justify-center">
           {!imageLoaded && (
             <div className="absolute inset-0 bg-[#1e2328] animate-pulse flex items-center justify-center z-10">
@@ -69,7 +146,7 @@ export const SplashMode: React.FC<SplashModeProps> = ({
             }}
             style={{
               transform: `scale(${currentScale})`,
-              transformOrigin: 'center center',
+              transformOrigin: `${focalX}% ${focalY}%`,
               transition: 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease',
               opacity: imageLoaded ? 1 : 0,
             }}
@@ -77,53 +154,144 @@ export const SplashMode: React.FC<SplashModeProps> = ({
           />
         </div>
 
-        {/* Zoom Level Indicator & Progressive Clues */}
-        <div className="flex flex-col items-center gap-1.5 mt-2.5">
-          {!isSolved && (
-            <div className="flex items-center gap-2 text-xs text-[#a09b8c]">
-              <span>Zoom: <strong className="text-[#c8aa6e]">{currentScale}x</strong></span>
-              <span>•</span>
-              <span>
-                {guesses.length >= 10
-                  ? 'Full view unlocked'
-                  : `Full view in ${10 - guesses.length} ${10 - guesses.length === 1 ? 'try' : 'tries'}`}
-              </span>
-            </div>
-          )}
-
-          {/* Progressive Clue when stuck (after 5+ wrong guesses) */}
-          {guesses.length >= 5 && !isSolved && (
-            <div className="px-4 py-1.5 rounded-full bg-[#1e2328] border border-[#c8aa6e]/40 text-xs text-[#c8aa6e] flex items-center gap-1.5 animate-flip-in shadow-md">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-              <span>
-                Clue ({guesses.length} tries): Region: <strong className="text-[#f0e6d2]">{target.regions.join(', ')}</strong>
-                {guesses.length >= 8 && (
-                  <> • Role: <strong className="text-[#f0e6d2]">{target.positions.join(', ')}</strong></>
-                )}
-              </span>
-            </div>
-          )}
-        </div>
-
-        {/* Revealed Skin Name on Victory */}
-        {isSolved && (
-          <div className="mt-3 text-center flex items-center justify-center gap-2 bg-[#1e2328]/90 px-4 py-1.5 rounded-full border border-[#c8aa6e]/60 animate-flip-in">
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-[#c8aa6e] font-bold text-sm">
-              {targetSkin.name}
+        {/* Progressive Clues when stuck (after 5+ wrong guesses) */}
+        {guesses.length >= 5 && !isSolved && (
+          <div className="mt-2.5 px-4 py-1.5 rounded-full bg-[#1e2328] border border-[#c8aa6e]/40 text-xs text-[#c8aa6e] flex items-center gap-1.5 animate-flip-in shadow-md">
+            <Sparkles className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+            <span>
+              Clue ({guesses.length} tries): Region: <strong className="text-[#f0e6d2]">{target.regions.join(', ')}</strong>
+              {guesses.length >= 8 && (
+                <> • Role: <strong className="text-[#f0e6d2]">{target.positions.join(', ')}</strong></>
+              )}
             </span>
+          </div>
+        )}
+
+        {/* Bonus Skin Guess Section upon Champion Solve */}
+        {isSolved && (
+          <div className="mt-3 w-full max-w-sm bg-[#1e2328]/95 border border-[#785a28]/60 rounded-xl p-3.5 shadow-xl backdrop-blur text-center animate-flip-in">
+            {selectedBonusSkin === null ? (
+              <>
+                <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#c8aa6e] uppercase tracking-wider mb-2.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Bonus: Which skin is this?</span>
+                </div>
+
+                {/* Quick select chips if champion has 8 or fewer skins */}
+                {target.skins && target.skins.length > 1 && target.skins.length <= 8 && (
+                  <div className="flex flex-wrap justify-center gap-1.5 mb-2.5">
+                    {target.skins.map(skin => (
+                      <button
+                        key={skin.id}
+                        type="button"
+                        onMouseDown={(e) => {
+                          e.preventDefault();
+                          handleSelectSkin(skin);
+                        }}
+                        onClick={() => handleSelectSkin(skin)}
+                        className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#091428] border border-[#c8aa6e]/50 text-[#f0e6d2] hover:bg-[#c8aa6e]/20 hover:border-[#c8aa6e] transition-all cursor-pointer shadow-sm active:scale-95"
+                      >
+                        {skin.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Searchable input / dropdown for all skins */}
+                <div ref={dropdownRef} className="relative w-full text-left">
+                  <div className="relative flex items-center">
+                    <input
+                      type="text"
+                      value={skinQuery}
+                      onChange={e => {
+                        setSkinQuery(e.target.value);
+                        setIsDropdownOpen(true);
+                      }}
+                      onFocus={() => setIsDropdownOpen(true)}
+                      onKeyDown={handleSkinInputKeyDown}
+                      placeholder="Search or select a skin..."
+                      className="w-full bg-[#091428] border border-[#c8aa6e]/60 focus:border-[#c8aa6e] text-[#f0e6d2] placeholder-[#a09b8c]/60 px-3 py-2 pl-8.5 pr-8 rounded-lg text-xs sm:text-sm shadow-inner outline-none transition-all"
+                    />
+                    <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#c8aa6e]/70 pointer-events-none" />
+                    <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[#a09b8c]/70 pointer-events-none" />
+                  </div>
+
+                  {isDropdownOpen && (
+                    <div className="absolute left-0 right-0 top-full mt-1.5 bg-[#1e2328] border-2 border-[#785a28] rounded-xl max-h-56 overflow-y-auto z-50 shadow-2xl divide-y divide-[#785a28]/30 animate-fade-in">
+                      {filteredSkins.length > 0 ? (
+                        filteredSkins.map(skin => (
+                          <button
+                            key={skin.id}
+                            type="button"
+                            onMouseDown={(e) => {
+                              e.preventDefault();
+                              handleSelectSkin(skin);
+                            }}
+                            onClick={() => handleSelectSkin(skin)}
+                            className="w-full text-left px-3.5 py-2.5 text-xs sm:text-sm text-[#f0e6d2] hover:bg-[#c8aa6e]/20 hover:text-white transition-colors flex items-center justify-between cursor-pointer active:bg-[#c8aa6e]/30"
+                          >
+                            <span className="font-medium">{skin.name}</span>
+                          </button>
+                        ))
+                      ) : (
+                        <div className="px-3 py-2.5 text-xs text-[#a09b8c] text-center">
+                          No matching skin found
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                <div className="mt-2.5 flex items-center justify-center">
+                  <button
+                    type="button"
+                    onClick={handleSkipBonus}
+                    className="text-[11px] text-[#a09b8c] hover:text-[#f0e6d2] transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <span>Skip / View results</span>
+                    <ArrowRight className="w-3 h-3" />
+                  </button>
+                </div>
+              </>
+            ) : (
+              <div className="flex flex-col items-center gap-1">
+                <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-wider">
+                  {(selectedBonusSkin.id === targetSkin.id || selectedBonusSkin.name.toLowerCase() === targetSkin.name.toLowerCase()) ? (
+                    <span className="text-emerald-400 flex items-center gap-1">
+                      <CheckCircle className="w-4 h-4" /> Bonus Correct!
+                    </span>
+                  ) : (
+                    <span className="text-rose-400 flex items-center gap-1">
+                      <XCircle className="w-4 h-4" /> Bonus Missed!
+                    </span>
+                  )}
+                </div>
+                <div className="mt-1 text-center">
+                  <span className="text-sm font-bold text-[#c8aa6e]">
+                    {targetSkin.name}
+                  </span>
+                  {selectedBonusSkin.id !== targetSkin.id && selectedBonusSkin.name.toLowerCase() !== targetSkin.name.toLowerCase() && (
+                    <span className="text-xs text-[#a09b8c] block mt-0.5">
+                      You guessed: {selectedBonusSkin.name}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
 
-      {/* Autocomplete Input */}
-      <AutocompleteInput
-        champions={allChampions}
-        guessedChampionIds={guesses.map(g => g.id)}
-        onSelectChampion={onGuess}
-        disabled={isSolved}
-        placeholder="Guess the champion in the splash..."
-      />
+      {/* Autocomplete Input (only when guessing champion) */}
+      {!isSolved && (
+        <AutocompleteInput
+          champions={allChampions}
+          guessedChampionIds={guesses.map(g => g.id)}
+          onSelectChampion={onGuess}
+          disabled={isSolved}
+          placeholder="Guess the champion in the splash..."
+        />
+      )}
 
       {/* Guess History */}
       {guesses.length > 0 && (

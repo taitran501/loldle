@@ -11,7 +11,8 @@ import {
   Quote as QuoteIcon, 
   Sparkles, 
   Smile, 
-  Image as ImageIcon 
+  Image as ImageIcon,
+  Flag
 } from 'lucide-react';
 
 interface VictoryModalProps {
@@ -25,6 +26,7 @@ interface VictoryModalProps {
   streak: number;
   abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
   bonusWon?: boolean;
+  isSurrendered?: boolean;
   onNextRound: () => void;
   onShare: () => void;
   onSelectMode: (mode: GameMode) => void;
@@ -41,13 +43,14 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
   streak,
   abilityKey,
   bonusWon,
+  isSurrendered = false,
   onNextRound,
   onShare,
   onSelectMode,
 }) => {
   useEffect(() => {
-    if (isOpen) {
-      // Golden confetti celebration
+    if (isOpen && !isSurrendered) {
+      // Golden confetti celebration only on victory
       confetti({
         particleCount: 80,
         spread: 70,
@@ -55,7 +58,7 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
         colors: ['#c8aa6e', '#f0e6d2', '#0ac8b9', '#f59e0b'],
       });
     }
-  }, [isOpen]);
+  }, [isOpen, isSurrendered]);
 
   if (!isOpen) return null;
 
@@ -69,12 +72,12 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
   const otherModes = allModes.filter(m => m.id !== mode);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
-      <div className="w-full max-w-md bg-[#1e2328] border-2 border-[#c8aa6e] rounded-2xl shadow-[0_0_40px_rgba(200,170,110,0.35)] overflow-hidden relative animate-flip-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300 animate-fade-in">
+      <div className={`w-full max-w-md bg-[#1e2328] border-2 ${isSurrendered ? 'border-rose-600/70 shadow-[0_0_40px_rgba(225,29,72,0.3)]' : 'border-[#c8aa6e] shadow-[0_0_40px_rgba(200,170,110,0.35)]'} rounded-2xl overflow-hidden relative animate-flip-in`}>
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 p-1.5 text-[#a09b8c] hover:text-[#f0e6d2] rounded-full hover:bg-white/10 z-10"
+          className="absolute top-3 right-3 p-1.5 text-[#a09b8c] hover:text-[#f0e6d2] rounded-full hover:bg-white/10 z-10 cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -91,14 +94,26 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1e2328] via-[#1e2328]/50 to-transparent" />
 
-          {/* Victory Badge */}
-          <div className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[#091428]/85 backdrop-blur px-4 py-1 rounded-full border border-[#c8aa6e] text-[#c8aa6e] text-xs font-bold uppercase tracking-wider shadow-lg">
-            <Trophy className="w-3.5 h-3.5 text-amber-400" />
-            <span>Victory!</span>
-          </div>
+          {/* Victory or Surrendered Badge */}
+          {isSurrendered ? (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[#091428]/90 backdrop-blur px-4 py-1 rounded-full border border-rose-500/60 text-rose-400 text-xs font-bold uppercase tracking-wider shadow-lg">
+              <Flag className="w-3.5 h-3.5 text-rose-400" />
+              <span>Surrendered</span>
+            </div>
+          ) : (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-[#091428]/85 backdrop-blur px-4 py-1 rounded-full border border-[#c8aa6e] text-[#c8aa6e] text-xs font-bold uppercase tracking-wider shadow-lg">
+              <Trophy className="w-3.5 h-3.5 text-amber-400" />
+              <span>Victory!</span>
+            </div>
+          )}
 
           {/* Champion Name */}
           <div className="absolute bottom-3 left-0 right-0 text-center px-4">
+            {isSurrendered && (
+              <span className="text-[11px] uppercase tracking-wider text-rose-300 font-bold block mb-0.5">
+                The answer was
+              </span>
+            )}
             <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#f0e6d2] tracking-wide drop-shadow">
               {champion.name}
             </h3>

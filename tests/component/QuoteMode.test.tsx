@@ -1,4 +1,4 @@
-﻿import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { QuoteMode } from '../../src/components/modes/QuoteMode';
@@ -167,15 +167,15 @@ describe('QuoteMode Component Tests', () => {
       />
     );
 
-    // 0 guesses -> 5 tries remaining
-    expect(screen.getByText('Audio clue in 5 tries')).toBeInTheDocument();
+    // 0 guesses -> 3 tries remaining
+    expect(screen.getByText('Audio clue in 3 tries')).toBeInTheDocument();
 
-    // 3 guesses -> 2 tries remaining
+    // 1 guess -> 2 tries remaining
     rerender(
       <QuoteMode
         target={mockTargetAhri}
         quoteIndex={0}
-        guesses={[mockChamp1, mockChamp2, mockChamp3]}
+        guesses={[mockChamp1]}
         onGuess={vi.fn()}
         isSolved={false}
         allChampions={mockAllChampions}
@@ -183,12 +183,12 @@ describe('QuoteMode Component Tests', () => {
     );
     expect(screen.getByText('Audio clue in 2 tries')).toBeInTheDocument();
 
-    // 4 guesses -> 1 try remaining (singular "try")
+    // 2 guesses -> 1 try remaining (singular "try")
     rerender(
       <QuoteMode
         target={mockTargetAhri}
         quoteIndex={0}
-        guesses={[mockChamp1, mockChamp2, mockChamp3, mockChamp4]}
+        guesses={[mockChamp1, mockChamp2]}
         onGuess={vi.fn()}
         isSolved={false}
         allChampions={mockAllChampions}
@@ -197,7 +197,30 @@ describe('QuoteMode Component Tests', () => {
     expect(screen.getByText('Audio clue in 1 try')).toBeInTheDocument();
   });
 
-  it('unlocks audio clue button after 5 guesses', () => {
+  it('unlocks audio clue for Quote 1 at 3 guesses, but keeps Quote 2, Quote 3, and Region locked', () => {
+    const threeGuesses = [mockChamp1, mockChamp2, mockChamp3];
+    render(
+      <QuoteMode
+        target={mockTargetAhri}
+        quoteIndex={0}
+        guesses={threeGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={mockAllChampions}
+      />
+    );
+
+    const playButton = screen.getByRole('button', { name: /listen to voice line/i });
+    expect(playButton).toBeInTheDocument();
+
+    // Quote 2, Quote 3, Region locked
+    expect(screen.queryByText('Quote #2 • Interaction Clue')).not.toBeInTheDocument();
+    expect(screen.queryByText('Quote #3 • Signature Pick Line')).not.toBeInTheDocument();
+    expect(screen.queryByText('Final Clue • Region')).not.toBeInTheDocument();
+    expect(screen.getByText('Quote #2 (Interaction) in 2 tries')).toBeInTheDocument();
+  });
+
+  it('unlocks Quote 2 (Interaction) at 5 guesses', () => {
     const fiveGuesses = [mockChamp1, mockChamp2, mockChamp3, mockChamp4, mockChamp5];
     render(
       <QuoteMode
@@ -210,12 +233,61 @@ describe('QuoteMode Component Tests', () => {
       />
     );
 
-    expect(screen.queryByText(/Audio clue in/)).not.toBeInTheDocument();
-    const playButton = screen.getByRole('button', { name: /listen to voice line/i });
-    expect(playButton).toBeInTheDocument();
+    // Quote 2 is unlocked
+    expect(screen.getByText('Quote #2 • Interaction Clue')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /listen to 2nd voice/i })).toBeInTheDocument();
+
+    // Quote 3 and Region still locked
+    expect(screen.queryByText('Quote #3 • Signature Pick Line')).not.toBeInTheDocument();
+    expect(screen.queryByText('Final Clue • Region')).not.toBeInTheDocument();
+    expect(screen.getByText('Signature Quote in 2 tries')).toBeInTheDocument();
   });
 
-  it('unlocks audio clue immediately when round is solved even with 0 guesses', () => {
+  it('unlocks Quote 3 (Signature Pick) at 7 guesses and Region at 9 guesses', () => {
+    const sevenGuesses = Array.from({ length: 7 }, (_, i) => ({
+      ...mockChamp1,
+      id: `Champ${i}`,
+      name: `Champ ${i}`,
+    }));
+    const { rerender } = render(
+      <QuoteMode
+        target={mockTargetAhri}
+        quoteIndex={0}
+        guesses={sevenGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={mockAllChampions}
+      />
+    );
+
+    // Quote 3 unlocked
+    expect(screen.getByText('Quote #3 • Signature Pick Line')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /listen to 3rd voice/i })).toBeInTheDocument();
+    expect(screen.queryByText('Final Clue • Region')).not.toBeInTheDocument();
+    expect(screen.getByText('Region clue in 2 tries')).toBeInTheDocument();
+
+    // At 9 guesses -> Region unlocked
+    const nineGuesses = Array.from({ length: 9 }, (_, i) => ({
+      ...mockChamp1,
+      id: `Champ${i}`,
+      name: `Champ ${i}`,
+    }));
+    rerender(
+      <QuoteMode
+        target={mockTargetAhri}
+        quoteIndex={0}
+        guesses={nineGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={mockAllChampions}
+      />
+    );
+
+    expect(screen.getByText('Final Clue • Region')).toBeInTheDocument();
+    expect(screen.getByText('Ionia')).toBeInTheDocument();
+  });
+
+  it('unlocks all clues immediately when round is solved even with 0 guesses', () => {
     render(
       <QuoteMode
         target={mockTargetAhri}
@@ -228,6 +300,34 @@ describe('QuoteMode Component Tests', () => {
     );
 
     expect(screen.getByRole('button', { name: /listen to voice line/i })).toBeInTheDocument();
+    expect(screen.getByText('Quote #2 • Interaction Clue')).toBeInTheDocument();
+    expect(screen.getByText('Quote #3 • Signature Pick Line')).toBeInTheDocument();
+    expect(screen.getByText('Final Clue • Region')).toBeInTheDocument();
+    expect(screen.getByText('Ionia')).toBeInTheDocument();
+  });
+
+  it('plays and pauses second quote audio correctly', async () => {
+    const fiveGuesses = [mockChamp1, mockChamp2, mockChamp3, mockChamp4, mockChamp5];
+    render(
+      <QuoteMode
+        target={mockTargetAhri}
+        quoteIndex={0}
+        guesses={fiveGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={mockAllChampions}
+      />
+    );
+
+    const button2 = screen.getByRole('button', { name: /listen to 2nd voice/i });
+    fireEvent.click(button2);
+
+    expect(playSpy).toHaveBeenCalled();
+    expect(await screen.findByText('Playing 2nd Voice...')).toBeInTheDocument();
+
+    fireEvent.click(button2);
+    expect(pauseSpy).toHaveBeenCalled();
+    expect(screen.getByText('Listen to 2nd Voice')).toBeInTheDocument();
   });
 
   it('toggles audio playback on button click and handles pause', async () => {
