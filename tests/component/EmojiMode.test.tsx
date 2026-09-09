@@ -18,7 +18,7 @@ const mockTarget: Champion = {
   iconUrl: '/assets/champions/Ahri.png',
   abilities: [],
   quotes: [{ text: "Don't you trust me?", audioUrl: '' }],
-  emojis: ['🦊', '🔮', '💖', '💎'],
+  emojis: ['🦊', '🔮', '💖', '💎', '✨'],
   skins: []
 };
 
@@ -31,11 +31,12 @@ const createMockChamp = (id: string, name: string): Champion => ({
 const champ1 = createMockChamp('Champ1', 'Champion One');
 const champ2 = createMockChamp('Champ2', 'Champion Two');
 const champ3 = createMockChamp('Champ3', 'Champion Three');
+const champ4 = createMockChamp('Champ4', 'Champion Four');
 
-const allChamps = [mockTarget, champ1, champ2, champ3];
+const allChamps = [mockTarget, champ1, champ2, champ3, champ4];
 
 describe('EmojiMode Component Tests', () => {
-  it('initially reveals only 1 emoji card and locks remaining 3', () => {
+  it('initially reveals only 1 emoji card and locks the remaining clues', () => {
     const { container } = render(
       <EmojiMode
         target={mockTarget}
@@ -46,20 +47,16 @@ describe('EmojiMode Component Tests', () => {
       />
     );
 
-    // Should have 1 emoji img and 3 lock icons
-    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
+    // This target has five configured clues, so four remain locked.
+    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
     expect(emojiImgs.length).toBe(1);
     expect(emojiImgs[0]).toHaveAttribute('alt', '🦊');
-
-    // SVG Twemoji link
     expect(emojiImgs[0].getAttribute('src')).toContain('twemoji');
-
-    // Remaining 3 are locked (check for lucide-lock icon)
-    const lockIcons = container.querySelectorAll('.lucide-lock');
-    expect(lockIcons.length).toBe(3);
+    expect(container.querySelectorAll('.lucide-lock').length).toBe(4);
+    expect(screen.getByRole('list', { name: 'Emoji clues: 1 of 5 revealed' })).toBeInTheDocument();
   });
 
-  it('progressively reveals emojis with each wrong guess', () => {
+  it('progressively reveals the configured number of emojis with each wrong guess', () => {
     const { container, rerender } = render(
       <EmojiMode
         target={mockTarget}
@@ -70,12 +67,12 @@ describe('EmojiMode Component Tests', () => {
       />
     );
 
-    // 1 guess -> 2 revealed, 2 locked
-    let emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
+    // 1 guess -> 2 revealed, 3 locked
+    let emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
     expect(emojiImgs.length).toBe(2);
-    expect(container.querySelectorAll('.lucide-lock').length).toBe(2);
+    expect(container.querySelectorAll('.lucide-lock').length).toBe(3);
 
-    // 2 guesses -> 3 revealed, 1 locked
+    // 2 guesses -> 3 revealed, 2 locked
     rerender(
       <EmojiMode
         target={mockTarget}
@@ -85,11 +82,11 @@ describe('EmojiMode Component Tests', () => {
         allChampions={allChamps}
       />
     );
-    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
+    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
     expect(emojiImgs.length).toBe(3);
-    expect(container.querySelectorAll('.lucide-lock').length).toBe(1);
+    expect(container.querySelectorAll('.lucide-lock').length).toBe(2);
 
-    // 3 guesses -> all 4 revealed
+    // 3 guesses -> 4 revealed, 1 locked
     rerender(
       <EmojiMode
         target={mockTarget}
@@ -99,12 +96,26 @@ describe('EmojiMode Component Tests', () => {
         allChampions={allChamps}
       />
     );
-    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
+    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
     expect(emojiImgs.length).toBe(4);
+    expect(container.querySelectorAll('.lucide-lock').length).toBe(1);
+
+    // 4 guesses -> all 5 revealed
+    rerender(
+      <EmojiMode
+        target={mockTarget}
+        guesses={[champ1, champ2, champ3, champ4]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
+    expect(emojiImgs.length).toBe(5);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
   });
 
-  it('reveals all 4 emojis immediately when round is solved even with 0 guesses', () => {
+  it('reveals all configured clues immediately when the round is solved', () => {
     const { container } = render(
       <EmojiMode
         target={mockTarget}
@@ -115,13 +126,27 @@ describe('EmojiMode Component Tests', () => {
       />
     );
 
-    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎/ });
-    expect(emojiImgs.length).toBe(4);
+    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
+    expect(emojiImgs.length).toBe(5);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
   });
 
+  it('reports the configured clue count instead of assuming four', () => {
+    render(
+      <EmojiMode
+        target={mockTarget}
+        guesses={[]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    expect(screen.getByText('1 of 5 clues revealed')).toBeInTheDocument();
+    expect(screen.getByText(/One new clue unlocks with each guess/)).toBeInTheDocument();
+  });
+
   it('displays region clue when player has 4 or more failed guesses', () => {
-    const champ4 = createMockChamp('Champ4', 'Champion Four');
     render(
       <EmojiMode
         target={mockTarget}

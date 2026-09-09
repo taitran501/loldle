@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { Champion } from '../../src/types';
+import { EMOJI_MAX_CLUES, EMOJI_MIN_CLUES } from '../../src/utils/constants';
 
 describe('Dataset & Asset Integrity Tests', () => {
   const jsonPath = path.resolve(process.cwd(), 'public/data/champions.json');
@@ -91,15 +92,22 @@ describe('Dataset & Asset Integrity Tests', () => {
     }
   });
 
-  it('verifies 100% of champions have exactly 4 curated emojis', () => {
+  it('verifies every champion has a unique 4-6 clue emoji sequence', () => {
+    const clueCounts = new Set<number>();
+
     for (const champ of champions) {
       expect(champ.emojis).toBeDefined();
-      expect(champ.emojis.length).toBe(4);
+      expect(champ.emojis.length).toBeGreaterThanOrEqual(EMOJI_MIN_CLUES);
+      expect(champ.emojis.length).toBeLessThanOrEqual(EMOJI_MAX_CLUES);
+      expect(new Set(champ.emojis).size).toBe(champ.emojis.length);
+      clueCounts.add(champ.emojis.length);
       champ.emojis.forEach(emoji => {
         expect(typeof emoji).toBe('string');
         expect(emoji.length).toBeGreaterThan(0);
       });
     }
+
+    expect([...clueCounts].sort()).toEqual([4, 5, 6]);
   });
 
   it('verifies Riot Games Official Data Dragon full HD splash URLs for all skins', () => {
