@@ -196,6 +196,71 @@ describe('SplashMode Component Tests', () => {
     expect(screen.getByRole('button', { name: 'Ahri (Base)' })).toBeInTheDocument();
   });
 
+  it('keeps a loaded splash visible when the champion guess opens the bonus prompt', async () => {
+    const { rerender } = render(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkinDynasty}
+        guesses={[]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    const img = screen.getByAltText('Champion Splash Art') as HTMLImageElement;
+    fireEvent.load(img);
+    await waitFor(() => expect(img.style.opacity).toBe('1'));
+
+    rerender(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkinDynasty}
+        guesses={[mockTarget]}
+        onGuess={vi.fn()}
+        isSolved={true}
+        allChampions={allChamps}
+        bonus={{ status: 'pending' }}
+      />
+    );
+
+    await waitFor(() => expect(screen.getByAltText('Champion Splash Art')).toHaveStyle({ opacity: '1' }));
+    expect(screen.getByText('Bonus: Which skin is this?')).toBeInTheDocument();
+  });
+
+  it('reveals a splash that was already complete before React receives onLoad', async () => {
+    const completeDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'complete');
+    const naturalWidthDescriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'naturalWidth');
+    Object.defineProperty(HTMLImageElement.prototype, 'complete', {
+      configurable: true,
+      get: () => true,
+    });
+    Object.defineProperty(HTMLImageElement.prototype, 'naturalWidth', {
+      configurable: true,
+      get: () => 1200,
+    });
+
+    try {
+      render(
+        <SplashMode
+          target={mockTarget}
+          targetSkin={mockSkinDynasty}
+          guesses={[]}
+          onGuess={vi.fn()}
+          isSolved={false}
+          allChampions={allChamps}
+        />
+      );
+
+      await waitFor(() => expect(screen.getByAltText('Champion Splash Art')).toHaveStyle({ opacity: '1' }));
+    } finally {
+      if (completeDescriptor) Object.defineProperty(HTMLImageElement.prototype, 'complete', completeDescriptor);
+      else delete (HTMLImageElement.prototype as { complete?: boolean }).complete;
+      if (naturalWidthDescriptor) Object.defineProperty(HTMLImageElement.prototype, 'naturalWidth', naturalWidthDescriptor);
+      else delete (HTMLImageElement.prototype as { naturalWidth?: number }).naturalWidth;
+    }
+  });
+
   it('handles selecting correct skin with positive feedback', () => {
     const onBonusCompleteMock = vi.fn();
     render(
