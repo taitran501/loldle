@@ -4,13 +4,13 @@ A web-based League of Legends guessing game featuring Daily and Unlimited modes 
 
 ## Game Modes
 
-- **Classic:** Deduce the mystery champion by comparing seven attributes: Gender, Positions, Species, Resource, Range type, Regions, and Release year. Clue tokens (Quote, Ability, Splash) unlock progressively with failed guesses.
-- **Quote:** Identify the champion from an iconic spoken quote. An audio clue unlocks after repeated incorrect attempts.
+- **Classic:** Deduce the mystery champion by comparing seven attributes: Gender, Positions, Species, Resource, Range type, Regions, and Release year. Clue tokens unlock at 5 guesses (Quote), 10 guesses (Ability), and 15 guesses (Splash).
+- **Quote:** Identify the champion from an iconic spoken quote. An audio clue unlocks after 3 guesses.
 - **Ability:** Guess the champion based on an ability icon (Passive, Q, W, E, or R). Optional Challenge Mode toggles (grayscale, rotation) allow customizable difficulty.
 - **Emoji:** Guess the champion represented by a sequence of up to 4 thematic emojis, unlocked incrementally.
 - **Splash:** Identify the champion from a cropped section of official skin splash art. The viewport zooms out with each subsequent guess.
 
-Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized streak mode) are supported across all modes with state persistence in `localStorage`.
+Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized streak mode) are supported across all modes. Active rounds, guesses, completed Daily rounds, and the selected mode persist in versioned `localStorage` state; Daily and Unlimited have separate sessions and statistics.
 
 ## Tech Stack
 
@@ -84,13 +84,16 @@ scripts/
 src/
   components/
     modes/             Mode-specific game views (Classic, Quote, Ability, Emoji, Splash)
-    AutocompleteInput  Search input with fuzzy matching and keyboard navigation
-    Header             Navigation bar with segmented Daily/Unlimited switcher
-    VictoryModal       Win screen with guess statistics and share functionality
+    AutocompleteInput  Prefix search input with keyboard navigation and explicit Guess confirmation
+    Header             Navigation bar with segmented Daily/Unlimited switcher and Statistics
+    VictoryModal       Win screen with guess summary and share functionality
   types/               Core game contracts and data types
   utils/
     compare.ts         Attribute comparison logic (exact match, partial match, arrows)
     daily.ts           Deterministic daily seed generator and unlimited RNG
+    constants.ts       Shared clue and hint unlock milestones
+    gameState.ts       Versioned Daily/Unlimited localStorage persistence
+    stats.ts            Versioned statistics, streak, and legacy migration logic
 tests/
   component/           React Testing Library tests for each game mode
   e2e/                 Playwright browser flows across desktop, tablet, and mobile

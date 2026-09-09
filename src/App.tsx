@@ -1,6 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Champion, GameMode, GameStats, Skin } from './types';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { Champion, GameMode, GameStatsV2, PlayType, Skin, BonusState } from './types';
 import { getDailyTarget, getRandomTarget, getTodayDateString } from './utils/daily';
+import {
+  GAME_STATE_STORAGE_KEY,
+  ModeState,
+  SessionState,
+  createEmptySessionState,
+  hydrateModeState,
+  loadPersistedGameState,
+  serializeGameState,
+} from './utils/gameState';
+import { createDefaultStats, LEGACY_STATS_STORAGE_KEY, loadStats, recordLoss, recordWin, STATS_STORAGE_KEY } from './utils/stats';
 import { Header } from './components/Header';
 import { ClassicMode } from './components/modes/ClassicMode';
 import { QuoteMode } from './components/modes/QuoteMode';
@@ -11,294 +21,538 @@ import { VictoryModal } from './components/VictoryModal';
 import { StatsModal } from './components/StatsModal';
 import { HelpModal } from './components/HelpModal';
 import { SurrenderModal } from './components/SurrenderModal';
-import { RefreshCw, Flag, Loader2, Sparkles } from 'lucide-react';
+import { RefreshCw, Flag, Loader2, RotateCcw } from 'lucide-react';
 
-interface SingleModeState {
-  target: Champion;
-  skin?: Skin;
-  abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R';
-  quoteIndex?: number;
-  bonusWon?: boolean;
-  isSurrendered?: boolean;
-  guesses: Champion[];
-  isSolved: boolean;
+interface RoundIdentity {
+  playType: PlayType;
+  mode: GameMode;
+  targetId: string;
+  serial: number;
 }
 
-const DEFAULT_STATS: GameStats = {
-  played: 0,
-  won: 0,
-  currentStreak: 0,
-  maxStreak: 0,
-  guessDistribution: {},
-};
+interface VictoryContext {
+  identity: RoundIdentity;
+  champion: Champion;
+  skin?: Skin;
+  mode: GameMode;
+  playType: PlayType;
+  guessCount: number;
+  streak: number;
+  abilityKey?: ModeState['abilityKey'];
+  bonus?: BonusState;
+  isSurrendered: boolean;
+}
+
+const BONUS_MODES: GameMode[] = ['ability', 'splash'];
 
 export const App: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
   const [loading, setLoading] = useState(true);
-  const [currentMode, setCurrentMode] = useState<GameMode>('classic');
-  const [isUnlimited, setIsUnlimited] = useState<boolean>(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [loadAttempt, setLoadAttempt] = useState(0);
 
-  // States per mode
-  const [modeStates, setModeStates] = useState<Record<GameMode, SingleModeState | null>>({
-    classic: null,
-    quote: null,
-    ability: null,
-    splash: null,
-    emoji: null,
-  });
+  const [currentMode, setCurrentMode] = useState<GameMode>(() =>
+    loadPersistedGameState(undefined, getTodayDateString()).currentMode
+  );
+  const [playType, setPlayType] = useState<PlayType>(() =>
+    loadPersistedGameState(undefined, getTodayDateString()).playType
+  );
+  const [sessions, setSessions] = useState<SessionState>(() => createEmptySessionState());
+  const [stateHydrated, setStateHydrated] = useState(false);
 
-  // Modals
   const [isStatsOpen, setIsStatsOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isVictoryOpen, setIsVictoryOpen] = useState(false);
   const [isSurrenderModalOpen, setIsSurrenderModalOpen] = useState(false);
+  const [victoryContext, setVictoryContext] = useState<VictoryContext | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Statistics
-  const [stats, setStats] = useState<GameStats>(() => {
-    try {
-      const saved = localStorage.getItem('loldle_stats');
-      return saved ? JSON.parse(saved) : DEFAULT_STATS;
-    } catch {
-      return DEFAULT_STATS;
-    }
-  });
+  const [stats, setStats] = useState<GameStatsV2>(() => loadStats());
+  const statsRef = useRef(stats);
+  const currentModeRef = useRef(currentMode);
+  const playTypeRef = useRef(playType);
+  const dailyDateRef = useRef(getTodayDateString());
+  const roundSerialRef = useRef(0);
+  const victoryTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const surrenderIdentityRef = useRef<RoundIdentity | null>(null);
+  const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const currentState = sessions[playType][currentMode];
 
   useEffect(() => {
-    localStorage.setItem('loldle_stats', JSON.stringify(stats));
+    statsRef.current = stats;
   }, [stats]);
 
-  const showToast = (msg: string) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(null), 3000);
-  };
-
-  // Load champions data from static JSON
   useEffect(() => {
-    async function loadData() {
-      try {
-        const res = await fetch('/data/champions.json');
-        if (!res.ok) throw new Error('Failed to load dataset');
-        const data: Champion[] = await res.json();
-        setChampions(data);
-      } catch (err) {
-        console.error('Data loading error:', err);
-      } finally {
-        setLoading(false);
-      }
+    currentModeRef.current = currentMode;
+  }, [currentMode]);
+
+  useEffect(() => {
+    playTypeRef.current = playType;
+  }, [playType]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(STATS_STORAGE_KEY, JSON.stringify(stats));
+    } catch (error) {
+      console.warn('Could not save statistics', error);
     }
-    loadData();
+  }, [stats]);
+
+  const showToast = useCallback((message: string) => {
+    setToastMessage(message);
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+    toastTimerRef.current = setTimeout(() => setToastMessage(null), 3000);
   }, []);
 
-  // Initialize mode target
-  const initModeTarget = useCallback(
-    (mode: GameMode, champList: Champion[], unlimited: boolean): SingleModeState => {
-      const result = unlimited
-        ? getRandomTarget(champList, mode)
-        : getDailyTarget(champList, mode, getTodayDateString());
+  useEffect(() => () => {
+    if (victoryTimerRef.current) clearTimeout(victoryTimerRef.current);
+    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
+  }, []);
 
-      return {
-        target: result.champion,
-        skin: result.skin,
-        abilityKey: result.abilityKey || 'Q',
-        quoteIndex: result.quoteIndex ?? 0,
-        guesses: [],
-        isSolved: false,
-      };
-    },
-    []
-  );
-
-  // Initialize all modes once champions are loaded
   useEffect(() => {
-    if (champions.length > 0) {
-      setModeStates({
-        classic: initModeTarget('classic', champions, isUnlimited),
-        quote: initModeTarget('quote', champions, isUnlimited),
-        ability: initModeTarget('ability', champions, isUnlimited),
-        splash: initModeTarget('splash', champions, isUnlimited),
-        emoji: initModeTarget('emoji', champions, isUnlimited),
-      });
-    }
-  }, [champions, isUnlimited, initModeTarget]);
+    let cancelled = false;
 
-  // Preload target assets (ability icons, splash arts, audio) in the background
-  useEffect(() => {
-    const abilityState = modeStates.ability;
-    if (abilityState?.target) {
-      const currentAbility = abilityState.target.abilities.find(a => a.key === abilityState.abilityKey) || abilityState.target.abilities[0];
-      if (currentAbility?.iconUrl) {
-        const img = new Image();
-        img.src = currentAbility.iconUrl;
+    const loadData = async () => {
+      setLoading(true);
+      setLoadError(null);
+      try {
+        const response = await fetch('/data/champions.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Dataset request failed (${response.status})`);
+        const data: Champion[] = await response.json();
+        if (!Array.isArray(data) || data.length === 0) throw new Error('Dataset is empty');
+        if (!cancelled) setChampions(data);
+      } catch (error) {
+        if (!cancelled) {
+          console.error('Data loading error:', error);
+          setChampions([]);
+          setLoadError('Could not load the local champion data.');
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
       }
-    }
-    const splashState = modeStates.splash;
-    if (splashState?.skin?.splashFullUrl) {
-      const img = new Image();
-      img.src = splashState.skin.splashFullUrl;
-    }
-    const quoteState = modeStates.quote;
-    if (quoteState?.target?.quotes) {
-      const qi = quoteState.quoteIndex ?? 0;
-      const q = quoteState.target.quotes[qi] || quoteState.target.quotes[0];
-      if (q?.audioUrl) {
-        const audio = new Audio();
-        audio.preload = 'auto';
-        audio.src = q.audioUrl;
-      }
-      const secondQ = quoteState.target.quotes.find((item, idx) => idx !== qi && item.text !== q?.text);
-      if (secondQ?.audioUrl) {
-        const audio2 = new Audio();
-        audio2.preload = 'auto';
-        audio2.src = secondQ.audioUrl;
-      }
-    }
-  }, [modeStates.ability?.target, modeStates.ability?.abilityKey, modeStates.splash?.skin?.splashFullUrl, modeStates.quote?.target?.id, modeStates.quote?.quoteIndex]);
-
-  // Current mode state
-  const currentState = modeStates[currentMode];
-
-  // Handle a guess
-  const handleGuess = (guess: Champion) => {
-    if (!currentState || currentState.isSolved) return;
-
-    const newGuesses = [guess, ...currentState.guesses];
-    const isCorrect = guess.id === currentState.target.id;
-
-    const updatedState: SingleModeState = {
-      ...currentState,
-      guesses: newGuesses,
-      isSolved: isCorrect,
     };
 
-    setModeStates(prev => ({
-      ...prev,
-      [currentMode]: updatedState,
-    }));
+    loadData();
+    return () => {
+      cancelled = true;
+    };
+  }, [loadAttempt]);
 
-    if (isCorrect) {
-      // Update statistics
-      setStats(prev => {
-        const nextStreak = prev.currentStreak + 1;
-        return {
-          ...prev,
-          played: prev.played + 1,
-          won: prev.won + 1,
-          currentStreak: nextStreak,
-          maxStreak: Math.max(prev.maxStreak, nextStreak),
-          guessDistribution: {
-            ...prev.guessDistribution,
-            [newGuesses.length]: (prev.guessDistribution[newGuesses.length] || 0) + 1,
-          },
-        };
+  const initModeState = useCallback((mode: GameMode, type: PlayType, champList: Champion[], excludeIds: string[] = []): ModeState => {
+    const result = type === 'unlimited'
+      ? getRandomTarget(champList, mode, excludeIds)
+      : getDailyTarget(champList, mode, getTodayDateString());
+
+    return {
+      target: result.champion,
+      skin: result.skin,
+      abilityKey: result.abilityKey || result.champion.abilities[0]?.key || 'Q',
+      quoteIndex: result.quoteIndex ?? 0,
+      guesses: [],
+      isSolved: false,
+    };
+  }, []);
+
+  useEffect(() => {
+    if (champions.length === 0 || stateHydrated) return;
+
+    const persisted = loadPersistedGameState(undefined, getTodayDateString());
+    const nextSessions = createEmptySessionState();
+
+    (['daily', 'unlimited'] as const).forEach(type => {
+      (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[]).forEach(mode => {
+        const restored = hydrateModeState(persisted[type].modes[mode], champions, mode);
+        nextSessions[type][mode] = restored || initModeState(mode, type, champions);
       });
-
-      // Delay victory modal popup so player can see all tiles finish flipping green
-      // For Ability and Splash modes, victory modal opens after secondary bonus guess (or skip)
-      if (currentMode !== 'ability' && currentMode !== 'splash') {
-        setTimeout(() => {
-          setIsVictoryOpen(true);
-        }, 1600);
-      }
-    }
-  };
-
-  // Skip / Give Up in Unlimited Mode - Open custom SurrenderModal
-  const handleGiveUp = () => {
-    if (!currentState || currentState.isSolved) return;
-    setIsSurrenderModalOpen(true);
-  };
-
-  // Confirmed Surrender
-  const handleConfirmSurrender = () => {
-    if (!currentState || currentState.isSolved) return;
-    setIsSurrenderModalOpen(false);
-
-    setModeStates(prev => ({
-      ...prev,
-      [currentMode]: {
-        ...currentState,
-        isSolved: true,
-        isSurrendered: true,
-      },
-    }));
-
-    setStats(prev => ({
-      ...prev,
-      played: prev.played + 1,
-      currentStreak: 0,
-    }));
-
-    setTimeout(() => {
-      setIsVictoryOpen(true);
-    }, 350);
-  };
-
-  // Next round in Unlimited Mode
-  const handleNextRound = () => {
-    if (!champions.length) return;
-    setIsVictoryOpen(false);
-
-    const newState = getRandomTarget(champions, currentMode, [currentState?.target.id || '']);
-    setModeStates(prev => ({
-      ...prev,
-      [currentMode]: {
-        target: newState.champion,
-        skin: newState.skin,
-        abilityKey: newState.abilityKey || 'Q',
-        quoteIndex: newState.quoteIndex ?? 0,
-        bonusWon: undefined,
-        isSurrendered: false,
-        guesses: [],
-        isSolved: false,
-      },
-    }));
-  };
-
-  // Toggle Unlimited / Daily mode
-  const handleToggleUnlimited = (targetVal?: boolean) => {
-    const nextVal = typeof targetVal === 'boolean' ? targetVal : !isUnlimited;
-    if (nextVal === isUnlimited) return;
-    setIsUnlimited(nextVal);
-    showToast(nextVal ? 'Switched to Unlimited Mode!' : 'Switched to Daily Mode!');
-  };
-
-  // Share result to clipboard
-  const handleShare = () => {
-    if (!currentState) return;
-    const text = `LoLdle (${currentMode.toUpperCase()}) - ${
-      isUnlimited ? `Streak ${stats.currentStreak} 🔥` : `Daily ${getTodayDateString()}`
-    }\nGuesses: ${currentState.guesses.length}\nPlay at: ${window.location.origin}`;
-
-    navigator.clipboard.writeText(text).then(() => {
-      showToast('Copied result to clipboard! 📋');
     });
-  };
 
-  if (loading) {
+    roundSerialRef.current += 1;
+    setSessions(nextSessions);
+    setCurrentMode(persisted.currentMode);
+    setPlayType(persisted.playType);
+    dailyDateRef.current = getTodayDateString();
+    setStateHydrated(true);
+  }, [champions, initModeState, stateHydrated]);
+
+  useEffect(() => {
+    if (!stateHydrated) return;
+    try {
+      localStorage.setItem(
+        GAME_STATE_STORAGE_KEY,
+        JSON.stringify(serializeGameState(currentMode, playType, sessions, getTodayDateString()))
+      );
+    } catch (error) {
+      console.warn('Could not save game state', error);
+    }
+  }, [currentMode, playType, sessions, stateHydrated]);
+
+  // Preload target media without making the game depend on remote media availability.
+  useEffect(() => {
+    const abilityState = sessions[playType].ability;
+    const ability = abilityState?.target.abilities.find(item => item.key === abilityState.abilityKey);
+    if (ability?.iconUrl) {
+      const image = new Image();
+      image.src = ability.iconUrl;
+    }
+
+    const splashState = sessions[playType].splash;
+    if (splashState?.skin?.splashFullUrl) {
+      const image = new Image();
+      image.src = splashState.skin.splashFullUrl;
+    }
+  }, [playType, sessions]);
+
+  const clearVictoryTimer = useCallback(() => {
+    if (victoryTimerRef.current) {
+      clearTimeout(victoryTimerRef.current);
+      victoryTimerRef.current = null;
+    }
+  }, []);
+
+  // Keep an open tab in sync when UTC rolls over. Reloading also performs the
+  // same check through loadPersistedGameState, but a player should not have to
+  // refresh the page to unlock the next Daily round.
+  useEffect(() => {
+    if (!stateHydrated || champions.length === 0) return;
+
+    dailyDateRef.current = getTodayDateString();
+    const checkForNewDaily = () => {
+      const today = getTodayDateString();
+      if (today === dailyDateRef.current) return;
+
+      dailyDateRef.current = today;
+      const nextDaily = Object.fromEntries(
+        (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[])
+          .map(mode => [mode, initModeState(mode, 'daily', champions)])
+      ) as SessionState['daily'];
+
+      if (playTypeRef.current === 'daily') {
+        clearVictoryTimer();
+        setIsVictoryOpen(false);
+        setVictoryContext(null);
+      }
+      roundSerialRef.current += 1;
+      setSessions(prev => ({ ...prev, daily: nextDaily }));
+    };
+
+    const interval = window.setInterval(checkForNewDaily, 30_000);
+    return () => window.clearInterval(interval);
+  }, [champions, clearVictoryTimer, initModeState, stateHydrated]);
+
+  const closeVictory = useCallback(() => {
+    clearVictoryTimer();
+    setIsVictoryOpen(false);
+    setVictoryContext(null);
+  }, [clearVictoryTimer]);
+
+  const getIdentity = useCallback((mode: GameMode, type: PlayType, state: ModeState): RoundIdentity => ({
+    mode,
+    playType: type,
+    targetId: state.target.id,
+    serial: roundSerialRef.current,
+  }), []);
+
+  const makeVictoryContext = useCallback((
+    state: ModeState,
+    identity: RoundIdentity,
+    streak: number
+  ): VictoryContext => ({
+    identity,
+    champion: state.target,
+    skin: state.skin,
+    mode: identity.mode,
+    playType: identity.playType,
+    guessCount: state.guesses.length,
+    streak,
+    abilityKey: state.abilityKey,
+    bonus: state.bonus,
+    isSurrendered: Boolean(state.isSurrendered),
+  }), []);
+
+  const scheduleVictory = useCallback((identity: RoundIdentity, context: VictoryContext, delayMs: number) => {
+    clearVictoryTimer();
+    victoryTimerRef.current = setTimeout(() => {
+      const current = sessions[playTypeRef.current][currentModeRef.current];
+      const isCurrentRound = identity.serial === roundSerialRef.current
+        && identity.playType === playTypeRef.current
+        && identity.mode === currentModeRef.current
+        && current?.target.id === identity.targetId;
+
+      if (isCurrentRound) {
+        setVictoryContext(context);
+        setIsVictoryOpen(true);
+      }
+      victoryTimerRef.current = null;
+    }, delayMs);
+  }, [clearVictoryTimer, sessions]);
+
+  const updateModeState = useCallback((type: PlayType, mode: GameMode, nextState: ModeState) => {
+    setSessions(prev => ({
+      ...prev,
+      [type]: {
+        ...prev[type],
+        [mode]: nextState,
+      },
+    }));
+  }, []);
+
+  const handleGuess = useCallback((guess: Champion) => {
+    const state = sessions[playType][currentMode];
+    if (!state || state.isSolved || state.guesses.some(item => item.id === guess.id)) return;
+
+    const newGuesses = [guess, ...state.guesses];
+    const isCorrect = guess.id === state.target.id;
+    const updatedState: ModeState = {
+      ...state,
+      guesses: newGuesses,
+      isSolved: isCorrect,
+      ...(isCorrect && BONUS_MODES.includes(currentMode) ? { bonus: { status: 'pending' } } : {}),
+    };
+    const identity = getIdentity(currentMode, playType, state);
+
+    updateModeState(playType, currentMode, updatedState);
+
+    if (!isCorrect) return;
+
+    const nextStats = recordWin(statsRef.current, playType, currentMode, newGuesses.length);
+    statsRef.current = nextStats;
+    setStats(nextStats);
+
+    if (!BONUS_MODES.includes(currentMode)) {
+      scheduleVictory(
+        identity,
+        makeVictoryContext(updatedState, identity, nextStats[playType].currentStreak),
+        1600
+      );
+    }
+  }, [currentMode, getIdentity, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleGiveUp = useCallback(() => {
+    const state = sessions[playType][currentMode];
+    if (!state || state.isSolved || playType !== 'unlimited') return;
+    surrenderIdentityRef.current = getIdentity(currentMode, playType, state);
+    setIsSurrenderModalOpen(true);
+  }, [currentMode, getIdentity, playType, sessions]);
+
+  const handleConfirmSurrender = useCallback(() => {
+    const identity = surrenderIdentityRef.current;
+    const state = sessions[playType][currentMode];
+    if (!identity || !state || state.isSolved || identity.serial !== roundSerialRef.current
+      || identity.targetId !== state.target.id || identity.mode !== currentMode || identity.playType !== playType) {
+      setIsSurrenderModalOpen(false);
+      surrenderIdentityRef.current = null;
+      return;
+    }
+
+    const updatedState: ModeState = {
+      ...state,
+      isSolved: true,
+      isSurrendered: true,
+    };
+    updateModeState(playType, currentMode, updatedState);
+    const nextStats = recordLoss(statsRef.current, playType, currentMode);
+    statsRef.current = nextStats;
+    setStats(nextStats);
+    setIsSurrenderModalOpen(false);
+    surrenderIdentityRef.current = null;
+    scheduleVictory(
+      identity,
+      makeVictoryContext(updatedState, identity, nextStats[playType].currentStreak),
+      350
+    );
+  }, [currentMode, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleNextRound = useCallback(() => {
+    const state = sessions[playType][currentMode];
+    if (!champions.length || playType !== 'unlimited' || !state?.isSolved) return;
+
+    closeVictory();
+    setIsSurrenderModalOpen(false);
+    surrenderIdentityRef.current = null;
+    roundSerialRef.current += 1;
+    updateModeState(
+      playType,
+      currentMode,
+      initModeState(currentMode, 'unlimited', champions, [state.target.id])
+    );
+  }, [champions, closeVictory, currentMode, initModeState, playType, sessions, updateModeState]);
+
+  const handleSelectMode = useCallback((mode: GameMode) => {
+    if (mode === currentMode) return;
+    clearVictoryTimer();
+    setIsVictoryOpen(false);
+    setVictoryContext(null);
+    setIsSurrenderModalOpen(false);
+    surrenderIdentityRef.current = null;
+    roundSerialRef.current += 1;
+    setCurrentMode(mode);
+  }, [clearVictoryTimer, currentMode]);
+
+  const handleTogglePlayType = useCallback((targetVal?: boolean) => {
+    const nextType: PlayType = typeof targetVal === 'boolean'
+      ? (targetVal ? 'unlimited' : 'daily')
+      : (playType === 'unlimited' ? 'daily' : 'unlimited');
+    if (nextType === playType) return;
+
+    clearVictoryTimer();
+    setIsVictoryOpen(false);
+    setVictoryContext(null);
+    setIsSurrenderModalOpen(false);
+    surrenderIdentityRef.current = null;
+    roundSerialRef.current += 1;
+    setPlayType(nextType);
+    showToast(nextType === 'unlimited' ? 'Switched to Unlimited Mode!' : 'Switched to Daily Mode!');
+  }, [clearVictoryTimer, playType, showToast]);
+
+  const handleAbilityBonus = useCallback((bonusKey: ModeState['abilityKey'], isCorrect: boolean) => {
+    const state = sessions[playType].ability;
+    if (!state?.isSolved || state.bonus?.status !== 'pending') return;
+
+    const identity = getIdentity('ability', playType, state);
+    const updatedState: ModeState = {
+      ...state,
+      bonus: { status: isCorrect ? 'correct' : 'missed', selectionKey: bonusKey },
+    };
+    updateModeState(playType, 'ability', updatedState);
+    scheduleVictory(
+      identity,
+      makeVictoryContext(updatedState, identity, statsRef.current[playType].currentStreak),
+      1200
+    );
+  }, [getIdentity, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleAbilityBonusSkip = useCallback(() => {
+    const state = sessions[playType].ability;
+    if (!state?.isSolved || state.bonus?.status !== 'pending') return;
+
+    const identity = getIdentity('ability', playType, state);
+    const updatedState: ModeState = { ...state, bonus: { status: 'skipped' } };
+    updateModeState(playType, 'ability', updatedState);
+    scheduleVictory(
+      identity,
+      makeVictoryContext(updatedState, identity, statsRef.current[playType].currentStreak),
+      0
+    );
+  }, [getIdentity, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleSplashBonus = useCallback((selectedSkin: Skin, isCorrect: boolean) => {
+    const state = sessions[playType].splash;
+    if (!state?.isSolved || state.bonus?.status !== 'pending') return;
+
+    const identity = getIdentity('splash', playType, state);
+    const updatedState: ModeState = {
+      ...state,
+      bonus: {
+        status: isCorrect ? 'correct' : 'missed',
+        selectionSkinId: selectedSkin.id,
+      },
+    };
+    updateModeState(playType, 'splash', updatedState);
+    scheduleVictory(
+      identity,
+      makeVictoryContext(updatedState, identity, statsRef.current[playType].currentStreak),
+      1400
+    );
+  }, [getIdentity, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleSplashBonusSkip = useCallback(() => {
+    const state = sessions[playType].splash;
+    if (!state?.isSolved || state.bonus?.status !== 'pending') return;
+
+    const identity = getIdentity('splash', playType, state);
+    const updatedState: ModeState = { ...state, bonus: { status: 'skipped' } };
+    updateModeState(playType, 'splash', updatedState);
+    scheduleVictory(
+      identity,
+      makeVictoryContext(updatedState, identity, statsRef.current[playType].currentStreak),
+      0
+    );
+  }, [getIdentity, makeVictoryContext, playType, scheduleVictory, sessions, updateModeState]);
+
+  const handleShare = useCallback(() => {
+    const context = victoryContext;
+    if (!context) return;
+    const text = `LoLdle (${context.mode.toUpperCase()}) - ${
+      context.playType === 'unlimited' ? `Streak ${context.streak} 🔥` : `Daily ${getTodayDateString()}`
+    }\nGuesses: ${context.guessCount}\nPlay at: ${window.location.origin}`;
+
+    navigator.clipboard.writeText(text)
+      .then(() => showToast('Copied result to clipboard! 📋'))
+      .catch(() => showToast('Could not copy the result.'));
+  }, [showToast, victoryContext]);
+
+  const retryData = useCallback(() => {
+    // Prevent the hydration effect from restoring old objects while the
+    // retried request is still in flight.
+    setChampions([]);
+    setStateHydrated(false);
+    setLoadAttempt(attempt => attempt + 1);
+  }, []);
+
+  const openStats = useCallback(() => setIsStatsOpen(true), []);
+  const openHelp = useCallback(() => setIsHelpOpen(true), []);
+  const closeStats = useCallback(() => setIsStatsOpen(false), []);
+  const closeHelp = useCallback(() => setIsHelpOpen(false), []);
+  const closeSurrender = useCallback(() => {
+    setIsSurrenderModalOpen(false);
+    surrenderIdentityRef.current = null;
+  }, []);
+  const resetStats = useCallback(() => {
+    const reset = createDefaultStats();
+    statsRef.current = reset;
+    setStats(reset);
+    try {
+      localStorage.removeItem(LEGACY_STATS_STORAGE_KEY);
+    } catch {
+      // Ignore storage cleanup failures; the v2 state is still reset in memory.
+    }
+  }, []);
+
+  const activeStatsBucket = stats[playType];
+
+  if (loadError) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-[#091428] text-[#f0e6d2]">
-        <Loader2 className="w-12 h-12 text-[#c8aa6e] animate-spin mb-4" />
-        <h2 className="text-xl font-serif font-bold text-[#c8aa6e]">Loading LoLdle Assets...</h2>
-        <p className="text-sm text-[#a09b8c] mt-1">Connecting to Cloud Data Dragon & CommunityDragon</p>
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#091428] text-[#f0e6d2] px-6 text-center" data-testid="dataset-error">
+        <RotateCcw className="w-12 h-12 text-rose-400 mb-4" />
+        <h2 className="text-xl font-serif font-bold text-[#f0e6d2]">Champion data unavailable</h2>
+        <p className="text-sm text-[#a09b8c] mt-2 max-w-sm">{loadError} Please retry to load the game.</p>
+        <button
+          type="button"
+          onClick={retryData}
+          className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#c8aa6e] px-5 py-2.5 font-bold text-[#091428] hover:bg-[#e0c488] transition"
+        >
+          <RotateCcw className="w-4 h-4" />
+          Retry
+        </button>
       </div>
     );
   }
 
+  if (loading || !stateHydrated) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center bg-[#091428] text-[#f0e6d2]" data-testid="app-loading">
+        <Loader2 className="w-12 h-12 text-[#c8aa6e] animate-spin mb-4" />
+        <h2 className="text-xl font-serif font-bold text-[#c8aa6e]">Loading LoLdle data...</h2>
+        <p className="text-sm text-[#a09b8c] mt-1">Preparing the local champion dataset</p>
+      </div>
+    );
+  }
+
+  const isUnlimited = playType === 'unlimited';
+
   return (
-    <div className="min-h-screen flex flex-col bg-[#091428] text-[#f0e6d2]">
-      {/* Header */}
+    <div className="min-h-screen flex flex-col bg-[#091428] text-[#f0e6d2]" data-testid="app-ready">
       <Header
         currentMode={currentMode}
-        onSelectMode={setCurrentMode}
+        onSelectMode={handleSelectMode}
         isUnlimited={isUnlimited}
-        onToggleUnlimited={handleToggleUnlimited}
-        onOpenHelp={() => setIsHelpOpen(true)}
+        onToggleUnlimited={handleTogglePlayType}
+        onOpenStats={openStats}
+        onOpenHelp={openHelp}
       />
 
-      {/* Main Game Container */}
-      <main className="flex-1 max-w-4xl w-full mx-auto px-3 sm:px-4 py-6 flex flex-col items-center">
-        {/* Top Controls: Give up / Next round */}
+      <main className="flex-1 max-w-4xl w-full mx-auto px-3 sm:px-4 py-6 flex flex-col items-center min-w-0">
         {currentState && (
           <div className="w-full flex items-center justify-between max-w-md mb-2 text-xs">
             <div className="flex items-center gap-2">
@@ -318,7 +572,7 @@ export const App: React.FC = () => {
               </button>
             )}
 
-            {isUnlimited && currentState.isSolved && (
+            {isUnlimited && currentState.isSolved && !isVictoryOpen && (
               <button
                 onClick={handleNextRound}
                 className="flex items-center gap-1 text-[#c8aa6e] hover:text-[#f0e6d2] font-semibold transition"
@@ -330,9 +584,9 @@ export const App: React.FC = () => {
           </div>
         )}
 
-        {/* Game Mode Views */}
         {currentState && currentMode === 'classic' && (
           <ClassicMode
+            key={`${playType}-classic`}
             target={currentState.target}
             guesses={currentState.guesses}
             onGuess={handleGuess}
@@ -343,8 +597,9 @@ export const App: React.FC = () => {
 
         {currentState && currentMode === 'quote' && (
           <QuoteMode
+            key={`${playType}-quote`}
             target={currentState.target}
-            quoteIndex={currentState.quoteIndex ?? 0}
+            quoteIndex={currentState.quoteIndex}
             guesses={currentState.guesses}
             onGuess={handleGuess}
             isSolved={currentState.isSolved}
@@ -354,31 +609,22 @@ export const App: React.FC = () => {
 
         {currentState && currentMode === 'ability' && (
           <AbilityMode
+            key={`${playType}-ability`}
             target={currentState.target}
-            targetAbilityKey={currentState.abilityKey || 'Q'}
+            targetAbilityKey={currentState.abilityKey}
             guesses={currentState.guesses}
             onGuess={handleGuess}
             isSolved={currentState.isSolved}
             allChampions={champions}
-            onOpenVictory={() => setIsVictoryOpen(true)}
-            onBonusComplete={(_bonusKey, isCorrect) => {
-              setModeStates(prev => {
-                const abilityState = prev.ability;
-                if (!abilityState) return prev;
-                return {
-                  ...prev,
-                  ability: {
-                    ...abilityState,
-                    bonusWon: isCorrect,
-                  },
-                };
-              });
-            }}
+            bonus={currentState.bonus}
+            onBonusComplete={handleAbilityBonus}
+            onBonusSkip={handleAbilityBonusSkip}
           />
         )}
 
         {currentState && currentMode === 'emoji' && (
           <EmojiMode
+            key={`${playType}-emoji`}
             target={currentState.target}
             guesses={currentState.guesses}
             onGuess={handleGuess}
@@ -389,82 +635,66 @@ export const App: React.FC = () => {
 
         {currentState && currentMode === 'splash' && (
           <SplashMode
+            key={`${playType}-splash`}
             target={currentState.target}
             targetSkin={currentState.skin || currentState.target.skins[0]}
             guesses={currentState.guesses}
             onGuess={handleGuess}
             isSolved={currentState.isSolved}
             allChampions={champions}
-            onOpenVictory={() => setIsVictoryOpen(true)}
-            onBonusComplete={(_selectedSkin, isCorrect) => {
-              setModeStates(prev => {
-                const splashState = prev.splash;
-                if (!splashState) return prev;
-                return {
-                  ...prev,
-                  splash: {
-                    ...splashState,
-                    bonusWon: isCorrect,
-                  },
-                };
-              });
-            }}
+            bonus={currentState.bonus}
+            onBonusComplete={handleSplashBonus}
+            onBonusSkip={handleSplashBonusSkip}
           />
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="w-full py-4 border-t border-[#785a28]/20 text-center text-xs text-[#a09b8c]/70">
-        <p>
-          LoLdle isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games.
-        </p>
-        <p className="mt-1">
-          League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
-        </p>
+      <footer className="w-full py-4 border-t border-[#785a28]/20 text-center text-xs text-[#a09b8c]/70 px-3">
+        <p>LoLdle isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games.</p>
+        <p className="mt-1">League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.</p>
       </footer>
 
-      {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1e2328] border border-[#c8aa6e] text-[#f0e6d2] px-4 py-2 rounded-xl shadow-2xl text-xs font-semibold animate-bounce">
+        <div role="status" className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-[#1e2328] border border-[#c8aa6e] text-[#f0e6d2] px-4 py-2 rounded-xl shadow-2xl text-xs font-semibold animate-bounce">
           {toastMessage}
         </div>
       )}
 
-      {/* Modals */}
-      {currentState && (
+      {victoryContext && (
         <VictoryModal
           isOpen={isVictoryOpen}
-          onClose={() => setIsVictoryOpen(false)}
-          champion={currentState.target}
-          skin={currentState.skin}
-          mode={currentMode}
-          guessCount={currentState.guesses.length}
-          isUnlimited={isUnlimited}
-          streak={stats.currentStreak}
-          abilityKey={currentState.abilityKey}
-          bonusWon={currentState.bonusWon}
-          isSurrendered={currentState.isSurrendered}
+          onClose={closeVictory}
+          champion={victoryContext.champion}
+          skin={victoryContext.skin}
+          mode={victoryContext.mode}
+          guessCount={victoryContext.guessCount}
+          playType={victoryContext.playType}
+          streak={victoryContext.streak}
+          abilityKey={victoryContext.abilityKey}
+          bonus={victoryContext.bonus}
+          isSurrendered={victoryContext.isSurrendered}
           onNextRound={handleNextRound}
           onShare={handleShare}
-          onSelectMode={setCurrentMode}
+          onSelectMode={handleSelectMode}
         />
       )}
 
       <SurrenderModal
         isOpen={isSurrenderModalOpen}
-        onClose={() => setIsSurrenderModalOpen(false)}
+        onClose={closeSurrender}
         onConfirm={handleConfirmSurrender}
-        streak={stats.currentStreak}
+        streak={activeStatsBucket.currentStreak}
       />
 
       <StatsModal
         isOpen={isStatsOpen}
-        onClose={() => setIsStatsOpen(false)}
+        onClose={closeStats}
         stats={stats}
-        onResetStats={() => setStats(DEFAULT_STATS)}
+        activePlayType={playType}
+        onResetStats={resetStats}
       />
 
-      <HelpModal isOpen={isHelpOpen} onClose={() => setIsHelpOpen(false)} />
+      <HelpModal isOpen={isHelpOpen} onClose={closeHelp} />
     </div>
   );
 };

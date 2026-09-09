@@ -22,6 +22,7 @@ test.describe('Classic Mode Flow', () => {
     const suggestion = page.locator('li').filter({ hasText: 'Aatrox' });
     await expect(suggestion).toBeVisible();
     await suggestion.click();
+    await page.getByTestId('submit-guess').click();
 
     // Verify row appeared in guesses table
     const guessRow = page.locator('div').filter({ hasText: 'Aatrox' }).first();

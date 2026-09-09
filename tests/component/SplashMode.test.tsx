@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { SplashMode } from '../../src/components/modes/SplashMode';
 import { Champion, Skin } from '../../src/types';
 
@@ -15,7 +15,7 @@ const mockSkinDynasty: Skin = {
   id: 103001,
   num: 1,
   name: 'Dynasty Ahri',
-  splashCenteredUrl: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1.jpg',
+  splashCenteredUrl: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1_centered.jpg',
   splashFullUrl: 'https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_1.jpg'
 };
 
@@ -64,6 +64,28 @@ describe('SplashMode Component Tests', () => {
     // Non-center transformOrigin
     expect(img.style.transformOrigin).not.toBe('center center');
     expect(img.style.transformOrigin).toMatch(/\d+% \d+%/);
+  });
+
+  it('shows a retry state after both the full and centered splash images fail', async () => {
+    render(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkinDynasty}
+        guesses={[]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    fireEvent.error(screen.getByAltText('Champion Splash Art'));
+    await waitFor(() => expect(screen.getByAltText('Champion Splash Art')).toBeInTheDocument());
+    fireEvent.error(screen.getByAltText('Champion Splash Art'));
+
+    await waitFor(() => {
+      expect(screen.getByText('Splash image unavailable')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'Retry' })).toBeInTheDocument();
+    });
   });
 
   it('starts at 3.5x scale and zooms out 0.25x with incorrect guesses reaching 1.0x in 10 tries without zoom text indicator', () => {

@@ -45,6 +45,7 @@ test.describe('Real Browser Speed & Latency Benchmarks', () => {
 
   test('switches rounds in Unlimited mode instantly without network delay', async ({ page }) => {
     await page.goto('/');
+    await expect(page.getByTestId('app-ready')).toBeVisible();
 
     // Verify switch happens in DOM quickly without roundtrip
     const start = Date.now();

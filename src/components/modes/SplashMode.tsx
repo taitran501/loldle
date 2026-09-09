@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { Champion, Skin } from '../../types';
+import { BonusState, Champion, Skin } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
 import { CheckCircle, XCircle, Sparkles, Search, ChevronDown, ArrowRight } from 'lucide-react';
 
@@ -10,8 +10,11 @@ interface SplashModeProps {
   onGuess: (champion: Champion) => void;
   isSolved: boolean;
   allChampions: Champion[];
+  bonus?: BonusState;
+  /** Kept as a compatibility fallback for standalone consumers; App uses onBonusSkip. */
   onOpenVictory?: () => void;
   onBonusComplete?: (selectedSkin: Skin, isCorrect: boolean) => void;
+  onBonusSkip?: () => void;
 }
 
 export const SplashMode: React.FC<SplashModeProps> = ({
@@ -21,8 +24,10 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   onGuess,
   isSolved,
   allChampions,
+  bonus,
   onOpenVictory,
   onBonusComplete,
+  onBonusSkip,
 }) => {
   // Continuous gradual zoom out with every guess:
   // Starts at 3.5x magnification, stepping down 0.25x per guess
@@ -51,6 +56,9 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   }, [target.id, targetSkin.id, targetSkin.num]);
 
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [usingFallback, setUsingFallback] = useState(false);
+  const [imageAttempt, setImageAttempt] = useState(0);
 
   // Bonus Skin Guessing state (secondary mini-quiz after solving champion)
   const [selectedBonusSkin, setSelectedBonusSkin] = useState<Skin | null>(null);
@@ -60,10 +68,16 @@ export const SplashMode: React.FC<SplashModeProps> = ({
 
   useEffect(() => {
     setImageLoaded(false);
-    setSelectedBonusSkin(null);
+    setImageError(false);
+    setUsingFallback(false);
+    setImageAttempt(0);
+    const savedBonusSkin = bonus?.selectionSkinId === undefined
+      ? (bonus?.status === 'skipped' ? targetSkin : null)
+      : target.skins.find(skin => skin.id === bonus.selectionSkinId) || null;
+    setSelectedBonusSkin(savedBonusSkin);
     setSkinQuery('');
     setIsDropdownOpen(false);
-  }, [target.id, targetSkin.id]);
+  }, [bonus?.selectionSkinId, bonus?.status, target.id, targetSkin]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -76,24 +90,25 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   }, []);
 
   const handleSelectSkin = (skin: Skin) => {
-    if (selectedBonusSkin !== null) return;
+    if (selectedBonusSkin !== null || (bonus && bonus.status !== 'pending')) return;
     setSelectedBonusSkin(skin);
     setIsDropdownOpen(false);
     const isBonusCorrect = skin.id === targetSkin.id || skin.name.toLowerCase() === targetSkin.name.toLowerCase();
     onBonusComplete?.(skin, isBonusCorrect);
-
-    // Smoothly trigger victory modal after 1400ms so player sees feedback
-    setTimeout(() => {
-      onOpenVictory?.();
-    }, 1400);
   };
 
   const handleSkipBonus = () => {
-    if (selectedBonusSkin === null) {
-      setSelectedBonusSkin(targetSkin);
-      onBonusComplete?.(targetSkin, false);
-    }
-    onOpenVictory?.();
+    if (selectedBonusSkin !== null || (bonus && bonus.status !== 'pending')) return;
+    setSelectedBonusSkin(targetSkin);
+    if (onBonusSkip) onBonusSkip();
+    else onOpenVictory?.();
+  };
+
+  const retryImage = () => {
+    setImageLoaded(false);
+    setImageError(false);
+    setUsingFallback(false);
+    setImageAttempt(attempt => attempt + 1);
   };
 
   const filteredSkins = (target.skins || []).filter(s => {
@@ -128,30 +143,40 @@ export const SplashMode: React.FC<SplashModeProps> = ({
       {/* Splash Art Viewport */}
       <div className="relative z-30 my-3 flex flex-col items-center">
         <div className="w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] rounded-2xl overflow-hidden border-2 border-[#c8aa6e]/80 shadow-[0_0_30px_rgba(200,170,110,0.25)] bg-[#091428] relative flex items-center justify-center">
-          {!imageLoaded && (
+          {!imageLoaded && !imageError && (
             <div className="absolute inset-0 bg-[#1e2328] animate-pulse flex items-center justify-center z-10">
               <Sparkles className="w-8 h-8 text-[#c8aa6e]/40 animate-spin" />
             </div>
           )}
-          <img
-            key={`${target.id}-${targetSkin.id}`}
-            src={targetSkin.splashFullUrl || targetSkin.splashCenteredUrl}
-            alt="Champion Splash Art"
-            onLoad={() => setImageLoaded(true)}
-            onError={e => {
-              const img = e.currentTarget;
-              if (img.src !== targetSkin.splashCenteredUrl && targetSkin.splashCenteredUrl) {
-                img.src = targetSkin.splashCenteredUrl;
-              }
-            }}
-            style={{
-              transform: `scale(${currentScale})`,
-              transformOrigin: `${focalX}% ${focalY}%`,
-              transition: 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease',
-              opacity: imageLoaded ? 1 : 0,
-            }}
-            className="w-full h-full object-cover select-none pointer-events-none"
-          />
+          {imageError ? (
+            <div className="flex flex-col items-center gap-2 px-3 text-center text-xs text-[#a09b8c]">
+              <span>Splash image unavailable</span>
+              <button type="button" onClick={retryImage} className="inline-flex items-center gap-1 rounded-lg border border-[#c8aa6e]/60 px-2.5 py-1 text-[#c8aa6e] hover:bg-[#c8aa6e]/20">
+                <Sparkles className="w-3 h-3" /> Retry
+              </button>
+            </div>
+          ) : (
+            <img
+              key={`${target.id}-${targetSkin.id}-${imageAttempt}`}
+              src={usingFallback ? targetSkin.splashCenteredUrl : (targetSkin.splashFullUrl || targetSkin.splashCenteredUrl)}
+              alt="Champion Splash Art"
+              onLoad={() => {
+                setImageLoaded(true);
+                setImageError(false);
+              }}
+              onError={() => {
+                if (!usingFallback && targetSkin.splashCenteredUrl && targetSkin.splashFullUrl !== targetSkin.splashCenteredUrl) setUsingFallback(true);
+                else setImageError(true);
+              }}
+              style={{
+                transform: `scale(${currentScale})`,
+                transformOrigin: `${focalX}% ${focalY}%`,
+                transition: 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease',
+                opacity: imageLoaded ? 1 : 0,
+              }}
+              className="w-full h-full object-cover select-none pointer-events-none"
+            />
+          )}
         </div>
 
         {/* Progressive Clues when stuck (after 5+ wrong guesses) */}
@@ -184,10 +209,6 @@ export const SplashMode: React.FC<SplashModeProps> = ({
                       <button
                         key={skin.id}
                         type="button"
-                        onMouseDown={(e) => {
-                          e.preventDefault();
-                          handleSelectSkin(skin);
-                        }}
                         onClick={() => handleSelectSkin(skin)}
                         className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#091428] border border-[#c8aa6e]/50 text-[#f0e6d2] hover:bg-[#c8aa6e]/20 hover:border-[#c8aa6e] transition-all cursor-pointer shadow-sm active:scale-95"
                       >
@@ -223,10 +244,6 @@ export const SplashMode: React.FC<SplashModeProps> = ({
                           <button
                             key={skin.id}
                             type="button"
-                            onMouseDown={(e) => {
-                              e.preventDefault();
-                              handleSelectSkin(skin);
-                            }}
                             onClick={() => handleSelectSkin(skin)}
                             className="w-full text-left px-3.5 py-2.5 text-xs sm:text-sm text-[#f0e6d2] hover:bg-[#c8aa6e]/20 hover:text-white transition-colors flex items-center justify-between cursor-pointer active:bg-[#c8aa6e]/30"
                           >
@@ -256,7 +273,9 @@ export const SplashMode: React.FC<SplashModeProps> = ({
             ) : (
               <div className="flex flex-col items-center gap-1">
                 <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-wider">
-                  {(selectedBonusSkin.id === targetSkin.id || selectedBonusSkin.name.toLowerCase() === targetSkin.name.toLowerCase()) ? (
+                  {bonus?.status === 'skipped' ? (
+                    <span className="text-[#c8aa6e] flex items-center gap-1">Skipped — answer revealed</span>
+                  ) : (selectedBonusSkin.id === targetSkin.id || selectedBonusSkin.name.toLowerCase() === targetSkin.name.toLowerCase()) ? (
                     <span className="text-emerald-400 flex items-center gap-1">
                       <CheckCircle className="w-4 h-4" /> Bonus Correct!
                     </span>

@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useId } from 'react';
 import { Champion } from '../types';
 import { Search } from 'lucide-react';
+import { championNameMatchesQuery, normalizeChampionSearch } from '../utils/search';
 
 interface AutocompleteInputProps {
   champions: Champion[];
@@ -20,23 +21,26 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedChampion, setSelectedChampion] = useState<Champion | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const listboxId = `champion-options-${useId().replace(/:/g, '')}`;
 
   // Filter available champions
   const availableChampions = champions.filter(
     c => !guessedChampionIds.includes(c.id)
   );
 
-  const filtered = query.trim() === ''
+  const normalizedQuery = normalizeChampionSearch(query);
+  const filtered = normalizedQuery === ''
     ? []
     : availableChampions
-        .filter(c => {
-          const q = query.toLowerCase().replace(/[^a-z0-9]/g, '');
-          const nameNorm = c.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-          return nameNorm.includes(q);
-        })
+        .filter(c => championNameMatchesQuery(c.name, query))
         .slice(0, 8);
+
+  const exactMatch = filtered.length === 1
+    && normalizeChampionSearch(filtered[0].name) === normalizedQuery;
+  const guessCandidate = selectedChampion || (exactMatch ? filtered[0] : null);
 
   useEffect(() => {
     setSelectedIndex(0);
@@ -53,11 +57,21 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleSelect = (champ: Champion) => {
+  const submitGuess = (champ: Champion | null = guessCandidate) => {
+    if (!champ || disabled) return;
     onSelectChampion(champ);
     setQuery('');
+    setSelectedChampion(null);
     setIsOpen(false);
     inputRef.current?.focus();
+  };
+
+  const handleSelect = (champ: Champion) => {
+    // Choosing a suggestion is a reversible selection. The player must still
+    // press Guess (or Enter) before a guess is committed to the round.
+    setSelectedChampion(champ);
+    setQuery(champ.name);
+    setIsOpen(false);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -76,7 +90,7 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
     } else if (e.key === 'Enter') {
       e.preventDefault();
       if (filtered.length > 0 && selectedIndex >= 0 && selectedIndex < filtered.length) {
-        handleSelect(filtered[selectedIndex]);
+        submitGuess(selectedChampion || filtered[selectedIndex]);
       }
     } else if (e.key === 'Escape') {
       setIsOpen(false);
@@ -85,13 +99,19 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
 
   return (
     <div ref={containerRef} className="relative w-full max-w-md mx-auto my-4">
-      <div className="relative flex items-center">
+      <div className="relative flex items-center gap-2">
         <input
           ref={inputRef}
           type="text"
           value={query}
+          id={listboxId}
+          aria-autocomplete="list"
+          aria-controls={`${listboxId}-list`}
+          aria-expanded={isOpen && query.trim() !== ''}
+          aria-activedescendant={isOpen && filtered[selectedIndex] ? `${listboxId}-option-${filtered[selectedIndex].id}` : undefined}
           onChange={e => {
             setQuery(e.target.value);
+            setSelectedChampion(null);
             setIsOpen(true);
           }}
           onFocus={() => {
@@ -100,19 +120,38 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
           onKeyDown={handleKeyDown}
           disabled={disabled}
           placeholder={disabled ? 'Round completed!' : placeholder}
-          className="w-full bg-[#1e2328] border-2 border-[#785a28]/60 focus:border-[#c8aa6e] text-[#f0e6d2] placeholder-[#a09b8c]/60 px-4 py-3 pl-11 rounded-xl text-base shadow-lg outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full min-w-0 bg-[#1e2328] border-2 border-[#785a28]/60 focus:border-[#c8aa6e] text-[#f0e6d2] placeholder-[#a09b8c]/60 px-4 py-3 pl-11 rounded-xl text-base shadow-lg outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         />
         <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#c8aa6e]/70" />
+        <button
+          type="button"
+          data-testid="submit-guess"
+          aria-label="Guess selected champion"
+          onClick={() => submitGuess()}
+          disabled={!guessCandidate || disabled}
+          className="flex-shrink-0 rounded-xl border border-[#c8aa6e]/70 bg-[#c8aa6e] px-3 py-3 text-sm font-bold text-[#091428] transition hover:bg-[#e0c488] disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Guess
+        </button>
       </div>
 
+      {selectedChampion && (
+        <p className="mt-1.5 text-center text-[11px] text-emerald-300" aria-live="polite">
+          {selectedChampion.name} selected. Press Guess to submit.
+        </p>
+      )}
+
       {/* Autocomplete Dropdown List */}
-      {isOpen && filtered.length > 0 && (
-        <ul className="absolute z-50 left-0 right-0 mt-2 bg-[#1e2328]/95 backdrop-blur border border-[#785a28] rounded-xl shadow-2xl overflow-hidden max-h-80 overflow-y-auto">
+      {isOpen && query.trim() !== '' && filtered.length > 0 && (
+        <ul id={`${listboxId}-list`} role="listbox" aria-label="Champion suggestions" className="absolute z-50 left-0 right-0 mt-2 bg-[#1e2328]/95 backdrop-blur border border-[#785a28] rounded-xl shadow-2xl overflow-hidden max-h-80 overflow-y-auto">
           {filtered.map((champ, idx) => {
             const isSelected = idx === selectedIndex;
             return (
               <li
                 key={champ.id}
+                id={`${listboxId}-option-${champ.id}`}
+                role="option"
+                aria-selected={isSelected}
                 onMouseEnter={() => setSelectedIndex(idx)}
                 onClick={() => handleSelect(champ)}
                 className={`flex items-center gap-3 px-3 py-2.5 cursor-pointer transition-colors ${
@@ -135,6 +174,15 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
             );
           })}
         </ul>
+      )}
+      {isOpen && query.trim() !== '' && filtered.length === 0 && (
+        <div
+          id={`${listboxId}-list`}
+          role="status"
+          className="absolute z-50 left-0 right-0 mt-2 bg-[#1e2328]/95 backdrop-blur border border-[#785a28] rounded-xl shadow-2xl px-3 py-3 text-xs text-[#a09b8c] text-center"
+        >
+          No champion matches your search
+        </div>
       )}
     </div>
   );

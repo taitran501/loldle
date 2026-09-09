@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
+import { QUOTE_AUDIO_UNLOCK_GUESSES, QUOTE_REGION_UNLOCK_GUESSES, QUOTE_THREE_UNLOCK_GUESSES, QUOTE_TWO_UNLOCK_GUESSES } from '../../utils/constants';
 import { Volume2, VolumeX, Quote as QuoteIcon, CheckCircle, XCircle, Sparkles, Crown, MapPin } from 'lucide-react';
 
 interface QuoteModeProps {
@@ -21,17 +22,20 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
   allChampions,
 }) => {
   const [playingQuoteIndex, setPlayingQuoteIndex] = useState<1 | 2 | 3 | null>(null);
+  const [loadingQuoteIndex, setLoadingQuoteIndex] = useState<1 | 2 | 3 | null>(null);
+  const [audioErrorIndex, setAudioErrorIndex] = useState<1 | 2 | 3 | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Progressive Clue Milestones: 3, 5, 7, 9
   // 3 guesses: Audio voice line of Quote 1
   // 5 guesses: Quote 2 (Interaction with another champion) + Audio 2
   // 7 guesses: Quote 3 (Signature / Champion Select Pick line) + Audio 3
   // 9 guesses: Region Clue
-  const isAudio1Unlocked = guesses.length >= 3 || isSolved;
-  const isQuote2Unlocked = guesses.length >= 5 || isSolved;
-  const isQuote3Unlocked = guesses.length >= 7 || isSolved;
-  const isRegionUnlocked = guesses.length >= 9 || isSolved;
+  const isAudio1Unlocked = guesses.length >= QUOTE_AUDIO_UNLOCK_GUESSES || isSolved;
+  const isQuote2Unlocked = guesses.length >= QUOTE_TWO_UNLOCK_GUESSES || isSolved;
+  const isQuote3Unlocked = guesses.length >= QUOTE_THREE_UNLOCK_GUESSES || isSolved;
+  const isRegionUnlocked = guesses.length >= QUOTE_REGION_UNLOCK_GUESSES || isSolved;
 
   // 1. Quote 1: Random quote based on quoteIndex
   const activeQuote = target.quotes?.[quoteIndex] ?? target.quotes?.[0] ?? null;
@@ -69,11 +73,20 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
 
   // Stop and reset audio if target champion or quotes change
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current = null;
-    }
+    if (audioRef.current) audioRef.current.pause();
+    audioRef.current = null;
+    if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+    audioTimeoutRef.current = null;
     setPlayingQuoteIndex(null);
+    setLoadingQuoteIndex(null);
+    setAudioErrorIndex(null);
+
+    return () => {
+      if (audioRef.current) audioRef.current.pause();
+      audioRef.current = null;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
+    };
   }, [target.id, audioUrl1, quote2?.audioUrl, quote3?.audioUrl]);
 
   const handlePlayAudio = (quoteNum: 1 | 2 | 3 = 1) => {
@@ -89,26 +102,76 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
         audioRef.current.pause();
         audioRef.current.currentTime = 0;
       }
+      audioRef.current = null;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
       setPlayingQuoteIndex(null);
+      setLoadingQuoteIndex(null);
       return;
     }
 
     if (audioRef.current) {
       audioRef.current.pause();
     }
+    if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+    audioTimeoutRef.current = null;
 
+    setAudioErrorIndex(null);
+    setLoadingQuoteIndex(quoteNum);
     const audio = new Audio(targetAudio);
-    audio.onended = () => setPlayingQuoteIndex(null);
-    audio.onerror = () => setPlayingQuoteIndex(null);
+    audio.onended = () => {
+      if (audioRef.current !== audio) return;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
+      setPlayingQuoteIndex(null);
+      setLoadingQuoteIndex(null);
+    };
+    audio.onerror = () => {
+      if (audioRef.current !== audio) return;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
+      setPlayingQuoteIndex(null);
+      setLoadingQuoteIndex(null);
+      setAudioErrorIndex(quoteNum);
+    };
     audioRef.current = audio;
+    audioTimeoutRef.current = setTimeout(() => {
+      if (audioRef.current !== audio) return;
+      audio.pause();
+      audioRef.current = null;
+      audioTimeoutRef.current = null;
+      setPlayingQuoteIndex(null);
+      setLoadingQuoteIndex(null);
+      setAudioErrorIndex(quoteNum);
+    }, 8000);
 
     audio.play().then(() => {
+      if (audioRef.current !== audio) return;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
       setPlayingQuoteIndex(quoteNum);
+      setLoadingQuoteIndex(null);
     }).catch(err => {
       console.warn('Audio playback error:', err);
+      if (audioRef.current !== audio) return;
+      if (audioTimeoutRef.current) clearTimeout(audioTimeoutRef.current);
+      audioTimeoutRef.current = null;
       setPlayingQuoteIndex(null);
+      setLoadingQuoteIndex(null);
+      setAudioErrorIndex(quoteNum);
     });
   };
+
+  const audioButtonLabel = (quoteNum: 1 | 2 | 3, defaultLabel: string) => {
+    if (playingQuoteIndex === quoteNum) return quoteNum === 1 ? 'Playing Voice...' : quoteNum === 2 ? 'Playing 2nd Voice...' : 'Playing 3rd Voice...';
+    if (loadingQuoteIndex === quoteNum) return 'Loading voice line...';
+    if (audioErrorIndex === quoteNum) return 'Retry voice line';
+    return defaultLabel;
+  };
+
+  const AudioErrorMessage: React.FC<{ quoteNum: 1 | 2 | 3 }> = ({ quoteNum }) => (
+    audioErrorIndex === quoteNum ? <span className="text-xs text-rose-400">Audio could not be loaded. Click to retry.</span> : null
+  );
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -148,8 +211,9 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
                 } disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer`}
               >
                 {playingQuoteIndex === 1 ? <Volume2 className="w-5 h-5 animate-bounce" /> : <Volume2 className="w-5 h-5" />}
-                <span>{playingQuoteIndex === 1 ? 'Playing Voice...' : 'Listen to Voice Line'}</span>
+                <span>{audioButtonLabel(1, 'Listen to Voice Line')}</span>
               </button>
+              <AudioErrorMessage quoteNum={1} />
             </div>
           )}
 
@@ -175,8 +239,9 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
                     } cursor-pointer`}
                   >
                     {playingQuoteIndex === 2 ? <Volume2 className="w-5 h-5 animate-bounce" /> : <Volume2 className="w-5 h-5" />}
-                    <span>{playingQuoteIndex === 2 ? 'Playing 2nd Voice...' : 'Listen to 2nd Voice'}</span>
+                    <span>{audioButtonLabel(2, 'Listen to 2nd Voice')}</span>
                   </button>
+                  <AudioErrorMessage quoteNum={2} />
                 </div>
               )}
             </div>
@@ -204,8 +269,9 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
                     } cursor-pointer`}
                   >
                     {playingQuoteIndex === 3 ? <Volume2 className="w-5 h-5 animate-bounce" /> : <Volume2 className="w-5 h-5" />}
-                    <span>{playingQuoteIndex === 3 ? 'Playing 3rd Voice...' : 'Listen to 3rd Voice'}</span>
+                    <span>{audioButtonLabel(3, 'Listen to 3rd Voice')}</span>
                   </button>
+                  <AudioErrorMessage quoteNum={3} />
                 </div>
               )}
             </div>
@@ -233,14 +299,14 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
               <div className="flex items-center gap-2 text-xs text-[#a09b8c] bg-[#091428]/60 px-4 py-2 rounded-full border border-[#785a28]/30 shadow-md">
                 <VolumeX className="w-4 h-4 text-[#a09b8c]" />
                 <span>
-                  {guesses.length < 3 ? (
-                    `Audio clue in ${3 - guesses.length} ${3 - guesses.length === 1 ? 'try' : 'tries'}`
-                  ) : guesses.length < 5 ? (
-                    `Quote #2 (Interaction) in ${5 - guesses.length} ${5 - guesses.length === 1 ? 'try' : 'tries'}`
-                  ) : guesses.length < 7 ? (
-                    `Signature Quote in ${7 - guesses.length} ${7 - guesses.length === 1 ? 'try' : 'tries'}`
-                  ) : guesses.length < 9 ? (
-                    `Region clue in ${9 - guesses.length} ${9 - guesses.length === 1 ? 'try' : 'tries'}`
+                  {guesses.length < QUOTE_AUDIO_UNLOCK_GUESSES ? (
+                    `Audio clue in ${QUOTE_AUDIO_UNLOCK_GUESSES - guesses.length} ${QUOTE_AUDIO_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
+                  ) : guesses.length < QUOTE_TWO_UNLOCK_GUESSES ? (
+                    `Quote #2 (Interaction) in ${QUOTE_TWO_UNLOCK_GUESSES - guesses.length} ${QUOTE_TWO_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
+                  ) : guesses.length < QUOTE_THREE_UNLOCK_GUESSES ? (
+                    `Signature Quote in ${QUOTE_THREE_UNLOCK_GUESSES - guesses.length} ${QUOTE_THREE_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
+                  ) : guesses.length < QUOTE_REGION_UNLOCK_GUESSES ? (
+                    `Region clue in ${QUOTE_REGION_UNLOCK_GUESSES - guesses.length} ${QUOTE_REGION_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
                   ) : (
                     'All clues unlocked'
                   )}
