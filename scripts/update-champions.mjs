@@ -5,6 +5,8 @@ const DDRAGON_VERSION = '16.17.1';
 const CHAMPIONS_DIR = path.resolve('public/assets/champions');
 const ABILITIES_DIR = path.resolve('public/assets/abilities');
 const DATA_FILE = path.resolve('public/data/champions.json');
+const EMOJI_MIN_CLUES = 4;
+const EMOJI_MAX_CLUES = 6;
 
 async function downloadFile(url, dest) {
   try {
@@ -181,6 +183,11 @@ async function main() {
   const existingFiltered = existingData.filter(c => !NEW_CHAMPS_CONFIG.some(nc => nc.id.toLowerCase() === c.id.toLowerCase()));
 
   for (const c of NEW_CHAMPS_CONFIG) {
+    const emojis = [...new Set(c.emojis.filter(emoji => typeof emoji === 'string' && emoji.trim().length > 0))];
+    if (emojis.length < EMOJI_MIN_CLUES || emojis.length > EMOJI_MAX_CLUES) {
+      throw new Error(`Emoji config for ${c.id} must contain ${EMOJI_MIN_CLUES}-${EMOJI_MAX_CLUES} unique clues`);
+    }
+
     const abilities = [
       { key: 'P', name: c.abilityNames.P, iconUrl: `/assets/abilities/${c.id}_p.png` },
       { key: 'Q', name: c.abilityNames.Q, iconUrl: `/assets/abilities/${c.id}_q.png` },
@@ -215,7 +222,7 @@ async function main() {
       iconUrl: `/assets/champions/${c.id}.png`,
       abilities,
       quote: c.quote,
-      emojis: c.emojis,
+      emojis,
       skins
     };
 

@@ -7,7 +7,7 @@ A web-based League of Legends guessing game featuring Daily and Unlimited modes 
 - **Classic:** Deduce the mystery champion by comparing seven attributes: Gender, Positions, Species, Resource, Range type, Regions, and Release year. Clue tokens unlock at 5 guesses (Quote), 10 guesses (Ability), and 15 guesses (Splash).
 - **Quote:** Identify the champion from an iconic spoken quote. An audio clue unlocks after 3 guesses.
 - **Ability:** Guess the champion based on an ability icon (Passive, Q, W, E, or R). Optional Challenge Mode toggles (grayscale, rotation) allow customizable difficulty.
-- **Emoji:** Guess the champion represented by a sequence of up to 4 thematic emojis, unlocked incrementally.
+- **Emoji:** Guess the champion represented by a curated sequence of 4-6 thematic emojis. Each champion can use a different number of clues, unlocked incrementally.
 - **Splash:** Identify the champion from a cropped section of official skin splash art. The viewport zooms out with each subsequent guess.
 
 Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized streak mode) are supported across all modes. Active rounds, guesses, completed Daily rounds, and the selected mode persist in versioned `localStorage` state; Daily and Unlimited have separate sessions and statistics.

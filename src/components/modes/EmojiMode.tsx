@@ -2,6 +2,7 @@ import React from 'react';
 import { Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
 import { CheckCircle, XCircle, Lock, HelpCircle } from 'lucide-react';
+import { getEmojiRevealCount, normalizeEmojiClues } from '../../utils/emoji';
 
 interface EmojiModeProps {
   target: Champion;
@@ -30,12 +31,8 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
   isSolved,
   allChampions,
 }) => {
-  // Emojis reveal progressively:
-  // 0 guesses: 1st emoji
-  // 1 guess: 2nd emoji
-  // 2 guesses: 3rd emoji
-  // 3+ guesses or solved: 4th emoji (all revealed)
-  const revealedCount = isSolved ? target.emojis.length : Math.min(guesses.length + 1, target.emojis.length);
+  const emojiClues = normalizeEmojiClues(target.emojis);
+  const revealedCount = getEmojiRevealCount(emojiClues.length, guesses.length, isSolved);
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -44,18 +41,25 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
           Emoji Mode
         </h2>
         <p className="text-sm text-[#a09b8c] mt-1">
-          Guess the champion from thematic emojis. A new emoji unlocks with each guess!
+          Guess the champion from thematic emojis. One new clue unlocks with each guess!
         </p>
       </div>
 
       {/* Emoji Cards Container */}
-      <div className="flex items-center justify-center gap-2.5 sm:gap-4 my-5">
-        {target.emojis.map((emoji, idx) => {
+      <div
+        data-testid="emoji-clues"
+        role="list"
+        aria-label={`Emoji clues: ${revealedCount} of ${emojiClues.length} revealed`}
+        className="grid grid-cols-4 items-center justify-items-center gap-2.5 sm:flex sm:flex-wrap sm:justify-center sm:gap-4 my-5 w-full max-w-2xl"
+      >
+        {emojiClues.map((emoji, idx) => {
           const isUnlocked = idx < revealedCount;
 
           return (
             <div
-              key={idx}
+              key={`${emoji}-${idx}`}
+              role="listitem"
+              aria-label={isUnlocked ? `Emoji clue ${idx + 1}: ${emoji}` : `Emoji clue ${idx + 1}: locked`}
               className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex flex-col items-center justify-center relative transition-all duration-300 select-none p-3 ${
                 isUnlocked
                   ? 'bg-[#1e2328]/95 border-2 border-[#c8aa6e] shadow-[0_0_20px_rgba(200,170,110,0.25)] animate-flip-in hover:scale-105'
@@ -82,7 +86,16 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
             </div>
           );
         })}
+        {emojiClues.length === 0 && (
+          <div role="status" className="col-span-4 text-sm text-rose-300">
+            No emoji clues available.
+          </div>
+        )}
       </div>
+
+      <p className="text-xs text-[#a09b8c]" aria-live="polite">
+        {revealedCount} of {emojiClues.length} clues revealed
+      </p>
 
       {/* Progressive Clue when stuck (after 4+ wrong guesses) */}
       {guesses.length >= 4 && !isSolved && (

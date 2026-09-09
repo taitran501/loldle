@@ -32,6 +32,7 @@ export interface Champion {
     text: string;
     audioUrl: string;
   }[];
+  /** Curated per-champion clue sequence; each dataset entry contains 4-6 clues. */
   emojis: string[];
   skins: Skin[];
 }
