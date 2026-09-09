@@ -11,6 +11,7 @@ test.describe('Game Modes Navigation Flow', () => {
     const classicInput = page.getByPlaceholder('Guess a champion (e.g. Ahri, Yasuo...)');
     await classicInput.fill('Aatrox');
     await page.locator('li').filter({ hasText: 'Aatrox' }).first().click();
+    await page.getByTestId('submit-guess').click();
     await expect(page.locator('div').filter({ hasText: 'Aatrox' }).first()).toBeVisible();
 
     const nav = page.locator('nav');

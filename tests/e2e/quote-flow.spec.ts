@@ -13,7 +13,7 @@ test.describe('Quote Mode Flow', () => {
     await expect(page.getByText('Who says this quote in League of Legends?')).toBeVisible();
 
     // Verify initial locked audio clue badge
-    await expect(page.getByText('Audio clue in 5 tries')).toBeVisible();
+    await expect(page.getByText('Audio clue in 3 tries')).toBeVisible();
 
     // Make an incorrect guess
     const input = page.getByPlaceholder('Guess who said it...');
@@ -23,11 +23,12 @@ test.describe('Quote Mode Flow', () => {
     const suggestion = page.locator('li').filter({ hasText: 'Aatrox' });
     await expect(suggestion).toBeVisible();
     await suggestion.click();
+    await page.getByTestId('submit-guess').click();
 
     // Verify guess history appeared
     await expect(page.locator('div').filter({ hasText: 'Aatrox' }).first()).toBeVisible();
 
-    // Verify audio countdown decreased to 4 tries
-    await expect(page.getByText('Audio clue in 4 tries')).toBeVisible();
+    // Verify audio countdown decreased to 2 tries
+    await expect(page.getByText('Audio clue in 2 tries')).toBeVisible();
   });
 });
