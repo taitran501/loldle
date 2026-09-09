@@ -192,9 +192,9 @@ const ICONIC_QUOTES = {
 
 // Iconic champion emojis dictionary (Curated, intuitive, zero typos)
 const ICONIC_EMOJIS = {
-  aatrox: ["🗡️", "🩸", "👿", "⛓️"],
+  aatrox: ["🗡️", "🩸", "👿", "⛓️", "🪽"],
   ahri: ["🦊", "🔮", "💖", "✨"],
-  akali: ["🥷", "💨", "🗡️", "🍜"],
+  akali: ["🥷", "💨", "🗡️", "🍜", "🌫️"],
   akshan: ["🪝", "🔫", "🪃", "🔄"],
   alistar: ["🐂", "⛓️", "🛡️", "💥"],
   ambessa: ["🐺", "⚔️", "👑", "🩸"],
@@ -208,12 +208,12 @@ const ICONIC_EMOJIS = {
   azir: ["🦅", "🏜️", "👑", "💂"],
   bard: ["🎺", "🔔", "🌀", "⏳"],
   belveth: ["🟣", "👑", "👁️", "🗡️"],
-  blitzcrank: ["🤖", "🪝", "⚡", "🥊"],
+  blitzcrank: ["🤖", "🪝", "⚡", "🥊", "🧲"],
   brand: ["🔥", "🌋", "💀", "☄️"],
   braum: ["🛡️", "🧔", "🐏", "❤️"],
   briar: ["🧛", "🩸", "⛓️", "🤤"],
   caitlyn: ["🎩", "🧁", "🎯", "🔍"],
-  camille: ["✂️", "🦵", "🪝", "💎"],
+  camille: ["✂️", "🦵", "🪝", "💎", "🦾"],
   cassiopeia: ["🐍", "🪨", "🧪", "👑"],
   chogath: ["🦖", "🍽️", "🟣", "🔊"],
   corki: ["✈️", "💣", "🚀", "🧔"],
@@ -221,7 +221,7 @@ const ICONIC_EMOJIS = {
   diana: ["🌙", "🗡️", "🌑", "✨"],
   drmundo: ["💉", "🪓", "🟣", "💼"],
   draven: ["🪓", "🎪", "😎", "🪙"],
-  ekko: ["⏳", "🏏", "⚡", "🌀"],
+  ekko: ["⏳", "🏏", "⚡", "🌀", "⏪"],
   elise: ["🕷️", "🕸️", "👑", "👠"],
   evelynn: ["😈", "👠", "🖤", "💋"],
   ezreal: ["🧤", "✨", "🗺️", "🎒"],
@@ -237,7 +237,7 @@ const ICONIC_EMOJIS = {
   gwen: ["✂️", "🪡", "🧵", "👗"],
   hecarim: ["🐴", "👻", "🪓", "💨"],
   heimerdinger: ["🔬", "🔧", "🚀", "🧠"],
-  hwei: ["🎨", "🖌️", "🎭", "🖼️"],
+  hwei: ["🎨", "🖌️", "🎭", "🖼️", "🌈"],
   illaoi: ["🐙", "🔮", "💪", "🌊"],
   irelia: ["🗡️", "🩰", "🪷", "🎀"],
   ivern: ["🌳", "🌿", "🦌", "🌼"],
@@ -246,7 +246,7 @@ const ICONIC_EMOJIS = {
   jax: ["🏮", "🥚", "🌀", "⚔️"],
   jayce: ["🔨", "⚡", "🚀", "👔"],
   jhin: ["4️⃣", "🎭", "🌹", "🔫"],
-  jinx: ["🚀", "💣", "🔫", "👧"],
+  jinx: ["🚀", "💣", "🔫", "👧", "🎆"],
   ksante: ["🛡️", "🦁", "💪", "🥋"],
   kaisa: ["🟣", "👾", "🦋", "🔫"],
   kalista: ["🏹", "👻", "🗡️", "🤝"],
@@ -258,7 +258,7 @@ const ICONIC_EMOJIS = {
   kayn: ["🪓", "👁️", "😈", "👥"],
   kennen: ["⚡", "🥷", "🐹", "🌀"],
   khazix: ["🦗", "🔪", "🟣", "🧬"],
-  kindred: ["🐑", "🐺", "🏹", "☯️"],
+  kindred: ["🐑", "🐺", "🏹", "☯️", "🎭"],
   kled: ["🦎", "🍄", "🪓", "🤠"],
   kogmaw: ["🐛", "🤮", "💣", "🎯"],
   leblanc: ["🧙‍♀️", "🎭", "🌹", "🪞"],
@@ -267,7 +267,7 @@ const ICONIC_EMOJIS = {
   lillia: ["🦌", "🌸", "💤", "🎳"],
   lissandra: ["❄️", "🧊", "👑", "👁️"],
   locke: ["🕯️", "⛓️", "🗡️", "🌫️"],
-  lucian: ["🔫", "🔫", "💨", "🖤"],
+  lucian: ["🔫", "👻", "💨", "🖤"],
   lulu: ["🧚", "🧁", "🪄", "🍄"],
   lux: ["🌈", "💡", "🪄", "👧"],
   malphite: ["🪨", "⛰️", "🛡️", "💥"],
@@ -280,7 +280,7 @@ const ICONIC_EMOJIS = {
   mordekaiser: ["🔨", "👑", "🏰", "💀"],
   morgana: ["⛓️", "🖤", "🟣", "🛡️"],
   naafiri: ["🐕", "🗡️", "🐺", "🩸"],
-  nami: ["🧜‍♀️", "🌊", "🫧", "🌙"],
+  nami: ["🧜‍♀️", "🌊", "🫧", "🌙", "🔱"],
   nasus: ["🐕", "⏳", "🪓", "🏜️"],
   nautilus: ["⚓", "🤿", "🌊", "🛡️"],
   neeko: ["🦎", "🌸", "🤹‍♀️", "🌈"],
@@ -308,7 +308,7 @@ const ICONIC_EMOJIS = {
   ryze: ["📜", "🧙‍♂️", "🔵", "🌀"],
   samira: ["🪙", "🗡️", "🔫", "🌹"],
   sejuani: ["🐗", "❄️", "⛓️", "👑"],
-  senna: ["🔫", "👻", "🌫️", "🖤"],
+  senna: ["🔫", "👻", "🌫️", "🖤", "🕯️"],
   seraphine: ["🎤", "💖", "🎵", "✨"],
   sett: ["🥊", "🤼", "👑", "💪"],
   shaco: ["🤡", "🔪", "📦", "🃏"],
@@ -329,30 +329,30 @@ const ICONIC_EMOJIS = {
   talon: ["🗡️", "🦅", "🥷", "🩸"],
   taric: ["💎", "✨", "🛡️", "🔨"],
   teemo: ["🍄", "🧭", "🎯", "😈"],
-  thresh: ["🏮", "⛓️", "💀", "👻"],
+  thresh: ["🏮", "⛓️", "💀", "👻", "🟢"],
   tristana: ["🚀", "💣", "👧", "💥"],
   trundle: ["🧊", "🦴", "👹", "👑"],
   tryndamere: ["🗡️", "😡", "👑", "🩸"],
   twistedfate: ["🃏", "🎩", "💰", "🌀"],
   twitch: ["🐀", "🏹", "🧀", "🧪"],
-  udyr: ["🐏", "🐻", "🐗", "🦅"],
+  udyr: ["🐏", "🐻", "🐗", "🦅", "🥋", "🔥"],
   urgot: ["🦀", "🔫", "⛓️", "🦾"],
   varus: ["🏹", "💜", "🩸", "🎯"],
   vayne: ["🏹", "🕶️", "🦇", "🖤"],
   veigar: ["🧙‍♂️", "🪄", "😈", "☄️"],
   velkoz: ["🦑", "👁️", "📐", "🟣"],
   vex: ["🖤", "👻", "😒", "☔"],
-  vi: ["🥊", "🧁", "💥", "🚓"],
+  vi: ["🥊", "🧁", "💥", "🚓", "🛠️"],
   viego: ["👑", "🗡️", "🖤", "💍"],
-  viktor: ["🦾", "⚡", "🤖", "⚙️"],
+  viktor: ["🦾", "⚡", "🤖", "⚙️", "🧪"],
   vladimir: ["🩸", "🍷", "🧛", "🔴"],
   volibear: ["🐻", "⚡", "❄️", "⛈️"],
-  warwick: ["🐺", "🩸", "🧪", "🐾"],
+  warwick: ["🐺", "🩸", "🧪", "🐾", "🌕"],
   wukong: ["🐒", "👑", "☁️", "🌀"],
   xayah: ["🪶", "🦅", "🗡️", "💜"],
   xerath: ["⚡", "🔷", "💥", "⛓️"],
   xinzhao: ["🗡️", "🚩", "🛡️", "👑"],
-  yasuo: ["🌪️", "🗡️", "🍶", "🍃"],
+  yasuo: ["🌪️", "🗡️", "🍶", "🍃", "🎐"],
   yone: ["⚔️", "👺", "💨", "👻"],
   yorick: ["⛏️", "👻", "⚰️", "👰"],
   yuumi: ["🐱", "📖", "🐟", "✨"],
@@ -366,6 +366,21 @@ const ICONIC_EMOJIS = {
   zoe: ["🦋", "✨", "💤", "🌀"],
   zyra: ["🌱", "🌹", "🥀", "🌿"]
 };
+
+const DEFAULT_EMOJI_CLUES = ['⚔️', '🛡️', '✨', '🎯'];
+const MIN_EMOJI_CLUES = 4;
+const MAX_EMOJI_CLUES = 6;
+
+function getEmojiClues(championKey) {
+  const configured = ICONIC_EMOJIS[championKey] || DEFAULT_EMOJI_CLUES;
+  const clues = [...new Set(configured.filter(emoji => typeof emoji === 'string' && emoji.trim().length > 0))];
+
+  if (clues.length < MIN_EMOJI_CLUES || clues.length > MAX_EMOJI_CLUES) {
+    throw new Error(`Emoji config for ${championKey} must contain ${MIN_EMOJI_CLUES}-${MAX_EMOJI_CLUES} unique clues`);
+  }
+
+  return clues;
+}
 
 // Supplement for newest champions not in older LoLdle dump
 const NEW_CHAMPIONS_DATA = {
@@ -575,7 +590,7 @@ async function main() {
     const audioUrl = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/${numericId}.ogg`;
 
     // Emojis
-    const emojis = ICONIC_EMOJIS[normKey] || ['⚔️', '🛡️', '✨'];
+    const emojis = getEmojiClues(normKey);
 
     finalChampions.push({
       id: champKey,
