@@ -4,6 +4,7 @@ import path from 'path';
 import { compareChampions } from '../../src/utils/compare';
 import { getDailyTarget, getRandomTarget } from '../../src/utils/daily';
 import { Champion } from '../../src/types';
+import { championNameMatchesQuery } from '../../src/utils/search';
 
 describe('Performance & Latency Benchmark Tests', () => {
   const jsonPath = path.resolve(process.cwd(), 'public/data/champions.json');
@@ -15,10 +16,7 @@ describe('Performance & Latency Benchmark Tests', () => {
 
     for (let i = 0; i < 500; i++) {
       const q = queries[i % queries.length];
-      champions.filter(c => {
-        const queryNorm = q.toLowerCase();
-        return c.name.toLowerCase().includes(queryNorm);
-      }).slice(0, 8);
+      champions.filter(c => championNameMatchesQuery(c.name, q)).slice(0, 8);
     }
 
     const elapsed = performance.now() - start;

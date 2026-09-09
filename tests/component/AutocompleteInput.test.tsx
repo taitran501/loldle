@@ -142,9 +142,29 @@ describe('AutocompleteInput Component Tests', () => {
     expect(screen.queryByText('Ahri')).not.toBeInTheDocument();
     expect(screen.getByText('Aatrox')).toBeInTheDocument();
     expect(screen.getByText('Akali')).toBeInTheDocument();
+    expect(screen.queryByText('Dr. Mundo')).not.toBeInTheDocument();
   });
 
-  it('selects champion on item click and clears input', async () => {
+  it('uses a prefix search so a one-letter A query only shows A champions', async () => {
+    const user = userEvent.setup();
+    render(
+      <AutocompleteInput
+        champions={mockChampions}
+        guessedChampionIds={[]}
+        onSelectChampion={vi.fn()}
+      />
+    );
+
+    const input = screen.getByPlaceholderText('Type champion name...');
+    await user.type(input, 'A');
+
+    expect(screen.getByText('Aatrox')).toBeInTheDocument();
+    expect(screen.getByText('Ahri')).toBeInTheDocument();
+    expect(screen.getByText('Akali')).toBeInTheDocument();
+    expect(screen.queryByText('Dr. Mundo')).not.toBeInTheDocument();
+  });
+
+  it('selects a suggestion without submitting until Guess is confirmed', async () => {
     const user = userEvent.setup();
     const onSelectMock = vi.fn();
     render(
@@ -161,9 +181,15 @@ describe('AutocompleteInput Component Tests', () => {
     const item = screen.getByText('Akali');
     await user.click(item);
 
+    expect(onSelectMock).not.toHaveBeenCalled();
+    expect(input).toHaveValue('Akali');
+    expect(screen.getByRole('button', { name: 'Guess selected champion' })).toBeEnabled();
+    expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Guess selected champion' }));
+
     expect(onSelectMock).toHaveBeenCalledWith(mockChampions[2]);
     expect(input).toHaveValue('');
-    expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
   it('supports keyboard navigation: ArrowDown, ArrowUp, and Enter', async () => {
@@ -205,6 +231,25 @@ describe('AutocompleteInput Component Tests', () => {
 
     await user.keyboard('{Escape}');
     expect(screen.queryByText('Aatrox')).not.toBeInTheDocument();
+  });
+
+  it('exposes ARIA state and a no-results message for unmatched searches', async () => {
+    const user = userEvent.setup();
+    render(
+      <AutocompleteInput
+        champions={mockChampions}
+        guessedChampionIds={[]}
+        onSelectChampion={vi.fn()}
+      />
+    );
+
+    const input = screen.getByPlaceholderText('Type champion name...');
+    await user.type(input, 'does-not-exist');
+
+    expect(input).toHaveAttribute('aria-autocomplete', 'list');
+    expect(input).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('status')).toHaveTextContent('No champion matches your search');
+    expect(screen.queryByRole('listbox')).not.toBeInTheDocument();
   });
 
   it('disables input and shows round completed placeholder when disabled', () => {
