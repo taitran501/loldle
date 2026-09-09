@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Champion, ClassicComparison, MatchStatus } from '../../types';
 import { compareChampions } from '../../utils/compare';
+import { CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES, CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES, CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES } from '../../utils/constants';
 import { AutocompleteInput } from '../AutocompleteInput';
 import { ArrowUp, ArrowDown, Check, Lock, Quote as QuoteIcon, Sparkles, Image as ImageIcon, X } from 'lucide-react';
 
@@ -37,22 +38,28 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
 
   // Classic clues unlock thresholds:
   // 1. Quote clue: 5 tries
-  // 2. Ability clue: 7 tries
-  // 3. Splash clue: 9 tries
+  // 2. Ability clue: 10 tries
+  // 3. Splash clue: 15 tries
   const [activeClue, setActiveClue] = useState<'quote' | 'ability' | 'splash' | null>(null);
 
   // Track newly added guess to stagger its tile animations from gender to release
-  const [prevGuessesLength, setPrevGuessesLength] = useState(guesses.length);
+  const prevGuessesLengthRef = useRef(guesses.length);
   const [animatingGuessId, setAnimatingGuessId] = useState<string | null>(null);
 
-  if (guesses.length !== prevGuessesLength) {
-    setPrevGuessesLength(guesses.length);
-    if (guesses.length > prevGuessesLength && guesses.length > 0) {
+  useEffect(() => {
+    if (guesses.length > prevGuessesLengthRef.current && guesses.length > 0) {
       setAnimatingGuessId(guesses[0].id);
     } else {
       setAnimatingGuessId(null);
     }
-  }
+    prevGuessesLengthRef.current = guesses.length;
+  }, [guesses.length, guesses[0]?.id]);
+
+  useEffect(() => {
+    setActiveClue(null);
+    setAnimatingGuessId(null);
+    prevGuessesLengthRef.current = guesses.length;
+  }, [target.id]);
 
   const getTileAnim = (isNew: boolean, colIndex: number) => {
     if (!isNew) return {};
@@ -62,9 +69,9 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
     };
   };
 
-  const quoteUnlocked = guesses.length >= 5 || isSolved;
-  const abilityUnlocked = guesses.length >= 7 || isSolved;
-  const splashUnlocked = guesses.length >= 9 || isSolved;
+  const quoteUnlocked = guesses.length >= CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES || isSolved;
+  const abilityUnlocked = guesses.length >= CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES || isSolved;
+  const splashUnlocked = guesses.length >= CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES || isSolved;
 
   const toggleClue = (type: 'quote' | 'ability' | 'splash') => {
     setActiveClue(prev => (prev === type ? null : type));
@@ -98,7 +105,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             <button
               onClick={() => quoteUnlocked && toggleClue('quote')}
               disabled={!quoteUnlocked}
-              title={quoteUnlocked ? 'Quote Clue' : `Quote unlocks in ${Math.max(1, 5 - guesses.length)} tries`}
+              title={quoteUnlocked ? 'Quote Clue' : `Quote unlocks in ${Math.max(1, CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES - guesses.length)} tries`}
               className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center relative transition-all duration-300 border-2 ${
                 !quoteUnlocked
                   ? 'bg-[#091428]/70 border-[#785a28]/30 text-[#a09b8c]/40 cursor-not-allowed'
@@ -119,7 +126,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             </span>
             <span className="text-[10px] text-[#a09b8c]">
               {!quoteUnlocked ? (
-                `${Math.max(1, 5 - guesses.length)} tries`
+                `${Math.max(1, CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES - guesses.length)} tries`
               ) : activeClue === 'quote' ? (
                 <span className="text-amber-400 font-medium">Viewing</span>
               ) : (
@@ -133,7 +140,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             <button
               onClick={() => abilityUnlocked && toggleClue('ability')}
               disabled={!abilityUnlocked}
-              title={abilityUnlocked ? 'Ability Clue' : `Ability unlocks in ${Math.max(1, 7 - guesses.length)} tries`}
+              title={abilityUnlocked ? 'Ability Clue' : `Ability unlocks in ${Math.max(1, CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES - guesses.length)} tries`}
               className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center relative transition-all duration-300 border-2 ${
                 !abilityUnlocked
                   ? 'bg-[#091428]/70 border-[#785a28]/30 text-[#a09b8c]/40 cursor-not-allowed'
@@ -154,7 +161,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             </span>
             <span className="text-[10px] text-[#a09b8c]">
               {!abilityUnlocked ? (
-                `${Math.max(1, 7 - guesses.length)} tries`
+                `${Math.max(1, CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES - guesses.length)} tries`
               ) : activeClue === 'ability' ? (
                 <span className="text-amber-400 font-medium">Viewing</span>
               ) : (
@@ -168,7 +175,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             <button
               onClick={() => splashUnlocked && toggleClue('splash')}
               disabled={!splashUnlocked}
-              title={splashUnlocked ? 'Splash Clue' : `Splash unlocks in ${Math.max(1, 9 - guesses.length)} tries`}
+              title={splashUnlocked ? 'Splash Clue' : `Splash unlocks in ${Math.max(1, CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES - guesses.length)} tries`}
               className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center relative transition-all duration-300 border-2 ${
                 !splashUnlocked
                   ? 'bg-[#091428]/70 border-[#785a28]/30 text-[#a09b8c]/40 cursor-not-allowed'
@@ -189,7 +196,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
             </span>
             <span className="text-[10px] text-[#a09b8c]">
               {!splashUnlocked ? (
-                `${Math.max(1, 9 - guesses.length)} tries`
+                `${Math.max(1, CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES - guesses.length)} tries`
               ) : activeClue === 'splash' ? (
                 <span className="text-amber-400 font-medium">Viewing</span>
               ) : (
@@ -255,9 +262,9 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
 
       {/* Guesses Table */}
       {comparisons.length > 0 && (
-        <div className="w-full max-w-4xl overflow-x-auto pb-4 mt-2">
+        <div className="w-full max-w-4xl pb-4 mt-2 overflow-x-hidden">
           {/* Header Row */}
-          <div className="grid grid-cols-8 gap-1.5 sm:gap-2 min-w-[680px] text-center font-bold text-xs uppercase tracking-wider text-[#c8aa6e] mb-2 px-1">
+          <div className="hidden md:grid grid-cols-8 gap-1.5 sm:gap-2 min-w-[680px] text-center font-bold text-xs uppercase tracking-wider text-[#c8aa6e] mb-2 px-1">
             <div className="py-1">Champion</div>
             <div className="py-1">Gender</div>
             <div className="py-1">Position(s)</div>
@@ -269,7 +276,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
           </div>
 
           {/* Comparison Rows */}
-          <div className="flex flex-col gap-2 min-w-[680px]">
+          <div className="hidden md:flex flex-col gap-2 min-w-[680px] overflow-x-auto">
             {comparisons.map((c) => {
               const isNew = c.champion.id === animatingGuessId;
               const tile0 = getTileAnim(isNew, 0);
@@ -385,6 +392,70 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
                     </div>
                   </div>
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Vertical cards on small screens keep every attribute readable without page-level horizontal scrolling. */}
+          <div className="md:hidden flex flex-col gap-3">
+            {comparisons.map(c => {
+              const isNew = c.champion.id === animatingGuessId;
+              const tile = getTileAnim(isNew, 0);
+              const mobileAttribute = (label: string, value: React.ReactNode, status: MatchStatus, index: number) => {
+                const animation = getTileAnim(isNew, index);
+                return (
+                  <div
+                    key={label}
+                    style={animation.style}
+                    className={`min-h-14 rounded-lg border p-2 flex flex-col justify-center ${statusBg(status)} ${animation.className || ''}`}
+                  >
+                    <span className="text-[10px] uppercase tracking-wide opacity-75">{label}</span>
+                    <span className="font-semibold leading-tight">{value}</span>
+                  </div>
+                );
+              };
+
+              return (
+                <article
+                  key={`mobile-${c.champion.id}`}
+                  className={`rounded-xl border border-[#785a28]/60 bg-[#1e2328] p-3 ${tile.className || ''}`}
+                  style={tile.style}
+                >
+                  <div className="flex items-center gap-3 pb-3 mb-3 border-b border-[#785a28]/40">
+                    <img
+                      src={c.champion.iconUrl}
+                      alt={c.champion.name}
+                      onError={e => {
+                        e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${c.champion.id}.png`;
+                      }}
+                      className="w-12 h-12 rounded-full object-cover border border-[#c8aa6e]/50"
+                    />
+                    <div>
+                      <span className="text-[10px] uppercase tracking-wide text-[#c8aa6e]">Guess</span>
+                      <h3 className="font-bold text-[#f0e6d2]">{c.champion.name}</h3>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-xs">
+                    {mobileAttribute('Gender match', c.champion.gender, c.genderMatch, 1)}
+                    {mobileAttribute('Position(s) match', c.champion.positions.join(', '), c.positionsMatch, 2)}
+                    {mobileAttribute('Species match', c.champion.species.join(', '), c.speciesMatch, 3)}
+                    {mobileAttribute('Resource match', c.champion.resource, c.resourceMatch, 4)}
+                    {mobileAttribute('Range type match', c.champion.rangeType.join(', '), c.rangeTypeMatch, 5)}
+                    {mobileAttribute('Region(s) match', c.champion.regions.join(', '), c.regionsMatch, 6)}
+                    <div
+                      style={getTileAnim(isNew, 7).style}
+                      className={`min-h-14 rounded-lg border p-2 flex flex-col justify-center ${statusBg(c.releaseYearMatch.status)} ${getTileAnim(isNew, 7).className || ''}`}
+                    >
+                      <span className="text-[10px] uppercase tracking-wide opacity-75">Release year</span>
+                      <span className="font-semibold flex items-center gap-1">
+                        {c.champion.releaseYear}
+                        {c.releaseYearMatch.direction === 'higher' && <ArrowUp className="w-3.5 h-3.5" />}
+                        {c.releaseYearMatch.direction === 'lower' && <ArrowDown className="w-3.5 h-3.5" />}
+                        {c.releaseYearMatch.status === 'correct' && <Check className="w-3.5 h-3.5" />}
+                      </span>
+                    </div>
+                  </div>
+                </article>
               );
             })}
           </div>

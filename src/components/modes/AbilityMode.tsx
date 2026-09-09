@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Champion } from '../../types';
+import { AbilityKey, BonusState, Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
+import { ABILITY_KEY_HINT_UNLOCK_GUESSES } from '../../utils/constants';
 import { CheckCircle, XCircle, Sparkles, SlidersHorizontal, RotateCw, Palette, ArrowRight } from 'lucide-react';
 
 interface AbilityModeProps {
   target: Champion;
-  targetAbilityKey: 'P' | 'Q' | 'W' | 'E' | 'R';
+  targetAbilityKey: AbilityKey;
   guesses: Champion[];
   onGuess: (champion: Champion) => void;
   isSolved: boolean;
   allChampions: Champion[];
+  bonus?: BonusState;
+  /** Kept as a compatibility fallback for standalone consumers; App uses onBonusSkip. */
   onOpenVictory?: () => void;
-  onBonusComplete?: (bonusKey: 'P' | 'Q' | 'W' | 'E' | 'R', isCorrect: boolean) => void;
+  onBonusComplete?: (bonusKey: AbilityKey, isCorrect: boolean) => void;
+  onBonusSkip?: () => void;
 }
 
 interface AbilityModifiers {
@@ -28,39 +32,36 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
   onGuess,
   isSolved,
   allChampions,
+  bonus,
   onOpenVictory,
   onBonusComplete,
+  onBonusSkip,
 }) => {
   const currentAbility = target.abilities.find(a => a.key === targetAbilityKey) || target.abilities[0];
 
   // Bonus Spell Key Guessing state (secondary mini-quiz after solving champion)
-  const [selectedBonusKey, setSelectedBonusKey] = useState<'P' | 'Q' | 'W' | 'E' | 'R' | null>(null);
+  const [selectedBonusKey, setSelectedBonusKey] = useState<AbilityKey | null>(null);
 
   useEffect(() => {
-    setSelectedBonusKey(null);
-  }, [target.id, targetAbilityKey]);
+    setSelectedBonusKey(bonus?.selectionKey ?? (bonus?.status === 'skipped' ? targetAbilityKey : null));
+  }, [bonus?.selectionKey, bonus?.status, target.id, targetAbilityKey]);
 
-  const handleSelectBonusKey = (key: 'P' | 'Q' | 'W' | 'E' | 'R') => {
-    if (selectedBonusKey !== null) return;
+  const handleSelectBonusKey = (key: AbilityKey) => {
+    if (selectedBonusKey !== null || (bonus && bonus.status !== 'pending')) return;
     setSelectedBonusKey(key);
     const isBonusCorrect = key === targetAbilityKey;
     onBonusComplete?.(key, isBonusCorrect);
-
-    // Smoothly trigger victory modal after 1200ms so player sees feedback
-    setTimeout(() => {
-      onOpenVictory?.();
-    }, 1200);
   };
 
   const handleSkipBonus = () => {
-    if (selectedBonusKey === null) {
-      setSelectedBonusKey(targetAbilityKey);
-    }
-    onOpenVictory?.();
+    if (selectedBonusKey !== null || (bonus && bonus.status !== 'pending')) return;
+    setSelectedBonusKey(targetAbilityKey);
+    if (onBonusSkip) onBonusSkip();
+    else onOpenVictory?.();
   };
 
   // Key hint unlocked after 3 wrong guesses
-  const isKeyHintUnlocked = guesses.length >= 3 || isSolved;
+  const isKeyHintUnlocked = guesses.length >= ABILITY_KEY_HINT_UNLOCK_GUESSES || isSolved;
 
   // Challenge Modes / Modifiers cached in localStorage
   const [modifiers, setModifiers] = useState<AbilityModifiers>(() => {
@@ -97,10 +98,23 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
   }, [target.id, currentAbility?.key]);
 
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
+  const [usingFallback, setUsingFallback] = useState(false);
+  const [imageAttempt, setImageAttempt] = useState(0);
 
   useEffect(() => {
     setImageLoaded(false);
+    setImageError(false);
+    setUsingFallback(false);
+    setImageAttempt(0);
   }, [target.id, currentAbility?.key]);
+
+  const retryImage = () => {
+    setImageLoaded(false);
+    setImageError(false);
+    setUsingFallback(false);
+    setImageAttempt(attempt => attempt + 1);
+  };
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -164,22 +178,32 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
       <div className="flex flex-col items-center my-3">
         <div className="relative p-2 rounded-2xl bg-gradient-to-b from-[#c8aa6e]/60 via-[#785a28]/40 to-[#091428] shadow-[0_0_25px_rgba(200,170,110,0.3)]">
           <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden bg-[#091428] border-2 border-[#c8aa6e] flex items-center justify-center relative">
-            {!imageLoaded && (
+            {!imageLoaded && !imageError && (
               <div className="absolute inset-0 bg-[#1e2328] animate-pulse flex items-center justify-center">
                 <Sparkles className="w-8 h-8 text-[#c8aa6e]/40 animate-spin" />
               </div>
             )}
             {currentAbility ? (
+              imageError ? (
+                <div className="flex flex-col items-center gap-2 px-3 text-center text-xs text-[#a09b8c]">
+                  <span>Ability image unavailable</span>
+                  <button type="button" onClick={retryImage} className="inline-flex items-center gap-1 rounded-lg border border-[#c8aa6e]/60 px-2.5 py-1 text-[#c8aa6e] hover:bg-[#c8aa6e]/20">
+                    <RotateCw className="w-3 h-3" /> Retry
+                  </button>
+                </div>
+              ) : (
               <img
-                key={`${target.id}-${currentAbility.key}`}
-                src={currentAbility.iconUrl}
+                key={`${target.id}-${currentAbility.key}-${imageAttempt}`}
+                src={usingFallback ? `https://cdn.communitydragon.org/latest/champion/${target.id}/ability-icon/${currentAbility.key.toLowerCase()}` : currentAbility.iconUrl}
                 alt="Ability Icon"
-                onLoad={() => setImageLoaded(true)}
-                onError={e => {
+                onLoad={() => {
+                  setImageLoaded(true);
+                  setImageError(false);
+                }}
+                onError={() => {
                   const fallbackUrl = `https://cdn.communitydragon.org/latest/champion/${target.id}/ability-icon/${currentAbility.key.toLowerCase()}`;
-                  if (e.currentTarget.src !== fallbackUrl) {
-                    e.currentTarget.src = fallbackUrl;
-                  }
+                  if (!usingFallback && currentAbility.iconUrl !== fallbackUrl) setUsingFallback(true);
+                  else setImageError(true);
                 }}
                 style={{
                   filter: modifiers.grayscale && !isSolved ? 'grayscale(100%) contrast(110%)' : 'none',
@@ -189,6 +213,7 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
                 }}
                 className="w-full h-full object-cover"
               />
+              )
             ) : (
               <Sparkles className="w-12 h-12 text-[#c8aa6e]" />
             )}
@@ -199,7 +224,7 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
         <div className="mt-3 w-full flex flex-col items-center">
           {isSolved ? (
             <div className="w-full max-w-sm bg-[#1e2328]/95 border border-[#785a28]/60 rounded-xl p-3 shadow-xl backdrop-blur text-center animate-flip-in">
-              {selectedBonusKey === null ? (
+              {selectedBonusKey === null || (bonus?.status === 'pending') ? (
                 <>
                   <div className="flex items-center justify-center gap-1.5 text-xs font-bold text-[#c8aa6e] uppercase tracking-wider mb-2.5">
                     <Sparkles className="w-3.5 h-3.5 text-amber-400" />
@@ -233,7 +258,9 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
               ) : (
                 <>
                   <div className="flex items-center justify-center gap-1.5 text-xs font-bold uppercase tracking-wider mb-2">
-                    {selectedBonusKey === targetAbilityKey ? (
+                    {bonus?.status === 'skipped' ? (
+                      <span className="text-[#c8aa6e] flex items-center gap-1">Skipped — answer revealed</span>
+                    ) : selectedBonusKey === targetAbilityKey ? (
                       <span className="text-emerald-400 flex items-center gap-1">
                         <CheckCircle className="w-3.5 h-3.5" /> Bonus Correct!
                       </span>
@@ -281,7 +308,7 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
             </div>
           ) : (
             <span className="text-xs text-[#a09b8c]">
-              Key hint unlocks after 3 guesses ({3 - guesses.length} left)
+              Key hint unlocks after {ABILITY_KEY_HINT_UNLOCK_GUESSES} guesses ({Math.max(1, ABILITY_KEY_HINT_UNLOCK_GUESSES - guesses.length)} left)
             </span>
           )}
         </div>

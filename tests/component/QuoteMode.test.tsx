@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { QuoteMode } from '../../src/components/modes/QuoteMode';
 import { Champion } from '../../src/types';
@@ -328,6 +328,27 @@ describe('QuoteMode Component Tests', () => {
     fireEvent.click(button2);
     expect(pauseSpy).toHaveBeenCalled();
     expect(screen.getByText('Listen to 2nd Voice')).toBeInTheDocument();
+  });
+
+  it('shows a retry state when a voice line cannot be played', async () => {
+    playSpy.mockRejectedValueOnce(new Error('audio unavailable'));
+
+    render(
+      <QuoteMode
+        target={mockTargetAhri}
+        quoteIndex={0}
+        guesses={[]}
+        onGuess={vi.fn()}
+        isSolved={true}
+        allChampions={mockAllChampions}
+      />
+    );
+
+    fireEvent.click(screen.getByRole('button', { name: /listen to voice line/i }));
+    await waitFor(() => {
+      expect(screen.getByRole('button', { name: 'Retry voice line' })).toBeInTheDocument();
+      expect(screen.getByText('Audio could not be loaded. Click to retry.')).toBeInTheDocument();
+    });
   });
 
   it('toggles audio playback on button click and handles pause', async () => {

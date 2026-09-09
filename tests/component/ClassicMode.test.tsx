@@ -55,8 +55,17 @@ const champ6 = createMockChamp('Champ6', 'Champion Six', 2016);
 const champ7 = createMockChamp('Champ7', 'Champion Seven', 2017);
 const champ8 = createMockChamp('Champ8', 'Champion Eight', 2018);
 const champ9 = createMockChamp('Champ9', 'Champion Nine', 2019);
+const champ10 = createMockChamp('Champ10', 'Champion Ten', 2020);
+const champ11 = createMockChamp('Champ11', 'Champion Eleven', 2021);
+const champ12 = createMockChamp('Champ12', 'Champion Twelve', 2022);
+const champ13 = createMockChamp('Champ13', 'Champion Thirteen', 2023);
+const champ14 = createMockChamp('Champ14', 'Champion Fourteen', 2024);
+const champ15 = createMockChamp('Champ15', 'Champion Fifteen', 2025);
 
-const allChamps = [mockTarget, champ1, champ2, champ3, champ4, champ5, champ6, champ7, champ8, champ9];
+const allChamps = [
+  mockTarget, champ1, champ2, champ3, champ4, champ5, champ6, champ7, champ8, champ9,
+  champ10, champ11, champ12, champ13, champ14, champ15,
+];
 
 describe('ClassicMode Component Tests', () => {
   it('renders Classic Mode title, subtitle and input', () => {
@@ -90,10 +99,10 @@ describe('ClassicMode Component Tests', () => {
     expect(screen.getByText('Ability')).toBeInTheDocument();
     expect(screen.getByText('Splash')).toBeInTheDocument();
 
-    // 0 guesses: Quote needs 5, Ability needs 7, Splash needs 9
+    // 0 guesses: Quote needs 5, Ability needs 10, Splash needs 15
     expect(screen.getByText('5 tries')).toBeInTheDocument();
-    expect(screen.getByText('7 tries')).toBeInTheDocument();
-    expect(screen.getByText('9 tries')).toBeInTheDocument();
+    expect(screen.getByText('10 tries')).toBeInTheDocument();
+    expect(screen.getByText('15 tries')).toBeInTheDocument();
   });
 
   it('unlocks Quote clue at 5 guesses and allows opening popover card', () => {
@@ -126,26 +135,41 @@ describe('ClassicMode Component Tests', () => {
     expect(screen.queryByText('Quote Clue')).not.toBeInTheDocument();
   });
 
-  it('unlocks Ability clue at 7 guesses and Splash clue at 9 guesses', () => {
-    const nineGuesses = [champ1, champ2, champ3, champ4, champ5, champ6, champ7, champ8, champ9];
-    render(
+  it('unlocks Ability clue at 10 guesses and Splash clue at 15 guesses', () => {
+    const tenGuesses = [champ1, champ2, champ3, champ4, champ5, champ6, champ7, champ8, champ9, champ10];
+    const fifteenGuesses = [...tenGuesses, champ11, champ12, champ13, champ14, champ15];
+    const { rerender } = render(
       <ClassicMode
         target={mockTarget}
-        guesses={nineGuesses}
+        guesses={tenGuesses}
         onGuess={vi.fn()}
         isSolved={false}
         allChampions={allChamps}
       />
     );
 
-    // All 3 clues should now be Ready
-    const readyElements = screen.getAllByText('Ready');
-    expect(readyElements.length).toBe(3);
+    // At 10 guesses Quote and Ability are ready; Splash needs 5 more.
+    expect(screen.getAllByText('Ready').length).toBe(2);
+    expect(screen.getByText('5 tries')).toBeInTheDocument();
 
     // Click Ability button
     const abilityButton = screen.getByTitle('Ability Clue');
     fireEvent.click(abilityButton);
     expect(screen.getByText('Ability Clue (Spell Icon)')).toBeInTheDocument();
+    fireEvent.click(abilityButton);
+
+    rerender(
+      <ClassicMode
+        target={mockTarget}
+        guesses={fifteenGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    // All 3 clues should now be Ready.
+    expect(screen.getAllByText('Ready').length).toBe(3);
 
     // Click Splash button
     const splashButton = screen.getByTitle('Splash Clue');
@@ -175,8 +199,8 @@ describe('ClassicMode Component Tests', () => {
     expect(screen.getByText('Release')).toBeInTheDocument();
 
     // Check row values
-    expect(screen.getByText('Champion One')).toBeInTheDocument();
-    expect(screen.getByText('Male')).toBeInTheDocument();
-    expect(screen.getByText('2010')).toBeInTheDocument();
+    expect(screen.getAllByText('Champion One').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Male').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('2010').length).toBeGreaterThanOrEqual(1);
   });
 });

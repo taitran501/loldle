@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Flag, X } from 'lucide-react';
 
 interface SurrenderModalProps {
@@ -14,12 +14,37 @@ export const SurrenderModal: React.FC<SurrenderModalProps> = ({
   onConfirm,
   streak,
 }) => {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    openerRef.current = document.activeElement as HTMLElement;
+    window.setTimeout(() => closeButtonRef.current?.focus(), 0);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      openerRef.current?.focus();
+    };
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-      <div className="w-full max-w-sm bg-[#1e2328] border-2 border-[#785a28] rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] p-6 relative text-center animate-flip-in">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="surrender-modal-title"
+        className="w-full max-w-sm bg-[#1e2328] border-2 border-[#785a28] rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] p-6 relative text-center animate-flip-in"
+      >
         <button
+          ref={closeButtonRef}
+          type="button"
+          aria-label="Close surrender dialog"
           onClick={onClose}
           className="absolute top-3 right-3 p-1.5 text-[#a09b8c] hover:text-[#f0e6d2] rounded-full hover:bg-white/10 cursor-pointer"
         >
@@ -31,7 +56,7 @@ export const SurrenderModal: React.FC<SurrenderModalProps> = ({
           <Flag className="w-7 h-7" />
         </div>
 
-        <h3 className="text-xl font-bold font-serif text-[#f0e6d2]">
+        <h3 id="surrender-modal-title" className="text-xl font-bold font-serif text-[#f0e6d2]">
           Surrender Round?
         </h3>
 
@@ -47,12 +72,14 @@ export const SurrenderModal: React.FC<SurrenderModalProps> = ({
         {/* Action Buttons */}
         <div className="flex gap-3">
           <button
+            type="button"
             onClick={onClose}
             className="flex-1 py-2.5 px-4 rounded-xl border border-[#785a28]/60 bg-[#091428] text-[#f0e6d2] font-semibold text-sm hover:bg-[#c8aa6e]/20 hover:border-[#c8aa6e] transition-all cursor-pointer shadow"
           >
             Keep Trying
           </button>
           <button
+            type="button"
             onClick={onConfirm}
             className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-bold text-sm transition-all shadow-lg cursor-pointer"
           >

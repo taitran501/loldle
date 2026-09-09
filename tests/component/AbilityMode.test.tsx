@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { AbilityMode } from '../../src/components/modes/AbilityMode';
 import { Champion } from '../../src/types';
 
@@ -67,6 +67,29 @@ describe('AbilityMode Component Tests', () => {
 
     const img = screen.getByAltText('Ability Icon') as HTMLImageElement;
     expect(img.src).toContain('/assets/abilities/Ahri_q.png');
+  });
+
+  it('shows a retry state after both the primary and fallback images fail', async () => {
+    render(
+      <AbilityMode
+        target={mockTarget}
+        targetAbilityKey="Q"
+        guesses={[]}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+
+    const image = screen.getByAltText('Ability Icon');
+    fireEvent.error(image);
+    await waitFor(() => expect(screen.getByAltText('Ability Icon')).toBeInTheDocument());
+    fireEvent.error(screen.getByAltText('Ability Icon'));
+
+    await waitFor(() => {
+      expect(screen.getByText('Ability image unavailable')).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: 'Retry' })).toBeInTheDocument();
+    });
   });
 
   it('shows countdown for key hint before 3 guesses', () => {
