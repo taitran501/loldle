@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { getEmojiClues } from './emoji-config.mjs';
 
 const LOLDLE_URL = 'https://raw.githubusercontent.com/joulsen/loldle-information-theory/main/resources/loldle-champ-data.json';
 const MERAKI_URL = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
@@ -190,198 +191,6 @@ const ICONIC_QUOTES = {
   zyra: "Feel the thorns' embrace."
 };
 
-// Iconic champion emojis dictionary (Curated, intuitive, zero typos)
-const ICONIC_EMOJIS = {
-  aatrox: ["🗡️", "🩸", "👿", "⛓️", "🪽"],
-  ahri: ["🦊", "🔮", "💖", "✨"],
-  akali: ["🥷", "💨", "🗡️", "🍜", "🌫️"],
-  akshan: ["🪝", "🔫", "🪃", "🔄"],
-  alistar: ["🐂", "⛓️", "🛡️", "💥"],
-  ambessa: ["🐺", "⚔️", "👑", "🩸"],
-  amumu: ["🤕", "😢", "🩹", "💔"],
-  anivia: ["❄️", "🦅", "🥚", "🧊"],
-  annie: ["🧸", "🔥", "👧", "🎒"],
-  aphelios: ["🌙", "🔫", "🔇", "🌌"],
-  ashe: ["🏹", "❄️", "👑", "👁️"],
-  aurelionsol: ["🐉", "⭐", "🌌", "🕳️"],
-  aurora: ["🐰", "👻", "❄️", "✨"],
-  azir: ["🦅", "🏜️", "👑", "💂"],
-  bard: ["🎺", "🔔", "🌀", "⏳"],
-  belveth: ["🟣", "👑", "👁️", "🗡️"],
-  blitzcrank: ["🤖", "🪝", "⚡", "🥊", "🧲"],
-  brand: ["🔥", "🌋", "💀", "☄️"],
-  braum: ["🛡️", "🧔", "🐏", "❤️"],
-  briar: ["🧛", "🩸", "⛓️", "🤤"],
-  caitlyn: ["🎩", "🧁", "🎯", "🔍"],
-  camille: ["✂️", "🦵", "🪝", "💎", "🦾"],
-  cassiopeia: ["🐍", "🪨", "🧪", "👑"],
-  chogath: ["🦖", "🍽️", "🟣", "🔊"],
-  corki: ["✈️", "💣", "🚀", "🧔"],
-  darius: ["🪓", "🩸", "👑", "💀"],
-  diana: ["🌙", "🗡️", "🌑", "✨"],
-  drmundo: ["💉", "🪓", "🟣", "💼"],
-  draven: ["🪓", "🎪", "😎", "🪙"],
-  ekko: ["⏳", "🏏", "⚡", "🌀", "⏪"],
-  elise: ["🕷️", "🕸️", "👑", "👠"],
-  evelynn: ["😈", "👠", "🖤", "💋"],
-  ezreal: ["🧤", "✨", "🗺️", "🎒"],
-  fiddlesticks: ["🌾", "🗝️", "😱", "🪶"],
-  fiora: ["🤺", "🗡️", "🌹", "🪞"],
-  fizz: ["🐟", "🦈", "🔱", "🌊"],
-  galio: ["🗿", "🦅", "🛡️", "💥"],
-  gangplank: ["🍊", "🏴‍☠️", "💣", "🗡️"],
-  garen: ["🗡️", "🛡️", "👑", "🌀"],
-  gnar: ["🦴", "🪃", "👹", "🧊"],
-  gragas: ["🛢️", "🍺", "💥", "🧔"],
-  graves: ["🚬", "🔫", "💣", "💰"],
-  gwen: ["✂️", "🪡", "🧵", "👗"],
-  hecarim: ["🐴", "👻", "🪓", "💨"],
-  heimerdinger: ["🔬", "🔧", "🚀", "🧠"],
-  hwei: ["🎨", "🖌️", "🎭", "🖼️", "🌈"],
-  illaoi: ["🐙", "🔮", "💪", "🌊"],
-  irelia: ["🗡️", "🩰", "🪷", "🎀"],
-  ivern: ["🌳", "🌿", "🦌", "🌼"],
-  janna: ["🌪️", "🕊️", "💨", "🛡️"],
-  jarvaniv: ["👑", "🚩", "🛡️", "⛰️"],
-  jax: ["🏮", "🥚", "🌀", "⚔️"],
-  jayce: ["🔨", "⚡", "🚀", "👔"],
-  jhin: ["4️⃣", "🎭", "🌹", "🔫"],
-  jinx: ["🚀", "💣", "🔫", "👧", "🎆"],
-  ksante: ["🛡️", "🦁", "💪", "🥋"],
-  kaisa: ["🟣", "👾", "🦋", "🔫"],
-  kalista: ["🏹", "👻", "🗡️", "🤝"],
-  karma: ["☯️", "🪷", "🛡️", "🐲"],
-  karthus: ["💀", "🎶", "📖", "👻"],
-  kassadin: ["🕳️", "🗡️", "🟣", "🌌"],
-  katarina: ["🗡️", "🌪️", "💋", "🔴"],
-  kayle: ["👼", "🗡️", "⚖️", "🔥"],
-  kayn: ["🪓", "👁️", "😈", "👥"],
-  kennen: ["⚡", "🥷", "🐹", "🌀"],
-  khazix: ["🦗", "🔪", "🟣", "🧬"],
-  kindred: ["🐑", "🐺", "🏹", "☯️", "🎭"],
-  kled: ["🦎", "🍄", "🪓", "🤠"],
-  kogmaw: ["🐛", "🤮", "💣", "🎯"],
-  leblanc: ["🧙‍♀️", "🎭", "🌹", "🪞"],
-  leesin: ["🦯", "🥋", "🐉", "🦶"],
-  leona: ["☀️", "🛡️", "🗡️", "👑"],
-  lillia: ["🦌", "🌸", "💤", "🎳"],
-  lissandra: ["❄️", "🧊", "👑", "👁️"],
-  locke: ["🕯️", "⛓️", "🗡️", "🌫️"],
-  lucian: ["🔫", "👻", "💨", "🖤"],
-  lulu: ["🧚", "🧁", "🪄", "🍄"],
-  lux: ["🌈", "💡", "🪄", "👧"],
-  malphite: ["🪨", "⛰️", "🛡️", "💥"],
-  malzahar: ["👾", "🔮", "🕳️", "🟣"],
-  maokai: ["🪵", "🌱", "💥", "👻"],
-  masteryi: ["🗡️", "🥽", "⚡", "🧘"],
-  mel: ["🪞", "⚜️", "⚖️", "🛡️"],
-  milio: ["🔥", "🎒", "⚽", "🐸"],
-  missfortune: ["🏴‍☠️", "🔫", "👒", "❤️"],
-  mordekaiser: ["🔨", "👑", "🏰", "💀"],
-  morgana: ["⛓️", "🖤", "🟣", "🛡️"],
-  naafiri: ["🐕", "🗡️", "🐺", "🩸"],
-  nami: ["🧜‍♀️", "🌊", "🫧", "🌙", "🔱"],
-  nasus: ["🐕", "⏳", "🪓", "🏜️"],
-  nautilus: ["⚓", "🤿", "🌊", "🛡️"],
-  neeko: ["🦎", "🌸", "🤹‍♀️", "🌈"],
-  nidalee: ["🐆", "🗡️", "🐾", "🌿"],
-  nilah: ["🌊", "🗡️", "😄", "😈"],
-  nocturne: ["🌑", "🔪", "😱", "👻"],
-  nunuwillump: ["👦", "⛄", "❄️", "🎶"],
-  olaf: ["🪓", "⚡", "🧔", "🍺"],
-  orianna: ["🤖", "🩰", "🔮", "⚙️"],
-  ornn: ["🔨", "🐐", "🌋", "🔥"],
-  pantheon: ["🛡️", "🗡️", "⭐", "🥖"],
-  poppy: ["🔨", "🛡️", "👧", "💛"],
-  pyke: ["🦈", "🗡️", "💰", "🌊"],
-  qiyana: ["⭕", "👑", "🌿", "💧"],
-  quinn: ["🦅", "🏹", "🎯", "💨"],
-  rakan: ["🦚", "💃", "🪶", "❤️"],
-  rammus: ["🦔", "🛡️", "🏎️", "👍"],
-  reksai: ["🦈", "🏜️", "👂", "🕳️"],
-  rell: ["🐴", "🧲", "🛡️", "🔨"],
-  renataglasc: ["💼", "🧪", "🦾", "💰"],
-  renekton: ["🐊", "🗡️", "🏜️", "😡"],
-  rengar: ["🦁", "🔪", "🦴", "👁️"],
-  riven: ["🗡️", "💔", "🛡️", "💨"],
-  rumble: ["🤖", "🔥", "🚀", "⚡"],
-  ryze: ["📜", "🧙‍♂️", "🔵", "🌀"],
-  samira: ["🪙", "🗡️", "🔫", "🌹"],
-  sejuani: ["🐗", "❄️", "⛓️", "👑"],
-  senna: ["🔫", "👻", "🌫️", "🖤", "🕯️"],
-  seraphine: ["🎤", "💖", "🎵", "✨"],
-  sett: ["🥊", "🤼", "👑", "💪"],
-  shaco: ["🤡", "🔪", "📦", "🃏"],
-  shen: ["🥷", "🗡️", "👻", "🛡️"],
-  shyvana: ["🐉", "🔥", "🥊", "🛡️"],
-  singed: ["🧪", "🛡️", "💨", "🏃"],
-  sion: ["🪓", "🧟", "🚂", "🩸"],
-  sivir: ["🥏", "💰", "🏜️", "🏃‍♀️"],
-  skarner: ["🦂", "🪨", "👑", "🌿"],
-  smolder: ["🐉", "🔥", "🍼", "👑"],
-  sona: ["🎵", "🎹", "🤫", "💙"],
-  soraka: ["🍌", "🦄", "⭐", "🩹"],
-  swain: ["🦅", "🖐️", "👁️", "👑"],
-  sylas: ["⛓️", "👑", "🪄", "⚡"],
-  syndra: ["🔮", "👑", "🟣", "🪐"],
-  tahmkench: ["🐸", "🎩", "👅", "🍽️"],
-  taliyah: ["🪨", "🏄‍♀️", "🏜️", "🧶"],
-  talon: ["🗡️", "🦅", "🥷", "🩸"],
-  taric: ["💎", "✨", "🛡️", "🔨"],
-  teemo: ["🍄", "🧭", "🎯", "😈"],
-  thresh: ["🏮", "⛓️", "💀", "👻", "🟢"],
-  tristana: ["🚀", "💣", "👧", "💥"],
-  trundle: ["🧊", "🦴", "👹", "👑"],
-  tryndamere: ["🗡️", "😡", "👑", "🩸"],
-  twistedfate: ["🃏", "🎩", "💰", "🌀"],
-  twitch: ["🐀", "🏹", "🧀", "🧪"],
-  udyr: ["🐏", "🐻", "🐗", "🦅", "🥋", "🔥"],
-  urgot: ["🦀", "🔫", "⛓️", "🦾"],
-  varus: ["🏹", "💜", "🩸", "🎯"],
-  vayne: ["🏹", "🕶️", "🦇", "🖤"],
-  veigar: ["🧙‍♂️", "🪄", "😈", "☄️"],
-  velkoz: ["🦑", "👁️", "📐", "🟣"],
-  vex: ["🖤", "👻", "😒", "☔"],
-  vi: ["🥊", "🧁", "💥", "🚓", "🛠️"],
-  viego: ["👑", "🗡️", "🖤", "💍"],
-  viktor: ["🦾", "⚡", "🤖", "⚙️", "🧪"],
-  vladimir: ["🩸", "🍷", "🧛", "🔴"],
-  volibear: ["🐻", "⚡", "❄️", "⛈️"],
-  warwick: ["🐺", "🩸", "🧪", "🐾", "🌕"],
-  wukong: ["🐒", "👑", "☁️", "🌀"],
-  xayah: ["🪶", "🦅", "🗡️", "💜"],
-  xerath: ["⚡", "🔷", "💥", "⛓️"],
-  xinzhao: ["🗡️", "🚩", "🛡️", "👑"],
-  yasuo: ["🌪️", "🗡️", "🍶", "🍃", "🎐"],
-  yone: ["⚔️", "👺", "💨", "👻"],
-  yorick: ["⛏️", "👻", "⚰️", "👰"],
-  yuumi: ["🐱", "📖", "🐟", "✨"],
-  yunara: ["🌸", "📿", "🏹", "👻"],
-  zaahen: ["🗡️", "🩸", "🏜️", "👁️"],
-  zac: ["🟢", "🍮", "🎈", "🧪"],
-  zed: ["🥷", "👥", "🗡️", "💀"],
-  zeri: ["⚡", "🔫", "🔋", "👟"],
-  ziggs: ["💣", "🧨", "💥", "🐹"],
-  zilean: ["⏰", "💣", "⌛", "👴"],
-  zoe: ["🦋", "✨", "💤", "🌀"],
-  zyra: ["🌱", "🌹", "🥀", "🌿"]
-};
-
-const DEFAULT_EMOJI_CLUES = ['⚔️', '🛡️', '✨', '🎯'];
-const MIN_EMOJI_CLUES = 4;
-const MAX_EMOJI_CLUES = 6;
-
-function getEmojiClues(championKey) {
-  const configured = ICONIC_EMOJIS[championKey] || DEFAULT_EMOJI_CLUES;
-  const clues = [...new Set(configured.filter(emoji => typeof emoji === 'string' && emoji.trim().length > 0))];
-
-  if (clues.length < MIN_EMOJI_CLUES || clues.length > MAX_EMOJI_CLUES) {
-    throw new Error(`Emoji config for ${championKey} must contain ${MIN_EMOJI_CLUES}-${MAX_EMOJI_CLUES} unique clues`);
-  }
-
-  return clues;
-}
-
 // Supplement for newest champions not in older LoLdle dump
 const NEW_CHAMPIONS_DATA = {
   ambessa: {
@@ -525,6 +334,19 @@ async function main() {
     }
   }
 
+  const existingDataPath = path.resolve('public/data/champions.json');
+  let existingData = [];
+  try {
+    existingData = JSON.parse(await fs.readFile(existingDataPath, 'utf8'));
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+  const existingChampions = new Map();
+  for (const champion of existingData) {
+    existingChampions.set(normalize(champion.id), champion);
+    existingChampions.set(normalize(champion.name), champion);
+  }
+
   const finalChampions = [];
 
   for (const [merakiKey, champ] of Object.entries(merakiMap)) {
@@ -588,6 +410,7 @@ async function main() {
     // Voice line quote & audio URL
     const quoteText = ICONIC_QUOTES[normKey] || `I fight for what I believe in.`;
     const audioUrl = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/${numericId}.ogg`;
+    const previousChampion = existingChampions.get(normKey);
 
     // Emojis
     const emojis = getEmojiClues(normKey);
@@ -606,13 +429,27 @@ async function main() {
       releaseYear,
       iconUrl: `/assets/champions/${champKey}.png`,
       abilities,
-      quote: {
+      quote: previousChampion?.quote || {
         text: quoteText,
         audioUrl
       },
       emojis,
-      skins
+      skins,
+      quotes: previousChampion?.quotes || []
     });
+  }
+
+  // Keep locally maintained champions when an upstream feed lags behind the
+  // checked-in roster (for example newly released champions).
+  const generatedKeys = new Set(finalChampions.map(champion => normalize(champion.id)));
+  for (const champion of existingData) {
+    const key = normalize(champion.id);
+    if (!generatedKeys.has(key)) {
+      finalChampions.push({
+        ...champion,
+        emojis: getEmojiClues(key)
+      });
+    }
   }
 
   // Sort alphabetically by name

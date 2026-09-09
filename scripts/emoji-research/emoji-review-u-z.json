@@ -1,0 +1,687 @@
+[
+  {
+    "championKey": "udyr",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Lee Sin", "Udyr", "Karma"],
+      "after2": ["Nidalee", "Rengar", "Udyr"],
+      "after3": ["Udyr", "Nidalee", "Volibear"],
+      "after4": ["Udyr", "Volibear", "Nidalee"]
+    },
+    "confusableWith": ["Volibear", "Nidalee", "Lee Sin"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🧘 is broad monk/spirit shorthand, but the animal stance sequence makes the target specific by clue 3."
+    ],
+    "suggestedEmojis": ["🧘", "🐯", "🐢", "🐻", "🔥"],
+    "sourcesChecked": [
+      { "title": "Udyr | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/udyr/", "kind": "official" },
+      { "title": "Udyr | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Udyr", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "urgot",
+    "mechanical": { "emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Urgot", "Viktor", "Blitzcrank"],
+      "after2": ["Urgot", "Thresh", "Nautilus"],
+      "after3": ["Urgot", "Graves", "Jhin"],
+      "after4": ["Urgot", "Mordekaiser", "Pyke"]
+    },
+    "confusableWith": ["Viktor", "Blitzcrank", "Mordekaiser"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "⛓️ is broad lore shorthand, but the leg-mounted gun clue is decisive and the four-clue chain is playable."
+    ],
+    "suggestedEmojis": ["🦿", "⛓️", "🔫", "💀"],
+    "sourcesChecked": [
+      { "title": "Urgot | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/urgot/", "kind": "official" },
+      { "title": "Urgot | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Urgot", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "varus",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Ashe", "Varus", "Aphelios"],
+      "after2": ["Varus", "Aatrox", "Malzahar"],
+      "after3": ["Varus", "Viego", "Kayn"],
+      "after4": ["Varus", "Thresh", "Aatrox"]
+    },
+    "confusableWith": ["Ashe", "Aphelios", "Aatrox", "Rhaast"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "👥 is an abstract shorthand for the shared-body consciousnesses and 🌿 is less immediately readable than Blight, but bow + corruption + shared-body gives a reasonable target by clue 3."
+    ],
+    "suggestedEmojis": ["🏹", "☣️", "👥", "⛓️", "🌿"],
+    "sourcesChecked": [
+      { "title": "Varus | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/varus/", "kind": "official" },
+      { "title": "Varus | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Varus", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "vayne",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Ashe", "Varus", "Vayne"],
+      "after2": ["Vayne", "Varus", "Ashe"],
+      "after3": ["Vayne", "Jhin", "Urgot"],
+      "after4": ["Vayne", "Kindred", "Rengar"]
+    },
+    "confusableWith": ["Ashe", "Varus", "Quinn", "Kindred"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🔩 renders as a nut-and-bolt object, not an arrow bolt, and duplicates the 🥈 Silver Bolts concept.",
+      "👹 and 🌙 are broad hunter/night mood clues; the set is recognizable by clue 2 but has padding after that point."
+    ],
+    "suggestedEmojis": ["🏹", "🥈", "🧱", "👹", "🌙"],
+    "sourcesChecked": [
+      { "title": "Vayne, the Night Hunter | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/vayne/", "kind": "official" },
+      { "title": "Vayne | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Vayne", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "veigar",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Ryze", "Veigar", "Zoe"],
+      "after2": ["Veigar", "Vex", "Morgana"],
+      "after3": ["Aurelion Sol", "Veigar", "Xerath"],
+      "after4": ["Veigar", "Morgana", "Zoe"]
+    },
+    "confusableWith": ["Vex", "Morgana", "Brand", "Lulu"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🧙‍♂️ and 😈 are generic archetype/persona clues, while 🕳️ is an abstract reading of Dark Matter; the target is plausible by clue 4 but not strongly distinguished from other dark mages."
+    ],
+    "suggestedEmojis": ["🧙‍♂️", "😈", "☄️", "🔒", "🕳️"],
+    "sourcesChecked": [
+      { "title": "Veigar | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/veigar/", "kind": "official" },
+      { "title": "Veigar | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Veigar", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "velkoz",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Vel'Koz", "Xerath", "Kog'Maw"],
+      "after2": ["Kog'Maw", "Vel'Koz", "Bel'Veth"],
+      "after3": ["Vel'Koz", "Heimerdinger", "Singed"],
+      "after4": ["Vel'Koz", "Bel'Veth", "Kog'Maw"]
+    },
+    "confusableWith": ["Kog'Maw", "Bel'Veth", "Malzahar", "Xerath"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence."
+    ],
+    "suggestedEmojis": ["👁️", "🦑", "🔬", "🕳️", "☢️"],
+    "sourcesChecked": [
+      { "title": "Vel'Koz | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/velkoz/", "kind": "official" },
+      { "title": "Vel'Koz | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Vel%27Koz", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "vex",
+    "mechanical": { "emojiCount": 6, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 1, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Vex", "Morgana", "Nocturne"],
+      "after2": ["Nocturne", "Vex", "Diana"],
+      "after3": ["Vex", "Nocturne", "Zed"],
+      "after4": ["Nocturne", "Vex", "Fiddlesticks"]
+    },
+    "confusableWith": ["Nocturne", "Morgana", "Lulu", "Yuumi"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "😒, 🌑, and 👤 are broad gloom/shadow shorthand rather than a clear yordle identity.",
+      "🚫 and 💨 repeat the anti-dash idea; 💨 reads as wind or smoke and does not clearly encode Gloom's dash interaction.",
+      "The first four clues still fit Nocturne or Morgana as well as Vex, so the current set needs player validation."
+    ],
+    "suggestedEmojis": ["😒", "👤", "😱", "🛑"],
+    "sourcesChecked": [
+      { "title": "Vex | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/vex/", "kind": "official" },
+      { "title": "Vex | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Vex", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "vi",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Vi", "Sett", "Lee Sin"],
+      "after2": ["Vi", "Blitzcrank", "Camille"],
+      "after3": ["Vi", "Sett", "Jinx"],
+      "after4": ["Vi", "Caitlyn", "Jayce"]
+    },
+    "confusableWith": ["Sett", "Blitzcrank", "Camille", "Lee Sin"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "💥 is a generic impact symbol that duplicates the punch/gauntlet idea, and ⚙️ is broad Piltover technology; the current five clues contain padding.",
+      "The target is easy by clue 2, but the later clues should add Vi-specific information rather than repeat generic force/technology."
+    ],
+    "suggestedEmojis": ["🥊", "🦾", "🧱", "🚓", "⚙️"],
+    "sourcesChecked": [
+      { "title": "Vi | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/vi/", "kind": "official" },
+      { "title": "Vi | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Vi", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "viego",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Viego", "Jarvan IV", "Leona"],
+      "after2": ["Yone", "Viego", "Tryndamere"],
+      "after3": ["Viego", "Thresh", "Hecarim"],
+      "after4": ["Viego", "Yone", "Kindred"]
+    },
+    "confusableWith": ["Mordekaiser", "Thresh", "Yorick", "Aatrox"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "👑, 🗡️, and 💔 are broad king/sword/lost-love symbols; 🎭 does not naturally communicate champion possession.",
+      "Black Mist is strong, but clue 4 still competes with Yone and other masked/undead champions."
+    ],
+    "suggestedEmojis": ["👑", "🗡️", "🌫️", "🎭", "🫥"],
+    "sourcesChecked": [
+      { "title": "Viego | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/viego/", "kind": "official" },
+      { "title": "Viego - Abilities Rundown | League of Legends", "url": "https://www.leagueoflegends.com/en-us/event/viego-abilities-rundown/", "kind": "official" },
+      { "title": "Viego | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Viego", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "viktor",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Blitzcrank", "Viktor", "Orianna"],
+      "after2": ["Viktor", "Camille", "Orianna"],
+      "after3": ["Viktor", "Skarner", "Jayce"],
+      "after4": ["Viktor", "Heimerdinger", "Jayce"]
+    },
+    "confusableWith": ["Jayce", "Blitzcrank", "Heimerdinger", "Xerath"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "💠 is not an obvious Hexcore symbol and 🔬 is generic science, but robot + mechanical augmentation + Hexcore makes Viktor a reasonable top-three guess by clue 3."
+    ],
+    "suggestedEmojis": ["🤖", "⚙️", "💠", "🔬", "⚡"],
+    "sourcesChecked": [
+      { "title": "Viktor | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/viktor/", "kind": "official" },
+      { "title": "Template:Data Viktor | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Viktor", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "vladimir",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Vladimir", "Briar", "Swain"],
+      "after2": ["Vladimir", "Briar", "Elise"],
+      "after3": ["Vladimir", "Nami", "Fizz"],
+      "after4": ["Vladimir", "Viego", "Vex"]
+    },
+    "confusableWith": ["Briar", "Swain", "Aatrox", "Elise"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🧛‍♂️ is archetype shorthand rather than a literal canon vampire, and 🌊 does not visually convey a blood pool; however blood + blood-mage archetype + Sanguine Pool/ Hemoplague gives a reasonable target by clue 2–4."
+    ],
+    "suggestedEmojis": ["🩸", "🧛‍♂️", "🌊", "🫥", "☣️"],
+    "sourcesChecked": [
+      { "title": "Vladimir | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/vladimir/", "kind": "official" },
+      { "title": "Vladimir | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Vladimir", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "volibear",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Volibear", "Udyr", "Nasus"],
+      "after2": ["Volibear", "Kennen", "Zeri"],
+      "after3": ["Volibear", "Anivia", "Udyr"],
+      "after4": ["Volibear", "Udyr", "Ornn"]
+    },
+    "confusableWith": ["Udyr", "Ornn", "Nasus"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "⚡ and 🌩️ duplicate the same lightning concept, while 🐻 and 🐾 duplicate the beast concept; the set spends two slots on repeated signals.",
+      "The bear makes the target obvious at clue 1, so later clues should focus on tooth/claw or demigod identity rather than repeat thunder and paws."
+    ],
+    "suggestedEmojis": ["🐻", "⚡", "❄️", "🦷"],
+    "sourcesChecked": [
+      { "title": "Volibear | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/volibear/", "kind": "official" },
+      { "title": "The Relentless Storm - Universe | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Universe%3AThe_Relentless_Storm", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "warwick",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Warwick", "Rengar", "Naafiri"],
+      "after2": ["Warwick", "Briar", "Vladimir"],
+      "after3": ["Warwick", "Rengar", "Kha'Zix"],
+      "after4": ["Warwick", "Singed", "Dr. Mundo"]
+    },
+    "confusableWith": ["Rengar", "Briar", "Dr. Mundo", "Singed"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence."
+    ],
+    "suggestedEmojis": ["🐺", "🩸", "🦷", "🧪", "👃"],
+    "sourcesChecked": [
+      { "title": "Warwick | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/warwick/", "kind": "official" },
+      { "title": "Warwick | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Warwick", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "wukong",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Wukong", "Nidalee", "Rengar"],
+      "after2": ["Wukong", "Jax", "Nasus"],
+      "after3": ["Wukong", "Shaco", "Neeko"],
+      "after4": ["Wukong", "Malphite", "Janna"]
+    },
+    "confusableWith": ["Master Yi", "Shaco", "Neeko", "Nidalee"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🦯 is rendered and read as a white cane, not an enchanted staff, so it is misleading even though the staff fact is valid.",
+      "🥋 is broad martial-arts shorthand; the clone and cyclone clues carry the real identification."
+    ],
+    "suggestedEmojis": ["🐒", "🪄", "👥", "🌪️"],
+    "sourcesChecked": [
+      { "title": "Wukong | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/wukong/", "kind": "official" },
+      { "title": "Wukong | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Wukong", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "xayah",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Xayah", "Rakan", "Quinn"],
+      "after2": ["Xayah", "Rakan", "Katarina"],
+      "after3": ["Xayah", "Rakan", "Varus"],
+      "after4": ["Xayah", "Rakan", "Kalista"]
+    },
+    "confusableWith": ["Rakan", "Quinn", "Varus", "Kalista"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🪶 and 🪽 repeat the feather/wing concept, while 🌪️ is a weak visual for Featherstorm; the pair clue 💑 helps but does not justify all five slots.",
+      "After clue 3 the target is likely Xayah, but the set should use feather recall rather than another feather/air symbol."
+    ],
+    "suggestedEmojis": ["🪶", "🗡️", "💑", "🪃"],
+    "sourcesChecked": [
+      { "title": "Xayah | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/xayah/", "kind": "official" },
+      { "title": "Xayah | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Xayah", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "xerath",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Kennen", "Zeri", "Xerath"],
+      "after2": ["Xerath", "Mordekaiser", "Karthus"],
+      "after3": ["Xerath", "Azir", "Skarner"],
+      "after4": ["Xerath", "Vel'Koz", "Azir"]
+    },
+    "confusableWith": ["Vel'Koz", "Azir", "Ryze", "Karthus"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🪦 is the closest standard glyph for a sarcophagus and 💥 is generic, but the energy body + prison + Shurima + artillery progression remains distinctive enough."
+    ],
+    "suggestedEmojis": ["⚡", "🪦", "🏜️", "🔭", "💥"],
+    "sourcesChecked": [
+      { "title": "Xerath | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/xerath/", "kind": "official" },
+      { "title": "Xerath (Character) | League of Legends Wiki", "url": "https://leagueoflegends.fandom.com/wiki/Xerath", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "xinzhao",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 1, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Pantheon", "Xin Zhao", "Jarvan IV"],
+      "after2": ["Xin Zhao", "Draven", "Pantheon"],
+      "after3": ["Jarvan IV", "Pantheon", "Xin Zhao"],
+      "after4": ["Xin Zhao", "Jarvan IV", "Pantheon"]
+    },
+    "confusableWith": ["Jarvan IV", "Pantheon", "Jax", "Zaahen"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🔱 is a trident rather than a three-talon spear, and 🏟️ is obscure lore for a normal player.",
+      "🛡️, ⭕, and ⚔️ are generic/overlapping guard-fighter symbols; the target is not reliably in the top three until the full chain."
+    ],
+    "suggestedEmojis": ["🔱", "3️⃣", "🛡️", "⭕"],
+    "sourcesChecked": [
+      { "title": "Xin Zhao | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/xinzhao/", "kind": "official" },
+      { "title": "Template:Data Xin Zhao/Crescent Guard | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Xin_Zhao/Crescent_Guard", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "yasuo",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Yasuo", "Janna", "Yone"],
+      "after2": ["Yasuo", "Yone", "Riven"],
+      "after3": ["Yasuo", "Yone", "Poppy"],
+      "after4": ["Yasuo", "Yone", "Riven"]
+    },
+    "confusableWith": ["Yone", "Riven", "Master Yi", "Samira"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🌪️ and 🧱 are excellent signature clues, but 🧭 and especially 😔 are broad lore/emotion shorthand that do not add much identification.",
+      "The current chain identifies Yasuo by clue 3; trim the emotional padding instead of extending the same answer."
+    ],
+    "suggestedEmojis": ["🌪️", "⚔️", "🧱", "🧭"],
+    "sourcesChecked": [
+      { "title": "Yasuo | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/yasuo/", "kind": "official" },
+      { "title": "Origins: Yasuo - League of Legends", "url": "https://nexus.leagueoflegends.com/en-us/2017/06/origins-yasuo/", "kind": "official" },
+      { "title": "Template:Data Yasuo/Steel Tempest | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Yasuo/Steel_Tempest", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "yone",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Yone", "Jhin", "Kindred"],
+      "after2": ["Yone", "Viego", "Mordekaiser"],
+      "after3": ["Yone", "Yasuo", "Riven"],
+      "after4": ["Yone", "Yasuo", "Viego"]
+    },
+    "confusableWith": ["Yasuo", "Viego", "Kayn", "Katarina"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🗡️ and ⚔️ duplicate the two-blade idea without making the two sword types clearer, while 🌀 is a vague proxy for Soul Unbound.",
+      "The mask and spirit clues are strong, but the current fifth clue spends a slot on a generic weapon repeat."
+    ],
+    "suggestedEmojis": ["🎭", "👻", "🗡️", "🌀"],
+    "sourcesChecked": [
+      { "title": "Yone | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/yone/", "kind": "official" },
+      { "title": "Champion Insights: Yone | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/dev/champion-insights-yone/", "kind": "official" },
+      { "title": "Yone | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Yone", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "yorick",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Yorick", "Karthus", "Mordekaiser"],
+      "after2": ["Yorick", "Sion", "Karthus"],
+      "after3": ["Yorick", "Thresh", "Viego"],
+      "after4": ["Yorick", "Thresh", "Maokai"]
+    },
+    "confusableWith": ["Thresh", "Mordekaiser", "Maokai", "Viego"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "⛏️ is a pickaxe approximation for Yorick's shovel/gravekeeper visual, and 👰 requires knowledge that the bride represents the Maiden of the Mist; the summon chain remains distinctive by clue 4."
+    ],
+    "suggestedEmojis": ["🪦", "🧟", "🌫️", "👰", "⛏️"],
+    "sourcesChecked": [
+      { "title": "Yorick | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/yorick/", "kind": "official" },
+      { "title": "Champion Update: Yorick, the Shepherd of Souls", "url": "https://na.leagueoflegends.com/en/featured/yorick-champion-update", "kind": "official" },
+      { "title": "Yorick | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Yorick", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "yunara",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 0, "distinctiveness": 0, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Yunara", "Karma", "Irelia"],
+      "after2": ["Ashe", "Yunara", "Varus"],
+      "after3": ["Karma", "Irelia", "Lillia"],
+      "after4": ["Lux", "Vel'Koz", "Zeri"]
+    },
+    "confusableWith": ["Senna", "Aphelios", "Zeri", "Yone"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "📿 is source-grounded but not yet a recognizable Yunara convention; 🏹 is generic marksman shorthand and 🌸/🧘 are broad Ionia/spiritual mood clues.",
+      "🔦 reads as a flashlight rather than Yunara's laser, and the target is not a reasonable top-three candidate by clue 4 in an independent read.",
+      "This recent champion needs a player blind-test before shipping; the research is adequate but the rebus is not."
+    ],
+    "suggestedEmojis": ["📿", "🏹", "🌀", "⚡"],
+    "sourcesChecked": [
+      { "title": "Yunara | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/yunara/", "kind": "official" },
+      { "title": "Yunara | Liquipedia League of Legends Wiki", "url": "https://liquipedia.net/leagueoflegends/Yunara", "kind": "secondary" },
+      { "title": "Yunara Abilities | Ability Reveal & Tooltips", "url": "https://www.reddit.com/r/leagueoflegends/comments/1lcv5sy/yunara_abilities/", "kind": "community" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "yuumi",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Yuumi", "Nidalee", "Rengar"],
+      "after2": ["Yuumi", "Bard", "Ryze"],
+      "after3": ["Yuumi", "Lulu", "Milio"],
+      "after4": ["Yuumi", "Lulu", "Rakan"]
+    },
+    "confusableWith": ["Lulu", "Rengar", "Nidalee", "Milio"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence."
+    ],
+    "suggestedEmojis": ["🐱", "📖", "🫂", "✨", "💨"],
+    "sourcesChecked": [
+      { "title": "Yuumi | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/yuumi/", "kind": "official" },
+      { "title": "Yuumi’s Rework | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/dev/dev-launching-yuumi-s-rework/", "kind": "official" },
+      { "title": "Yuumi | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Yuumi", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "zaahen",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 1, "semanticClarity": 1, "progression": 0, "distinctiveness": 0, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Darius", "Olaf", "Aatrox"],
+      "after2": ["Aatrox", "Rhaast", "Zaahen"],
+      "after3": ["Aatrox", "Sion", "Viego"],
+      "after4": ["Aatrox", "Rhaast", "Xin Zhao"]
+    },
+    "confusableWith": ["Aatrox", "Rhaast", "Xin Zhao", "Varus"],
+    "issues": [
+      "Original blindTest is target-first through clue 3 and drops the target entirely by clue 4; it is target-biased and fails independent progression.",
+      "🪓 is an axe, not a glaive, while 👿, ⚔️, and 🏜️ are generic Darkin/fighter/Shurima symbols shared by close alternatives.",
+      "🔄 is a vague revival symbol and does not distinguish Zaahen's Determination mechanic from Aatrox, Sion, or Viego.",
+      "The research confirms the facts, but current Unicode has no precise glaive or Determination glyph; this set needs player validation before shipping."
+    ],
+    "suggestedEmojis": ["🗡️", "👿", "♾️", "⚔️", "🏜️"],
+    "sourcesChecked": [
+      { "title": "Zaahen | League of Legends", "url": "https://www.leagueoflegends.com/en-ph/champions/zaahen/", "kind": "official" },
+      { "title": "Zaahen (League of Legends)", "url": "https://lol.fandom.com/wiki/Zaahen/LoL", "kind": "secondary" },
+      { "title": "We're the team behind League's newest champion, Zaahen, Ask Us Anything!", "url": "https://www.reddit.com/r/leagueoflegends/comments/1p0hd9e/were_the_team_behind_leagues_newest_champion_zaahen_ask_us_anything/", "kind": "community" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "zac",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zac", "Kog'Maw", "Bel'Veth"],
+      "after2": ["Zac", "Zeri", "Nami"],
+      "after3": ["Zac", "Zeri", "Dr. Mundo"],
+      "after4": ["Zac", "Warwick", "Dr. Mundo"]
+    },
+    "confusableWith": ["Dr. Mundo", "Warwick", "Zeri", "Kog'Maw"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence."
+    ],
+    "suggestedEmojis": ["🦠", "🫧", "🤸", "♻️", "🧪"],
+    "sourcesChecked": [
+      { "title": "Zac | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/zac/", "kind": "official" },
+      { "title": "Zac | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Zac", "kind": "secondary" }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "zed",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zed", "Shen", "Akali"],
+      "after2": ["Zed", "Nocturne", "Kayn"],
+      "after3": ["Zed", "Shaco", "Neeko"],
+      "after4": ["Zed", "Shen", "Nocturne"]
+    },
+    "confusableWith": ["Shen", "Akali", "Nocturne", "Kayn"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "✴️ is an eight-pointed star, not a shuriken, so it is visually misleading; ☠️ is generic death shorthand.",
+      "Ninja + shadow clone already identifies the family by clue 3, but the projectile clue should be less ambiguous."
+    ],
+    "suggestedEmojis": ["🥷", "🌑", "👥", "🗡️", "☠️"],
+    "sourcesChecked": [
+      { "title": "Zed | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/zed/", "kind": "official" },
+      { "title": "Zed | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Zed", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "zeri",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zeri", "Kennen", "Volibear"],
+      "after2": ["Jinx", "Zeri", "Graves"],
+      "after3": ["Zeri", "Nilah", "Vayne"],
+      "after4": ["Zeri", "Jinx", "Ekko"]
+    },
+    "confusableWith": ["Jinx", "Ekko", "Kennen", "Ziggs"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "⚡ and 🔌 duplicate the electricity concept, while 💥 is generic; the sequence has a strong unique clue in 🛼 but wastes two later slots.",
+      "The target is clear by clue 3, so use Spark Surge/terrain traversal instead of repeating electricity."
+    ],
+    "suggestedEmojis": ["⚡", "🔫", "🛼", "🧱"],
+    "sourcesChecked": [
+      { "title": "Zeri | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/zeri/", "kind": "official" },
+      { "title": "Champion Insights: Zeri | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/game-updates/champion-insights-zeri/", "kind": "official" },
+      { "title": "Template:Data Zeri | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Zeri", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "ziggs",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Ziggs", "Jinx", "Tristana"],
+      "after2": ["Ziggs", "Jinx", "Tristana"],
+      "after3": ["Ziggs", "Teemo", "Shaco"],
+      "after4": ["Ziggs", "Jinx", "Heimerdinger"]
+    },
+    "confusableWith": ["Jinx", "Tristana", "Corki", "Heimerdinger"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "💣, 🧨, and 💥 are overlapping explosive symbols; 🤪 is generic personality padding.",
+      "The target is already plausible by clue 3 from bomb + minefield, so later clues should encode Satchel launch or turret demolition rather than another explosion."
+    ],
+    "suggestedEmojis": ["💣", "🪤", "🚀", "🏰"],
+    "sourcesChecked": [
+      { "title": "Ziggs | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/ziggs/", "kind": "official" },
+      { "title": "Ziggs (League of Legends) | League of Legends Wiki", "url": "https://leagueoflegends.fandom.com/wiki/Ziggs/LoL", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "zilean",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zilean", "Ekko", "Bard"],
+      "after2": ["Zilean", "Ziggs", "Jhin"],
+      "after3": ["Zilean", "Ekko", "Zoe"],
+      "after4": ["Zilean", "Ekko", "Bard"]
+    },
+    "confusableWith": ["Ekko", "Bard", "Zoe", "Ziggs"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "⏰ and ⌛ repeat the same time concept, and 🧙 is generic mage shorthand; the direct Time Bomb/Rewind clues do the real work.",
+      "The target is clear by clue 3, so remove the redundant hourglass or generic wizard rather than padding to five."
+    ],
+    "suggestedEmojis": ["⏰", "💣", "🔙", "♻️"],
+    "sourcesChecked": [
+      { "title": "Zilean | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/zilean/", "kind": "official" },
+      { "title": "Zilean | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Zilean", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "zoe",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zoe", "Lulu", "Lux"],
+      "after2": ["Zoe", "Lillia", "Yuumi"],
+      "after3": ["Zoe", "Bard", "LeBlanc"],
+      "after4": ["Zoe", "Bard", "LeBlanc"]
+    },
+    "confusableWith": ["Lulu", "Bard", "Yuumi", "Lillia"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🎒 suggests a backpack rather than picking up enemy spells/items, and ✨/🌌 are broad magic/cosmic mood symbols.",
+      "Bubble + portal are strong, but the fourth clue should communicate Spell Thief without relying on a target-aware interpretation of a backpack."
+    ],
+    "suggestedEmojis": ["✨", "🫧", "🌀", "🪄", "🌌"],
+    "sourcesChecked": [
+      { "title": "Zoe | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/zoe/", "kind": "official" },
+      { "title": "Zoe | Leaguepedia", "url": "https://lol.fandom.com/wiki/Zoe", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "zyra",
+    "mechanical": { "emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true },
+    "scores": { "signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2 },
+    "independentBlindTest": {
+      "after1": ["Zyra", "Maokai", "Ivern"],
+      "after2": ["Zyra", "Teemo", "Maokai"],
+      "after3": ["Zyra", "Maokai", "Morgana"],
+      "after4": ["Zyra", "Neeko", "Maokai"]
+    },
+    "confusableWith": ["Maokai", "Ivern", "Neeko", "Morgana"],
+    "issues": [
+      "Original blindTest is target-first at every reveal stage and is target-biased; it is not independent evidence.",
+      "🌱, 🌺, and 🌿 all repeat the plant concept; the leaf is padding after seeds, thorns, roots, and flowers already cover the identity.",
+      "The target is plausible by clue 3, but the set should stop at four distinct plant/roots signals instead of adding another generic leaf."
+    ],
+    "suggestedEmojis": ["🌱", "🌵", "🪢", "🌺"],
+    "sourcesChecked": [
+      { "title": "Zyra | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/zyra/", "kind": "official" },
+      { "title": "Zyra | Leaguepedia", "url": "https://lol.fandom.com/wiki/Zyra", "kind": "secondary" }
+    ],
+    "status": "needs_review"
+  }
+]

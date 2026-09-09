@@ -1,0 +1,553 @@
+[
+  {
+    "championKey": "aatrox",
+    "championName": "Aatrox",
+    "facts": [
+      {"id": "fact-1", "claim": "Aatrox was once an honored defender of Shurima and is now a Darkin whose essence is trapped in a weapon and animates stolen flesh.", "type": "lore", "source": {"title": "Aatrox | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/aatrox/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Aatrox's kit includes The Darkin Blade, Infernal Chains, Umbral Dash and World Ender, with attacks that can heal him.", "type": "ability", "source": {"title": "Aatrox | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/aatrox/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The Darkin physiology described for Aatrox includes an enormous winged World Ender form and continued consciousness within the blade.", "type": "visual", "source": {"title": "Aatrox (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Aatrox", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Darkin trapped in a great weapon", "blood-fueled healing and stolen flesh", "infernal chains", "winged World Ender form"],
+    "emojiCandidates": [
+      {"emoji": "⚔️", "meaning": "the Darkin Blade and warfare", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🩸", "meaning": "blood, stolen flesh and healing in combat", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⛓️", "meaning": "Infernal Chains", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🪽", "meaning": "the winged World Ender form", "strength": "signature", "basis": ["fact-3"]},
+      {"emoji": "🌍", "meaning": "World Ender and apocalyptic scale", "strength": "supporting", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Darius", "Mordekaiser", "Rhaast"],
+    "unresolved": []
+  },
+  {
+    "championKey": "ahri",
+    "championName": "Ahri",
+    "facts": [
+      {"id": "fact-1", "claim": "Ahri is a fox-like Vastaya connected to the spirit realm who manipulates emotions and consumes essence, receiving memories from souls.", "type": "lore", "source": {"title": "Ahri | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/ahri/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Riot's champion design history identifies Ahri's core thematic abilities as an orb, fox-fire, charm and a dash based on the nine-tailed fox.", "type": "ability", "source": {"title": "ORIGINS: Ahri | League of Legends", "url": "https://nexus.leagueoflegends.com/en-us/2017/09/origins-ahri/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary character reference describes Ahri as a vulpine Vastaya with soul-feeding and spirit-magic traits.", "type": "visual", "source": {"title": "Ahri (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Ahri", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["nine-tailed fox", "emotion charm", "orb and fox-fire", "consuming spirit essence"],
+    "emojiCandidates": [
+      {"emoji": "🦊", "meaning": "fox-like Vastaya", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "9️⃣", "meaning": "the nine tails", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🔮", "meaning": "Orb of Deception and spirit magic", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "💘", "meaning": "Charm and manipulation of emotions", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "👻", "meaning": "spirit essence and memories", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Rakan", "Neeko", "Lillia"],
+    "unresolved": []
+  },
+  {
+    "championKey": "akali",
+    "championName": "Akali",
+    "facts": [
+      {"id": "fact-1", "claim": "Akali left the Kinkou Order and now acts as an Ionia-focused rogue assassin trained by Shen.", "type": "lore", "source": {"title": "Akali | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/akali/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Akali throws five kunai, uses Twilight Shroud to become invisible in smoke, and can dash through Shuriken Flip and Perfect Execution.", "type": "ability", "source": {"title": "Akali, the Rogue Assassin | League of Legends", "url": "https://nexus.leagueoflegends.com/en-us/champion/akali/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary champion reference describes Akali's ninja training, smoke cover, kunai and shuriken-based combat identity.", "type": "gameplay", "source": {"title": "Akali (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Akali", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["rogue ninja assassin", "smoke invisibility", "five kunai and shuriken", "Ionia and Kinkou training"],
+    "emojiCandidates": [
+      {"emoji": "🥷", "meaning": "ninja assassin", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🌫️", "meaning": "Twilight Shroud smoke and stealth", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🔪", "meaning": "kunai and close-range assassin weapons", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💨", "meaning": "rapid dash and repositioning", "strength": "supporting", "basis": ["fact-2"]},
+      {"emoji": "☯️", "meaning": "Ionia/Kinkou balance and training", "strength": "supporting", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Zed", "Katarina", "Qiyana"],
+    "unresolved": []
+  },
+  {
+    "championKey": "akshan",
+    "championName": "Akshan",
+    "facts": [
+      {"id": "fact-1", "claim": "Akshan is a Rogue Sentinel who fights with stealth, righteous vengeance and a legendary death-reversing weapon.", "type": "lore", "source": {"title": "Akshan | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/akshan/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Akshan's gameplay includes the Avengerang boomerang, camouflage, Heroic Swing and the Comeuppance gun ultimate.", "type": "ability", "source": {"title": "Akshan | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/akshan/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The Absolver is described by the secondary reference as a Sentinel weapon enchanted to revive people killed by marked Scoundrels.", "type": "ability", "source": {"title": "Akshan (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Akshan", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Sentinel gun and death reversal", "grappling swing around terrain", "boomerang", "camouflage and Scoundrels"],
+    "emojiCandidates": [
+      {"emoji": "🪃", "meaning": "Avengerang boomerang", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🪝", "meaning": "Heroic Swing grappling hook", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🔫", "meaning": "Sentinel gun and Comeuppance", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "♻️", "meaning": "reviving allies through the Absolver", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🕵️", "meaning": "stealth and Going Rogue camouflage", "strength": "supporting", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Lucian", "Camille", "Vayne"],
+    "unresolved": []
+  },
+  {
+    "championKey": "alistar",
+    "championName": "Alistar",
+    "facts": [
+      {"id": "fact-1", "claim": "Alistar is a minotaur who was enslaved and forced into gladiatorial combat before fighting for the downtrodden.", "type": "lore", "source": {"title": "Alistar | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/alistar/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Alistar's recognizable abilities are Pulverize, Headbutt, Trample and Unbreakable Will, with a roar charged by crowd control.", "type": "ability", "source": {"title": "Alistar | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/alistar/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary champion reference emphasizes Alistar's horns, hooves, fists and history of chains and enslavement.", "type": "visual", "source": {"title": "Alistar (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Alistar", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["minotaur horns and hooves", "headbutt and Pulverize combo", "roar", "freed gladiator"],
+    "emojiCandidates": [
+      {"emoji": "🐂", "meaning": "minotaur/bull identity", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "👊", "meaning": "Headbutt and brute-force fists", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💥", "meaning": "Pulverize knock-up", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "📣", "meaning": "Triumphant Roar", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "⛓️", "meaning": "his former chains and gladiator enslavement", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Malphite", "Sion", "Ornn"],
+    "unresolved": []
+  },
+  {
+    "championKey": "ambessa",
+    "championName": "Ambessa",
+    "facts": [
+      {"id": "fact-1", "claim": "Ambessa Medarda is a Noxian warrior, general and mother whose champion identity is tied to conquest and the Wolf.", "type": "lore", "source": {"title": "Ambessa | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/ambessa/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "The secondary lore reference presents Ambessa as a feared Medarda general who seeks power for her clan and empire.", "type": "lore", "source": {"title": "Ambessa (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Ambessa", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "Ambessa's gameplay identity uses chain and fist stances with repeated dashes and close-range strikes.", "type": "ability", "source": {"title": "Ambessa (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Ambessa/LoL", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Noxian general and Medarda", "Chosen of the Wolf", "chain and fist stances", "aggressive dashes"],
+    "emojiCandidates": [
+      {"emoji": "🐺", "meaning": "the Wolf motif and Chosen of the Wolf", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⚔️", "meaning": "Noxian general and warrior", "strength": "supporting", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⛓️", "meaning": "chain stance and weapon", "strength": "signature", "basis": ["fact-3"]},
+      {"emoji": "👊", "meaning": "fist stance and close combat", "strength": "signature", "basis": ["fact-3"]},
+      {"emoji": "💨", "meaning": "repeated stance-linked dashes", "strength": "signature", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Warwick", "Riven", "Sett"],
+    "unresolved": ["No single Unicode emoji cleanly represents Ambessa's distinctive chained twin weapons or Medarda identity."]
+  },
+  {
+    "championKey": "amumu",
+    "championName": "Amumu",
+    "facts": [
+      {"id": "fact-1", "claim": "Amumu is a lonely, cursed mummy from ancient Shurima whose touch brings death and who searches for a friend.", "type": "lore", "source": {"title": "Amumu | League of Legends", "url": "https://www.leagueoflegends.com/en-sg/champions/amumu/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Amumu's abilities include Bandage Toss, Despair, Tantrum and Curse of the Sad Mummy, with a curse that amplifies incoming magic damage.", "type": "ability", "source": {"title": "Amumu | League of Legends", "url": "https://www.leagueoflegends.com/en-sg/champions/amumu/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Amumu as an undead, bandage-wrapped being associated with sadness, curses and Shuriman legends.", "type": "visual", "source": {"title": "Amumu (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Amumu", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["sad mummy", "bandages", "curse and area stun", "loneliness and tears"],
+    "emojiCandidates": [
+      {"emoji": "🩹", "meaning": "wrapped bandages and Bandage Toss", "strength": "signature", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "😭", "meaning": "the Sad Mummy's loneliness and tears", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🧟", "meaning": "living cadaver/mummy", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "☠️", "meaning": "curse, death and ruin", "strength": "supporting", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🌀", "meaning": "Curse of the Sad Mummy area control", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Sion", "Karthus", "Malzahar"],
+    "unresolved": []
+  },
+  {
+    "championKey": "anivia",
+    "championName": "Anivia",
+    "facts": [
+      {"id": "fact-1", "claim": "Anivia is a winged spirit of the Freljord who protects the region through endless cycles of life, death and rebirth.", "type": "lore", "source": {"title": "Anivia | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/anivia/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Anivia's kit uses Frostbite, a Glacial Storm and Rebirth, including a passive egg form after death.", "type": "ability", "source": {"title": "Anivia (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Anivia", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary lore reference describes Anivia as an elemental ice phoenix who commands frost, blizzards and walls of ice.", "type": "visual", "source": {"title": "The Cryophoenix - Universe | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Universe%3AThe_Cryophoenix", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["ice phoenix", "Freljord winter", "rebirth from an egg", "blizzard and ice wall"],
+    "emojiCandidates": [
+      {"emoji": "🐦", "meaning": "winged phoenix spirit", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "❄️", "meaning": "ice and Freljord winter", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🥚", "meaning": "Rebirth egg passive", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧊", "meaning": "frost, ice wall and Frostbite", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🌨️", "meaning": "Glacial Storm blizzard", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Anivia", "Braum", "Lissandra"],
+    "unresolved": []
+  },
+  {
+    "championKey": "annie",
+    "championName": "Annie",
+    "facts": [
+      {"id": "fact-1", "claim": "Annie is a child mage with powerful pyromancy who summons her beloved teddy bear Tibbers as a fiery protector.", "type": "lore", "source": {"title": "Annie | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/annie/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Annie's passive stuns with the next offensive spell after four casts, and Summon: Tibbers creates a burning bear that can attack.", "type": "ability", "source": {"title": "Annie | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/annie/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference connects Annie's early magic to fire and identifies Tibbers as her signature summoned companion.", "type": "visual", "source": {"title": "Annie (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Annie", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["child pyromancer", "Tibbers teddy bear", "four-spell stun", "fire magic"],
+    "emojiCandidates": [
+      {"emoji": "👧", "meaning": "child mage", "strength": "signature", "basis": ["fact-1"]},
+      {"emoji": "🔥", "meaning": "pyromancy and fiery spells", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🧸", "meaning": "Tibbers teddy bear", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "4️⃣", "meaning": "four casts before Pyromania stuns", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "💥", "meaning": "Tibbers summon and area burst", "strength": "supporting", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Brand", "Veigar", "Nunu & Willump"],
+    "unresolved": []
+  },
+  {
+    "championKey": "aphelios",
+    "championName": "Aphelios",
+    "facts": [
+      {"id": "fact-1", "claim": "Aphelios is the Weapon of the Faithful and fights with moonstone weapons guided by his sister Alune from a spiritual fortress.", "type": "lore", "source": {"title": "Aphelios (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Aphelios", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Aphelios has five weapons, each with its own Q, and swaps between main-hand and off-hand weapons while using Moonlight ammunition.", "type": "ability", "source": {"title": "Aphelios Kit Primer | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/game-updates/aphelios-kit-primer/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The official champion profile identifies Aphelios as a moon-linked marksman whose weapon order and ammunition shape his gameplay.", "type": "gameplay", "source": {"title": "Aphelios | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/aphelios/", "kind": "official", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["five moon weapons", "weapon swapping and ammo", "silent faithful", "Alune's spiritual guidance"],
+    "emojiCandidates": [
+      {"emoji": "🌙", "meaning": "moonstone weapons and Lunari faith", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "5️⃣", "meaning": "the five-gun weapon system", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🔫", "meaning": "his rotating arsenal of ranged weapons", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🔄", "meaning": "main-hand/off-hand swapping and weapon order", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🤫", "meaning": "Aphelios's silent, faithful persona", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Jinx", "Lucian", "Senna"],
+    "unresolved": []
+  },
+  {
+    "championKey": "ashe",
+    "championName": "Ashe",
+    "facts": [
+      {"id": "fact-1", "claim": "Ashe is the Frost Archer and an Avarosan warmother who seeks to unite the Freljord.", "type": "lore", "source": {"title": "Ashe | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/ashe/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Ashe's kit applies Frost, fires a cone of arrows, sends a hawk spirit for vision and launches a global Enchanted Crystal Arrow.", "type": "ability", "source": {"title": "Ashe (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Ashe", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary champion reference associates Ashe with the Avarosan bow, Frost Shot, Hawkshot and the crystal arrow.", "type": "visual", "source": {"title": "Ashe (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Ashe", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["ice bow and Frost Shot", "crystal arrow", "hawk scout", "Avarosan warmother"],
+    "emojiCandidates": [
+      {"emoji": "🏹", "meaning": "Frost Archer bow", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "❄️", "meaning": "Frost Shot and Freljord", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🦅", "meaning": "Hawkshot scouting spirit", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💎", "meaning": "Enchanted Crystal Arrow", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "👑", "meaning": "Avarosan warmother and leader", "strength": "supporting", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Varus", "Sivir", "Anivia"],
+    "unresolved": []
+  },
+  {
+    "championKey": "aurelionsol",
+    "championName": "Aurelion Sol",
+    "facts": [
+      {"id": "fact-1", "claim": "Aurelion Sol is a celestial dragon known as the Star Forger who shapes cosmic objects and resents mortal constraints.", "type": "lore", "source": {"title": "Aurelion Sol | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/aurelionsol/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "His current kit collects Stardust to improve abilities including a black-hole area, Astral Flight and a meteor-based ultimate.", "type": "ability", "source": {"title": "Aurelion Sol | League of Legends", "url": "https://www.leagueoflegends.com/en-au/champions/aurelionsol/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Aurelion Sol as a cosmic dragon associated with stars, planets and celestial creation.", "type": "visual", "source": {"title": "Aurelion Sol (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Aurelion_Sol", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["cosmic dragon", "star forging", "Stardust scaling", "black hole and Astral Flight"],
+    "emojiCandidates": [
+      {"emoji": "🐉", "meaning": "celestial dragon", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "⭐", "meaning": "stars and Stardust", "strength": "signature", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🌌", "meaning": "cosmic creation and space", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🕳️", "meaning": "Singularity black hole", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🔨", "meaning": "the Star Forger shaping celestial bodies", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Bard", "Shyvana", "Azir"],
+    "unresolved": []
+  },
+  {
+    "championKey": "aurora",
+    "championName": "Aurora",
+    "facts": [
+      {"id": "fact-1", "claim": "Aurora is the Witch Between Worlds, a rabbit-like Vastaya who can see and interact with spirits.", "type": "lore", "source": {"title": "Aurora | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/aurora/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Aurora's gameplay uses spirit exorcism, movement between the material and spirit realms, and a spirit-filled ultimate arena.", "type": "ability", "source": {"title": "Aurora Champion Spotlight | Gameplay - League of Legends", "url": "https://www.youtube.com/watch?v=L8Za9xjMg84", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary champion category identifies Aurora as a ranged burst/assassin called the Witch Between Worlds and links her to spirit lore.", "type": "visual", "source": {"title": "Category:Aurora | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Category%3AAurora", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["rabbit-like Vastaya witch", "spirits and exorcism", "spirit realm movement", "between-worlds magic"],
+    "emojiCandidates": [
+      {"emoji": "🐰", "meaning": "rabbit-like Vastaya identity", "strength": "signature", "basis": ["fact-1"]},
+      {"emoji": "🧙‍♀️", "meaning": "witch and spellcaster", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "👻", "meaning": "spirits she sees and exorcises", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🪄", "meaning": "spirit magic and witchcraft", "strength": "supporting", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🌀", "meaning": "crossing between worlds", "strength": "signature", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Lillia", "Vex", "Neeko"],
+    "unresolved": []
+  },
+  {
+    "championKey": "azir",
+    "championName": "Azir",
+    "facts": [
+      {"id": "fact-1", "claim": "Azir was a mortal emperor of Shurima who was betrayed and reborn millennia later as an Ascended being seeking to restore his buried city.", "type": "lore", "source": {"title": "Azir | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/azir/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Azir commands untargetable Sand Soldiers, can summon the Disc of the Sun and uses Shifting Sands to move through his soldiers.", "type": "ability", "source": {"title": "ORIGINS: Azir | League of Legends", "url": "https://nexus.leagueoflegends.com/en-us/2017/06/origins-azir/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference connects Azir to Shuriman Ascension, a falcon-headed emperor visual and a sand-soldier army.", "type": "visual", "source": {"title": "Azir (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Azir", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Shuriman emperor", "sand soldiers", "sun disc", "Ascended falcon imagery"],
+    "emojiCandidates": [
+      {"emoji": "👑", "meaning": "emperor of Shurima", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🏜️", "meaning": "Shurima and sand", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🪖", "meaning": "commanded Sand Soldiers and army", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "☀️", "meaning": "Disc of the Sun", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🦅", "meaning": "Ascended bird/emperor visual", "strength": "supporting", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Nasus", "Renekton", "Xerath"],
+    "unresolved": []
+  },
+  {
+    "championKey": "bard",
+    "championName": "Bard",
+    "facts": [
+      {"id": "fact-1", "claim": "Bard is a cosmic traveler and caretaker drawn to artifacts of magical power, accompanied by helpful spirit meeps.", "type": "lore", "source": {"title": "Bard | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/bard/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Bard collects ancient Chimes, gains meeps that empower attacks, and can create Magical Journeys and Tempered Fate.", "type": "ability", "source": {"title": "Bard | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/bard/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Bard as a celestial being who perceives the universe as music and travels with spirit companions.", "type": "visual", "source": {"title": "Bard (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Bard", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["cosmic caretaker", "meeps", "collectible chimes", "magical portal journey"],
+    "emojiCandidates": [
+      {"emoji": "🌌", "meaning": "cosmic traveler", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🔔", "meaning": "ancient Chimes", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "👻", "meaning": "spirit meeps", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🎵", "meaning": "Bard's musical perception and chime theme", "strength": "signature", "basis": ["fact-3"]},
+      {"emoji": "🌀", "meaning": "Magical Journey portal", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Aurelion Sol", "Kindred", "Ryze"],
+    "unresolved": []
+  },
+  {
+    "championKey": "belveth",
+    "championName": "Bel'Veth",
+    "facts": [
+      {"id": "fact-1", "claim": "Bel'Veth is a Void Empress created from the raw material of an entire devoured city and seeks to remake Runeterra.", "type": "lore", "source": {"title": "Bel'Veth | League of Legends", "url": "https://www.leagueoflegends.com/en-au/champions/belveth/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Bel'Veth gains permanent attack-speed stacks called Lavender after taking down large monsters or champions and can enter a stronger true form.", "type": "ability", "source": {"title": "Champion Insights: Bel'Veth | League of Legends", "url": "https://pre-blades-bw-testing.leagueoflegends.com/en-us/news/dev/champion-insights-bel-veth/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Bel'Veth as a manta-ray-like Voidborn with a monstrous maw and a connection to the Lavender Sea and Void Coral.", "type": "visual", "source": {"title": "Bel'Veth (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Bel%27Veth", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Void Empress", "Lavender stacks and Lavender Sea", "manta-ray-like true form", "Void Coral and endless attack speed"],
+    "emojiCandidates": [
+      {"emoji": "👑", "meaning": "Void Empress", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "👾", "meaning": "Voidborn origin", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪻", "meaning": "Lavender Sea and Lavender stacks", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🪸", "meaning": "Void Coral", "strength": "signature", "basis": ["fact-3"]},
+      {"emoji": "🧬", "meaning": "evolving true form and remade reality", "strength": "supporting", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "♾️", "meaning": "permanent, effectively endless attack-speed stacking", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Kha'Zix", "Cho'Gath", "Vel'Koz"],
+    "unresolved": ["There is no universally recognizable manta-ray emoji, so the Void/Lavender/Coral chain carries most of the disambiguation."]
+  },
+  {
+    "championKey": "blitzcrank",
+    "championName": "Blitzcrank",
+    "facts": [
+      {"id": "fact-1", "claim": "Blitzcrank is an enormous, near-indestructible Zaun automaton originally built to dispose of hazardous waste.", "type": "lore", "source": {"title": "Blitzcrank | League of Legends", "url": "https://www.leagueoflegends.com/en-ph/champions/blitzcrank/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Blitzcrank's signature kit includes Rocket Grab, Power Fist, Static Field and Overdrive.", "type": "ability", "source": {"title": "Blitzcrank | League of Legends", "url": "https://www.leagueoflegends.com/en-ph/champions/blitzcrank/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference identifies Blitzcrank's mechanical body, extending arm and electrical attacks as core parts of his gameplay identity.", "type": "visual", "source": {"title": "Blitzcrank (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Blitzcrank", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Zaun robot", "Rocket Grab hook", "mechanical arm", "electric Static Field"],
+    "emojiCandidates": [
+      {"emoji": "🤖", "meaning": "automaton", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪝", "meaning": "Rocket Grab hook", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🦾", "meaning": "mechanical extending arm", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "⚡", "meaning": "Static Field electricity", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🛠️", "meaning": "constructed machine and hazardous-work origin", "strength": "supporting", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Viktor", "Urgot", "Rell"],
+    "unresolved": []
+  },
+  {
+    "championKey": "brand",
+    "championName": "Brand",
+    "facts": [
+      {"id": "fact-1", "claim": "Brand was once the Freljord tribesman Kegan Rodhe before a World Rune burned away his soul and turned his body into living flame.", "type": "lore", "source": {"title": "Brand | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/brand/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Brand's Blaze passive stacks on targets, becomes unstable at three stacks and detonates in an area; his other spells are fire-based.", "type": "ability", "source": {"title": "Brand | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/brand/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Kegan's magical transformation, fire manipulation and connection to the World Rune.", "type": "lore", "source": {"title": "Brand (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Brand", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["living flame", "World Rune vessel", "Blaze stacks", "area detonation"],
+    "emojiCandidates": [
+      {"emoji": "🔥", "meaning": "living flame and fire magic", "strength": "signature", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🔮", "meaning": "World Rune source of power", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "💥", "meaning": "Blaze detonation", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "3️⃣", "meaning": "three Blaze stacks before explosion", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Annie", "Vel'Koz", "Malzahar"],
+    "unresolved": []
+  },
+  {
+    "championKey": "braum",
+    "championName": "Braum",
+    "facts": [
+      {"id": "fact-1", "claim": "Braum is a beloved Freljord hero with massive strength who carries an enchanted vault door as his shield.", "type": "lore", "source": {"title": "Braum | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/braum/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Braum's kit applies four Concussive Blows stacks for a stun and includes Winter's Bite, Stand Behind Me, Unbreakable and Glacial Fissure.", "type": "ability", "source": {"title": "Braum | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/braum/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary lore reference identifies Braum as an Iceborn with an enchanted vault door, a ram motif and a protective personality.", "type": "visual", "source": {"title": "Braum - Universe | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Universe%3ABraum", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["vault-door shield", "huge muscles and mustache", "Freljord Iceborn", "protector who blocks projectiles"],
+    "emojiCandidates": [
+      {"emoji": "🛡️", "meaning": "Braum's enormous shield and protection", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🚪", "meaning": "enchanted vault door shield", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "💪", "meaning": "legendary strength and muscles", "strength": "supporting", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "❄️", "meaning": "Freljord and Iceborn power", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🧔", "meaning": "Braum's unmistakable mustache", "strength": "supporting", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Taric", "Poppy", "Ornn"],
+    "unresolved": []
+  },
+  {
+    "championKey": "briar",
+    "championName": "Briar",
+    "facts": [
+      {"id": "fact-1", "claim": "Briar was created by the Black Rose through hemomancy as a living weapon with an insatiable hunger for blood and life.", "type": "lore", "source": {"title": "Champion Insights: Briar | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/dev/champion-insights-briar/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Briar's design centers on a restraint that can be removed, triggering a frenzied blood-hunt and all-in combat behavior.", "type": "gameplay", "source": {"title": "Champion Insights: Briar | League of Legends", "url": "https://www.leagueoflegends.com/en-us/news/dev/champion-insights-briar/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference identifies Briar's Hemomania, blood magic origin, restraint and bite-focused attacks.", "type": "ability", "source": {"title": "Briar (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Briar", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["blood-hungry living weapon", "restrained frenzy", "hemomancy", "unstoppable bite and rush"],
+    "emojiCandidates": [
+      {"emoji": "🩸", "meaning": "blood hunger and hemomancy", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "⛓️", "meaning": "restraint and released berserk state", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "😵‍💫", "meaning": "frenzy and loss of control", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🦷", "meaning": "blood-hunter bite attacks", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🏃‍♀️", "meaning": "all-in rush toward prey", "strength": "supporting", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Vladimir", "Warwick", "Sion"],
+    "unresolved": []
+  },
+  {
+    "championKey": "caitlyn",
+    "championName": "Caitlyn",
+    "facts": [
+      {"id": "fact-1", "claim": "Caitlyn Kiramman is Piltover's finest peacekeeper and an elite shot pursuing criminal elements.", "type": "lore", "source": {"title": "Caitlyn | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/caitlyn/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Caitlyn's kit includes Headshot, Yordle Snap Trap, 90 Caliber Net and Ace in the Hole, with brush-enhanced attack stacks.", "type": "ability", "source": {"title": "Caitlyn (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Caitlyn/LoL", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference links Caitlyn's gameplay to a rifle, traps, long-range headshots and Piltover law enforcement.", "type": "gameplay", "source": {"title": "Caitlyn (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Caitlyn", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Piltover sheriff", "long rifle and headshots", "Yordle Snap Traps", "Ace in the Hole"],
+    "emojiCandidates": [
+      {"emoji": "🕵️‍♀️", "meaning": "detective/peacekeeper", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🔫", "meaning": "Caitlyn's rifle", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪤", "meaning": "Yordle Snap Trap", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🎯", "meaning": "Headshot and long-range precision", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "⚙️", "meaning": "Piltover technology and city", "strength": "supporting", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Jhin", "Jinx", "Vi"],
+    "unresolved": []
+  },
+  {
+    "championKey": "camille",
+    "championName": "Camille",
+    "facts": [
+      {"id": "fact-1", "claim": "Camille is Clan Ferros's elite Principal Intelligencer, augmented with hextech so thoroughly that she may be more machine than woman.", "type": "lore", "source": {"title": "Camille | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/camille/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Camille's kit includes adaptive shields, Precision Protocol, Tactical Sweep, Hookshot and the Hextech Ultimatum.", "type": "ability", "source": {"title": "Camille | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/camille/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference identifies Camille's cybernetic prosthetic legs and terrain-grappling Hookshot as core physical traits.", "type": "visual", "source": {"title": "Camille (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Camille", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["hextech prosthetic legs", "Hookshot terrain grapple", "blade legs", "hextech shield and arena"],
+    "emojiCandidates": [
+      {"emoji": "🦿", "meaning": "cybernetic prosthetic legs", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪝", "meaning": "Hookshot and Wall Dive", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🗡️", "meaning": "blade-like legs and precise attacks", "strength": "signature", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "⚙️", "meaning": "hextech augmentation and Clan Ferros", "strength": "signature", "basis": ["fact-1"]},
+      {"emoji": "🛡️", "meaning": "Adaptive Defenses shield", "strength": "supporting", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Akshan", "Fiora", "Irelia"],
+    "unresolved": []
+  },
+  {
+    "championKey": "cassiopeia",
+    "championName": "Cassiopeia",
+    "facts": [
+      {"id": "fact-1", "claim": "Cassiopeia is a deadly Noxian creature whose body was transformed into a serpent after a Shuriman curse.", "type": "lore", "source": {"title": "Cassiopeia | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/cassiopeia/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Cassiopeia's kit relies on poisoning enemies, repeatedly casting Twin Fang on poisoned targets and Petrifying Gaze.", "type": "ability", "source": {"title": "Cassiopeia (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Cassiopeia", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Cassiopeia's serpentine physiology, venom and ability to petrify enemies with her gaze.", "type": "visual", "source": {"title": "Cassiopeia (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Cassiopeia", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["serpent transformation", "poison", "petrifying gaze", "Twin Fang"],
+    "emojiCandidates": [
+      {"emoji": "🐍", "meaning": "serpentine body", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "☠️", "meaning": "venom and poison", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🪨", "meaning": "Petrifying Gaze turns foes to stone", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "👁️", "meaning": "deadly gaze", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧪", "meaning": "poisoned ground and toxic magic", "strength": "supporting", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Rengar", "Twitch", "Teemo"],
+    "unresolved": []
+  },
+  {
+    "championKey": "chogath",
+    "championName": "Cho'Gath",
+    "facts": [
+      {"id": "fact-1", "claim": "Cho'Gath is the Terror of the Void, a Void monster whose identity is built around consuming and becoming more threatening.", "type": "lore", "source": {"title": "Cho'Gath | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/chogath/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Cho'Gath's Feast kills targets with true damage and grants permanent stacks that increase health, attack range and size; Rupture knocks enemies up.", "type": "ability", "source": {"title": "Cho'Gath | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Chogath", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary page identifies Cho'Gath's Carnivore sustain, Void classification, teeth and infinitely stacking Feast as defining mechanics.", "type": "gameplay", "source": {"title": "Cho'Gath | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Chogath", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Terror of the Void", "Feast devour", "permanent growth in size", "rupturing knock-up"],
+    "emojiCandidates": [
+      {"emoji": "👾", "meaning": "Void monster", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🦷", "meaning": "devouring maw and monster teeth", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🍽️", "meaning": "Feast and devouring enemies", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "📈", "meaning": "permanent Feast growth and stacking size", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💥", "meaning": "Rupture from beneath the ground", "strength": "supporting", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Kog'Maw", "Vel'Koz", "Bel'Veth"],
+    "unresolved": []
+  },
+  {
+    "championKey": "corki",
+    "championName": "Corki",
+    "facts": [
+      {"id": "fact-1", "claim": "Corki is a daring Yordle bombardier and pilot who flies an airship into battle.", "type": "lore", "source": {"title": "Corki | League of Legends", "url": "https://www.leagueoflegends.com/en-au/champions/corki/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Corki's abilities include Phosphorus Bomb, Valkyrie, Gatling Gun and Missile Barrage, with a periodic Package pickup.", "type": "ability", "source": {"title": "Corki | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Corki", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference identifies Corki as a Yordle with a plane, rockets, bombs and the Package as recognizable gameplay props.", "type": "visual", "source": {"title": "Corki (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Corki", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Yordle pilot", "airship", "bombs and missiles", "The Package delivery"],
+    "emojiCandidates": [
+      {"emoji": "🛩️", "meaning": "Corki's combat plane", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🧑‍✈️", "meaning": "Yordle pilot", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "💣", "meaning": "bombardier and Phosphorus Bomb", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🚀", "meaning": "Missile Barrage", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "📦", "meaning": "The Package", "strength": "signature", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Tristana", "Heimerdinger", "Rumble"],
+    "unresolved": []
+  },
+  {
+    "championKey": "darius",
+    "championName": "Darius",
+    "facts": [
+      {"id": "fact-1", "claim": "Darius is the Hand of Noxus, a battle-hardened commander whose raised axe represents Noxian might.", "type": "lore", "source": {"title": "Darius | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/darius/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Darius's attacks apply Hemorrhage bleed stacks up to five, while Noxian Guillotine delivers a lethal true-damage leap.", "type": "ability", "source": {"title": "Darius | League of Legends", "url": "https://www.leagueoflegends.com/en-gb/champions/darius/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary lore reference also associates Darius with Noxus, execution and the double-axe imagery shared with his brother Draven.", "type": "visual", "source": {"title": "Darius | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/en-us/Category%3ADarius", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Hand of Noxus", "giant axe", "five bleed stacks", "Noxian Guillotine dunk"],
+    "emojiCandidates": [
+      {"emoji": "🪓", "meaning": "Darius's massive axe", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🩸", "meaning": "Hemorrhage bleed", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "5️⃣", "meaning": "five Hemorrhage stacks", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "⬇️", "meaning": "leaping Noxian Guillotine/dunk", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🎖️", "meaning": "Noxian commander and Hand", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Draven", "Aatrox", "Sion"],
+    "unresolved": []
+  },
+  {
+    "championKey": "diana",
+    "championName": "Diana",
+    "facts": [
+      {"id": "fact-1", "claim": "Diana is the Scorn of the Moon, a Lunari warrior and Aspect of the Moon from Mount Targon.", "type": "lore", "source": {"title": "Diana | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/diana/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Diana's kit features Moonsilver Blade, Crescent Strike, Lunar Rush and Moonfall, combining a crescent projectile with a pull and burst.", "type": "ability", "source": {"title": "Diana (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Diana", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference identifies Diana's bright silver crescent blade and deep blue moon magic as signature visual traits.", "type": "visual", "source": {"title": "Diana (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Diana", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["Lunari moon warrior", "crescent moonsilver blade", "Lunar Rush dash", "Moonfall pull"],
+    "emojiCandidates": [
+      {"emoji": "🌙", "meaning": "Moon aspect and Lunari identity", "strength": "signature", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "☪️", "meaning": "crescent-and-star Lunari motif", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🗡️", "meaning": "Moonsilver Blade", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💨", "meaning": "Lunar Rush dash", "strength": "signature", "basis": ["fact-2"]},
+      {"emoji": "🌀", "meaning": "Moonfall pull and area burst", "strength": "signature", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Leona", "Aphelios", "Nocturne"],
+    "unresolved": []
+  },
+  {
+    "championKey": "drmundo",
+    "championName": "Dr. Mundo",
+    "facts": [
+      {"id": "fact-1", "claim": "Dr. Mundo is a purple, self-proclaimed physician from Zaun who escaped an asylum and imitates the unethical procedures performed on him.", "type": "lore", "source": {"title": "Dr. Mundo | League of Legends", "url": "https://www.leagueoflegends.com/en-sg/champions/drmundo/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Mundo throws an Infected Bonesaw, uses Heart Zapper and gains powerful regeneration through Maximum Dosage while using health as a resource.", "type": "ability", "source": {"title": "Dr. Mundo | League of Legends", "url": "https://www.leagueoflegends.com/en-sg/champions/drmundo/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary reference describes Mundo's chemically altered physiology, purple skin, oversized body, cleaver and accelerated healing.", "type": "visual", "source": {"title": "Dr. Mundo (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Dr._Mundo", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["mad doctor", "purple chemically altered body", "infected cleaver", "self-healing injections"],
+    "emojiCandidates": [
+      {"emoji": "🩺", "meaning": "self-proclaimed doctor", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "💜", "meaning": "iconic purple body", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🔪", "meaning": "Infected Bonesaw cleaver", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💉", "meaning": "chemical injections and Maximum Dosage", "strength": "signature", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🧪", "meaning": "Zaun chemical alteration", "strength": "supporting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Singed", "Vladimir", "Warwick"],
+    "unresolved": []
+  },
+  {
+    "championKey": "draven",
+    "championName": "Draven",
+    "facts": [
+      {"id": "fact-1", "claim": "Draven is the Glorious Executioner, a Noxian showman who turns execution into spectacle and craves fame.", "type": "lore", "source": {"title": "Draven | League of Legends", "url": "https://www.leagueoflegends.com/en-us/champions/draven/", "kind": "official", "accessedAt": "2026-09-09"}},
+      {"id": "fact-2", "claim": "Draven's recognizable kit revolves around League of Draven, Spinning Axe, Blood Rush, Stand Aside and Whirling Death.", "type": "ability", "source": {"title": "Draven (League of Legends) | League of Legends Wiki", "url": "https://leagueoflegends.fandom.com/wiki/Draven/LoL", "kind": "secondary", "accessedAt": "2026-09-09"}},
+      {"id": "fact-3", "claim": "The secondary references connect Draven to double axes, spinning/catching axes, execution and his brother Darius.", "type": "gameplay", "source": {"title": "Draven (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Draven", "kind": "secondary", "accessedAt": "2026-09-09"}}
+    ],
+    "signatureSignals": ["showman executioner", "spinning axes that can be caught", "League of Draven fame", "Noxian brother of Darius"],
+    "emojiCandidates": [
+      {"emoji": "🪓", "meaning": "Spinning Axe and double axes", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🔄", "meaning": "axes returning to be caught", "strength": "signature", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🎭", "meaning": "theatrical showman and spectacle", "strength": "signature", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🩸", "meaning": "execution and Blood Rush theme", "strength": "supporting", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "👑", "meaning": "glory, fame and League of Draven", "strength": "signature", "basis": ["fact-1", "fact-2"]}
+    ],
+    "confusableWith": ["Darius", "Aatrox", "Olaf"],
+    "unresolved": []
+  }
+]

@@ -1,0 +1,585 @@
+[
+  {
+    "championKey": "illaoi",
+    "championName": "Illaoi",
+    "facts": [
+      {"id":"fact-1","claim":"Illaoi is the prophet of the Great Kraken Nagakabouros and fights with a large golden idol.","type":"lore","source":{"title":"Illaoi | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/illaoi/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Her kit creates and commands tentacles, rips an enemy champion's spirit from the body, and summons more tentacles with Leap of Faith.","type":"ability","source":{"title":"Illaoi | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Illaoi","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["golden idol and Kraken faith","tentacles","spirit extraction","large physical priestess"],
+    "emojiCandidates":[
+      {"emoji":"🌊","meaning":"Kraken, sea and Nagakabouros context","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🗿","meaning":"the golden idol she carries","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🐙","meaning":"tentacles and the Great Kraken","strength":"signature","basis":["fact-2"]},
+      {"emoji":"👻","meaning":"a champion spirit pulled out as a Vessel","strength":"signature","basis":["fact-2"]},
+      {"emoji":"💪","meaning":"her imposing physical strength","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Nami","Nautilus","Thresh"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "irelia",
+    "championName": "Irelia",
+    "facts": [
+      {"id":"fact-1","claim":"Irelia learned ancient Ionian dances and adapted them for war, levitating a host of deadly blades.","type":"lore","source":{"title":"Irelia | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/irelia/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Her abilities include Bladesurge, Flawless Duet and Vanguard's Edge, all centered on moving and controlling blades.","type":"ability","source":{"title":"Irelia | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Irelia","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["blade dancing","levitating Ionian blades","Flawless Duet","Ionian resistance leader"],
+    "emojiCandidates":[
+      {"emoji":"🪷","meaning":"Ionian spiritual and cultural setting","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🗡️","meaning":"the floating blades that define her combat style","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"💃","meaning":"dance adapted into combat","strength":"signature","basis":["fact-1"]},
+      {"emoji":"👯","meaning":"Flawless Duet and paired blade movement","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🪭","meaning":"a visual shorthand for the graceful Ionian dance tradition","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Riven","Fiora","Katarina"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "ivern",
+    "championName": "Ivern",
+    "facts": [
+      {"id":"fact-1","claim":"Ivern is the Green Father, a magically transformed being who protects the forests and their creatures.","type":"lore","source":{"title":"Ivern | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/ivern/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Friend of the Forest lets Ivern free jungle monsters instead of killing them, while Brushmaker, Rootcaller and Triggerseed shape his nature-based kit.","type":"gameplay","source":{"title":"Ivern | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Ivern","kind":"secondary","accessedAt":"2026-09-09"}},
+      {"id":"fact-3","claim":"Daisy is Ivern's distinctive large summoned companion.","type":"ability","source":{"title":"Ivern | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Ivern","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Green Father","freeing jungle monsters","brush and roots","Daisy companion"],
+    "emojiCandidates":[
+      {"emoji":"🌳","meaning":"the Green Father and living forest identity","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🌿","meaning":"brush, roots and nature magic","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🪨","meaning":"Daisy's large golem-like summoned body","strength":"signature","basis":["fact-3"]},
+      {"emoji":"🦌","meaning":"a protected forest creature rather than a hunted camp","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"🌼","meaning":"Daisy's name and gentle nature motif","strength":"supporting","basis":["fact-3"]}
+    ],
+    "confusableWith":["Maokai","Zyra","Neeko"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "janna",
+    "championName": "Janna",
+    "facts": [
+      {"id":"fact-1","claim":"Janna is an elemental wind spirit who protects the dispossessed of Zaun and is associated with sailors' prayers for fair winds.","type":"lore","source":{"title":"Janna | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/janna/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Howling Gale, Zephyr, Eye of the Storm and Monsoon express wind, movement and protective shielding.","type":"ability","source":{"title":"Janna | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Janna","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["wind spirit","gales and Monsoon","protective shield","Zaun guardian"],
+    "emojiCandidates":[
+      {"emoji":"🌪️","meaning":"Howling Gale and the Storm's Fury identity","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"💨","meaning":"elemental wind and Zephyr","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🕊️","meaning":"a benevolent spirit carried by the wind","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🛡️","meaning":"Eye of the Storm and protection of Zaun's vulnerable people","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🏜️","meaning":"the Shuriman roots of her ancient wind-spirit story","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Zephyr","Nami","Karma"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "jarvaniv",
+    "championName": "Jarvan IV",
+    "facts": [
+      {"id":"fact-1","claim":"Jarvan IV is the Exemplar of Demacia and its crown prince, trained as a heavily armored royal warrior.","type":"lore","source":{"title":"Jarvan IV | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/jarvaniv/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"His signature kit links Dragon Strike to a Demacian Standard flag and ends with Cataclysm, a circular terrain arena.","type":"ability","source":{"title":"Jarvan IV | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Jarvan_IV","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Demacian prince","lance and flag combo","dragon-themed dash","Cataclysm terrain ring"],
+    "emojiCandidates":[
+      {"emoji":"👑","meaning":"royal heir and future king of Demacia","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🚩","meaning":"Demacian Standard flag","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🐉","meaning":"Dragon Strike and the dragon motif","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"Demacian armor and defensive Golden Aegis","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"⭕","meaning":"the circular prison created by Cataclysm","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Xin Zhao","Garen","Jarvan III"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "jax",
+    "championName": "Jax",
+    "facts": [
+      {"id":"fact-1","claim":"Jax is a weapons master and the last known survivor of the Kohari of Icathia; he famously fights with an improvised lamp because he could not find a weapon worthy of him.","type":"lore","source":{"title":"Jax | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/jax/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Leap Strike lets Jax leap to a unit, Counter Strike dodges basic attacks and stuns nearby enemies, and Grandmaster-at-Arms rewards repeated attacks.","type":"gameplay","source":{"title":"Jax | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Jax","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["lamp as weapon","weapons master","leap and counterattack","Icathian survivor"],
+    "emojiCandidates":[
+      {"emoji":"🏮","meaning":"the iconic lamppost/lamp Jax uses as a weapon","strength":"signature","basis":["fact-1"]},
+      {"emoji":"⚔️","meaning":"Grandmaster at Arms and mastery of weapons","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🦘","meaning":"Leap Strike's distinctive jump","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"Counter Strike's defensive evasion stance","strength":"supporting","basis":["fact-2"]},
+      {"emoji":"🔥","meaning":"his empowered weapon attacks and relentless dueling pressure","strength":"supporting","basis":["fact-2"]}
+    ],
+    "confusableWith":["Yone","Riven","Tryndamere"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "jayce",
+    "championName": "Jayce",
+    "facts": [
+      {"id":"fact-1","claim":"Jayce Talis is Piltover's Defender of Tomorrow, a hextech inventor who carries the Mercury Hammer.","type":"lore","source":{"title":"Jayce | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/jayce/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Jayce swaps between Mercury Hammer and Mercury Cannon forms, with Shock Blast, Acceleration Gate and Thundering Blow defining the kit.","type":"ability","source":{"title":"Jayce | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Jayce","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Mercury Hammer/Cannon","hextech inventor","form switching","Acceleration Gate and Shock Blast"],
+    "emojiCandidates":[
+      {"emoji":"🔨","meaning":"Mercury Hammer","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔫","meaning":"Mercury Cannon form","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔄","meaning":"switching between two weapon forms","strength":"signature","basis":["fact-2"]},
+      {"emoji":"⚡","meaning":"hextech energy and Shock Blast","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"🚪","meaning":"Acceleration Gate","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Heimerdinger","Viktor","Caitlyn"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "jhin",
+    "championName": "Jhin",
+    "facts": [
+      {"id":"fact-1","claim":"Jhin is a meticulous Ionian serial killer and artist whose murders are treated as elaborate performances.","type":"lore","source":{"title":"Jhin | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/jhin/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Whisper uses four rounds with a guaranteed critical fourth shot, while Captive Audience and Curtain Call turn flowers, traps and a cannon into theatrical motifs.","type":"gameplay","source":{"title":"Jhin | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Jhin","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["four-shot firearm","theatrical masked artist","flowers as traps","Curtain Call"],
+    "emojiCandidates":[
+      {"emoji":"4️⃣","meaning":"four rounds and the famous fourth shot","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🎭","meaning":"the masked performer and theatrical murders","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🌹","meaning":"beauty, flowers and Captive Audience traps","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔫","meaning":"Whisper and the transformed Curtain Call cannon","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🎬","meaning":"a staged finale and Curtain Call performance","strength":"supporting","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Aphelios","Caitlyn","Shaco"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "jinx",
+    "championName": "Jinx",
+    "facts": [
+      {"id":"fact-1","claim":"Jinx is the Loose Cannon of Zaun, known for reckless destruction and a love of explosions and chaos.","type":"lore","source":{"title":"Jinx | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/jinx/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"She switches between the Pow-Pow minigun and Fishbones rocket launcher, throws Flame Chompers, and fires a global Super Mega Death Rocket.","type":"ability","source":{"title":"Jinx | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Jinx/LoL","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Pow-Pow and Fishbones","rocket launcher","Flame Chompers","Get Excited chaos"],
+    "emojiCandidates":[
+      {"emoji":"🚀","meaning":"Fishbones and Super Mega Death Rocket","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔫","meaning":"Pow-Pow minigun and her weapon switching","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🦷","meaning":"Flame Chompers traps","strength":"signature","basis":["fact-2"]},
+      {"emoji":"💣","meaning":"her explosive, destructive identity","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"⚡","meaning":"the burst of speed and attack speed from Get Excited","strength":"supporting","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Ziggs","Caitlyn","Aphelios"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "ksante",
+    "championName": "K'Sante",
+    "facts": [
+      {"id":"fact-1","claim":"K'Sante is the Pride of Nazumah, a monster hunter and protector of a desert city in Shurima.","type":"lore","source":{"title":"K'Sante | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/ksante/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"He fights with paired Ntofo weapons, combining tank defenses with a distinctive All Out transformation that trades defenses for offensive power.","type":"ability","source":{"title":"K'Sante Abilities Rundown","url":"https://www.leagueoflegends.com/en-us/event/k-sante-abilities-rundown/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-3","claim":"His kit uses shields, wall interaction and a form-changing ultimate to move from protector to fighter.","type":"gameplay","source":{"title":"K'Sante | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/K%27Sante","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Nazumah monster hunter","paired Ntofo weapons","tank-to-fighter All Out","desert protector"],
+    "emojiCandidates":[
+      {"emoji":"🏜️","meaning":"Nazumah's desert setting","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🥊","meaning":"paired close-combat Ntofo weapons","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"his protector and tank identity","strength":"signature","basis":["fact-2","fact-3"]},
+      {"emoji":"🔄","meaning":"All Out changes his form and tradeoff","strength":"signature","basis":["fact-2","fact-3"]},
+      {"emoji":"🧱","meaning":"Path Maker and wall-breaking movement","strength":"supporting","basis":["fact-3"]}
+    ],
+    "confusableWith":["Ornn","Sett","Malphite"],
+    "unresolved":["Generic shield and fist symbols are not uniquely K'Sante without the desert and transformation clues."]
+  },
+  {
+    "championKey": "kaisa",
+    "championName": "Kai'Sa",
+    "facts": [
+      {"id":"fact-1","claim":"Kai'Sa survived the Void after being taken as a child and now lives in uneasy symbiosis with a living Void carapace.","type":"lore","source":{"title":"Kai'Sa | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kaisa/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Second Skin stacks Plasma and her Living Weapon identity evolves her abilities as she gains stats; Icathian Rain and Void Seeker are core attacks.","type":"ability","source":{"title":"Kai'Sa | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kai%27Sa","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["living Void carapace","survivor and hunter","ability evolution","Icathian/Void projectiles"],
+    "emojiCandidates":[
+      {"emoji":"🟣","meaning":"the Void's purple visual identity","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🐚","meaning":"a living protective shell or carapace","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🧬","meaning":"symbiosis and evolving Living Weapon abilities","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔫","meaning":"her ranged hunter weapons and Icathian Rain","strength":"supporting","basis":["fact-2"]},
+      {"emoji":"🎯","meaning":"a precise Void hunter tracking prey","strength":"supporting","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Kassadin","Kha'Zix","Malzahar"],
+    "unresolved":["The shell emoji is an inference for a carapace and may read as marine rather than Void-themed on some platforms."]
+  },
+  {
+    "championKey": "kalista",
+    "championName": "Kalista",
+    "facts": [
+      {"id":"fact-1","claim":"Kalista is an undead wraith from Camavor and the Spear of Vengeance, bound to hunt those who betray an oath.","type":"lore","source":{"title":"Kalista | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kalista/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Her kit is built around Martial Poise hopping, Rend spears embedded in a target, and Fate's Call with an Oathsworn ally.","type":"gameplay","source":{"title":"Kalista | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kalista","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["undead vengeance wraith","spears and Rend","Oathsworn bond","constant hop movement"],
+    "emojiCandidates":[
+      {"emoji":"👻","meaning":"undead wraith and Black Mist origin","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🗡️","meaning":"spear-like weapon and Rend stacks","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🤝","meaning":"the Oathsworn bond and Fate's Call","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🦘","meaning":"Martial Poise makes every attack a hop","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🌫️","meaning":"the Black Mist and Shadow Isles atmosphere","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Thresh","Senna","Viego"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "karma",
+    "championName": "Karma",
+    "facts": [
+      {"id":"fact-1","claim":"Karma is the living embodiment of an ancient Ionian soul reincarnated through countless lives, carrying accumulated memories.","type":"lore","source":{"title":"Karma | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/karma/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Gathering Fire reduces Mantra's cooldown, and Mantra empowers her damaging, tethering and shielding abilities.","type":"ability","source":{"title":"Karma | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Karma","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["reincarnated Ionian spirit","Mantra empowerment","spirit energy","shield and tether support"],
+    "emojiCandidates":[
+      {"emoji":"♻️","meaning":"reincarnation and recurring lives","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🪷","meaning":"Ionian spiritual tradition","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🔥","meaning":"Mantra and empowered spell energy","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"Inspire and its empowered shield","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔗","meaning":"Focused Resolve's tether","strength":"supporting","basis":["fact-2"]}
+    ],
+    "confusableWith":["Irelia","Janna","Lulu"],
+    "unresolved":["Reincarnation has no perfectly literal single emoji; the cycle symbol is a deliberate rebus inference."]
+  },
+  {
+    "championKey": "karthus",
+    "championName": "Karthus",
+    "facts": [
+      {"id":"fact-1","claim":"Karthus is the Deathsinger, an undead lich associated with the Shadow Isles and a desire to welcome death.","type":"lore","source":{"title":"Karthus | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/karthus/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Death Defied lets him cast after dying, while Requiem is a global death-themed song and Defile surrounds him with damaging aura.","type":"ability","source":{"title":"Karthus | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Karthus","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["undead singer","Requiem global song","death after death","Shadow Isles mist"],
+    "emojiCandidates":[
+      {"emoji":"💀","meaning":"death and undead lich identity","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🎶","meaning":"the Deathsinger and Requiem","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🪦","meaning":"Death Defied and continuing after death","strength":"signature","basis":["fact-2"]},
+      {"emoji":"👻","meaning":"undead spirit and Shadow Isles haunting","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🌫️","meaning":"the Shadow Isles and Black Mist atmosphere","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Sona","Vex","Thresh"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kassadin",
+    "championName": "Kassadin",
+    "facts": [
+      {"id":"fact-1","claim":"Kassadin is the Void Walker, a father who crossed into the Void and armed himself with artifacts to rescue his daughter Kai'Sa.","type":"lore","source":{"title":"Kassadin | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kassadin/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Void Stone, Null Sphere, Nether Blade and Riftwalk make his kit a Void-themed melee fighter with repeated short-range teleportation.","type":"ability","source":{"title":"Kassadin | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kassadin","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Void Walker","Void artifacts and blade","Riftwalk teleport","father searching for Kai'Sa"],
+    "emojiCandidates":[
+      {"emoji":"🕳️","meaning":"the Void and crossing a rift","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"👾","meaning":"Void creature territory","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🗡️","meaning":"Nether Blade and artifact weapons","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🌀","meaning":"Riftwalk's repeated teleportation","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"Void Stone's magic shield","strength":"supporting","basis":["fact-2"]}
+    ],
+    "confusableWith":["Kai'Sa","Kha'Zix","Malzahar"],
+    "unresolved":["Void symbols overlap with other Void champions; the blade plus repeated rift clues are the intended distinction."]
+  },
+  {
+    "championKey": "katarina",
+    "championName": "Katarina",
+    "facts": [
+      {"id":"fact-1","claim":"Katarina is a high-caliber Noxian assassin and the eldest daughter of General Du Couteau.","type":"lore","source":{"title":"Katarina | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/katarina/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"She throws bouncing daggers, Shunpos to units or daggers, and uses Death Lotus; takedowns dramatically reduce remaining cooldowns.","type":"gameplay","source":{"title":"Katarina | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Katarina","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Noxian assassin","dagger pickup and bounce","blink to daggers","kill resets and Death Lotus"],
+    "emojiCandidates":[
+      {"emoji":"🗡️","meaning":"serrated daggers and Sinister Blade identity","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🪃","meaning":"Bouncing Blade and returning dagger trajectory","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🌀","meaning":"Shunpo movement and spinning Death Lotus","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔄","meaning":"cooldown resets after takedowns","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🩸","meaning":"lethal Noxian assassination","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Akali","Talon","Qiyana"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kayle",
+    "championName": "Kayle",
+    "facts": [
+      {"id":"fact-1","claim":"Kayle is a Targonian Aspect who fought for justice with wings of divine flame and served as a protector of Demacia with Morgana.","type":"lore","source":{"title":"Kayle | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kayle/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Divine Ascent progressively grants wings, range and waves of fire, while Divine Judgment makes a target invulnerable.","type":"ability","source":{"title":"Kayle | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kayle","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["angelic wings","justice and judgment","level-based ascension","fire waves and invulnerability"],
+    "emojiCandidates":[
+      {"emoji":"👼","meaning":"angelic and divine identity","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🪽","meaning":"Divine Ascent wings","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔥","meaning":"divine flame and fire waves","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"⚖️","meaning":"justice and judgment","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🛡️","meaning":"Divine Judgment's invulnerability","strength":"supporting","basis":["fact-2"]}
+    ],
+    "confusableWith":["Morgana","Leona","Aatrox"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kayn",
+    "championName": "Kayn",
+    "facts": [
+      {"id":"fact-1","claim":"Kayn is a shadow assassin who wields the Darkin scythe Rhaast and battles for control of his body and mind.","type":"lore","source":{"title":"Kayn | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kayn/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"The Darkin Scythe, Shadow Step and Umbral Trespass support two possible forms: Shadow Assassin and Rhaast, with different combat identities.","type":"ability","source":{"title":"Kayn | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kayn","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Darkin scythe","shadow magic","two transformation outcomes","walking through walls and possessing targets"],
+    "emojiCandidates":[
+      {"emoji":"🌑","meaning":"shadow magic and Shadow Assassin","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🪓","meaning":"a readable axe-like shorthand for his scythe","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🔄","meaning":"the choice between Kayn and Rhaast forms","strength":"signature","basis":["fact-2"]},
+      {"emoji":"😈","meaning":"Rhaast's Darkin corruption","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🧱","meaning":"Shadow Step passing through walls","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Zed","Rhaast","Viego"],
+    "unresolved":["Unicode has no scythe emoji; axe is an imperfect visual proxy and should be reviewed against the renderer."]
+  },
+  {
+    "championKey": "kennen",
+    "championName": "Kennen",
+    "facts": [
+      {"id":"fact-1","claim":"Kennen is the Heart of the Tempest, a Yordle and member of the Kinkou who uses lightning to mediate the mortal and spirit realms.","type":"lore","source":{"title":"Kennen | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kennen/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"His abilities apply Marks of the Storm, and three marks stun; Lightning Rush turns him into a moving ball of electricity.","type":"gameplay","source":{"title":"Kennen | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kennen","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["small lightning Yordle","Marks of the Storm","shuriken","Lightning Rush and storm stun"],
+    "emojiCandidates":[
+      {"emoji":"🐹","meaning":"small Yordle silhouette","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🥷","meaning":"Kinkou ninja identity","strength":"signature","basis":["fact-1"]},
+      {"emoji":"⚡","meaning":"lightning element and Heart of the Tempest","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🎯","meaning":"stacking Marks of the Storm on targets","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🌀","meaning":"Slicing Maelstrom storm around him","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Zeri","Shen","Akali"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "khazix",
+    "championName": "Kha'Zix",
+    "facts": [
+      {"id":"fact-1","claim":"Kha'Zix is a Voidreaver who infiltrated Runeterra to devour the strongest creatures and evolve beyond them.","type":"lore","source":{"title":"Kha'Zix | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/khazix/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Taste Their Fear rewards isolated targets, Leap provides a sudden jump, and Void Assault grants stealth; several abilities can evolve.","type":"gameplay","source":{"title":"Kha'Zix | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kha%27Zix","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["evolving Void insect","isolation and fear","leap","stealth and adaptive mutation"],
+    "emojiCandidates":[
+      {"emoji":"🦗","meaning":"insectoid Voidreaver body","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🧬","meaning":"evolution of limbs and abilities","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"👁️","meaning":"hunting isolated prey and unseen threat","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🕳️","meaning":"Void origin","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🦘","meaning":"Leap as his recognizable engage","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Kai'Sa","Kassadin","Rek'Sai"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kindred",
+    "championName": "Kindred",
+    "facts": [
+      {"id":"fact-1","claim":"Kindred is the Eternal Hunters represented by two entities: Lamb and Wolf, two faces of death in Runeterra.","type":"lore","source":{"title":"Kindred | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kindred/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Marks of the Kindred grow through hunts, Wolf's Frenzy summons Wolf to attack, and Lamb's Respite creates a zone that prevents units from dying briefly.","type":"ability","source":{"title":"Kindred | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kindred","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Lamb and Wolf pair","Eternal Hunters","marks and hunts","Lamb's Respite death-denial zone"],
+    "emojiCandidates":[
+      {"emoji":"🐑","meaning":"Lamb, one half of Kindred","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🐺","meaning":"Wolf, the other half and companion","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🏹","meaning":"Lamb's ranged hunting weapon","strength":"signature","basis":["fact-2"]},
+      {"emoji":"☯️","meaning":"two complementary faces of one death concept","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🛡️","meaning":"Lamb's Respite temporarily prevents death","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🎭","meaning":"the two masks/faces of the Eternal Hunters","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Lamb","Wolf","Viego"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kled",
+    "championName": "Kled",
+    "facts": [
+      {"id":"fact-1","claim":"Kled is a cantankerous Noxian Yordle cavalier who rides the cowardly lizard Skaarl.","type":"lore","source":{"title":"Kled | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kled/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"His kit features Bear Trap on a Rope, Jousting, a dismounted state with courage, and the long-range Chaaaaaaaarge ultimate.","type":"gameplay","source":{"title":"Kled | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kled","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Skaarl lizard mount","Noxian Yordle cavalier","dismount and courage","reckless charge and bear trap"],
+    "emojiCandidates":[
+      {"emoji":"🦎","meaning":"Skaarl, the cowardly lizard","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🤠","meaning":"eccentric cavalier/wild-west visual shorthand","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🪤","meaning":"Bear Trap on a Rope","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🪓","meaning":"Kled's aggressive axe-wielding fighter image","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"📣","meaning":"Chaaaaaaaarge and his reckless rallying cry","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Rumble","Gnar","Sejuani"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "kogmaw",
+    "championName": "Kog'Maw",
+    "facts": [
+      {"id":"fact-1","claim":"Kog'Maw is a putrid Void creature from Icathia with a caustic, gaping mouth.","type":"lore","source":{"title":"Kog'Maw | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/kogmaw/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Caustic Spittle, Bio-Arcane Barrage, Void Ooze and Living Artillery make acid, ooze and long-range biological artillery central to his kit; Icathian Surprise explodes on death.","type":"ability","source":{"title":"Kog'Maw | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Kog%27Maw","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["gaping mouth","Void creature","acid and ooze","death explosion and artillery"],
+    "emojiCandidates":[
+      {"emoji":"👾","meaning":"Void creature","strength":"signature","basis":["fact-1"]},
+      {"emoji":"👄","meaning":"the Mouth of the Abyss","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🧪","meaning":"caustic acid and biological attacks","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🤮","meaning":"putrid creature and corrosive spit","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"💥","meaning":"Icathian Surprise after death","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🎯","meaning":"Living Artillery's long-range targeting","strength":"supporting","basis":["fact-2"]}
+    ],
+    "confusableWith":["Vel'Koz","Cho'Gath","Zac"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "leblanc",
+    "championName": "LeBlanc",
+    "facts": [
+      {"id":"fact-1","claim":"LeBlanc is the Deceiver, a pale woman and central manipulator of the Black Rose who works through hidden identities and illusions.","type":"lore","source":{"title":"LeBlanc | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/leblanc/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Mirror Image, Distortion, Ethereal Chains and Mimic let her create a clone, blink, bind targets and repeat spells.","type":"ability","source":{"title":"LeBlanc | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/LeBlanc","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Black Rose","deception and clone","blink/Distortion","chains and Mimic repetition"],
+    "emojiCandidates":[
+      {"emoji":"🌹","meaning":"the Black Rose cabal","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🎭","meaning":"shifting identities and deception","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🪞","meaning":"Mirror Image clone","strength":"signature","basis":["fact-2"]},
+      {"emoji":"👥","meaning":"a duplicate/clone indistinguishable from her","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔗","meaning":"Ethereal Chains","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🪄","meaning":"illusion magic and Mimic","strength":"supporting","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Neeko","Shaco","Viego"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "leesin",
+    "championName": "Lee Sin",
+    "facts": [
+      {"id":"fact-1","claim":"Lee Sin is the Blind Monk, an Ionian martial artist who lost his sight and follows a path of atonement.","type":"lore","source":{"title":"Lee Sin | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/leesin/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Sonic Wave, Safeguard, Dragon's Rage and his ward-assisted movement define his recognizable martial-arts gameplay.","type":"gameplay","source":{"title":"Lee Sin | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lee_Sin","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["blind monk","martial arts","Sonic Wave/Resonating Strike","Dragon's Rage kick"],
+    "emojiCandidates":[
+      {"emoji":"🦯","meaning":"blindness and the blind monk title","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🥋","meaning":"Ionian martial-arts monk","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔊","meaning":"Sonic Wave","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🐉","meaning":"Dragon's Rage","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🦶","meaning":"the famous roundhouse kick","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Udyr","Xin Zhao","Master Yi"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "leona",
+    "championName": "Leona",
+    "facts": [
+      {"id":"fact-1","claim":"Leona is the Radiant Dawn, a Targonian Aspect who serves the power of the sun and fights in golden armor with a shield and sword.","type":"lore","source":{"title":"Leona | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/leona/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Shield of Daybreak, Eclipse, Zenith Blade and Solar Flare make sunlight, shielded initiation and stuns the core of her kit.","type":"ability","source":{"title":"Leona | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Leona","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["sun Aspect","golden shield and sword","Eclipse defense","Solar Flare initiation"],
+    "emojiCandidates":[
+      {"emoji":"☀️","meaning":"sun power and Radiant Dawn","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🛡️","meaning":"Shield of Daybreak and tank support","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🗡️","meaning":"Zenith Blade and sword-bearing warrior","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🌘","meaning":"Eclipse","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🏔️","meaning":"Mount Targon","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Kayle","Diana","Taric"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "lillia",
+    "championName": "Lillia",
+    "facts": [
+      {"id":"fact-1","claim":"Lillia is the Bashful Bloom, a shy magical fawn who gathers dreams in an enchanted Ionian forest.","type":"lore","source":{"title":"Champion Insights: Lillia","url":"https://www.leagueoflegends.com/en-us/news/dev/champion-insights-lillia/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Dream Dust marks enemies, Swirlseed rolls like a seed, and Lilting Lullaby puts marked enemies to sleep.","type":"ability","source":{"title":"Lillia | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lillia","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["fawn and flower","dream dust","rolling seed","global sleep lullaby"],
+    "emojiCandidates":[
+      {"emoji":"🦌","meaning":"fawn-like half-human form","strength":"signature","basis":["fact-1"]},
+      {"emoji":"🌸","meaning":"Bashful Bloom and enchanted forest","strength":"signature","basis":["fact-1"]},
+      {"emoji":"💤","meaning":"Lilting Lullaby and sleep","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🎳","meaning":"Swirlseed rolling across the map","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🌙","meaning":"dream harvesting","strength":"signature","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Ivern","Neeko","Nidalee"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "lissandra",
+    "championName": "Lissandra",
+    "facts": [
+      {"id":"fact-1","claim":"Lissandra is the Ice Witch of the Freljord who corrupts nature with black ice and plots an ice age.","type":"lore","source":{"title":"Lissandra | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/lissandra/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Ice Shard, Ring of Frost, Glacial Path and Frozen Tomb make ice, teleporting through a claw and self-encasement in dark ice central to her kit.","type":"ability","source":{"title":"Lissandra | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lissandra","kind":"secondary","accessedAt":"2026-09-09"}},
+      {"id":"fact-3","claim":"Her lore is closely tied to the hidden Watchers and the frozen north.","type":"lore","source":{"title":"Lissandra | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lissandra","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["black ice witch","Frozen Tomb","ice claw teleport","Watchers and Freljord"],
+    "emojiCandidates":[
+      {"emoji":"❄️","meaning":"ice magic and Freljord frost","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🧊","meaning":"Frozen Tomb and black-ice encasement","strength":"signature","basis":["fact-2"]},
+      {"emoji":"👁️","meaning":"the Watchers beneath the ice","strength":"signature","basis":["fact-3"]},
+      {"emoji":"👑","meaning":"the Ice Witch's Freljord leadership and ancient sisters","strength":"supporting","basis":["fact-1","fact-3"]},
+      {"emoji":"🧙","meaning":"the witch archetype","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Anivia","Ashe","Morgana"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "locke",
+    "championName": "Locke",
+    "facts": [
+      {"id":"fact-1","claim":"Locke is the Ashen Exorcist, a Demacian champion introduced by Riot in 2026 with a demon-hunting identity.","type":"lore","source":{"title":"Locke: The Ashen Exorcist | Champion Trailer","url":"https://www.youtube.com/watch?v=vq0Ml3Gfa7Q","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Public secondary references list Silver Stake, Ritual Nails, Soul Ignition, Ashen Pursuit and Purgatory, including self-ignition, soul nails and a binding artifact.","type":"ability","source":{"title":"Locke - Liquipedia League of Legends Wiki","url":"https://liquipedia.net/leagueoflegends/Locke","kind":"secondary","accessedAt":"2026-09-09"}},
+      {"id":"fact-3","claim":"Locke's public profile emphasizes ash, exorcism, soul sealing and damage that can be converted into healing after Soul Ignition.","type":"gameplay","source":{"title":"Locke - League of Legends Esports Wiki","url":"https://lol.fandom.com/wiki/Locke","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Ashen Exorcist","demon and soul sealing","Silver Stake and Ritual Nails","self-igniting ash magic"],
+    "emojiCandidates":[
+      {"emoji":"🌫️","meaning":"ash cloud and the Ashen title","strength":"signature","basis":["fact-1","fact-3"]},
+      {"emoji":"👻","meaning":"exorcism and demon spirits","strength":"signature","basis":["fact-1","fact-3"]},
+      {"emoji":"⛓️","meaning":"Purgatory's binding artifact and soul sealing","strength":"signature","basis":["fact-2","fact-3"]},
+      {"emoji":"🗡️","meaning":"Silver Stake and exorcist weapon","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔥","meaning":"Soul Ignition and ash/fire magic","strength":"signature","basis":["fact-2","fact-3"]}
+    ],
+    "confusableWith":["Thresh","Mordekaiser","Viego"],
+    "unresolved":["Locke is a new champion and Unicode has no precise exorcist/soul-nail symbol; the set relies on an ash-spirit-binding rebus and needs player validation."]
+  },
+  {
+    "championKey": "lucian",
+    "championName": "Lucian",
+    "facts": [
+      {"id":"fact-1","claim":"Lucian is a Sentinel of Light who hunts wraiths with twin relic pistols after Thresh killed his wife Senna.","type":"lore","source":{"title":"Lucian | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/lucian/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Lightslinger fires a second shot after every ability, while Piercing Light, Relentless Pursuit and The Culling make double-gun mobility central to gameplay.","type":"gameplay","source":{"title":"Lucian | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lucian","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["twin relic pistols","Sentinel of Light","wraith hunting","double-shot dash and Culling"],
+    "emojiCandidates":[
+      {"emoji":"🔫","meaning":"relic pistols","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"👻","meaning":"wraiths and the Black Mist enemy","strength":"signature","basis":["fact-1"]},
+      {"emoji":"💨","meaning":"Relentless Pursuit mobility","strength":"signature","basis":["fact-2"]},
+      {"emoji":"⚡","meaning":"rapid double-shot rhythm","strength":"supporting","basis":["fact-2"]},
+      {"emoji":"🖤","meaning":"Black Mist and the grief/vengeance thread","strength":"supporting","basis":["fact-1"]}
+    ],
+    "confusableWith":["Senna","Graves","Miss Fortune"],
+    "unresolved":[]
+  },
+  {
+    "championKey": "lulu",
+    "championName": "Lulu",
+    "facts": [
+      {"id":"fact-1","claim":"Lulu is a Bandle City Yordle mage who travels with her fairy companion Pix and warps reality through whimsical magic.","type":"lore","source":{"title":"Lulu | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/lulu/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Pix, Whimsy, Help Pix and Wild Growth define her kit through a fairy companion, polymorph, shielding and sudden size increase.","type":"ability","source":{"title":"Lulu | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lulu","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["Pix fairy companion","polymorph/Whimsy","Wild Growth size increase","Bandle City whimsy"],
+    "emojiCandidates":[
+      {"emoji":"🧚","meaning":"Pix and Lulu's fae magic","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"✨","meaning":"Glitterlance and reality-warping enchantment","strength":"supporting","basis":["fact-1","fact-2"]},
+      {"emoji":"🍄","meaning":"Bandle City/fairy-tale whimsy","strength":"supporting","basis":["fact-1"]},
+      {"emoji":"🦏","meaning":"Wild Growth making an ally suddenly huge","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🔄","meaning":"Whimsy's transformation/polymorph effect","strength":"signature","basis":["fact-2"]}
+    ],
+    "confusableWith":["Yuumi","Neeko","Ivern"],
+    "unresolved":["There is no literal Pix emoji; fairy plus transformation clues are intended to carry the companion identity."]
+  },
+  {
+    "championKey": "lux",
+    "championName": "Lux",
+    "facts": [
+      {"id":"fact-1","claim":"Luxanna Crownguard is a Demacian mage who can manipulate light while hiding her powers in a society suspicious of magic.","type":"lore","source":{"title":"Lux | League of Legends","url":"https://www.leagueoflegends.com/en-us/champions/lux/","kind":"official","accessedAt":"2026-09-09"}},
+      {"id":"fact-2","claim":"Illumination, Light Binding, Prismatic Barrier, Lucent Singularity and Final Spark make light, bindings, shields and a long laser her defining kit.","type":"ability","source":{"title":"Lux | League of Legends Wiki","url":"https://wiki.leagueoflegends.com/en-us/Lux","kind":"secondary","accessedAt":"2026-09-09"}}
+    ],
+    "signatureSignals":["light magic","Demacian mage","light binding and prism shield","Final Spark laser"],
+    "emojiCandidates":[
+      {"emoji":"💡","meaning":"Lady of Luminosity and light magic","strength":"signature","basis":["fact-1","fact-2"]},
+      {"emoji":"🔗","meaning":"Light Binding","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🛡️","meaning":"Prismatic Barrier","strength":"signature","basis":["fact-2"]},
+      {"emoji":"⚡","meaning":"Final Spark's explosive beam","strength":"signature","basis":["fact-2"]},
+      {"emoji":"🌈","meaning":"prismatic light spectrum","strength":"supporting","basis":["fact-1","fact-2"]}
+    ],
+    "confusableWith":["Leona","Morgana","Seraphine"],
+    "unresolved":[]
+  }
+]

@@ -1,0 +1,376 @@
+[
+  {
+    "championKey": "ekko",
+    "emojis": ["⏳", "🌀", "⏪", "🔧"],
+    "difficulty": "hard",
+    "signals": [
+      { "emoji": "⏳", "type": "lore", "meaning": "time manipulation through the Z-Drive", "basis": ["fact-1"] },
+      { "emoji": "🌀", "type": "ability", "meaning": "branching realities and Parallel Convergence", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "⏪", "type": "ability", "meaning": "Chronobreak rewind", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🔧", "type": "lore", "meaning": "a self-made Zaun invention", "basis": ["fact-1"] }
+    ],
+    "confusableWith": ["Zilean", "Zoe", "Bard"],
+    "disambiguation": "Time alone suggests Zilean, but the branching rewind plus an improvised inventor's device points to Ekko; Zilean is a clock mage, while Zoe uses portals and Bard is a cosmic caretaker.",
+    "blindTest": {
+      "after1": ["Zilean", "Ekko", "Zoe"],
+      "after2": ["Ekko", "Zilean", "Zoe"],
+      "after3": ["Ekko", "Zilean", "Zoe"],
+      "after4": ["Ekko", "Zilean", "Zoe"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Four non-generic time and invention clues keep the target in the top three by clue 4, with Chronobreak providing the decisive separation."
+  },
+  {
+    "championKey": "elise",
+    "emojis": ["🕷️", "🕸️", "🥚", "🔄"],
+    "difficulty": "easy",
+    "signals": [
+      { "emoji": "🕷️", "type": "visual", "meaning": "Spider Queen and Spider Form", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🕸️", "type": "lore", "meaning": "web-bound predator", "basis": ["fact-1"] },
+      { "emoji": "🥚", "type": "ability", "meaning": "Spiderling brood", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🔄", "type": "ability", "meaning": "Human Form and Spider Form switch", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Evelynn", "Nidalee", "Kha'Zix"],
+    "disambiguation": "The spider and web establish Elise early; Spiderlings plus a human/spider form switch separate her from Evelynn's demon stealth, Nidalee's cougar, and Kha'Zix's Void evolution.",
+    "blindTest": {
+      "after1": ["Elise", "Kha'Zix", "Evelynn"],
+      "after2": ["Elise", "Kha'Zix", "Evelynn"],
+      "after3": ["Elise", "Kha'Zix", "Nidalee"],
+      "after4": ["Elise", "Nidalee", "Kha'Zix"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The sequence is intentionally direct but uses Spiderlings and form-switching rather than generic poison or color clues."
+  },
+  {
+    "championKey": "evelynn",
+    "emojis": ["😈", "💋", "🌫️", "☠️"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "😈", "type": "lore", "meaning": "demon of agony", "basis": ["fact-1"] },
+      { "emoji": "💋", "type": "lore", "meaning": "seductive façade and Allure", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "🌫️", "type": "ability", "meaning": "Demon Shade camouflage", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "☠️", "type": "ability", "meaning": "Last Caress as the lethal finish", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Nocturne", "Shaco", "Ahri"],
+    "disambiguation": "A demon is broad, but the seductive lure followed by camouflage and a lethal caress identifies Evelynn; Nocturne is nightmare-shadow, Shaco is a killer jester, and Ahri is a fox Vastaya.",
+    "blindTest": {
+      "after1": ["Evelynn", "Nocturne", "Shaco"],
+      "after2": ["Evelynn", "Ahri", "Shaco"],
+      "after3": ["Evelynn", "Nocturne", "Shaco"],
+      "after4": ["Evelynn", "Nocturne", "Shaco"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Seduction, camouflage, and execution are all character-defining signals; no generic role or color clue is needed."
+  },
+  {
+    "championKey": "ezreal",
+    "emojis": ["🧤", "🏺", "🌀", "🎯"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🧤", "type": "lore", "meaning": "mystical Shuriman gauntlet", "basis": ["fact-1"] },
+      { "emoji": "🏺", "type": "lore", "meaning": "ancient catacomb and relic exploration", "basis": ["fact-1"] },
+      { "emoji": "🌀", "type": "ability", "meaning": "Arcane Shift repositioning", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🎯", "type": "gameplay", "meaning": "skillshot-heavy Trueshot pattern", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Jayce", "Kassadin", "Zoe"],
+    "disambiguation": "The gauntlet and ruin-raiding set Ezreal apart; Arcane Shift and a long-range skillshot pattern distinguish him from Jayce's hammer, Kassadin's Void armor, and Zoe's cosmic spell theft.",
+    "blindTest": {
+      "after1": ["Ezreal", "Jayce", "Kassadin"],
+      "after2": ["Ezreal", "Jayce", "Zoe"],
+      "after3": ["Ezreal", "Kassadin", "Zoe"],
+      "after4": ["Ezreal", "Jayce", "Kassadin"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The gauntlet is the unusual early signal, while Arcane Shift and precision projectiles make Ezreal the top hypothesis by clue 4."
+  },
+  {
+    "championKey": "fiddlesticks",
+    "emojis": ["🌾", "🪶", "😱", "🪓"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🌾", "type": "ability", "meaning": "A Harmless Scarecrow effigy", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🪶", "type": "visual", "meaning": "crow essence and Crowstorm", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "😱", "type": "ability", "meaning": "fear as the central mechanic and food", "basis": ["fact-1", "fact-2", "fact-3"] },
+      { "emoji": "🪓", "type": "visual", "meaning": "jagged scythe-like reaping weapon", "basis": ["fact-1"] }
+    ],
+    "confusableWith": ["Nocturne", "Shaco", "Karthus"],
+    "disambiguation": "The scarecrow, crows, and fear stack into Fiddlesticks; Nocturne lacks the effigy body, Shaco lacks the crow-and-fear kit, and Karthus is a singing lich.",
+    "blindTest": {
+      "after1": ["Fiddlesticks", "Nocturne", "Shaco"],
+      "after2": ["Fiddlesticks", "Nocturne", "Karthus"],
+      "after3": ["Fiddlesticks", "Nocturne", "Shaco"],
+      "after4": ["Fiddlesticks", "Nocturne", "Karthus"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Scarecrow plus crow is unusual enough to avoid a generic horror rebus; fear and the reaping weapon provide the final separation."
+  },
+  {
+    "championKey": "fiora",
+    "emojis": ["🤺", "🎯", "4️⃣", "🛡️"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🤺", "type": "lore", "meaning": "Grand Duelist and fencing", "basis": ["fact-1"] },
+      { "emoji": "🎯", "type": "ability", "meaning": "an exposed Vital as the target", "basis": ["fact-2"] },
+      { "emoji": "4️⃣", "type": "ability", "meaning": "Grand Challenge's four Vitals", "basis": ["fact-2"] },
+      { "emoji": "🛡️", "type": "gameplay", "meaning": "Riposte parry", "basis": ["fact-3"] }
+    ],
+    "confusableWith": ["Camille", "Irelia", "Yone"],
+    "disambiguation": "The four exposed Vitals and timed parry are Fiora's separators; the other duelists use hooks, blades, or spirit swords without this four-point challenge pattern.",
+    "blindTest": {
+      "after1": ["Fiora", "Irelia", "Camille"],
+      "after2": ["Fiora", "Camille", "Yone"],
+      "after3": ["Fiora", "Irelia", "Camille"],
+      "after4": ["Fiora", "Camille", "Irelia"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Four clues are enough: fencing is broad, but Vitals plus the explicit four-count and Riposte are signature-level."
+  },
+  {
+    "championKey": "fizz",
+    "emojis": ["🌊", "🔱", "🦈", "🐟"],
+    "difficulty": "easy",
+    "signals": [
+      { "emoji": "🌊", "type": "lore", "meaning": "amphibious Bilgewater identity", "basis": ["fact-1"] },
+      { "emoji": "🔱", "type": "ability", "meaning": "Seastone Trident", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🦈", "type": "ability", "meaning": "shark eruption from Chum the Waters", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🐟", "type": "ability", "meaning": "the fish lure that precedes the shark", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Nami", "Nautilus", "Tahm Kench"],
+    "disambiguation": "The trident plus the fish-to-shark sequence identifies Fizz; Nami has a staff and waves, Nautilus has an anchor, and Tahm Kench has no shark lure.",
+    "blindTest": {
+      "after1": ["Nami", "Fizz", "Nautilus"],
+      "after2": ["Fizz", "Nami", "Nautilus"],
+      "after3": ["Fizz", "Nami", "Tahm Kench"],
+      "after4": ["Fizz", "Nami", "Nautilus"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The shark and trident are high-signal clues; the fish-before-shark order adds a gameplay-specific disambiguator without padding."
+  },
+  {
+    "championKey": "galio",
+    "emojis": ["🗿", "🛡️", "🛬", "💥"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🗿", "type": "lore", "meaning": "stone colossus", "basis": ["fact-1"] },
+      { "emoji": "🛡️", "type": "ability", "meaning": "anti-mage protection and Shield of Durand", "basis": ["fact-1", "fact-2", "fact-3"] },
+      { "emoji": "🛬", "type": "ability", "meaning": "Hero's Entrance landing on an ally", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "💥", "type": "gameplay", "meaning": "impact knock-up on arrival", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Malphite", "Rammus", "Ornn"],
+    "disambiguation": "The stone body is shared with other tanks, but an anti-mage shield followed by an ally-targeted landing and impact points specifically to Galio.",
+    "blindTest": {
+      "after1": ["Galio", "Malphite", "Rammus"],
+      "after2": ["Galio", "Malphite", "Ornn"],
+      "after3": ["Galio", "Malphite", "Rammus"],
+      "after4": ["Galio", "Malphite", "Ornn"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The landing clue is the decisive fourth signal and distinguishes Galio's team-entry ultimate from generic stone tanks."
+  },
+  {
+    "championKey": "gangplank",
+    "emojis": ["🏴‍☠️", "🍊", "🛢️", "💣"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🏴‍☠️", "type": "lore", "meaning": "Bilgewater pirate king", "basis": ["fact-1"] },
+      { "emoji": "🍊", "type": "ability", "meaning": "Remove Scurvy's citrus cleanse", "basis": ["fact-3"] },
+      { "emoji": "🛢️", "type": "ability", "meaning": "Powder Keg", "basis": ["fact-1", "fact-2", "fact-3"] },
+      { "emoji": "💣", "type": "gameplay", "meaning": "keg chain reaction and Cannon Barrage", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Miss Fortune", "Graves", "Twisted Fate"],
+    "disambiguation": "Pirate imagery is broad, but citrus healing followed by connected powder kegs and explosions is Gangplank's distinctive kit signature.",
+    "blindTest": {
+      "after1": ["Gangplank", "Miss Fortune", "Graves"],
+      "after2": ["Gangplank", "Miss Fortune", "Twisted Fate"],
+      "after3": ["Gangplank", "Graves", "Miss Fortune"],
+      "after4": ["Gangplank", "Miss Fortune", "Graves"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Orange is not padding here: it is the unusual Remove Scurvy clue, paired with the source-backed Powder Keg mechanic."
+  },
+  {
+    "championKey": "garen",
+    "emojis": ["🛡️", "🗡️", "🌀", "⚖️"],
+    "difficulty": "easy",
+    "signals": [
+      { "emoji": "🛡️", "type": "visual", "meaning": "magic-resistant Demacian armor", "basis": ["fact-1"] },
+      { "emoji": "🗡️", "type": "lore", "meaning": "mighty broadsword", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🌀", "type": "ability", "meaning": "Judgment's spinning sword attack", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "⚖️", "type": "ability", "meaning": "Demacian Justice finisher", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Darius", "Jarvan IV", "Xin Zhao"],
+    "disambiguation": "The Demacian sword-and-shield silhouette narrows the field, while the signature spin followed by a Justice finisher identifies Garen.",
+    "blindTest": {
+      "after1": ["Garen", "Jarvan IV", "Darius"],
+      "after2": ["Garen", "Darius", "Jarvan IV"],
+      "after3": ["Garen", "Darius", "Xin Zhao"],
+      "after4": ["Garen", "Darius", "Jarvan IV"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The spin and Justice clues carry the rebus; shield and sword establish the broad Demacian warrior signal without relying on color."
+  },
+  {
+    "championKey": "gnar",
+    "emojis": ["🧒", "🧊", "🪃", "👹"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🧒", "type": "lore", "meaning": "childlike Mini Gnar", "basis": ["fact-1"] },
+      { "emoji": "🧊", "type": "lore", "meaning": "millennia frozen in True Ice", "basis": ["fact-1"] },
+      { "emoji": "🪃", "type": "ability", "meaning": "bonetooth boomerang", "basis": ["fact-2"] },
+      { "emoji": "👹", "type": "ability", "meaning": "Mega Gnar's massive rage form", "basis": ["fact-1", "fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Nunu", "Poppy", "Kled"],
+    "disambiguation": "Child plus ice can suggest Nunu, but the boomerang and the explicit small-to-massive rage transformation make Gnar the target.",
+    "blindTest": {
+      "after1": ["Gnar", "Nunu", "Poppy"],
+      "after2": ["Nunu", "Gnar", "Lissandra"],
+      "after3": ["Gnar", "Nunu", "Kled"],
+      "after4": ["Gnar", "Nunu", "Poppy"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The sequence deliberately delays the strongest gameplay signal until the boomerang, then uses the Mini/Mega split as the disambiguator."
+  },
+  {
+    "championKey": "gragas",
+    "emojis": ["🍺", "🛢️", "🤸", "💥"],
+    "difficulty": "easy",
+    "signals": [
+      { "emoji": "🍺", "type": "lore", "meaning": "rowdy brewmaster", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "🛢️", "type": "ability", "meaning": "massive barrel and Barrel Roll", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🤸", "type": "ability", "meaning": "Body Slam", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "💥", "type": "ability", "meaning": "Explosive Cask", "basis": ["fact-1", "fact-2"] }
+    ],
+    "confusableWith": ["Braum", "Sion", "Ornn"],
+    "disambiguation": "Beer plus a carried barrel suggests Gragas quickly; Body Slam and the explosive cask separate him from other large Freljord brawlers.",
+    "blindTest": {
+      "after1": ["Gragas", "Braum", "Ornn"],
+      "after2": ["Gragas", "Braum", "Sion"],
+      "after3": ["Gragas", "Sion", "Braum"],
+      "after4": ["Gragas", "Braum", "Sion"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Every clue maps to the brew-and-barrel identity or a named ability; the sequence contains no generic role filler."
+  },
+  {
+    "championKey": "graves",
+    "emojis": ["🔫", "🔄", "💨", "💥"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🔫", "type": "lore", "meaning": "Destiny double-barreled shotgun", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🔄", "type": "gameplay", "meaning": "distinctive two-shell reload cycle", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "💨", "type": "ability", "meaning": "Smoke Screen", "basis": ["fact-3"] },
+      { "emoji": "💥", "type": "ability", "meaning": "explosive Collateral Damage shell and recoil", "basis": ["fact-3"] }
+    ],
+    "confusableWith": ["Jhin", "Caitlyn", "Twisted Fate"],
+    "disambiguation": "The gun is broad, but a shotgun that must reload, creates a smoke screen, and recoils from its explosive ultimate is Graves.",
+    "blindTest": {
+      "after1": ["Graves", "Jhin", "Caitlyn"],
+      "after2": ["Graves", "Jhin", "Caitlyn"],
+      "after3": ["Graves", "Jhin", "Twisted Fate"],
+      "after4": ["Graves", "Jhin", "Caitlyn"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Reload and Smoke Screen are the unusual gameplay signals; the final explosion confirms the shotgun outlaw rather than a generic marksman."
+  },
+  {
+    "championKey": "gwen",
+    "emojis": ["🧵", "✂️", "🪡", "🌫️"],
+    "difficulty": "easy",
+    "signals": [
+      { "emoji": "🧵", "type": "lore", "meaning": "sewing thread and seamstress origin", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "✂️", "type": "ability", "meaning": "giant scissors and Snip Snip!", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🪡", "type": "ability", "meaning": "Needlework and repeated needles", "basis": ["fact-1", "fact-2"] },
+      { "emoji": "🌫️", "type": "ability", "meaning": "protective Hallowed Mist", "basis": ["fact-1", "fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Orianna", "Camille", "Morgana"],
+    "disambiguation": "Scissors, needles, and thread identify the Hallowed Seamstress; Hallowed Mist and the living-doll origin separate Gwen from Orianna, Camille, and Morgana.",
+    "blindTest": {
+      "after1": ["Gwen", "Orianna", "Camille"],
+      "after2": ["Gwen", "Orianna", "Camille"],
+      "after3": ["Gwen", "Orianna", "Morgana"],
+      "after4": ["Gwen", "Orianna", "Camille"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The tools that created Gwen are also her weapons, so all four clues are signature-level rather than generic craft imagery."
+  },
+  {
+    "championKey": "hecarim",
+    "emojis": ["🐴", "👻", "💨", "🌫️"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🐴", "type": "visual", "meaning": "man-and-horse fusion", "basis": ["fact-1"] },
+      { "emoji": "👻", "type": "lore", "meaning": "Shadow Isles wraith", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "💨", "type": "ability", "meaning": "speed-scaling charge", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🌫️", "type": "lore", "meaning": "Black Mist and spectral cavalry", "basis": ["fact-1", "fact-3"] }
+    ],
+    "confusableWith": ["Viego", "Thresh", "Karthus"],
+    "disambiguation": "The horse body plus wraith identity narrows Shadow Isles candidates, while charge speed and Black Mist cavalry distinguish Hecarim from Viego, Thresh, and Karthus.",
+    "blindTest": {
+      "after1": ["Hecarim", "Viego", "Thresh"],
+      "after2": ["Hecarim", "Viego", "Karthus"],
+      "after3": ["Hecarim", "Viego", "Thresh"],
+      "after4": ["Hecarim", "Viego", "Thresh"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "Horse, wraith, speed, and Black Mist are all tied to Hecarim's lore or kit; the target is a top-three hypothesis at every stage."
+  },
+  {
+    "championKey": "heimerdinger",
+    "emojis": ["🔬", "🗼", "🚀", "💣"],
+    "difficulty": "medium",
+    "signals": [
+      { "emoji": "🔬", "type": "lore", "meaning": "Piltover scientist and inventor", "basis": ["fact-1"] },
+      { "emoji": "🗼", "type": "ability", "meaning": "H-28G Evolution Turret", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🚀", "type": "ability", "meaning": "Hextech Micro-Rockets", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "💣", "type": "ability", "meaning": "CH-2 Electron Storm Grenade", "basis": ["fact-2", "fact-3"] }
+    ],
+    "confusableWith": ["Ziggs", "Corki", "Jayce"],
+    "disambiguation": "A scientist with a turret nest, micro-rockets, and an electron grenade is Heimerdinger; Ziggs has bombs and mines but no deployable turret system.",
+    "blindTest": {
+      "after1": ["Heimerdinger", "Ziggs", "Corki"],
+      "after2": ["Heimerdinger", "Ziggs", "Jayce"],
+      "after3": ["Heimerdinger", "Ziggs", "Corki"],
+      "after4": ["Heimerdinger", "Ziggs", "Jayce"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The turret is the unusual signature clue; rockets and the named electron grenade make the sequence distinct from generic inventor or bomber themes."
+  },
+  {
+    "championKey": "hwei",
+    "emojis": ["🎨", "🖌️", "🎭", "🌀"],
+    "difficulty": "hard",
+    "signals": [
+      { "emoji": "🎨", "type": "lore", "meaning": "painting as Hwei's magic medium", "basis": ["fact-1", "fact-3"] },
+      { "emoji": "🖌️", "type": "lore", "meaning": "paintbrush and palette", "basis": ["fact-1"] },
+      { "emoji": "🎭", "type": "ability", "meaning": "the Disaster, Serenity, and Torment subjects", "basis": ["fact-2", "fact-3"] },
+      { "emoji": "🌀", "type": "ability", "meaning": "Spiraling Despair", "basis": ["fact-2"] }
+    ],
+    "confusableWith": ["Jhin", "Lux", "Zoe"],
+    "disambiguation": "Art and a brush can suggest Jhin, but Hwei's three emotional Subject branches and Spiraling Despair identify the newer paint-based artillery mage.",
+    "blindTest": {
+      "after1": ["Hwei", "Jhin", "Zoe"],
+      "after2": ["Hwei", "Jhin", "Lux"],
+      "after3": ["Hwei", "Jhin", "Zoe"],
+      "after4": ["Hwei", "Jhin", "Lux"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": "The three Subject branches and spiraling signature are the disambiguators; the color palette is intentionally omitted to avoid generic padding."
+  }
+]

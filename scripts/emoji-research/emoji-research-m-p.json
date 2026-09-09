@@ -1,0 +1,2274 @@
+[
+  {
+    "championKey": "malphite",
+    "championName": "Malphite",
+    "facts": [
+      {
+        "claim": "Malphite is a massive creature of living stone and the surviving shard of the Monolith.",
+        "type": "lore",
+        "source": {
+          "title": "Malphite",
+          "url": "https://www.leagueoflegends.com/en-us/champions/malphite/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His kit includes a rechargeable Granite Shield and the ground-impact ultimate Unstoppable Force.",
+        "type": "ability",
+        "source": {
+          "title": "Malphite (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Malphite/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "Malphite's signature combat pattern combines ground slams with a charge that knocks enemies into the air.",
+        "type": "gameplay",
+        "source": {
+          "title": "Malphite - Leaguepedia | League of Legends Esports Wiki",
+          "url": "https://lol.fandom.com/wiki/Malphite",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "living stone golem",
+      "rock shield",
+      "ground slam",
+      "unstoppable charge and knock-up"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪨",
+        "meaning": "living stone",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Granite Shield",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "ground-impact slam",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⬆️",
+        "meaning": "launching enemies with Unstoppable Force",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ornn",
+      "Poppy",
+      "Rammus"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "malzahar",
+    "championName": "Malzahar",
+    "facts": [
+      {
+        "claim": "Malzahar is a Shuriman seer who believes the Void is the path to Runeterra's salvation.",
+        "type": "lore",
+        "source": {
+          "title": "Malzahar",
+          "url": "https://www.leagueoflegends.com/en-us/champions/malzahar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His kit centers on Voidlings and Malefic Visions that spread between dying units.",
+        "type": "ability",
+        "source": {
+          "title": "Malzahar",
+          "url": "https://www.leagueoflegends.com/en-us/champions/malzahar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference identifies Void Swarm, portals from Call of the Void, and the channelled suppression of Nether Grasp.",
+        "type": "gameplay",
+        "source": {
+          "title": "Malzahar - Leaguepedia | League of Legends Esports Wiki",
+          "url": "https://lol.fandom.com/wiki/Malzahar",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Void prophet",
+      "Voidling swarm",
+      "mind visions",
+      "long suppression channel"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🕳️",
+        "meaning": "portal into the Void",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🐜",
+        "meaning": "small Voidling swarm",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧠",
+        "meaning": "Malefic Visions infect the mind",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⛓️",
+        "meaning": "Nether Grasp suppression and lock-down",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Bel'Veth",
+      "Kha'Zix",
+      "Fiddlesticks"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "maokai",
+    "championName": "Maokai",
+    "facts": [
+      {
+        "claim": "Maokai is a towering treant and nature spirit fighting the horrors of the Shadow Isles after surviving through Waters of Life.",
+        "type": "lore",
+        "source": {
+          "title": "Maokai",
+          "url": "https://www.leagueoflegends.com/en-us/champions/maokai/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His passive heals him through empowered attacks and has its cooldown reduced by spell activity.",
+        "type": "ability",
+        "source": {
+          "title": "Maokai",
+          "url": "https://www.leagueoflegends.com/en-us/champions/maokai/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference highlights Sapling Toss, including saplings that chase enemies and become stronger in brush.",
+        "type": "gameplay",
+        "source": {
+          "title": "Maokai (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Maokai/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "treant nature spirit",
+      "Shadow Isles undeath",
+      "saplings",
+      "life-giving water and self-heal"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌳",
+        "meaning": "treant body",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌱",
+        "meaning": "Sapling Toss",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💧",
+        "meaning": "Waters of Life in his heartwood",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "👻",
+        "meaning": "the Shadow Isles and undeath",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ivern",
+      "Zyra",
+      "Thresh"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "masteryi",
+    "championName": "Master Yi",
+    "facts": [
+      {
+        "claim": "Master Yi is one of the last living practitioners of the Ionian martial art of Wuju.",
+        "type": "lore",
+        "source": {
+          "title": "Master Yi",
+          "url": "https://www.leagueoflegends.com/en-us/champions/masteryi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His kit includes Double Strike, Alpha Strike, Meditate, Wuju Style, and Highlander, combining repeated attacks, vanishing movement, healing, and speed.",
+        "type": "ability",
+        "source": {
+          "title": "Master Yi",
+          "url": "https://www.leagueoflegends.com/en-us/champions/masteryi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference confirms Alpha Strike's untargetable multi-target strikes, Meditate healing, Wuju true damage, and Highlander reset potential.",
+        "type": "gameplay",
+        "source": {
+          "title": "Master Yi | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/Master_Yi",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Wuju swordmaster",
+      "double strike",
+      "Alpha Strike vanish",
+      "Meditate and Highlander speed"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🗡️",
+        "meaning": "Wuju blade",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "2️⃣",
+        "meaning": "Double Strike",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🫥",
+        "meaning": "vanishing and becoming untargetable during Alpha Strike",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧘",
+        "meaning": "Meditate",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "Highlander speed",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Yasuo",
+      "Yone",
+      "Zed"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "mel",
+    "championName": "Mel",
+    "facts": [
+      {
+        "claim": "Mel Medarda is a Noxian aristocrat and heir whose encounter with the Black Rose awakens new magic.",
+        "type": "lore",
+        "source": {
+          "title": "Mel",
+          "url": "https://www.leagueoflegends.com/en-us/champions/mel/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Mel gains bonus projectiles from casting and applies Overwhelm stacks that can execute a target.",
+        "type": "ability",
+        "source": {
+          "title": "Mel",
+          "url": "https://www.leagueoflegends.com/en-us/champions/mel/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary character reference describes Mel's reflective magic and connection to the Black Rose and Arcane setting.",
+        "type": "lore",
+        "source": {
+          "title": "Mel (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Mel",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Black Rose aristocrat",
+      "soul reflection",
+      "radiant projectiles",
+      "reflective defense and execution stacks"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌹",
+        "meaning": "Black Rose connection",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪞",
+        "meaning": "Soul's Reflection and reflective magic",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "✨",
+        "meaning": "radiant light and projectiles",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Rebuttal's projectile reflection",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💀",
+        "meaning": "Overwhelm execution",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "LeBlanc",
+      "Morgana",
+      "Lux"
+    ],
+    "unresolved": [
+      "Unicode has no dedicated symbol for projectile reflection or Overwhelm; the set relies on the Black Rose plus mirror combination."
+    ]
+  },
+  {
+    "championKey": "milio",
+    "championName": "Milio",
+    "facts": [
+      {
+        "claim": "Milio is an Ixtali boy who mastered the fire axiom and discovered soothing fire.",
+        "type": "lore",
+        "source": {
+          "title": "Milio",
+          "url": "https://www.leagueoflegends.com/en-us/champions/milio/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His abilities enchant allies with extra burning damage, kick a ball, create protective flames, and heal or cleanse allies.",
+        "type": "ability",
+        "source": {
+          "title": "Milio",
+          "url": "https://www.leagueoflegends.com/en-us/champions/milio/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary character reference identifies Milio's signature fuemigos as small, bouncy fire elementals that heal and soothe wounds.",
+        "type": "visual",
+        "source": {
+          "title": "Milio (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Milio",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "soothing fire",
+      "fuemigo fire companions",
+      "healing and cleansing",
+      "fireball kick and warm hugs"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🔥",
+        "meaning": "fire axiom and soothing flames",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⚽",
+        "meaning": "Ultra Mega Fire Kick",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🩹",
+        "meaning": "healing wounds with soothing fire",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧸",
+        "meaning": "friendly fuemigo companion",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🤗",
+        "meaning": "Warm Hugs",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Annie",
+      "Brand",
+      "Rumble"
+    ],
+    "unresolved": [
+      "There is no dedicated fuemigo emoji, so 🧸 is a friendly companion proxy rather than a literal match."
+    ]
+  },
+  {
+    "championKey": "missfortune",
+    "championName": "Miss Fortune",
+    "facts": [
+      {
+        "claim": "Miss Fortune is a Bilgewater captain and bounty hunter who avenged her family by destroying Gangplank's flagship.",
+        "type": "lore",
+        "source": {
+          "title": "Miss Fortune",
+          "url": "https://www.leagueoflegends.com/en-us/champions/missfortune/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her kit includes Love Tap, Double Up, Make It Rain, and Bullet Time, with bonus damage when switching targets.",
+        "type": "ability",
+        "source": {
+          "title": "Miss Fortune",
+          "url": "https://www.leagueoflegends.com/en-us/champions/missfortune/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms her marksman identity and the signature gun-focused abilities that culminate in Bullet Time.",
+        "type": "gameplay",
+        "source": {
+          "title": "Miss Fortune | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/Miss_Fortune",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Bilgewater captain",
+      "gunslinger and bounty hunter",
+      "Love Tap",
+      "rain of bullets"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🏴‍☠️",
+        "meaning": "Bilgewater captain and bounty hunter",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔫",
+        "meaning": "gun-focused marksman",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💋",
+        "meaning": "Love Tap",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌧️",
+        "meaning": "Make It Rain",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Bullet Time barrage",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Graves",
+      "Gangplank",
+      "Samira"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "mordekaiser",
+    "championName": "Mordekaiser",
+    "facts": [
+      {
+        "claim": "Mordekaiser is an iron revenant and necromantic warlord who binds souls into servitude.",
+        "type": "lore",
+        "source": {
+          "title": "Mordekaiser",
+          "url": "https://www.leagueoflegends.com/en-us/champions/mordekaiser/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "After three attacks or spells he gains a damage aura, and Realm of Death drags an enemy into another dimension.",
+        "type": "ability",
+        "source": {
+          "title": "Mordekaiser",
+          "url": "https://www.leagueoflegends.com/en-us/champions/mordekaiser/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary lore reference ties his spectral power to the brutal mace Nightfall and an empire built from enslaved souls.",
+        "type": "lore",
+        "source": {
+          "title": "The Iron Revenant - Universe | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe:The_Iron_Revenant",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "iron revenant",
+      "mace Nightfall",
+      "necromantic souls",
+      "one-on-one Death Realm"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⚙️",
+        "meaning": "iron armor and revenant body",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔨",
+        "meaning": "the heavy mace Nightfall",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👻",
+        "meaning": "enslaved souls and revenant magic",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Realm of Death dimension",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⛓️",
+        "meaning": "binding souls into servitude",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Sion",
+      "Thresh",
+      "Yorick"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "morgana",
+    "championName": "Morgana",
+    "facts": [
+      {
+        "claim": "Morgana is conflicted between celestial and mortal natures and binds her wings to embrace humanity.",
+        "type": "lore",
+        "source": {
+          "title": "Morgana",
+          "url": "https://www.leagueoflegends.com/en-us/champions/morgana/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her signature kit includes Dark Binding, Black Shield, and Soul Shackles made from dark fire and chains.",
+        "type": "ability",
+        "source": {
+          "title": "Morgana",
+          "url": "https://www.leagueoflegends.com/en-us/champions/morgana/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference confirms her healing from spell damage, cursed shadow zone, binding root, and magic-protecting Black Shield.",
+        "type": "gameplay",
+        "source": {
+          "title": "Morgana - Leaguepedia | League of Legends Esports Wiki",
+          "url": "https://lol.fandom.com/wiki/Morgana",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "bound celestial wings",
+      "dark chains",
+      "Black Shield",
+      "dark fire and self-healing"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪽",
+        "meaning": "celestial wings bound to humanity",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "⛓️",
+        "meaning": "Dark Binding and Soul Shackles",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🖤",
+        "meaning": "dark fire and shadow magic",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Black Shield",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔥",
+        "meaning": "dark celestial fire",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Kayle",
+      "Leona",
+      "Diana"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "naafiri",
+    "championName": "Naafiri",
+    "facts": [
+      {
+        "claim": "Naafiri is a Darkin power carried by a pack of Shuriman dune hounds.",
+        "type": "lore",
+        "source": {
+          "title": "Naafiri",
+          "url": "https://www.leagueoflegends.com/en-us/champions/naafiri/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her passive spawns packmates, while Darkin Daggers cause bleeding and call the pack to attack.",
+        "type": "ability",
+        "source": {
+          "title": "Naafiri",
+          "url": "https://www.leagueoflegends.com/en-us/champions/naafiri/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary character reference describes Naafiri's host as a pack with shared hunting instincts and a dagger-shaped Darkin identity.",
+        "type": "lore",
+        "source": {
+          "title": "Naafiri (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Naafiri",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Darkin hound",
+      "packmates and hive-mind hunting",
+      "dagger",
+      "bleeding pursuit across Shurima"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐕",
+        "meaning": "dune hound host",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "Darkin dagger",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👥",
+        "meaning": "packmates acting as one",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🩸",
+        "meaning": "bleeding Darkin Daggers",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🏜️",
+        "meaning": "Shuriman desert hunt",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Warwick",
+      "Aatrox",
+      "Nasus"
+    ],
+    "unresolved": [
+      "The dog emoji is a generic proxy for a Shuriman dune hound and does not convey the Darkin dagger by itself."
+    ]
+  },
+  {
+    "championKey": "nami",
+    "championName": "Nami",
+    "facts": [
+      {
+        "claim": "Nami is a Marai vastaya of the seas who uses her Tidecaller staff to summon ocean power.",
+        "type": "lore",
+        "source": {
+          "title": "Nami",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nami/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her ability names and kit include Aqua Prison, Ebb and Flow, Tidecaller's Blessing, and Tidal Wave.",
+        "type": "ability",
+        "source": {
+          "title": "Nami",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nami/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference describes her bubble suspension, bouncing water stream, ally empowerment, and tidal wave knock-up.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nami (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Nami/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "sea vastaya",
+      "Tidecaller staff",
+      "Aqua Prison bubble",
+      "Tidal Wave and bouncing water"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧜‍♀️",
+        "meaning": "sea vastaya / merfolk visual",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🫧",
+        "meaning": "Aqua Prison bubble",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌊",
+        "meaning": "Tidal Wave",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪄",
+        "meaning": "Tidecaller staff and water magic",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Fizz",
+      "Nilah",
+      "Tahm Kench"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "nasus",
+    "championName": "Nasus",
+    "facts": [
+      {
+        "claim": "Nasus is a jackal-headed Ascended guardian of knowledge from ancient Shurima.",
+        "type": "lore",
+        "source": {
+          "title": "Nasus",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nasus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His kit combines life steal, the stack-building Siphoning Strike, and a large sandstorm transformation.",
+        "type": "ability",
+        "source": {
+          "title": "Nasus",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nasus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference confirms that killing units with Siphoning Strike permanently increases its stacks and that Fury of the Sands reduces its cooldown.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nasus | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/Nasus",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "jackal Ascended",
+      "Shuriman sands",
+      "infinite Q stacks",
+      "giant sandstorm form"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐺",
+        "meaning": "jackal-headed beast proxy",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🏜️",
+        "meaning": "ancient Shurima and sand",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔨",
+        "meaning": "the iconic Siphoning Strike bonk",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "📈",
+        "meaning": "permanent Q stack growth",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌪️",
+        "meaning": "Fury of the Sands sandstorm",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Renekton",
+      "Skarner",
+      "Sion"
+    ],
+    "unresolved": [
+      "Unicode has no jackal emoji, so 🐺 is used as the closest recognizable canine-beast proxy."
+    ]
+  },
+  {
+    "championKey": "nautilus",
+    "championName": "Nautilus",
+    "facts": [
+      {
+        "claim": "Nautilus is an armored goliath and lonely legend of Bilgewater's dark waters who swings an enormous anchor.",
+        "type": "lore",
+        "source": {
+          "title": "Nautilus",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nautilus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His passive roots targets on the first attack, and Depth Charge sends a shockwave through the ground to knock enemies up.",
+        "type": "ability",
+        "source": {
+          "title": "Nautilus",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nautilus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms Dredge Line as an anchor hook that drags Nautilus and an enemy together.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nautilus (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Nautilus/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "armored titan of the depths",
+      "giant anchor",
+      "hook drag",
+      "underground knock-up"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⚓",
+        "meaning": "enormous anchor weapon",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌊",
+        "meaning": "Bilgewater depths",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🪝",
+        "meaning": "Dredge Line hook and drag",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🦾",
+        "meaning": "iron-clad armored body",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Depth Charge eruption",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Pyke",
+      "Thresh",
+      "Blitzcrank"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "neeko",
+    "championName": "Neeko",
+    "facts": [
+      {
+        "claim": "Neeko is a vastaya who can blend into a crowd by borrowing the appearances and emotional state of others.",
+        "type": "lore",
+        "source": {
+          "title": "Neeko",
+          "url": "https://www.leagueoflegends.com/en-us/champions/neeko/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Inherent Glamour disguises Neeko as allies or map units, while Shapesplitter and Blooming Burst support her deceptive and colorful play pattern.",
+        "type": "ability",
+        "source": {
+          "title": "Neeko",
+          "url": "https://www.leagueoflegends.com/en-us/champions/neeko/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary character reference identifies chameleon-like traits and shapeshifting through another being's Sho'ma.",
+        "type": "visual",
+        "source": {
+          "title": "Neeko (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Neeko",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "chameleon-like vastaya",
+      "disguise and shapeshifting",
+      "clone",
+      "bright blooms and primordial magic"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🦎",
+        "meaning": "chameleon-like reptile identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🎭",
+        "meaning": "disguise and borrowed appearance",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "👥",
+        "meaning": "Shapesplitter clone",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌸",
+        "meaning": "Blooming Burst and Pop Blossom",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Shaco",
+      "LeBlanc",
+      "Nidalee"
+    ],
+    "unresolved": [
+      "Unicode has no dedicated chameleon emoji, so 🦎 is a reptile proxy."
+    ]
+  },
+  {
+    "championKey": "nidalee",
+    "championName": "Nidalee",
+    "facts": [
+      {
+        "claim": "Nidalee is a jungle tracker who shapeshifts into a ferocious cougar and hunts with traps and spear throws.",
+        "type": "lore",
+        "source": {
+          "title": "Nidalee",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nidalee/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her Prowl passive rewards brush movement, while Javelin Toss or Bushwhack marks a target as Hunted for empowered cougar attacks.",
+        "type": "ability",
+        "source": {
+          "title": "Nidalee",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nidalee/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms the human/cougar forms, long-range javelin, Bushwhack trap, and Hunted Pounce sequence.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nidalee (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Nidalee/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "human/cougar transformation",
+      "javelin hunt",
+      "brush traps",
+      "Hunted Pounce"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐆",
+        "meaning": "cougar form",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🏹",
+        "meaning": "long-range javelin hunt",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌿",
+        "meaning": "brush-based Prowl and traps",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🎯",
+        "meaning": "Hunted mark",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🐾",
+        "meaning": "cougar Pounce",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Rengar",
+      "Kha'Zix",
+      "Neeko"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "nilah",
+    "championName": "Nilah",
+    "facts": [
+      {
+        "claim": "Nilah is an ascetic warrior empowered by the demon of joy, Ashlesh, and channels its liquid form into a blade.",
+        "type": "lore",
+        "source": {
+          "title": "Nilah",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nilah/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her passive shares enhanced healing and shielding, while Jubilant Veil lets her dodge incoming attacks in mist.",
+        "type": "ability",
+        "source": {
+          "title": "Nilah",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nilah/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary development reference identifies the urumi whip-like sword, Ashlesh's forced perpetual joy, and water-based whirlpool combat.",
+        "type": "lore",
+        "source": {
+          "title": "Nilah/Development | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Nilah/Development",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Ashlesh Lord of Joy",
+      "perpetual joy",
+      "liquid water blade/urumi",
+      "mist dodge and whirlpool"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "😄",
+        "meaning": "forced perpetual joy",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👹",
+        "meaning": "Ashlesh, the joy demon",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌊",
+        "meaning": "water magic and liquid weapon",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "urumi whip-blade",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Apotheosis whirlpool",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nami",
+      "Samira",
+      "Fiddlesticks"
+    ],
+    "unresolved": [
+      "There is no Unicode emoji for an urumi or the Seventh Layer; the blade and water combination is an inference."
+    ]
+  },
+  {
+    "championKey": "nocturne",
+    "championName": "Nocturne",
+    "facts": [
+      {
+        "claim": "Nocturne is a faceless demonic amalgamation of nightmares, darkness, and wicked blades.",
+        "type": "lore",
+        "source": {
+          "title": "Nocturne",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nocturne/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His kit uses Umbra Blades, Shroud of Darkness, Unspeakable Horror, and Paranoia to heal, block a spell, fear a target, and attack through darkness.",
+        "type": "ability",
+        "source": {
+          "title": "Nocturne",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nocturne/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference describes Paranoia as a global sight reduction followed by a dash to the target.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nocturne (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Nocturne/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "eternal nightmare",
+      "global blackout",
+      "shadow blades",
+      "fear and dive from darkness"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "😱",
+        "meaning": "nightmare and fear",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌑",
+        "meaning": "pure darkness and shadow realm",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🙈",
+        "meaning": "Paranoia removes enemy vision",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "wicked Umbra Blades",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "Paranoia dash from darkness",
+        "strength": "supporting",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Fiddlesticks",
+      "Evelynn",
+      "Vex"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "nunu",
+    "championName": "Nunu & Willump",
+    "facts": [
+      {
+        "claim": "Nunu and Willump are a boy and a magical yeti bound by friendship and a shared love of snowballs in the Freljord.",
+        "type": "lore",
+        "source": {
+          "title": "Nunu & Willump",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nunu/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Their kit includes Consume, Biggest Snowball Ever!, Snowball Barrage, and Absolute Zero, with a passive that empowers Willump and an ally.",
+        "type": "ability",
+        "source": {
+          "title": "Nunu & Willump",
+          "url": "https://www.leagueoflegends.com/en-us/champions/nunu/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms the rolling snowball engage and the channelling blizzard of Absolute Zero.",
+        "type": "gameplay",
+        "source": {
+          "title": "Nunu & Willump (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Nunu/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "boy and yeti duo",
+      "snowball roll",
+      "Freljord snow",
+      "Absolute Zero blizzard"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧒",
+        "meaning": "Nunu the boy",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🐻",
+        "meaning": "large furry yeti proxy for Willump",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "❄️",
+        "meaning": "Freljord snow and frost",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⚪",
+        "meaning": "rolling snowball",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Absolute Zero blizzard",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Braum",
+      "Sejuani",
+      "Anivia"
+    ],
+    "unresolved": [
+      "Unicode has no dedicated yeti emoji, so 🐻 is a large-furry-companion proxy."
+    ]
+  },
+  {
+    "championKey": "olaf",
+    "championName": "Olaf",
+    "facts": [
+      {
+        "claim": "Olaf is an axe-wielding Freljordian berserker who seeks a glorious death in combat.",
+        "type": "lore",
+        "source": {
+          "title": "Olaf",
+          "url": "https://www.leagueoflegends.com/en-us/champions/olaf/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Berserker Rage grants more attack speed and life steal as Olaf loses health, and Undertow throws an axe that can be picked up to reset its cooldown.",
+        "type": "ability",
+        "source": {
+          "title": "Olaf",
+          "url": "https://www.leagueoflegends.com/en-us/champions/olaf/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms the axe throw, missing-health berserker scaling, and Ragnarok's combat identity.",
+        "type": "gameplay",
+        "source": {
+          "title": "Olaf (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Olaf/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "axe berserker",
+      "rage at low health",
+      "seeking death",
+      "Ragnarok crowd-control immunity"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪓",
+        "meaning": "Undertow axe",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💀",
+        "meaning": "quest for a glorious death",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "💢",
+        "meaning": "berserker rage",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🚫",
+        "meaning": "Ragnarok ignores crowd control",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🩸",
+        "meaning": "power from missing health",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Tryndamere",
+      "Darius",
+      "Sion"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "orianna",
+    "championName": "Orianna",
+    "facts": [
+      {
+        "claim": "Orianna is a technological clockwork being accompanied by a brass sphere she built for companionship and protection.",
+        "type": "lore",
+        "source": {
+          "title": "Orianna",
+          "url": "https://www.leagueoflegends.com/en-us/champions/orianna/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Her abilities command The Ball to attack, create a pulse field, shield an ally, and release a shockwave.",
+        "type": "ability",
+        "source": {
+          "title": "Orianna",
+          "url": "https://www.leagueoflegends.com/en-us/champions/orianna/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms that the Ball can attach to allies and that Command: Shockwave pulls enemies toward it.",
+        "type": "gameplay",
+        "source": {
+          "title": "Orianna (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Orianna/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "clockwork body",
+      "brass Ball companion",
+      "remote commands",
+      "Shockwave pull and ally shield"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⚙️",
+        "meaning": "clockwork body",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "⚽",
+        "meaning": "The Ball companion",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🎛️",
+        "meaning": "commanding a remote ball",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌪️",
+        "meaning": "Command: Shockwave",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Command: Protect shield",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Blitzcrank",
+      "Rumble",
+      "Syndra"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "ornn",
+    "championName": "Ornn",
+    "facts": [
+      {
+        "claim": "Ornn is the Freljordian spirit of forging and craftsmanship who works beneath a volcano with a trusty hammer.",
+        "type": "lore",
+        "source": {
+          "title": "Ornn",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ornn/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Living Forge lets Ornn forge items anywhere, and Call of the Forge God summons a massive elemental that can be redirected.",
+        "type": "ability",
+        "source": {
+          "title": "Ornn",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ornn/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference highlights Ornn's magma pillar, belched fire, Brittle debuff, and masterwork crafting.",
+        "type": "gameplay",
+        "source": {
+          "title": "Ornn (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Ornn/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "ram-like forge spirit",
+      "hammer and craftsmanship",
+      "volcano and lava",
+      "item forging and fire elemental"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐏",
+        "meaning": "ram-like forge deity",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔨",
+        "meaning": "trusty hammer",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌋",
+        "meaning": "volcanic Hearth-Home forge",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛠️",
+        "meaning": "craftsmanship and item forging",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧱",
+        "meaning": "building masterwork items",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Poppy",
+      "Braum",
+      "Volibear"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "pantheon",
+    "championName": "Pantheon",
+    "facts": [
+      {
+        "claim": "Pantheon is Atreus reborn after surviving the death of the Aspect of War, wielding the fallen Aspect's spear and shield.",
+        "type": "lore",
+        "source": {
+          "title": "Pantheon",
+          "url": "https://www.leagueoflegends.com/en-us/champions/pantheon/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "His passive empowers every few spells or attacks, while Aegis Assault blocks damage from the front and strikes with his spear.",
+        "type": "ability",
+        "source": {
+          "title": "Pantheon",
+          "url": "https://www.leagueoflegends.com/en-us/champions/pantheon/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary ability reference confirms Shield Vault's stun, Aegis Assault's directional invulnerability, and Grand Starfall's spear-and-landing attack.",
+        "type": "gameplay",
+        "source": {
+          "title": "Pantheon (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Pantheon/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "spear and shield warrior",
+      "empowered Mortal Will",
+      "front-facing shield block",
+      "Grand Starfall descent"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🛡️",
+        "meaning": "Aegis shield",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "spear weapon",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "☄️",
+        "meaning": "celestial Aspect and comet-like attack",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⬇️",
+        "meaning": "Grand Starfall from the sky",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "shield vault impact and spear combo",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Leona",
+      "Braum",
+      "Jarvan IV"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "poppy",
+    "championName": "Poppy",
+    "facts": [
+      {
+        "claim": "Poppy is a determined Demacian yordle carrying Orlon's legendary hammer while searching for the Hero of Demacia.",
+        "type": "lore",
+        "source": {
+          "title": "Poppy",
+          "url": "https://www.leagueoflegends.com/en-us/champions/poppy/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Iron Ambassador throws a bouncing buckler that can be picked up for a shield, and Steadfast Presence stops enemy dashes.",
+        "type": "ability",
+        "source": {
+          "title": "Poppy",
+          "url": "https://www.leagueoflegends.com/en-us/champions/poppy/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary character reference emphasizes Poppy's yordle physiology, oversized hammer, buckler, and long-running Demacian mission.",
+        "type": "visual",
+        "source": {
+          "title": "Poppy (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Poppy",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "yordle with oversized hammer",
+      "bouncing buckler",
+      "Demacia's hidden hero",
+      "anti-dash defender"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🔨",
+        "meaning": "Orlon's legendary hammer",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "buckler and temporary shield",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔄",
+        "meaning": "bouncing Iron Ambassador buckler",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🏰",
+        "meaning": "Demacia and the hidden hero",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⛔",
+        "meaning": "stopping enemy dashes",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ornn",
+      "Pantheon",
+      "Braum"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "pyke",
+    "championName": "Pyke",
+    "facts": [
+      {
+        "claim": "Pyke is a Bilgewater harpooner who died inside a jaull-fish and returned as a supernatural monster hunting exploiters.",
+        "type": "lore",
+        "source": {
+          "title": "Pyke",
+          "url": "https://www.leagueoflegends.com/en-us/champions/pyke/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "When hidden Pyke regenerates recent champion damage and converts extra maximum health into bonus attack damage.",
+        "type": "ability",
+        "source": {
+          "title": "Pyke",
+          "url": "https://www.leagueoflegends.com/en-us/champions/pyke/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary gameplay reference confirms Bone Skewer, Ghostwater camouflage, Phantom Undertow, and the low-health execution of Death from Below.",
+        "type": "gameplay",
+        "source": {
+          "title": "Pyke (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Pyke/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "drowned harpooner revenant",
+      "hook and underwater camouflage",
+      "grey-health regeneration",
+      "repeatable execute"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪝",
+        "meaning": "harpoon and Bone Skewer",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌊",
+        "meaning": "drowned Bilgewater origin",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "👻",
+        "meaning": "returned revenant",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🫥",
+        "meaning": "Ghostwater camouflage",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☠️",
+        "meaning": "Death from Below execution",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nautilus",
+      "Thresh",
+      "Fizz"
+    ],
+    "unresolved": []
+  }
+]

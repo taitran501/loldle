@@ -1,0 +1,720 @@
+[
+  {
+    "championKey": "ekko",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Zilean", "Ekko", "Zoe"],
+      "after2": ["Zilean", "Ekko", "Zoe"],
+      "after3": ["Ekko", "Zilean", "Zoe"],
+      "after4": ["Ekko", "Jayce", "Heimerdinger"]
+    },
+    "confusableWith": ["Zilean", "Zoe", "Jayce"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Ekko is ranked first in 3 of 4 stages.",
+      "🌀 is an abstract portal/whirlwind symbol rather than a clear representation of Parallel Convergence; it is acceptable only as a hard clue because ⏪ and 🔧 carry the stronger identity signals."
+    ],
+    "suggestedEmojis": ["⏳", "🌀", "⏪", "🔧"],
+    "sourcesChecked": [
+      {
+        "title": "Ekko | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/ekko/",
+        "kind": "official"
+      },
+      {
+        "title": "Ekko (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ekko/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "elise",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 1,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Elise", "Nidalee", "Kha'Zix"],
+      "after2": ["Elise", "Nidalee", "Kha'Zix"],
+      "after3": ["Elise", "Kha'Zix", "Bel'Veth"],
+      "after4": ["Elise", "Nidalee", "Gnar"]
+    },
+    "confusableWith": ["Nidalee", "Kha'Zix", "Gnar"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Elise is ranked first in all 4 stages.",
+      "🕷️ and 🕸️ duplicate the same spider/web concept, while 🥚 implies eggs even though the cited ability evidence establishes dormant Spiderlings, not an egg mechanic.",
+      "🔄 is a generic transformation symbol and does not identify Elise's Human Form/Spider Form as clearly as a human-form or Rappel clue."
+    ],
+    "suggestedEmojis": ["🕷️", "🧪", "🧍", "🪂"],
+    "sourcesChecked": [
+      {
+        "title": "Elise | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/elise/",
+        "kind": "official"
+      },
+      {
+        "title": "Elise (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Elise/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "evelynn",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Evelynn", "Nocturne", "Shaco"],
+      "after2": ["Evelynn", "Ahri", "Shaco"],
+      "after3": ["Evelynn", "Nocturne", "Viego"],
+      "after4": ["Evelynn", "Nocturne", "Karthus"]
+    },
+    "confusableWith": ["Nocturne", "Shaco", "Ahri"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Evelynn is ranked first in all 4 stages.",
+      "☠️ is a generic lethal/kill symbol, but the other three clues provide enough signature signal through demon identity, seduction, and camouflage."
+    ],
+    "suggestedEmojis": ["😈", "💋", "🌫️", "☠️"],
+    "sourcesChecked": [
+      {
+        "title": "Evelynn | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/evelynn/",
+        "kind": "official"
+      },
+      {
+        "title": "Evelynn (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Evelynn/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "ezreal",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Ezreal", "Jayce", "Kassadin"],
+      "after2": ["Ezreal", "Sivir", "Taliyah"],
+      "after3": ["Ezreal", "Zoe", "Kassadin"],
+      "after4": ["Ezreal", "Jayce", "Zoe"]
+    },
+    "confusableWith": ["Jayce", "Kassadin", "Zoe"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Ezreal is ranked first in all 4 stages.",
+      "🏺 and 🌀 are broad ruin/portal symbols, but 🧤 plus Arcane Shift/skillshot context makes Ezreal a reasonable top-three guess by clue 4."
+    ],
+    "suggestedEmojis": ["🧤", "🏺", "🌀", "🎯"],
+    "sourcesChecked": [
+      {
+        "title": "Ezreal | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/ezreal/",
+        "kind": "official"
+      },
+      {
+        "title": "Ezreal (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ezreal/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "fiddlesticks",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Fiddlesticks", "Yorick", "Nocturne"],
+      "after2": ["Fiddlesticks", "Xayah", "Quinn"],
+      "after3": ["Fiddlesticks", "Nocturne", "Shaco"],
+      "after4": ["Fiddlesticks", "Karthus", "Thresh"]
+    },
+    "confusableWith": ["Nocturne", "Shaco", "Karthus"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Fiddlesticks is ranked first in all 4 stages.",
+      "🌾 communicates straw/scarecrow only indirectly, and 🪶 is a feather rather than a crow; the overall combination is strong but these two symbols are less visually exact than the cited lore."
+    ],
+    "suggestedEmojis": ["🌾", "🐦‍⬛", "😱", "🪓"],
+    "sourcesChecked": [
+      {
+        "title": "Fiddlesticks | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/fiddlesticks/",
+        "kind": "official"
+      },
+      {
+        "title": "Fiddlesticks (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Fiddlesticks",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "fiora",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Fiora", "Camille", "Irelia"],
+      "after2": ["Fiora", "Camille", "Irelia"],
+      "after3": ["Fiora", "Camille", "Irelia"],
+      "after4": ["Fiora", "Camille", "Irelia"]
+    },
+    "confusableWith": ["Camille", "Irelia", "Yone"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Fiora is ranked first in all 4 stages."
+    ],
+    "suggestedEmojis": ["🤺", "🎯", "4️⃣", "🛡️"],
+    "sourcesChecked": [
+      {
+        "title": "Fiora | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/fiora/",
+        "kind": "official"
+      },
+      {
+        "title": "Fiora (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Fiora/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "fizz",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Nami", "Fizz", "Nautilus"],
+      "after2": ["Fizz", "Nami", "Nautilus"],
+      "after3": ["Fizz", "Nami", "Tahm Kench"],
+      "after4": ["Fizz", "Nami", "Tahm Kench"]
+    },
+    "confusableWith": ["Nami", "Nautilus", "Tahm Kench"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Fizz is ranked first in 3 of 4 stages.",
+      "🌊 is generic, but the fish-to-shark sequence and trident are direct gameplay signatures rather than padding."
+    ],
+    "suggestedEmojis": ["🌊", "🔱", "🦈", "🐟"],
+    "sourcesChecked": [
+      {
+        "title": "Fizz | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/fizz/",
+        "kind": "official"
+      },
+      {
+        "title": "Fizz (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Fizz/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "galio",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 1,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Malphite", "Galio", "Ornn"],
+      "after2": ["Galio", "Malphite", "Braum"],
+      "after3": ["Galio", "Malphite", "Pantheon"],
+      "after4": ["Galio", "Malphite", "Pantheon"]
+    },
+    "confusableWith": ["Malphite", "Braum", "Pantheon"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Galio is ranked first in all 4 stages.",
+      "🛬 is likely read as an airplane rather than Galio's ally-targeted leap and landing, and 💥 is a generic impact clue; the set remains only a weak top-three by clue 4.",
+      "The first two clues (stone monument and shield) are broad tank signals, so the set relies too heavily on recognizing Hero's Entrance from an ambiguous travel emoji."
+    ],
+    "suggestedEmojis": ["🗿", "🛡️", "🪂", "💥"],
+    "sourcesChecked": [
+      {
+        "title": "Galio | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/galio/",
+        "kind": "official"
+      },
+      {
+        "title": "Galio (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Galio/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "gangplank",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Gangplank", "Miss Fortune", "Twisted Fate"],
+      "after2": ["Gangplank", "Miss Fortune", "Dr. Mundo"],
+      "after3": ["Gangplank", "Gragas", "Graves"],
+      "after4": ["Gangplank", "Gragas", "Ziggs"]
+    },
+    "confusableWith": ["Miss Fortune", "Graves", "Twisted Fate"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Gangplank is ranked first in all 4 stages."
+    ],
+    "suggestedEmojis": ["🏴‍☠️", "🍊", "🛢️", "💣"],
+    "sourcesChecked": [
+      {
+        "title": "Gangplank | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/gangplank/",
+        "kind": "official"
+      },
+      {
+        "title": "Gangplank (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Gangplank/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "garen",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Garen", "Braum", "Jarvan IV"],
+      "after2": ["Garen", "Darius", "Jarvan IV"],
+      "after3": ["Garen", "Darius", "Tryndamere"],
+      "after4": ["Garen", "Darius", "Jarvan IV"]
+    },
+    "confusableWith": ["Darius", "Jarvan IV", "Xin Zhao"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Garen is ranked first in all 4 stages."
+    ],
+    "suggestedEmojis": ["🛡️", "🗡️", "🌀", "⚖️"],
+    "sourcesChecked": [
+      {
+        "title": "Garen | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/garen/",
+        "kind": "official"
+      },
+      {
+        "title": "Garen (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Garen/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "gnar",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Gnar", "Nunu", "Annie"],
+      "after2": ["Nunu", "Gnar", "Lissandra"],
+      "after3": ["Gnar", "Sivir", "Draven"],
+      "after4": ["Gnar", "Nunu", "Kled"]
+    },
+    "confusableWith": ["Nunu", "Poppy", "Kled"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Gnar is ranked first in 3 of 4 stages."
+    ],
+    "suggestedEmojis": ["🧒", "🧊", "🪃", "👹"],
+    "sourcesChecked": [
+      {
+        "title": "Gnar | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/gnar/",
+        "kind": "official"
+      },
+      {
+        "title": "Gnar (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Gnar/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "gragas",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Gragas", "Braum", "Draven"],
+      "after2": ["Gragas", "Gangplank", "Jhin"],
+      "after3": ["Gragas", "Sion", "Malphite"],
+      "after4": ["Gragas", "Gangplank", "Ziggs"]
+    },
+    "confusableWith": ["Braum", "Sion", "Ornn"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Gragas is ranked first in all 4 stages.",
+      "🤸 reads primarily as gymnastics or acrobatics, not Body Slam; beer plus barrel already identifies Gragas, so this clue is unnecessary padding unless replaced with a clearer brawl/impact symbol."
+    ],
+    "suggestedEmojis": ["🍺", "🛢️", "🤼", "💥"],
+    "sourcesChecked": [
+      {
+        "title": "Gragas | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/gragas/",
+        "kind": "official"
+      },
+      {
+        "title": "Gragas (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Gragas",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "graves",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Graves", "Jhin", "Caitlyn"],
+      "after2": ["Graves", "Jhin", "Caitlyn"],
+      "after3": ["Graves", "Teemo", "Shaco"],
+      "after4": ["Graves", "Jhin", "Caitlyn"]
+    },
+    "confusableWith": ["Jhin", "Caitlyn", "Twisted Fate"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Graves is ranked first in all 4 stages.",
+      "🔄 can read as refresh/loop rather than a shotgun reload, and 💨 reads as wind rather than Smoke Screen; the gameplay mapping is valid but not visually clear to a normal player."
+    ],
+    "suggestedEmojis": ["🔫", "🔄", "🌫️", "💥"],
+    "sourcesChecked": [
+      {
+        "title": "Graves | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/graves/",
+        "kind": "official"
+      },
+      {
+        "title": "Graves (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Graves/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "gwen",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Gwen", "Orianna", "Camille"],
+      "after2": ["Gwen", "Camille", "Riven"],
+      "after3": ["Gwen", "Orianna", "Hwei"],
+      "after4": ["Gwen", "Morgana", "Senna"]
+    },
+    "confusableWith": ["Orianna", "Camille", "Morgana"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Gwen is ranked first in all 4 stages."
+    ],
+    "suggestedEmojis": ["🧵", "✂️", "🪡", "🌫️"],
+    "sourcesChecked": [
+      {
+        "title": "Gwen | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/gwen/",
+        "kind": "official"
+      },
+      {
+        "title": "Gwen (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Gwen",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "hecarim",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Hecarim", "Rell", "Kled"],
+      "after2": ["Hecarim", "Viego", "Thresh"],
+      "after3": ["Hecarim", "Rammus", "Master Yi"],
+      "after4": ["Hecarim", "Viego", "Thresh"]
+    },
+    "confusableWith": ["Viego", "Thresh", "Karthus"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Hecarim is ranked first in all 4 stages.",
+      "💨 is a generic speed symbol and 🌫️ is shared Shadow Isles imagery; the horse-plus-wraith combination is still a strong and fair identity signal."
+    ],
+    "suggestedEmojis": ["🐴", "👻", "🏇", "🌫️"],
+    "sourcesChecked": [
+      {
+        "title": "Hecarim | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/hecarim/",
+        "kind": "official"
+      },
+      {
+        "title": "Hecarim (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Hecarim",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "heimerdinger",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Heimerdinger", "Viktor", "Jayce"],
+      "after2": ["Heimerdinger", "Azir", "Zyra"],
+      "after3": ["Heimerdinger", "Corki", "Jinx"],
+      "after4": ["Heimerdinger", "Ziggs", "Corki"]
+    },
+    "confusableWith": ["Ziggs", "Corki", "Jayce"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Heimerdinger is ranked first in all 4 stages.",
+      "🔬 is generic science, but the turret/rocket/grenade sequence supplies three clear kit signals and makes the target a reasonable top-three by clue 3."
+    ],
+    "suggestedEmojis": ["🔬", "🗼", "🚀", "💣"],
+    "sourcesChecked": [
+      {
+        "title": "Heimerdinger | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/heimerdinger/",
+        "kind": "official"
+      },
+      {
+        "title": "Template:Data Heimerdinger/Hextech Micro-Rockets | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Heimerdinger/Hextech_Micro-Rockets",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "hwei",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": false,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 1,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 0
+    },
+    "independentBlindTest": {
+      "after1": ["Hwei", "Jhin", "Neeko"],
+      "after2": ["Hwei", "Gwen", "Neeko"],
+      "after3": ["Jhin", "Hwei", "Shaco"],
+      "after4": ["Hwei", "Zoe", "Jhin"]
+    },
+    "confusableWith": ["Jhin", "Gwen", "Zoe"],
+    "issues": [
+      "Mechanical blocker: curation evidenceRefs fact-1/fact-2/fact-3 do not exist as fact IDs in the research records; the research facts have no id field.",
+      "The original blindTest is target-biased: Hwei is ranked first in all 4 stages.",
+      "🎨 and 🖌️ overlap as the same broad painter concept; they do not provide two independent signals.",
+      "🎭 is not established by the local research or Riot ability/lore pages as a Hwei signature and reads as theatre/mask rather than one of his three subjects.",
+      "🌀 can refer to Spiraling Despair, but the sequence has no clear clue for Hwei's Disaster/Serenity/Torment structure, so clue 3–4 does not reliably distinguish him from other artists or visually themed mages."
+    ],
+    "suggestedEmojis": ["🎨", "🖌️", "🔥", "😌", "🌀"],
+    "sourcesChecked": [
+      {
+        "title": "Hwei | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/hwei/",
+        "kind": "official"
+      },
+      {
+        "title": "Hwei Abilities Rundown | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/event/hwei-abilities-rundown/",
+        "kind": "official"
+      },
+      {
+        "title": "Hwei (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Hwei/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  }
+]
