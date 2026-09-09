@@ -1,0 +1,549 @@
+[
+  {
+    "championKey": "malphite",
+    "emojis": ["🪨", "🛡️", "💥", "⬆️"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🪨", "type": "visual", "meaning": "living stone and the Monolith", "basis": ["fact-1"]},
+      {"emoji": "🛡️", "type": "ability", "meaning": "recharging Granite Shield", "basis": ["fact-2"]},
+      {"emoji": "💥", "type": "gameplay", "meaning": "ground-impact slam", "basis": ["fact-3"]},
+      {"emoji": "⬆️", "type": "ability", "meaning": "Unstoppable Force knocks enemies into the air", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Ornn", "Poppy", "Rammus"],
+    "disambiguation": "The stone body plus a rechargeable shield and a ground charge that launches enemies separates Malphite from other armored or hammer-wielding champions.",
+    "blindTest": {
+      "after1": ["Malphite", "Ornn", "Poppy"],
+      "after2": ["Malphite", "Poppy", "Rammus"],
+      "after3": ["Malphite", "Ornn", "Poppy"],
+      "after4": ["Malphite", "Ornn", "Poppy"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "malzahar",
+    "emojis": ["🕳️", "🐜", "🧠", "⛓️"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🕳️", "type": "lore", "meaning": "the Void and a portal into it", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🐜", "type": "ability", "meaning": "a swarm of Voidlings", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧠", "type": "ability", "meaning": "Malefic Visions and a seer's mind", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⛓️", "type": "ability", "meaning": "Nether Grasp suppresses a target", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Bel'Veth", "Kha'Zix", "Fiddlesticks"],
+    "disambiguation": "Voidlings and the chained suppression effect point to Malzahar rather than a generic Void creature or fear champion.",
+    "blindTest": {
+      "after1": ["Malzahar", "Bel'Veth", "Kha'Zix"],
+      "after2": ["Malzahar", "Bel'Veth", "Kha'Zix"],
+      "after3": ["Malzahar", "Fiddlesticks", "Kassadin"],
+      "after4": ["Malzahar", "Morgana", "Fiddlesticks"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "maokai",
+    "emojis": ["🌳", "🌱", "💧", "👻"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🌳", "type": "visual", "meaning": "a living treant and nature spirit", "basis": ["fact-1"]},
+      {"emoji": "🌱", "type": "ability", "meaning": "Sapling Toss and chasing saplings", "basis": ["fact-3"]},
+      {"emoji": "💧", "type": "ability", "meaning": "Waters of Life sustains him", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "👻", "type": "lore", "meaning": "the Shadow Isles and undeath", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Ivern", "Zyra", "Thresh"],
+    "disambiguation": "The treant silhouette is narrowed by throwable saplings and a Shadow Isles survival/healing identity.",
+    "blindTest": {
+      "after1": ["Maokai", "Ivern", "Zyra"],
+      "after2": ["Maokai", "Ivern", "Zyra"],
+      "after3": ["Maokai", "Morgana", "Thresh"],
+      "after4": ["Maokai", "Thresh", "Yorick"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "masteryi",
+    "emojis": ["🗡️", "2️⃣", "🫥", "🧘", "💨"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🗡️", "type": "visual", "meaning": "Wuju swordsmanship", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "2️⃣", "type": "ability", "meaning": "Double Strike repeats an attack", "basis": ["fact-2"]},
+      {"emoji": "🫥", "type": "gameplay", "meaning": "Alpha Strike becomes untargetable", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧘", "type": "ability", "meaning": "Meditate heals while channeling", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💨", "type": "ability", "meaning": "Highlander grants speed and resets", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Yasuo", "Yone", "Zed"],
+    "disambiguation": "The combination of a Wuju blade, repeated-hit clue, untargetability, meditation, and speed reset is characteristic of Master Yi.",
+    "blindTest": {
+      "after1": ["Master Yi", "Yasuo", "Yone"],
+      "after2": ["Master Yi", "Yasuo", "Yone"],
+      "after3": ["Master Yi", "Zed", "Shaco"],
+      "after4": ["Master Yi", "Zed", "Yasuo"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "mel",
+    "emojis": ["🌹", "🪞", "✨", "🛡️", "💀"],
+    "difficulty": "hard",
+    "signals": [
+      {"emoji": "🌹", "type": "lore", "meaning": "the Black Rose connection", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪞", "type": "ability", "meaning": "reflective magic and Rebuttal", "basis": ["fact-3"]},
+      {"emoji": "✨", "type": "ability", "meaning": "bonus projectiles from casting", "basis": ["fact-2"]},
+      {"emoji": "🛡️", "type": "ability", "meaning": "Rebuttal blocks and reflects hostile magic", "basis": ["fact-3"]},
+      {"emoji": "💀", "type": "gameplay", "meaning": "Overwhelm stacks can execute a target", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["LeBlanc", "Morgana", "Lux"],
+    "disambiguation": "The Black Rose rose and reflection/execute combination separates Mel from other magic users, but those mechanics are difficult to encode with universally recognizable emoji.",
+    "blindTest": {
+      "after1": ["Mel", "LeBlanc", "Morgana"],
+      "after2": ["Mel", "LeBlanc", "Morgana"],
+      "after3": ["Mel", "Lux", "Syndra"],
+      "after4": ["Mel", "Lux", "Morgana"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "needs_review",
+    "reviewNotes": "Target reaches the top three by clue 4, but Mel is a newer champion and the set depends on abstract reflection and Overwhelm semantics. Validate with blind players before shipping."
+  },
+  {
+    "championKey": "milio",
+    "emojis": ["🔥", "⚽", "🩹", "🧸", "🤗"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🔥", "type": "lore", "meaning": "soothing fire and the fire axiom", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⚽", "type": "ability", "meaning": "Fire Kick sends a fuemigo ball", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🩹", "type": "ability", "meaning": "healing and soothing wounds", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧸", "type": "visual", "meaning": "a small fuemigo companion proxy", "basis": ["fact-3"]},
+      {"emoji": "🤗", "type": "ability", "meaning": "Warm Hugs protect allies", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Annie", "Brand", "Rumble"],
+    "disambiguation": "A friendly small fire elemental that is kicked as a ball and heals allies points to Milio, not a fire-damage mage.",
+    "blindTest": {
+      "after1": ["Milio", "Brand", "Annie"],
+      "after2": ["Milio", "Annie", "Brand"],
+      "after3": ["Milio", "Sona", "Soraka"],
+      "after4": ["Milio", "Annie", "Rumble"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "missfortune",
+    "emojis": ["🏴‍☠️", "🔫", "💋", "🌧️", "💥"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "🏴‍☠️", "type": "lore", "meaning": "Bilgewater captain and bounty hunter", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🔫", "type": "visual", "meaning": "signature dual-gun identity", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "💋", "type": "ability", "meaning": "Love Tap rewards switching targets", "basis": ["fact-2"]},
+      {"emoji": "🌧️", "type": "ability", "meaning": "Make It Rain", "basis": ["fact-2"]},
+      {"emoji": "💥", "type": "ability", "meaning": "Bullet Time's broad gun barrage", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Graves", "Gangplank", "Samira"],
+    "disambiguation": "The pirate captain, paired guns, Love Tap kiss, and a rain-like Bullet Time barrage distinguish Miss Fortune from other gun users.",
+    "blindTest": {
+      "after1": ["Miss Fortune", "Gangplank", "Graves"],
+      "after2": ["Miss Fortune", "Graves", "Caitlyn"],
+      "after3": ["Miss Fortune", "Lucian", "Graves"],
+      "after4": ["Miss Fortune", "Samira", "Lucian"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "mordekaiser",
+    "emojis": ["⚙️", "🔨", "👻", "🌀", "⛓️"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "⚙️", "type": "visual", "meaning": "iron revenant armor", "basis": ["fact-1"]},
+      {"emoji": "🔨", "type": "visual", "meaning": "the brutal mace Nightfall", "basis": ["fact-3"]},
+      {"emoji": "👻", "type": "lore", "meaning": "necromancy and bound souls", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🌀", "type": "ability", "meaning": "Realm of Death moves a target to another dimension", "basis": ["fact-2"]},
+      {"emoji": "⛓️", "type": "gameplay", "meaning": "souls bound into servitude", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Sion", "Thresh", "Yorick"],
+    "disambiguation": "The iron mace and a one-versus-one death realm identify Mordekaiser among undead tanks and soul-themed champions.",
+    "blindTest": {
+      "after1": ["Mordekaiser", "Sion", "Thresh"],
+      "after2": ["Mordekaiser", "Sion", "Yorick"],
+      "after3": ["Mordekaiser", "Thresh", "Yorick"],
+      "after4": ["Mordekaiser", "Thresh", "Sion"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "morgana",
+    "emojis": ["🪽", "⛓️", "🖤", "🛡️", "🔥"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🪽", "type": "lore", "meaning": "wings bound to embrace humanity", "basis": ["fact-1"]},
+      {"emoji": "⛓️", "type": "ability", "meaning": "Dark Binding and Soul Shackles", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🖤", "type": "visual", "meaning": "dark magic and shadow identity", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🛡️", "type": "ability", "meaning": "Black Shield protects against magic", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🔥", "type": "ability", "meaning": "dark celestial fire", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Kayle", "Leona", "Diana"],
+    "disambiguation": "Bound wings plus dark chains and a magic-protecting shield distinguish Morgana from other winged or celestial champions.",
+    "blindTest": {
+      "after1": ["Morgana", "Kayle", "Diana"],
+      "after2": ["Morgana", "Kayle", "Leona"],
+      "after3": ["Morgana", "Kayle", "Swain"],
+      "after4": ["Morgana", "Kayle", "Leona"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "naafiri",
+    "emojis": ["🐕", "🗡️", "👥", "🩸", "🏜️"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🐕", "type": "visual", "meaning": "Shuriman dune hound host", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🗡️", "type": "lore", "meaning": "Darkin dagger identity", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "👥", "type": "gameplay", "meaning": "packmates hunt alongside the host", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🩸", "type": "ability", "meaning": "Darkin Daggers cause bleeding", "basis": ["fact-2"]},
+      {"emoji": "🏜️", "type": "lore", "meaning": "Shuriman desert setting", "basis": ["fact-1", "fact-3"]}
+    ],
+    "confusableWith": ["Warwick", "Aatrox", "Nasus"],
+    "disambiguation": "A dog-like Darkin carried by a coordinated pack is the key distinction from lone werewolves, blade Darkin, or jackal Ascended champions.",
+    "blindTest": {
+      "after1": ["Naafiri", "Warwick", "Nasus"],
+      "after2": ["Naafiri", "Aatrox", "Warwick"],
+      "after3": ["Naafiri", "Aatrox", "Warwick"],
+      "after4": ["Naafiri", "Aatrox", "Warwick"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nami",
+    "emojis": ["🧜‍♀️", "🫧", "🌊", "🪄"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "🧜‍♀️", "type": "visual", "meaning": "Marai sea vastaya", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🫧", "type": "ability", "meaning": "Aqua Prison bubble", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🌊", "type": "ability", "meaning": "Tidal Wave and ocean power", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🪄", "type": "visual", "meaning": "Tidecaller staff channels the sea", "basis": ["fact-1"]}
+    ],
+    "confusableWith": ["Fizz", "Nilah", "Tahm Kench"],
+    "disambiguation": "The merfolk silhouette plus bubble control and a large tidal wave makes Nami more specific than a generic water champion.",
+    "blindTest": {
+      "after1": ["Nami", "Fizz", "Tahm Kench"],
+      "after2": ["Nami", "Fizz", "Zoe"],
+      "after3": ["Nami", "Fizz", "Nilah"],
+      "after4": ["Nami", "Nilah", "Fizz"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nasus",
+    "emojis": ["🐺", "🏜️", "🔨", "📈", "🌪️"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "🐺", "type": "visual", "meaning": "jackal-headed Ascended guardian", "basis": ["fact-1"]},
+      {"emoji": "🏜️", "type": "lore", "meaning": "ancient Shurima", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🔨", "type": "ability", "meaning": "Siphoning Strike's heavy Q bonk", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "📈", "type": "gameplay", "meaning": "last-hit stacks grow permanently", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🌪️", "type": "ability", "meaning": "Fury of the Sands sandstorm form", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Renekton", "Skarner", "Sion"],
+    "disambiguation": "The jackal form is narrowed by the endlessly stacking Q and the sandstorm transformation.",
+    "blindTest": {
+      "after1": ["Nasus", "Renekton", "Skarner"],
+      "after2": ["Nasus", "Renekton", "Sivir"],
+      "after3": ["Nasus", "Sion", "Sett"],
+      "after4": ["Nasus", "Renekton", "Sion"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nautilus",
+    "emojis": ["⚓", "🌊", "🪝", "🦾", "💥"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "⚓", "type": "visual", "meaning": "enormous anchor and Bilgewater depths", "basis": ["fact-1"]},
+      {"emoji": "🌊", "type": "lore", "meaning": "a legend of dark waters", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🪝", "type": "ability", "meaning": "Dredge Line hooks and drags", "basis": ["fact-3"]},
+      {"emoji": "🦾", "type": "visual", "meaning": "armored goliath", "basis": ["fact-1"]},
+      {"emoji": "💥", "type": "ability", "meaning": "Depth Charge erupts through the ground", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Pyke", "Thresh", "Blitzcrank"],
+    "disambiguation": "Anchor, armored diver, and a hook that brings both combatants together identify Nautilus over the other hook champions.",
+    "blindTest": {
+      "after1": ["Nautilus", "Thresh", "Pyke"],
+      "after2": ["Nautilus", "Pyke", "Thresh"],
+      "after3": ["Nautilus", "Pyke", "Thresh"],
+      "after4": ["Nautilus", "Pyke", "Thresh"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "neeko",
+    "emojis": ["🦎", "🎭", "👥", "🌸"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🦎", "type": "visual", "meaning": "chameleon-like vastaya", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🎭", "type": "ability", "meaning": "Inherent Glamour disguises her as another unit", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "👥", "type": "gameplay", "meaning": "Shapesplitter creates a deceptive clone", "basis": ["fact-2"]},
+      {"emoji": "🌸", "type": "ability", "meaning": "colorful Blooming Burst", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Shaco", "LeBlanc", "Nidalee"],
+    "disambiguation": "The chameleon identity together with ally/map-unit disguise and a clone separates Neeko from other illusion users.",
+    "blindTest": {
+      "after1": ["Neeko", "Shyvana", "Nidalee"],
+      "after2": ["Neeko", "Shaco", "LeBlanc"],
+      "after3": ["Neeko", "Shaco", "Nidalee"],
+      "after4": ["Neeko", "Shaco", "Nidalee"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nidalee",
+    "emojis": ["🐆", "🏹", "🌿", "🎯", "🐾"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🐆", "type": "visual", "meaning": "ferocious cougar form", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🏹", "type": "ability", "meaning": "long-range javelin hunt", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🌿", "type": "gameplay", "meaning": "brush tracking and Bushwhack traps", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🎯", "type": "ability", "meaning": "Hunted mark enables empowered attacks", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🐾", "type": "ability", "meaning": "cougar Pounce follows the hunt", "basis": ["fact-1", "fact-2"]}
+    ],
+    "confusableWith": ["Rengar", "Kha'Zix", "Neeko"],
+    "disambiguation": "The human hunter's javelin/trap setup followed by a cougar pounce is the decisive Nidalee sequence.",
+    "blindTest": {
+      "after1": ["Nidalee", "Rengar", "Kha'Zix"],
+      "after2": ["Nidalee", "Rengar", "Quinn"],
+      "after3": ["Nidalee", "Rengar", "Taliyah"],
+      "after4": ["Nidalee", "Rengar", "Neeko"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nilah",
+    "emojis": ["😄", "👹", "🌊", "🗡️", "🌀"],
+    "difficulty": "hard",
+    "signals": [
+      {"emoji": "😄", "type": "lore", "meaning": "perpetual joy forced by Ashlesh", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "👹", "type": "lore", "meaning": "the demon of joy, Ashlesh", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🌊", "type": "visual", "meaning": "liquid water power", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🗡️", "type": "visual", "meaning": "the urumi whip-like blade", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🌀", "type": "ability", "meaning": "water whirlpool combat", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Nami", "Samira", "Fiddlesticks"],
+    "disambiguation": "The demon of joy and liquid urumi blade are intended to separate Nilah from Nami's sea-mage identity and other melee marksmen, but the symbols overlap.",
+    "blindTest": {
+      "after1": ["Nilah", "Jinx", "Nami"],
+      "after2": ["Nilah", "Fiddlesticks", "Evelynn"],
+      "after3": ["Nilah", "Nami", "Fizz"],
+      "after4": ["Nilah", "Nami", "Samira"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "needs_review",
+    "reviewNotes": "The target reaches the top three by clue 4, but Unicode has no clear urumi or Seventh Layer symbol. The joy/demon/water combination needs blind-player validation to ensure it is recognizable rather than read as Nami or Samira."
+  },
+  {
+    "championKey": "nocturne",
+    "emojis": ["😱", "🌑", "🙈", "🗡️", "💨"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "😱", "type": "lore", "meaning": "a demon made of nightmares", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🌑", "type": "ability", "meaning": "Paranoia's darkness and global blackout", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🙈", "type": "gameplay", "meaning": "removing enemy sight", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🗡️", "type": "visual", "meaning": "wicked Umbra Blades", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "💨", "type": "ability", "meaning": "Paranoia dashes through darkness", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Fiddlesticks", "Evelynn", "Vex"],
+    "disambiguation": "Nightmare fear is narrowed by the global blackout, sight denial, and a long-distance dash with blades.",
+    "blindTest": {
+      "after1": ["Nocturne", "Fiddlesticks", "Evelynn"],
+      "after2": ["Nocturne", "Fiddlesticks", "Vex"],
+      "after3": ["Nocturne", "Fiddlesticks", "Vex"],
+      "after4": ["Nocturne", "Fiddlesticks", "Kha'Zix"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "nunu",
+    "emojis": ["🧒", "🐻", "❄️", "⚪", "🌀"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🧒", "type": "lore", "meaning": "Nunu, the young boy", "basis": ["fact-1"]},
+      {"emoji": "🐻", "type": "visual", "meaning": "Willump, represented by a large furry companion", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "❄️", "type": "lore", "meaning": "Freljordian snow and ice", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "⚪", "type": "ability", "meaning": "rolling snowball engage", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🌀", "type": "ability", "meaning": "Absolute Zero's channelling blizzard", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Braum", "Sejuani", "Anivia"],
+    "disambiguation": "The child-and-yeti duo plus a rolling snowball and a charged blizzard identifies Nunu & Willump over other Freljord ice champions.",
+    "blindTest": {
+      "after1": ["Nunu & Willump", "Braum", "Sejuani"],
+      "after2": ["Nunu & Willump", "Braum", "Anivia"],
+      "after3": ["Nunu & Willump", "Braum", "Gragas"],
+      "after4": ["Nunu & Willump", "Anivia", "Lissandra"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "olaf",
+    "emojis": ["🪓", "💀", "💢", "🚫", "🩸"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🪓", "type": "visual", "meaning": "axe-wielding berserker", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "💀", "type": "lore", "meaning": "seeking a glorious death", "basis": ["fact-1"]},
+      {"emoji": "💢", "type": "gameplay", "meaning": "berserker rage as health falls", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🚫", "type": "ability", "meaning": "Ragnarok rejects crowd control", "basis": ["fact-3"]},
+      {"emoji": "🩸", "type": "gameplay", "meaning": "missing health boosts attack speed and life steal", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Tryndamere", "Darius", "Sion"],
+    "disambiguation": "The thrown-and-retrieved axe plus stronger fighting while wounded and crowd-control immunity separates Olaf from other berserkers.",
+    "blindTest": {
+      "after1": ["Olaf", "Tryndamere", "Darius"],
+      "after2": ["Olaf", "Darius", "Sion"],
+      "after3": ["Olaf", "Tryndamere", "Darius"],
+      "after4": ["Olaf", "Mordekaiser", "Tryndamere"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "orianna",
+    "emojis": ["⚙️", "⚽", "🎛️", "🌪️", "🛡️"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "⚙️", "type": "visual", "meaning": "clockwork body", "basis": ["fact-1"]},
+      {"emoji": "⚽", "type": "visual", "meaning": "the brass Ball companion", "basis": ["fact-1", "fact-2", "fact-3"]},
+      {"emoji": "🎛️", "type": "ability", "meaning": "commands control the Ball", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🌪️", "type": "ability", "meaning": "Command: Shockwave pulls enemies", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🛡️", "type": "ability", "meaning": "the Ball shields an ally", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Blitzcrank", "Rumble", "Syndra"],
+    "disambiguation": "A clockwork girl operating a separate Ball through commands and a shockwave is uniquely more specific than a generic mechanical mage.",
+    "blindTest": {
+      "after1": ["Orianna", "Blitzcrank", "Rumble"],
+      "after2": ["Orianna", "Aurelion Sol", "Rumble"],
+      "after3": ["Orianna", "Syndra", "Ziggs"],
+      "after4": ["Orianna", "Syndra", "Ziggs"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "ornn",
+    "emojis": ["🐏", "🔨", "🌋", "🛠️", "🧱"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "🐏", "type": "visual", "meaning": "ram-like forge spirit", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🔨", "type": "visual", "meaning": "trusty forging hammer", "basis": ["fact-1"]},
+      {"emoji": "🌋", "type": "lore", "meaning": "volcano forge and magma", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🛠️", "type": "gameplay", "meaning": "crafting items and masterworks", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🧱", "type": "ability", "meaning": "forged, brittle impact and magma terrain", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Poppy", "Braum", "Volibear"],
+    "disambiguation": "The ram, volcano forge, and ability to craft upgrades distinguish Ornn from other large Freljord or hammer champions.",
+    "blindTest": {
+      "after1": ["Ornn", "Braum", "Volibear"],
+      "after2": ["Ornn", "Poppy", "Jax"],
+      "after3": ["Ornn", "Brand", "Vladimir"],
+      "after4": ["Ornn", "Poppy", "Braum"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "pantheon",
+    "emojis": ["🛡️", "🗡️", "☄️", "⬇️", "💥"],
+    "difficulty": "easy",
+    "signals": [
+      {"emoji": "🛡️", "type": "visual", "meaning": "spear-and-shield warrior", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "🗡️", "type": "visual", "meaning": "fallen Aspect's spear", "basis": ["fact-1", "fact-2"]},
+      {"emoji": "☄️", "type": "lore", "meaning": "the Aspect of War and starfall", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "⬇️", "type": "ability", "meaning": "Grand Starfall descends from the sky", "basis": ["fact-3"]},
+      {"emoji": "💥", "type": "ability", "meaning": "Shield Vault lands with a stun", "basis": ["fact-2", "fact-3"]}
+    ],
+    "confusableWith": ["Leona", "Braum", "Jarvan IV"],
+    "disambiguation": "A spear-and-shield fighter who falls from the sky separates Pantheon from terrestrial shield tanks and armor-clad warriors.",
+    "blindTest": {
+      "after1": ["Pantheon", "Leona", "Braum"],
+      "after2": ["Pantheon", "Leona", "Jarvan IV"],
+      "after3": ["Pantheon", "Aurelion Sol", "Diana"],
+      "after4": ["Pantheon", "Leona", "Jarvan IV"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "poppy",
+    "emojis": ["🔨", "🛡️", "🔄", "🏰", "⛔"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🔨", "type": "visual", "meaning": "Orlon's oversized legendary hammer", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🛡️", "type": "ability", "meaning": "bouncing buckler becomes a shield", "basis": ["fact-2", "fact-3"]},
+      {"emoji": "🔄", "type": "gameplay", "meaning": "the buckler bounces and returns", "basis": ["fact-2"]},
+      {"emoji": "🏰", "type": "lore", "meaning": "Demacian mission and Hero of Demacia", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "⛔", "type": "ability", "meaning": "Steadfast Presence stops enemy dashes", "basis": ["fact-2"]}
+    ],
+    "confusableWith": ["Ornn", "Pantheon", "Braum"],
+    "disambiguation": "The small hammer bearer with a bouncing buckler and anti-dash field is Poppy, not a generic hammer or shield champion.",
+    "blindTest": {
+      "after1": ["Poppy", "Ornn", "Jax"],
+      "after2": ["Poppy", "Pantheon", "Braum"],
+      "after3": ["Poppy", "Sivir", "Samira"],
+      "after4": ["Poppy", "Pantheon", "Ornn"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  },
+  {
+    "championKey": "pyke",
+    "emojis": ["🪝", "🌊", "👻", "🫥", "☠️"],
+    "difficulty": "medium",
+    "signals": [
+      {"emoji": "🪝", "type": "visual", "meaning": "Bilgewater harpooner", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "🌊", "type": "lore", "meaning": "drowned in a jaull-fish and returned from the deep", "basis": ["fact-1", "fact-3"]},
+      {"emoji": "👻", "type": "lore", "meaning": "supernatural revenant hunting exploiters", "basis": ["fact-1"]},
+      {"emoji": "🫥", "type": "ability", "meaning": "Ghostwater camouflage", "basis": ["fact-3"]},
+      {"emoji": "☠️", "type": "ability", "meaning": "Death from Below executes low-health targets", "basis": ["fact-3"]}
+    ],
+    "confusableWith": ["Nautilus", "Thresh", "Fizz"],
+    "disambiguation": "The drowned harpooner who disappears and executes low-health victims distinguishes Pyke from other hook or water champions.",
+    "blindTest": {
+      "after1": ["Pyke", "Nautilus", "Thresh"],
+      "after2": ["Pyke", "Nautilus", "Fizz"],
+      "after3": ["Pyke", "Evelynn", "Talon"],
+      "after4": ["Pyke", "Nautilus", "Thresh"]
+    },
+    "evidenceRefs": ["fact-1", "fact-2", "fact-3"],
+    "status": "pass",
+    "reviewNotes": ""
+  }
+]

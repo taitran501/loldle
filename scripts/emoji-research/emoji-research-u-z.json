@@ -1,0 +1,2927 @@
+[
+  {
+    "championKey": "udyr",
+    "championName": "Udyr",
+    "facts": [
+      {
+        "claim": "Udyr is a Freljordian spirit walker who communes with spirits and channels their energy into a primal fighting style.",
+        "type": "lore",
+        "source": {
+          "title": "Udyr | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/udyr/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Udyr has four basic abilities that swap between stances and can be recast for empowered spirit effects.",
+        "type": "ability",
+        "source": {
+          "title": "Udyr | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/udyr/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki identifies Udyr's kit with animal-spirit stances including tiger, turtle, bear, and phoenix motifs.",
+        "type": "visual",
+        "source": {
+          "title": "Udyr | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Udyr",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "spirit walker",
+      "four animal-spirit stances",
+      "bear, tiger, turtle, and phoenix forms"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧘",
+        "meaning": "spirit walker and inner discipline",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🐯",
+        "meaning": "Wilding Claw tiger stance",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🐢",
+        "meaning": "Iron Mantle turtle stance",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🐻",
+        "meaning": "Blazing Stampede bear stance",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔥",
+        "meaning": "Wingborne Storm phoenix/fire spirit",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Volibear",
+      "Nidalee",
+      "Lee Sin"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "urgot",
+    "championName": "Urgot",
+    "facts": [
+      {
+        "claim": "Urgot was a Noxian headsman betrayed by the empire, chained in a Zaun prison mine, and later became a feared figure in Zaun's underworld.",
+        "type": "lore",
+        "source": {
+          "title": "Urgot | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/urgot/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Urgot's attacks and Purge trigger blasts of flame from the shotgun-like weapons mounted around his legs.",
+        "type": "ability",
+        "source": {
+          "title": "Urgot | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/urgot/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Urgot's leg-mounted weapons and Fear Beyond Death as a harpoon-based execution ability.",
+        "type": "gameplay",
+        "source": {
+          "title": "Urgot | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Urgot",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "six-legged cyborg body",
+      "shotgun legs and Purge",
+      "chains and execution harpoon"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🦿",
+        "meaning": "mechanical legs",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⛓️",
+        "meaning": "chains from his imprisonment",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔫",
+        "meaning": "leg-mounted shotgun weapons",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💀",
+        "meaning": "Fear Beyond Death execution",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Viktor",
+      "Blitzcrank",
+      "Mordekaiser"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "varus",
+    "championName": "Varus",
+    "facts": [
+      {
+        "claim": "Varus is an ancient Darkin who escaped in the remade flesh of two Ionian hunters while carrying the bound essence of a cursed bow.",
+        "type": "lore",
+        "source": {
+          "title": "Varus | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/varus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Varus's kit centers on Piercing Arrow, Blighted Quiver, Hail of Arrows, and Chain of Corruption.",
+        "type": "ability",
+        "source": {
+          "title": "Varus | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/varus/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki records Varus as a unique hybrid whose body contains the separate consciousnesses of Varus, Valmar, and Kai, with corruption and hemomancy tied to his Darkin nature.",
+        "type": "lore",
+        "source": {
+          "title": "Varus | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Varus",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Darkin archer",
+      "corruptive blight and spreading chain",
+      "three souls in one body"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🏹",
+        "meaning": "Darkin bow and archer identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "☣️",
+        "meaning": "corruption and Blight",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👥",
+        "meaning": "multiple consciousnesses sharing one body",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⛓️",
+        "meaning": "Chain of Corruption",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌿",
+        "meaning": "Blight spreading through living targets",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ashe",
+      "Aphelios",
+      "Aatrox",
+      "Rhaast"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "vayne",
+    "championName": "Vayne",
+    "facts": [
+      {
+        "claim": "Vayne is a Demacian monster hunter who carries a wrist-mounted crossbow and hunts the evil-doer who destroyed her family.",
+        "type": "lore",
+        "source": {
+          "title": "Vayne, the Night Hunter | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vayne/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Vayne's signature abilities include Tumble, Silver Bolts, Condemn, and Final Hour with invisibility during Tumble.",
+        "type": "ability",
+        "source": {
+          "title": "Vayne, the Night Hunter | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vayne/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Silver Bolts as a rare-metal third-hit effect and Night Hunter as movement toward nearby enemy champions.",
+        "type": "gameplay",
+        "source": {
+          "title": "Vayne | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vayne",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "wrist crossbow",
+      "silver anti-monster bolts",
+      "tumble and night-hunt invisibility"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🏹",
+        "meaning": "wrist-mounted crossbow",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🥈",
+        "meaning": "silver bolts",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔩",
+        "meaning": "bolts fired from the crossbow",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "👹",
+        "meaning": "monster-hunting target",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌙",
+        "meaning": "Night Hunter and Final Hour",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ashe",
+      "Varus",
+      "Quinn",
+      "Kindred"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "veigar",
+    "championName": "Veigar",
+    "facts": [
+      {
+        "claim": "Veigar is a Bandle City yordle who embraced forbidden dark sorcery and calls himself a master of evil.",
+        "type": "lore",
+        "source": {
+          "title": "Veigar | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/veigar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Veigar permanently gains ability power from spells hitting champions or takedowns, making growth a defining part of his passive.",
+        "type": "gameplay",
+        "source": {
+          "title": "Veigar | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/veigar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki lists Dark Matter, Event Horizon, and Primordial Burst as Veigar's defining dark-magic tools, including a cage-like stun field and meteor-like burst.",
+        "type": "ability",
+        "source": {
+          "title": "Veigar | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Veigar",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "tiny evil yordle wizard",
+      "permanent power stacking",
+      "dark-magic cage and meteor burst"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧙‍♂️",
+        "meaning": "yordle sorcerer",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "😈",
+        "meaning": "Tiny Master of Evil persona",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "☄️",
+        "meaning": "Primordial Burst and Dark Matter",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪤",
+        "meaning": "Event Horizon cage trap",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🕳️",
+        "meaning": "dark matter and forbidden magic",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Vex",
+      "Morgana",
+      "Brand",
+      "Lulu"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "velkoz",
+    "championName": "Vel'Koz",
+    "facts": [
+      {
+        "claim": "Vel'Koz is the Eye of the Void, an intelligent Void being whose abilities apply Organic Deconstruction to enemies.",
+        "type": "lore",
+        "source": {
+          "title": "Vel'Koz | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/velkoz/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Vel'Koz's kit includes Plasma Fission, Void Rift, Tectonic Disruption, and Life Form Disintegration Ray.",
+        "type": "ability",
+        "source": {
+          "title": "Vel'Koz | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/velkoz/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Vel'Koz as a Void creature with tentacular anatomy and a strong research, dissection, and disintegration theme.",
+        "type": "visual",
+        "source": {
+          "title": "Vel'Koz | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vel%27Koz",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "single eye of the Void",
+      "tentacles and organic deconstruction",
+      "research beam and disintegration ray"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "👁️",
+        "meaning": "Eye of the Void",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🦑",
+        "meaning": "tentacular Void body",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔬",
+        "meaning": "analysis and dissection",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🕳️",
+        "meaning": "the Void",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☢️",
+        "meaning": "disintegration energy",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Kog'Maw",
+      "Bel'Veth",
+      "Malzahar",
+      "Xerath"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "vex",
+    "championName": "Vex",
+    "facts": [
+      {
+        "claim": "Vex is a gloomy yordle from the Shadow Isles who travels with a powerful living Shadow companion.",
+        "type": "lore",
+        "source": {
+          "title": "Vex | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vex/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Vex's Doom 'n Gloom passive empowers an ability to fear enemies and responds to nearby enemy dashes with marks.",
+        "type": "gameplay",
+        "source": {
+          "title": "Vex | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vex/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Shadow Surge as Vex's shadow projectile that marks a champion and lets her dash to the marked target.",
+        "type": "ability",
+        "source": {
+          "title": "Vex | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vex",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "gloomy yordle",
+      "living Shadow companion",
+      "anti-dash fear mechanic"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "😒",
+        "meaning": "gloom and teenage ennui",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌑",
+        "meaning": "Shadow Isles gloom",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "👤",
+        "meaning": "her living Shadow companion",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "😱",
+        "meaning": "Doom 'n Gloom fear",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🚫",
+        "meaning": "interrupting enemy dashes",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "enemy dash interaction",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nocturne",
+      "Morgana",
+      "Lulu",
+      "Yuumi"
+    ],
+    "unresolved": [
+      "Unicode has no specific icon for Vex's Shadow companion or yordle identity."
+    ]
+  },
+  {
+    "championKey": "vi",
+    "championName": "Vi",
+    "facts": [
+      {
+        "claim": "Vi is the Piltover Enforcer, a Zaun-born fighter who uses massive hextech gauntlets to punch through obstacles and suspects.",
+        "type": "lore",
+        "source": {
+          "title": "Vi | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Vi charges Vault Breaker and uses Cease and Desist to lock onto and knock up a target while her attacks build Denting Blows.",
+        "type": "ability",
+        "source": {
+          "title": "Vi | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki highlights Vi's charged dash, armor-breaking three-hit passive, and targeted airborne ultimate as core gameplay signatures.",
+        "type": "gameplay",
+        "source": {
+          "title": "Vi | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vi",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "hextech gauntlets",
+      "charged punch and armor break",
+      "Piltover Enforcer engage"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🥊",
+        "meaning": "signature punching style",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🦾",
+        "meaning": "massive hextech gauntlets",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Vault Breaker impact",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🚓",
+        "meaning": "Piltover enforcement",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "⚙️",
+        "meaning": "hextech machinery",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Sett",
+      "Blitzcrank",
+      "Camille",
+      "Lee Sin"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "viego",
+    "championName": "Viego",
+    "facts": [
+      {
+        "claim": "Viego is the Ruined King whose obsession with restoring his dead queen Isolde unleashed the Ruination and Black Mist.",
+        "type": "lore",
+        "source": {
+          "title": "Viego | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/viego/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Viego can possess slain champions, temporarily taking their form and basic abilities before casting Heartbreaker.",
+        "type": "gameplay",
+        "source": {
+          "title": "Viego - Abilities Rundown | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/event/viego-abilities-rundown/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Sovereign's Domination as consuming Mist Wraiths to become untargetable and gain possession, while the Ruined King story centers the Black Mist and Isolde.",
+        "type": "ability",
+        "source": {
+          "title": "Viego | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Viego",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Ruined King and lost queen",
+      "Black Mist and Mist Wraiths",
+      "champion possession"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "👑",
+        "meaning": "Ruined King",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "Blade of the Ruined King",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌫️",
+        "meaning": "Black Mist and Ruination",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🎭",
+        "meaning": "possessing another champion's form",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💔",
+        "meaning": "obsession with Isolde and lost love",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Mordekaiser",
+      "Thresh",
+      "Yorick",
+      "Aatrox"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "viktor",
+    "championName": "Viktor",
+    "facts": [
+      {
+        "claim": "Viktor has embraced a biomechanical Glorious Evolution and seeks to spread the revelation of the Hexcore.",
+        "type": "lore",
+        "source": {
+          "title": "Viktor | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/viktor/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Viktor collects Hex Fragments from kills to permanently augment his basic abilities and ultimately his Arcane Storm.",
+        "type": "gameplay",
+        "source": {
+          "title": "Viktor | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/viktor/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki lists Gravity Field, Hextech Ray, and Arcane Storm as Viktor's core control, laser, and storm abilities.",
+        "type": "ability",
+        "source": {
+          "title": "Viktor | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Viktor",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "biomechanical evolution",
+      "Hexcore augmentation",
+      "gravity field and Hextech Ray"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🤖",
+        "meaning": "biomechanical evolution",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "⚙️",
+        "meaning": "mechanical augmentation",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💠",
+        "meaning": "Hexcore and hextech",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🔬",
+        "meaning": "inventor and scientific experimentation",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "⚡",
+        "meaning": "Hextech Ray and Arcane Storm",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jayce",
+      "Blitzcrank",
+      "Heimerdinger",
+      "Xerath"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "vladimir",
+    "championName": "Vladimir",
+    "facts": [
+      {
+        "claim": "Vladimir is a Noxian hemomancer who can control blood and extend his life through supernatural power.",
+        "type": "lore",
+        "source": {
+          "title": "Vladimir | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vladimir/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Vladimir's kit drains blood, charges Tides of Blood, and spreads Hemoplague while using health as a resource.",
+        "type": "ability",
+        "source": {
+          "title": "Vladimir | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/vladimir/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki identifies Sanguine Pool as Vladimir sinking into a blood pool, becoming untargetable while slowing and damaging nearby enemies.",
+        "type": "gameplay",
+        "source": {
+          "title": "Vladimir | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Vladimir",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "blood mage and hemomancy",
+      "Sanguine Pool untargetability",
+      "blood drain and Hemoplague"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🩸",
+        "meaning": "blood manipulation and drain",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧛‍♂️",
+        "meaning": "immortal blood mage archetype",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌊",
+        "meaning": "Tides of Blood",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🫥",
+        "meaning": "untargetable while in Sanguine Pool",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☣️",
+        "meaning": "Hemoplague",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Briar",
+      "Swain",
+      "Aatrox",
+      "Elise"
+    ],
+    "unresolved": [
+      "There is no literal blood-pool Unicode glyph, so the pool clue is represented by untargetability and water imagery."
+    ]
+  },
+  {
+    "championKey": "volibear",
+    "championName": "Volibear",
+    "facts": [
+      {
+        "claim": "Volibear is a Freljordian demigod whose identity is tied to thunder, storms, and the savage Ursine.",
+        "type": "lore",
+        "source": {
+          "title": "Volibear | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/volibear/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Volibear's attacks and abilities build attack speed and eventually deal bonus magic damage to nearby enemies.",
+        "type": "gameplay",
+        "source": {
+          "title": "Volibear | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/volibear/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki's Relentless Storm lore describes Volibear casting off armor to fight with tooth, claw, and thunder.",
+        "type": "visual",
+        "source": {
+          "title": "The Relentless Storm - League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe%3AThe_Relentless_Storm",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "thunder bear demigod",
+      "Freljord and Ursine",
+      "storm attacks and lightning"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐻",
+        "meaning": "bear demigod",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⚡",
+        "meaning": "thunder and lightning",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "❄️",
+        "meaning": "Freljord ice and tundra",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌩️",
+        "meaning": "Relentless Storm",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🐾",
+        "meaning": "tooth, claw, and beast form",
+        "strength": "supporting",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Udyr",
+      "Ornn",
+      "Volibear",
+      "Nasus"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "warwick",
+    "championName": "Warwick",
+    "facts": [
+      {
+        "claim": "Warwick is an engineered beast hunting Zaun's gray alleys, with chemtech machinery and an intense attraction to the scent of blood.",
+        "type": "lore",
+        "source": {
+          "title": "Warwick | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/warwick/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Warwick heals from his attacks while low on health and senses weakened enemies through Blood Hunt, gaining movement and attack speed toward them.",
+        "type": "gameplay",
+        "source": {
+          "title": "Warwick | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/warwick/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki highlights Warwick's bite, low-health healing, blood tracking, and asymmetrical chemtech machinery as defining features.",
+        "type": "visual",
+        "source": {
+          "title": "Warwick | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Warwick",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "chemtech werewolf",
+      "blood scent and Blood Hunt",
+      "bite plus low-health healing"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐺",
+        "meaning": "werewolf beast",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🩸",
+        "meaning": "Blood Hunt and blood scent",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🦷",
+        "meaning": "Jaws of the Beast bite",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧪",
+        "meaning": "chemtech experiments and machinery",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👃",
+        "meaning": "tracking enemies by blood scent",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Rengar",
+      "Briar",
+      "Dr. Mundo",
+      "Singed"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "wukong",
+    "championName": "Wukong",
+    "facts": [
+      {
+        "claim": "Wukong is the Monkey King, a Vastaya trained in Wuju who fights with an enchanted staff.",
+        "type": "lore",
+        "source": {
+          "title": "Wukong | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/wukong/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Wukong's kit includes Warrior Trickster, which turns him invisible and leaves a clone, and Cyclone, which spins his staff and knocks enemies up.",
+        "type": "ability",
+        "source": {
+          "title": "Wukong | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/wukong/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki's Monkey King story connects Wukong to Master Yi, Wuju training, a decoy, and an enchanted staff.",
+        "type": "lore",
+        "source": {
+          "title": "The Monkey King - League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Universe%3AThe_Monkey_King",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "monkey king",
+      "enchanted staff and Wuju",
+      "clone and spinning cyclone"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐒",
+        "meaning": "Monkey King",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🦯",
+        "meaning": "staff weapon",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👥",
+        "meaning": "Warrior Trickster clone",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌪️",
+        "meaning": "Cyclone ultimate",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🥋",
+        "meaning": "Wuju martial-arts training",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Master Yi",
+      "Shaco",
+      "Neeko",
+      "Nidalee"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "xayah",
+    "championName": "Xayah",
+    "facts": [
+      {
+        "claim": "Xayah is a Lhotlan Vastaya rebel who fights to reclaim her people and their ancient magic.",
+        "type": "lore",
+        "source": {
+          "title": "Xayah | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xayah/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Xayah's abilities create and recall feathers, and Featherstorm lets her leap into the air while firing a cone of feathers.",
+        "type": "ability",
+        "source": {
+          "title": "Xayah | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xayah/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Clean Cuts, Bladecaller, Featherstorm, and Xayah's paired recall with Rakan as her main gameplay and relationship signatures.",
+        "type": "gameplay",
+        "source": {
+          "title": "Xayah | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Xayah",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "feather weapons",
+      "recallable feather trap",
+      "rebel partnership with Rakan"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪶",
+        "meaning": "feathers created and recalled by her kit",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "Double Daggers and feather blades",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💑",
+        "meaning": "paired relationship with Rakan",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪽",
+        "meaning": "feathered Vastaya identity and Featherstorm",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌪️",
+        "meaning": "Featherstorm cone and aerial escape",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Rakan",
+      "Quinn",
+      "Varus",
+      "Kalista"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "xerath",
+    "championName": "Xerath",
+    "facts": [
+      {
+        "claim": "Xerath is an Ascended Magus of ancient Shurima, made of arcane energy trapped in the broken shards of a magical sarcophagus.",
+        "type": "lore",
+        "source": {
+          "title": "Xerath | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xerath/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Xerath's kit is built around long-range arcane artillery including Arcanopulse, Eye of Destruction, Shocking Orb, and Rite of the Arcane.",
+        "type": "ability",
+        "source": {
+          "title": "Xerath | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xerath/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki's lore presents Xerath as a betrayed Shuriman slave whose ascension destroyed the empire and left him a being of arcane energy.",
+        "type": "lore",
+        "source": {
+          "title": "Xerath | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Xerath",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "arcane energy in a sarcophagus",
+      "Shuriman ascension",
+      "long-range lightning artillery"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⚡",
+        "meaning": "arcane lightning body and attacks",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🪦",
+        "meaning": "sarcophagus prison",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🏜️",
+        "meaning": "ancient Shurima",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔭",
+        "meaning": "extreme long-range artillery",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "arcane barrage",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Vel'Koz",
+      "Azir",
+      "Ryze",
+      "Karthus"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "xinzhao",
+    "championName": "Xin Zhao",
+    "facts": [
+      {
+        "claim": "Xin Zhao is a Demacian loyalist and former Noxian arena fighter who wields a favored three-talon spear.",
+        "type": "lore",
+        "source": {
+          "title": "Xin Zhao | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xinzhao/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Xin Zhao's kit includes Three Talon Strike and Crescent Guard, which creates a protective circle and excludes non-challenged enemies.",
+        "type": "ability",
+        "source": {
+          "title": "Xin Zhao | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/xinzhao/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki identifies Xin Zhao's third-hit heal, spear attacks, Demacian service, and Crescent Guard zone as his core gameplay identity.",
+        "type": "gameplay",
+        "source": {
+          "title": "Xin Zhao | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Xin_Zhao",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "three-talon spear",
+      "Demacian protector and gladiator past",
+      "Crescent Guard circle"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🔱",
+        "meaning": "three-talon spear",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🏟️",
+        "meaning": "Noxian fighting pits",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Demacian protector and guarded zone",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⭕",
+        "meaning": "Crescent Guard protective circle",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⚔️",
+        "meaning": "three-hit spear fighter",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jarvan IV",
+      "Pantheon",
+      "Jax",
+      "Zaahen"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "yasuo",
+    "championName": "Yasuo",
+    "facts": [
+      {
+        "claim": "Yasuo is an Ionian swordsman forced to flee after being blamed for a fatal mistake and is commonly framed as a wandering samurai.",
+        "type": "lore",
+        "source": {
+          "title": "Origins: Yasuo - League of Legends",
+          "url": "https://nexus.leagueoflegends.com/en-us/2017/06/origins-yasuo/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Yasuo's kit centers on Steel Tempest, Wind Wall, Sweeping Blade, and Last Breath.",
+        "type": "ability",
+        "source": {
+          "title": "Yasuo | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yasuo/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki identifies Yasuo's wind technique, katana skill, and Wind Wall as key distinctions from ordinary sword fighters.",
+        "type": "gameplay",
+        "source": {
+          "title": "Yasuo | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Yasuo",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "wind swordsman",
+      "Wind Wall",
+      "wandering samurai and guilt"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌪️",
+        "meaning": "wind technique and tornado",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⚔️",
+        "meaning": "Ionian swordsman",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧱",
+        "meaning": "Wind Wall",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧭",
+        "meaning": "wandering and exile",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "😔",
+        "meaning": "the Unforgiven's guilt",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Yone",
+      "Riven",
+      "Master Yi",
+      "Samira"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "yone",
+    "championName": "Yone",
+    "facts": [
+      {
+        "claim": "Yone was Yasuo's half-brother, died by Yasuo's hand, returned from the spirit realm, and wears the mask of a defeated azakana.",
+        "type": "lore",
+        "source": {
+          "title": "Yone | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yone/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Yone uses two blades and has Spirit Cleave, Soul Unbound, and Fate Sealed in his kit.",
+        "type": "ability",
+        "source": {
+          "title": "Yone - Abilities Rundown | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/event/yone-abilities-rundown/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Yone's astral projection, spirit blade, demonic mask, and two-katana fighting style.",
+        "type": "visual",
+        "source": {
+          "title": "Yone | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Yone",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "demonic mask",
+      "two blades",
+      "spirit projection and return"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🎭",
+        "meaning": "azakana mask",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👻",
+        "meaning": "spirit realm and returned soul",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "spirit blade",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⚔️",
+        "meaning": "two-blade fighting style",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Soul Unbound projection",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Yasuo",
+      "Viego",
+      "Kayn",
+      "Katarina"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "yorick",
+    "championName": "Yorick",
+    "facts": [
+      {
+        "claim": "Yorick is the last survivor of a religious order on the Shadow Isles and is cursed and blessed with power over the dead.",
+        "type": "lore",
+        "source": {
+          "title": "Yorick | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yorick/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Yorick can summon Mist Walkers and the Maiden of the Mist, while Last Rites, Dark Procession, and Mourning Mist shape his graveyard gameplay.",
+        "type": "ability",
+        "source": {
+          "title": "Yorick | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yorick/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki presents Yorick's Cursed Horde, Mist Walkers, Maiden, and Shadow Isles mist as his defining summon-and-push identity.",
+        "type": "gameplay",
+        "source": {
+          "title": "Yorick | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Yorick",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "grave shepherd",
+      "Mist Walkers and Maiden",
+      "Shadow Isles mist and shovel"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪦",
+        "meaning": "graves and Last Rites",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧟",
+        "meaning": "Mist Walkers and undead summons",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌫️",
+        "meaning": "Shadow Isles mist",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "👰",
+        "meaning": "Maiden of the Mist",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⛏️",
+        "meaning": "grave-digging shovel",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Thresh",
+      "Mordekaiser",
+      "Maokai",
+      "Viego"
+    ],
+    "unresolved": [
+      "Unicode lacks a shovel glyph with consistent support, so a pickaxe is used as the nearest grave-tool symbol."
+    ]
+  },
+  {
+    "championKey": "yunara",
+    "championName": "Yunara",
+    "facts": [
+      {
+        "claim": "Yunara is an Ionia-devoted warrior who spent centuries in the spirit realm honing her skills with the legendary Aion Er'na relic.",
+        "type": "lore",
+        "source": {
+          "title": "Yunara | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yunara/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Yunara's kit includes a spinning prayer bead and changes that attack into a damaging slowing laser while she is in her Transcendent State.",
+        "type": "ability",
+        "source": {
+          "title": "Yunara | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yunara/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki catalogs Yunara's Ionia, spirit, prayer-bead, and ability-icon references, while community discussion describes her Unleash and transcendence mechanics.",
+        "type": "gameplay",
+        "source": {
+          "title": "Yunara Gameplay and Abilities Discussion | Reddit",
+          "url": "https://www.reddit.com/r/leagueoflegends/comments/1lce38p/yunara_gameplay_and_abilities/",
+          "kind": "community",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      },
+      {
+        "claim": "The League Wiki's champion-data entry catalogs Yunara's prayer-bead, Kanmei's Steps, and Transcend One's Self abilities.",
+        "type": "ability",
+        "source": {
+          "title": "Template:Data Yunara | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Yunara",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-4"
+      }
+    ],
+    "signatureSignals": [
+      "Aion Er'na relic and prayer beads",
+      "Ionia and spirit realm devotion",
+      "transcendent laser state"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "📿",
+        "meaning": "spinning prayer bead and relic tradition",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🏹",
+        "meaning": "marksman identity",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌸",
+        "meaning": "Ionia and Kanmei spiritual aesthetic",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔦",
+        "meaning": "laser in Transcendent State",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧘",
+        "meaning": "centuries of spiritual devotion and training",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Senna",
+      "Aphelios",
+      "Zeri",
+      "Yone"
+    ],
+    "unresolved": [
+      "Yunara is recent and has limited established community emoji conventions; the relic and prayer-bead clues need blind testing with current players."
+    ]
+  },
+  {
+    "championKey": "yuumi",
+    "championName": "Yuumi",
+    "facts": [
+      {
+        "claim": "Yuumi is the Magical Cat, a Bandle City companion who travels with a sentient book while searching for her missing master.",
+        "type": "lore",
+        "source": {
+          "title": "Yuumi | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yuumi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Yuumi's kit includes You and Me!, which attaches her to an ally, Prowling Projectile, Zoomies, and Final Chapter.",
+        "type": "ability",
+        "source": {
+          "title": "Yuumi | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/yuumi/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki highlights Yuumi's attachment, Best Friend relationship, magical book, and ally-focused healing as her distinguishing identity.",
+        "type": "gameplay",
+        "source": {
+          "title": "Yuumi | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Yuumi",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "magical cat",
+      "sentient book companion",
+      "attaching to an ally"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐱",
+        "meaning": "magical cat",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "📖",
+        "meaning": "sentient book and search for her master",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🫂",
+        "meaning": "You and Me! attachment",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "✨",
+        "meaning": "magical companion and projectiles",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "Zoomies movement",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Lulu",
+      "Rengar",
+      "Nidalee",
+      "Milio"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zaahen",
+    "championName": "Zaahen",
+    "facts": [
+      {
+        "claim": "Zaahen is a Darkin champion whose attacks and abilities against champions grant Determination stacks and bonus attack damage.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zaahen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-ph/champions/zaahen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zaahen's official champion profile lists The Darkin Glaive, Dreaded Return, Aureate Rush, and Grim Deliverance among his signature abilities.",
+        "type": "ability",
+        "source": {
+          "title": "Zaahen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-ph/champions/zaahen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "In a Riot team AMA, the developers said Zaahen intentionally adopts aspects and ability references of Xin Zhao, creating a Darkin contrast to the Demacian spear fighter.",
+        "type": "lore",
+        "source": {
+          "title": "We're the team behind League's newest champion, Zaahen, Ask Us Anything! | Reddit",
+          "url": "https://www.reddit.com/r/leagueoflegends/comments/1p0hd9e/were_the_team_behind_leagues_newest_champion_zaahen_ask_us_anything/",
+          "kind": "community",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      },
+      {
+        "claim": "Leaguepedia documents Zaahen's Determination passive, The Darkin Glaive, and Dreaded Return as core parts of his kit.",
+        "type": "ability",
+        "source": {
+          "title": "Zaahen | League of Legends Esports Wiki",
+          "url": "https://lol.fandom.com/wiki/Zaahen",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-4"
+      }
+    ],
+    "signatureSignals": [
+      "Darkin glaive wielder",
+      "Determination stacking",
+      "return/revival and Xin Zhao mirror"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🪓",
+        "meaning": "The Darkin Glaive",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "👿",
+        "meaning": "Darkin identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔄",
+        "meaning": "Dreaded Return and revival theme",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⚔️",
+        "meaning": "hunting and fighting fellow Darkin",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🏜️",
+        "meaning": "Shuriman Darkin origin",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Aatrox",
+      "Xin Zhao",
+      "Rhaast",
+      "Varus"
+    ],
+    "unresolved": [
+      "Zaahen is recent and the current Unicode set has no glaive or Determination symbol; the proposed set may need player validation to separate him from Aatrox and Xin Zhao."
+    ]
+  },
+  {
+    "championKey": "zac",
+    "championName": "Zac",
+    "facts": [
+      {
+        "claim": "Zac formed from a toxic spill through a chemtech seam and grew from primordial ooze into a thinking being living in Zaun's pipes.",
+        "type": "lore",
+        "source": {
+          "title": "Zac | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zac/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zac sheds chunks of himself after hitting enemies and splits into four bloblets on fatal damage that can recombine to revive him.",
+        "type": "ability",
+        "source": {
+          "title": "Zac | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zac/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Zac's chunks, four bloblet Cell Division, Elastic Slingshot, and Let's Bounce as his defining goo and movement mechanics.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zac | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Zac",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "living chemtech goo",
+      "elastic bounce movement",
+      "split and recombine passive"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🦠",
+        "meaning": "living primordial organism",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🫧",
+        "meaning": "goo chunks and bubbling body",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🤸",
+        "meaning": "Elastic Slingshot and bouncing movement",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "♻️",
+        "meaning": "bloblets recombine to revive",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧪",
+        "meaning": "chemtech origin",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Dr. Mundo",
+      "Warwick",
+      "Zeri",
+      "Kog'Maw"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zed",
+    "championName": "Zed",
+    "facts": [
+      {
+        "claim": "Zed is the Master of Shadows, an Ionian ninja who embraced forbidden shadow techniques.",
+        "type": "lore",
+        "source": {
+          "title": "Zed | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zed/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zed's kit creates Living Shadows, throws Razor Shurikens, uses Shadow Slash, and applies Death Mark.",
+        "type": "ability",
+        "source": {
+          "title": "Zed | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zed/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki connects Zed's gameplay to energy, shadow clones, shuriken projectiles, and the assassin's marked return after Death Mark.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zed | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Zed",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "shadow ninja",
+      "shadow clone and shuriken",
+      "Death Mark assassin return"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🥷",
+        "meaning": "Ionian ninja",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌑",
+        "meaning": "forbidden shadow technique",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "👥",
+        "meaning": "Living Shadow clone",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "✴️",
+        "meaning": "Razor Shuriken",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☠️",
+        "meaning": "Death Mark assassination",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Shen",
+      "Akali",
+      "Nocturne",
+      "Kayn"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zeri",
+    "championName": "Zeri",
+    "facts": [
+      {
+        "claim": "Zeri is the Spark of Zaun, a magic-born marksman whose electrical power is inseparable from her identity and home.",
+        "type": "lore",
+        "source": {
+          "title": "Zeri | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zeri/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zeri's gameplay uses Burst Fire as her basic attack, Spark Surge to move through terrain, and Lightning Crash to build a charged electric fight state.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zeri | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zeri/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "Riot's Champion Insights describes Zeri's concept as beginning with a gun and highlights rollerblades as a distinctive movement choice; the League Wiki documents her electric kit.",
+        "type": "visual",
+        "source": {
+          "title": "Champion Insights: Zeri | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/news/game-updates/champion-insights-zeri/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      },
+      {
+        "claim": "The League Wiki documents Zeri's Spark Surge terrain dash and Lightning Crash overcharge and electric-chain mechanics.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zeri (League of Legends) | League of Legends Wiki",
+          "url": "https://leagueoflegends.fandom.com/wiki/Zeri/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-4"
+      }
+    ],
+    "signatureSignals": [
+      "electric Zaun marksman",
+      "gun-like Burst Fire",
+      "rollerblades and wall movement"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⚡",
+        "meaning": "Spark of Zaun and electrical magic",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🔫",
+        "meaning": "gun-inspired Burst Fire",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛼",
+        "meaning": "rollerblade movement concept",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔌",
+        "meaning": "Zaunite electricity",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Lightning Crash burst state",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jinx",
+      "Ekko",
+      "Kennen",
+      "Ziggs"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "ziggs",
+    "championName": "Ziggs",
+    "facts": [
+      {
+        "claim": "Ziggs is a Zaun-based yordle explosives expert who loves big bombs and befriended Jinx after leaving a predictable life in Piltover.",
+        "type": "lore",
+        "source": {
+          "title": "Ziggs | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ziggs/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Ziggs uses Bouncing Bomb, Satchel Charge, Hexplosive Minefield, and Mega Inferno Bomb, with Satchel Charge also able to destroy vulnerable turrets.",
+        "type": "ability",
+        "source": {
+          "title": "Ziggs | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ziggs/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki details Ziggs's bouncing bombs, proximity mines, self-knockback Satchel, and turret-execution mechanic.",
+        "type": "gameplay",
+        "source": {
+          "title": "Ziggs | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Ziggs",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "yordle bomber",
+      "bouncing bombs and mines",
+      "Satchel Charge demolition"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "💣",
+        "meaning": "bomb expert",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧨",
+        "meaning": "explosive charges",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🪤",
+        "meaning": "Hexplosive Minefield",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Mega Inferno Bomb",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🤪",
+        "meaning": "reckless explosive personality",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jinx",
+      "Tristana",
+      "Corki",
+      "Heimerdinger"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zilean",
+    "championName": "Zilean",
+    "facts": [
+      {
+        "claim": "Zilean is the Chronokeeper, an ancient time mage who seeks to undo the destruction of Icathia.",
+        "type": "lore",
+        "source": {
+          "title": "Zilean | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zilean/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zilean throws Time Bombs, can Rewind his abilities, accelerates or slows with Time Warp, and saves an ally with Chronoshift.",
+        "type": "ability",
+        "source": {
+          "title": "Zilean | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zilean/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki documents Zilean's clock-and-bomb kit, cooldown reduction, speed manipulation, and resurrection effect.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zilean | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Zilean",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "time mage and Chronokeeper",
+      "clock bombs",
+      "rewind and resurrection"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⏰",
+        "meaning": "Chronokeeper and time",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "💣",
+        "meaning": "Time Bomb",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔙",
+        "meaning": "Rewind",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⌛",
+        "meaning": "stored time and aging",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧙",
+        "meaning": "ancient time mage",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ekko",
+      "Bard",
+      "Zoe",
+      "Ziggs"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zoe",
+    "championName": "Zoe",
+    "facts": [
+      {
+        "claim": "Zoe is the Aspect of Twilight, a cosmic messenger of Targon whose mischief and imagination can reshape reality.",
+        "type": "lore",
+        "source": {
+          "title": "Zoe | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zoe/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zoe can pick up remnants of enemy summoner spells and active items, uses Sleepy Trouble Bubble, and briefly portals with Portal Jump.",
+        "type": "ability",
+        "source": {
+          "title": "Zoe | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zoe/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Zoe's spell theft, portal jump, sleep bubble, and cosmic messenger identity as her distinctive mechanics and lore.",
+        "type": "gameplay",
+        "source": {
+          "title": "Zoe | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Zoe",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "cosmic mischievous messenger",
+      "sleepy bubble",
+      "spell theft and portal jump"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "✨",
+        "meaning": "sparkles and cosmic magic",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🫧",
+        "meaning": "Sleepy Trouble Bubble",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Portal Jump",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🎒",
+        "meaning": "stealing and carrying enemy spells/items",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌌",
+        "meaning": "Aspect of Twilight and cosmic messenger",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Lulu",
+      "Bard",
+      "Yuumi",
+      "Lillia"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "zyra",
+    "championName": "Zyra",
+    "facts": [
+      {
+        "claim": "Zyra is Rise of the Thorns, a predatory plant-human creature from Ixtal whose body and powers are made of plant life.",
+        "type": "lore",
+        "source": {
+          "title": "Zyra | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zyra/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Zyra's kit grows Thorn Spitters from seeds, sends Grasping Roots, and summons a Stranglethorns thicket that knocks enemies up.",
+        "type": "ability",
+        "source": {
+          "title": "Zyra | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/zyra/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The League Wiki describes Zyra as a unique human-plant hybrid that creates vines, thorn flowers, and infectious spores.",
+        "type": "visual",
+        "source": {
+          "title": "Zyra | League of Legends Wiki",
+          "url": "https://wiki.leagueoflegends.com/en-us/Zyra",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "plant-human hybrid",
+      "seed-grown thorn plants",
+      "roots, vines, and strangling thicket"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌱",
+        "meaning": "seeds and plant growth",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌵",
+        "meaning": "thorny plant attacks",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪢",
+        "meaning": "Grasping Roots and vines",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌺",
+        "meaning": "blooming plant body and garden",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌿",
+        "meaning": "plant magic and infectious growth",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Maokai",
+      "Ivern",
+      "Neeko",
+      "Morgana"
+    ],
+    "unresolved": []
+  }
+]

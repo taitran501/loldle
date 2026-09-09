@@ -1,0 +1,448 @@
+[
+  {
+    "championKey": "malphite",
+    "mechanical": {"emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Malphite", "Ornn", "Taliyah"],
+      "after2": ["Malphite", "Poppy", "Ornn"],
+      "after3": ["Malphite", "Ornn", "Poppy"],
+      "after4": ["Malphite", "Ornn", "Poppy"]
+    },
+    "confusableWith": ["Ornn", "Poppy", "Taliyah"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "malzahar",
+    "mechanical": {"emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Malzahar", "Kassadin", "Bel'Veth"],
+      "after2": ["Malzahar", "Bel'Veth", "Kha'Zix"],
+      "after3": ["Malzahar", "Fiddlesticks", "Kassadin"],
+      "after4": ["Malzahar", "Fiddlesticks", "Morgana"]
+    },
+    "confusableWith": ["Bel'Veth", "Kha'Zix", "Fiddlesticks"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "maokai",
+    "mechanical": {"emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 1, "semanticClarity": 1, "progression": 1, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Maokai", "Ivern", "Zyra"],
+      "after2": ["Maokai", "Ivern", "Zyra"],
+      "after3": ["Maokai", "Nami", "Ivern"],
+      "after4": ["Maokai", "Yorick", "Thresh"]
+    },
+    "confusableWith": ["Ivern", "Zyra", "Yorick"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🌳 and 🌱 repeat the same plant signal, while 💧 depends on obscure Waters of Life lore and does not help a normal player by clue 3.",
+      "The tree-plus-ghost combination is plausible by clue 4 but remains less distinctive than the curator's blindTest suggests."
+    ],
+    "suggestedEmojis": ["🌳", "🌱", "🌫️", "👻"],
+    "sourcesChecked": [
+      {"title": "Maokai", "url": "https://www.leagueoflegends.com/en-us/champions/maokai/", "kind": "official"},
+      {"title": "Maokai (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Maokai/LoL", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "masteryi",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Yasuo", "Yone", "Master Yi"],
+      "after2": ["Master Yi", "Yasuo", "Yone"],
+      "after3": ["Master Yi", "Zed", "Shaco"],
+      "after4": ["Master Yi", "Zed", "Yasuo"]
+    },
+    "confusableWith": ["Yasuo", "Yone", "Zed"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "mel",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 1, "semanticClarity": 1, "progression": 1, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Zyra", "LeBlanc", "Mel"],
+      "after2": ["LeBlanc", "Mel", "Morgana"],
+      "after3": ["Mel", "LeBlanc", "Lux"],
+      "after4": ["Mel", "Lux", "Morgana"]
+    },
+    "confusableWith": ["LeBlanc", "Morgana", "Lux"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🌹 is only recognizable as Black Rose after the player already knows Mel's lore; ✨ is generic magic, 🛡️ duplicates the defensive meaning of 🪞, and 💀 is a generic execute cue.",
+      "Riot confirms bonus projectiles, Overwhelm execution, and Rebuttal reflection, but the current emoji chain does not encode those mechanics clearly enough for a new champion."
+    ],
+    "suggestedEmojis": ["🌹", "🪞", "☀️", "🪤"],
+    "sourcesChecked": [
+      {"title": "Mel Abilities Rundown", "url": "https://www.leagueoflegends.com/en-us/news/game-updates/mel-abilities-rundown/", "kind": "official"},
+      {"title": "Mel (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Mel", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "milio",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Brand", "Annie", "Milio"],
+      "after2": ["Milio", "Brand", "Annie"],
+      "after3": ["Milio", "Soraka", "Sona"],
+      "after4": ["Milio", "Annie", "Rumble"]
+    },
+    "confusableWith": ["Brand", "Annie", "Rumble"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🧸 reads as a teddy bear rather than a fuemigo fire elemental; the fire-ball-heal chain is strong by clue 3, but this visual proxy is misleading."
+    ],
+    "suggestedEmojis": ["🔥", "⚽", "🩹", "🤗"],
+    "sourcesChecked": [
+      {"title": "Milio", "url": "https://www.leagueoflegends.com/en-us/champions/milio/", "kind": "official"},
+      {"title": "Milio (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Milio", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "missfortune",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Gangplank", "Miss Fortune", "Pyke"],
+      "after2": ["Miss Fortune", "Graves", "Gangplank"],
+      "after3": ["Miss Fortune", "Caitlyn", "Graves"],
+      "after4": ["Miss Fortune", "Samira", "Lucian"]
+    },
+    "confusableWith": ["Gangplank", "Graves", "Samira"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "mordekaiser",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Orianna", "Mordekaiser", "Blitzcrank"],
+      "after2": ["Mordekaiser", "Sion", "Ornn"],
+      "after3": ["Mordekaiser", "Thresh", "Yorick"],
+      "after4": ["Mordekaiser", "Sion", "Thresh"]
+    },
+    "confusableWith": ["Sion", "Thresh", "Yorick"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "morgana",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Kayle", "Morgana", "Anivia"],
+      "after2": ["Morgana", "Thresh", "Leona"],
+      "after3": ["Morgana", "Leona", "Swain"],
+      "after4": ["Morgana", "Kayle", "Leona"]
+    },
+    "confusableWith": ["Kayle", "Leona", "Diana"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "naafiri",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Warwick", "Nasus", "Naafiri"],
+      "after2": ["Naafiri", "Aatrox", "Warwick"],
+      "after3": ["Naafiri", "Warwick", "Rengar"],
+      "after4": ["Naafiri", "Aatrox", "Warwick"]
+    },
+    "confusableWith": ["Warwick", "Aatrox", "Nasus"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "nami",
+    "mechanical": {"emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Nami", "Fizz", "Nilah"],
+      "after2": ["Nami", "Fizz", "Nilah"],
+      "after3": ["Nami", "Fizz", "Nilah"],
+      "after4": ["Nami", "Nilah", "Fizz"]
+    },
+    "confusableWith": ["Fizz", "Nilah", "Tahm Kench"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "nasus",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 1, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Warwick", "Nasus", "Naafiri"],
+      "after2": ["Nasus", "Warwick", "Renekton"],
+      "after3": ["Nasus", "Renekton", "Skarner"],
+      "after4": ["Nasus", "Renekton", "Sion"]
+    },
+    "confusableWith": ["Warwick", "Renekton", "Naafiri"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🐺 is factually a wolf, while Riot identifies Nasus as jackal-headed; that first clue actively points toward Warwick.",
+      "🔨 is a generic heavy-hit cue and 📈 requires the player to already know Nasus's stacking mechanic."
+    ],
+    "suggestedEmojis": ["🐕", "🏜️", "📈", "🌪️"],
+    "sourcesChecked": [
+      {"title": "Nasus", "url": "https://www.leagueoflegends.com/en-us/champions/nasus/", "kind": "official"},
+      {"title": "Nasus | League of Legends Wiki", "url": "https://wiki.leagueoflegends.com/Nasus", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "nautilus",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Nautilus", "Thresh", "Pyke"],
+      "after2": ["Nautilus", "Pyke", "Thresh"],
+      "after3": ["Nautilus", "Blitzcrank", "Thresh"],
+      "after4": ["Nautilus", "Pyke", "Thresh"]
+    },
+    "confusableWith": ["Thresh", "Pyke", "Blitzcrank"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🦾 reads as a robotic arm and pulls toward Blitzcrank; it does not communicate Nautilus's armored diver identity.",
+      "💥 is generic and loses the more diagnostic Depth Charge knock-up signal."
+    ],
+    "suggestedEmojis": ["⚓", "🌊", "🪝", "🤿", "⬆️"],
+    "sourcesChecked": [
+      {"title": "Nautilus", "url": "https://www.leagueoflegends.com/en-gb/champions/nautilus/", "kind": "official"},
+      {"title": "Nautilus (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Nautilus/LoL", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "neeko",
+    "mechanical": {"emojiCount": 4, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Neeko", "Shyvana", "Nidalee"],
+      "after2": ["Neeko", "Shaco", "LeBlanc"],
+      "after3": ["Neeko", "Shaco", "LeBlanc"],
+      "after4": ["Neeko", "Shaco", "Nidalee"]
+    },
+    "confusableWith": ["Shaco", "LeBlanc", "Nidalee"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "nidalee",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Nidalee", "Rengar", "Kha'Zix"],
+      "after2": ["Nidalee", "Rengar", "Quinn"],
+      "after3": ["Nidalee", "Rengar", "Shaco"],
+      "after4": ["Nidalee", "Rengar", "Neeko"]
+    },
+    "confusableWith": ["Rengar", "Kha'Zix", "Neeko"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🏹 is a bow, but Riot's champion page explicitly describes Nidalee's spear throws and Javelin Toss; the icon is a factual weapon mismatch.",
+      "The remaining cougar, brush, Hunt, and Pounce signals work, so the target is plausible by clue 3, but the wrong weapon should not ship."
+    ],
+    "suggestedEmojis": ["🐆", "🌿", "🎯", "🐾"],
+    "sourcesChecked": [
+      {"title": "Nidalee", "url": "https://www.leagueoflegends.com/en-gb/champions/nidalee/", "kind": "official"},
+      {"title": "Nidalee (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Nidalee/LoL", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "nilah",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 1, "semanticClarity": 1, "progression": 1, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Zoe", "Seraphine", "Nilah"],
+      "after2": ["Nilah", "Fiddlesticks", "Evelynn"],
+      "after3": ["Nilah", "Nami", "Fizz"],
+      "after4": ["Nilah", "Nami", "Samira"]
+    },
+    "confusableWith": ["Nami", "Samira", "Fiddlesticks"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "😄 and 👹 are broad mood/demon symbols, 🗡️ does not communicate Nilah's distinctive urumi whip-blade, and 🌀 is a generic water-motion cue.",
+      "Riot confirms Ashlesh as the demon of joy, but the independent clue-4 list still keeps Nami and Samira alongside Nilah; the current chain is not reliably identifying enough."
+    ],
+    "suggestedEmojis": ["😄", "👹", "🌊", "🌀"],
+    "sourcesChecked": [
+      {"title": "Nilah Abilities Rundown", "url": "https://www.leagueoflegends.com/en-us/event/nilah-abilities-rundown/", "kind": "official"},
+      {"title": "Nilah (Character) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Nilah", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "nocturne",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Fiddlesticks", "Nocturne", "Vex"],
+      "after2": ["Nocturne", "Fiddlesticks", "Vex"],
+      "after3": ["Nocturne", "Fiddlesticks", "Vex"],
+      "after4": ["Nocturne", "Fiddlesticks", "Kha'Zix"]
+    },
+    "confusableWith": ["Fiddlesticks", "Vex", "Evelynn"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "nunu",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Annie", "Nunu & Willump", "Amumu"],
+      "after2": ["Nunu & Willump", "Amumu", "Braum"],
+      "after3": ["Nunu & Willump", "Sejuani", "Lissandra"],
+      "after4": ["Nunu & Willump", "Anivia", "Lissandra"]
+    },
+    "confusableWith": ["Annie", "Amumu", "Anivia"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🐻 is a bear, but Riot identifies Willump as a magical yeti; this is a misleading creature clue.",
+      "⚪ only reads as a snowball when paired with ❄️, and 🌀 is a generic blizzard cue; the target becomes plausible by clue 3 but not strongly distinguished until the snowball sequence."
+    ],
+    "suggestedEmojis": ["🧒", "⛄", "❄️", "⚪", "🌨️"],
+    "sourcesChecked": [
+      {"title": "Nunu & Willump", "url": "https://www.leagueoflegends.com/en-gb/champions/nunu/", "kind": "official"},
+      {"title": "Nunu & Willump (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Nunu/LoL", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "olaf",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Olaf", "Darius", "Draven"],
+      "after2": ["Olaf", "Darius", "Tryndamere"],
+      "after3": ["Olaf", "Tryndamere", "Sion"],
+      "after4": ["Olaf", "Mordekaiser", "Tryndamere"]
+    },
+    "confusableWith": ["Darius", "Tryndamere", "Sion"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "orianna",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Orianna", "Blitzcrank", "Rumble"],
+      "after2": ["Orianna", "Syndra", "Aurelion Sol"],
+      "after3": ["Orianna", "Syndra", "Ziggs"],
+      "after4": ["Orianna", "Syndra", "Ziggs"]
+    },
+    "confusableWith": ["Blitzcrank", "Syndra", "Rumble"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "ornn",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Ornn", "Volibear", "Poppy"],
+      "after2": ["Ornn", "Poppy", "Jax"],
+      "after3": ["Ornn", "Brand", "Vladimir"],
+      "after4": ["Ornn", "Poppy", "Braum"]
+    },
+    "confusableWith": ["Poppy", "Volibear", "Braum"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "pantheon",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 1, "semanticClarity": 1, "progression": 2, "distinctiveness": 1, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Leona", "Pantheon", "Braum"],
+      "after2": ["Pantheon", "Leona", "Jarvan IV"],
+      "after3": ["Pantheon", "Diana", "Aurelion Sol"],
+      "after4": ["Pantheon", "Leona", "Jarvan IV"]
+    },
+    "confusableWith": ["Leona", "Braum", "Jarvan IV"],
+    "issues": [
+      "Original blindTest is target-first at all four stages; it was not used as evidence.",
+      "🗡️ is a dagger/sword, while Riot's ability and lore references identify Pantheon's signature weapon as a spear.",
+      "☄️ and the starfall landing carry the set, but the weapon mismatch weakens the earliest identity signal."
+    ],
+    "suggestedEmojis": ["🛡️", "☄️", "⬇️", "💥"],
+    "sourcesChecked": [
+      {"title": "Pantheon", "url": "https://www.leagueoflegends.com/en-us/champions/pantheon/", "kind": "official"},
+      {"title": "Pantheon (League of Legends) | League of Legends Wiki | Fandom", "url": "https://leagueoflegends.fandom.com/wiki/Pantheon/LoL", "kind": "secondary"}
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "poppy",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Poppy", "Ornn", "Jax"],
+      "after2": ["Poppy", "Braum", "Pantheon"],
+      "after3": ["Poppy", "Sivir", "Samira"],
+      "after4": ["Poppy", "Pantheon", "Ornn"]
+    },
+    "confusableWith": ["Ornn", "Pantheon", "Braum"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  },
+  {
+    "championKey": "pyke",
+    "mechanical": {"emojiCount": 5, "uniqueEmoji": true, "evidenceRefsValid": true, "sourcesValid": true},
+    "scores": {"signatureStrength": 2, "semanticClarity": 2, "progression": 2, "distinctiveness": 2, "evidenceQuality": 2},
+    "independentBlindTest": {
+      "after1": ["Nautilus", "Thresh", "Pyke"],
+      "after2": ["Pyke", "Nautilus", "Thresh"],
+      "after3": ["Pyke", "Evelynn", "Talon"],
+      "after4": ["Pyke", "Nautilus", "Thresh"]
+    },
+    "confusableWith": ["Nautilus", "Thresh", "Fizz"],
+    "issues": ["Original blindTest is target-first at all four stages; it was not used as evidence."],
+    "suggestedEmojis": [],
+    "sourcesChecked": [],
+    "status": "pass"
+  }
+]

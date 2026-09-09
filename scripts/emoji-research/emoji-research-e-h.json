@@ -1,0 +1,1600 @@
+[
+  {
+    "championKey": "ekko",
+    "championName": "Ekko",
+    "facts": [
+      {
+        "claim": "Ekko is a Zaun prodigy who uses his own Z-Drive invention to manipulate time and explore branching possibilities of reality.",
+        "type": "lore",
+        "source": {
+          "title": "Ekko | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ekko/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Ekko's official kit is named Z-Drive Resonance, Timewinder, Parallel Convergence, Phase Dive, and Chronobreak; its time effects include suspending enemies and reversing a bad moment.",
+        "type": "ability",
+        "source": {
+          "title": "Ekko | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ekko/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki presents Ekko as a mobile burst assassin whose Z-Drive can create a rewind or do-over window when a fight turns against him.",
+        "type": "gameplay",
+        "source": {
+          "title": "Ekko (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Ekko/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Zaun inventor with a Z-Drive",
+      "branching timelines",
+      "Chronobreak rewind",
+      "time-bending mobility"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "⏳",
+        "meaning": "time manipulation and the Z-Drive",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "branching realities and Parallel Convergence",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "⏪",
+        "meaning": "Chronobreak's rewind or do-over",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔧",
+        "meaning": "Ekko's self-made device and inventor identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Zilean",
+      "Zoe",
+      "Bard"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "elise",
+    "championName": "Elise",
+    "facts": [
+      {
+        "claim": "Elise was once mortal and became a spider-like predator after the bite of a vile demigod; she now lures prey into her web to preserve her youth.",
+        "type": "lore",
+        "source": {
+          "title": "Elise | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/elise/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Elise's official kit creates dormant Spiderlings in human form, switches into Spider Form, stuns with Cocoon, and uses Rappel to rise and descend on a target.",
+        "type": "ability",
+        "source": {
+          "title": "Elise | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/elise/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki specifies that Rappel makes Elise and her Spiderlings untargetable in the air, while Spider Form summons stored Spiderlings and grants spider attacks.",
+        "type": "gameplay",
+        "source": {
+          "title": "Elise (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Elise/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Spider Queen",
+      "web and venom predator",
+      "Spiderling brood",
+      "human/spider transformation"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🕷️",
+        "meaning": "Spider Queen and Spider Form",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🕸️",
+        "meaning": "web-bound ambush predator",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🥚",
+        "meaning": "Spiderlings and a spider brood",
+        "strength": "supporting",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔄",
+        "meaning": "switching between Human Form and Spider Form",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☠️",
+        "meaning": "Neurotoxin and lethal spider attacks",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Evelynn",
+      "Nidalee",
+      "Kha'Zix"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "evelynn",
+    "championName": "Evelynn",
+    "facts": [
+      {
+        "claim": "Evelynn is a demon who lures victims with a human façade, then reveals her true form and feeds on their torment.",
+        "type": "lore",
+        "source": {
+          "title": "Evelynn | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/evelynn/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit is named Demon Shade, Hate Spike, Allure, Whiplash, and Last Caress; Demon Shade heals Evelynn out of combat and grants camouflage after level 6.",
+        "type": "ability",
+        "source": {
+          "title": "Evelynn | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/evelynn/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki describes Evelynn as a demon of agony who combines a seductive lure and camouflage with a painful finishing attack.",
+        "type": "gameplay",
+        "source": {
+          "title": "Evelynn (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Evelynn/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "demon of agony",
+      "seductive façade and Allure",
+      "post-six camouflage",
+      "Last Caress execution"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "😈",
+        "meaning": "demon identity and Agony's Embrace",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "💋",
+        "meaning": "seductive façade and Allure",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌫️",
+        "meaning": "Demon Shade camouflage",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "☠️",
+        "meaning": "Last Caress as a lethal finisher",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🩸",
+        "meaning": "pain and agony feeding",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nocturne",
+      "Shaco",
+      "Ahri"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "ezreal",
+    "championName": "Ezreal",
+    "facts": [
+      {
+        "claim": "Ezreal is a dashing explorer who raids ancient catacombs and relies on a mystical Shuriman gauntlet to fire arcane blasts.",
+        "type": "lore",
+        "source": {
+          "title": "Ezreal | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ezreal/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit combines Rising Spell Force, Mystic Shot, Essence Flux, Arcane Shift, and Trueshot Barrage, including a long-range energy barrage.",
+        "type": "ability",
+        "source": {
+          "title": "Ezreal | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/ezreal/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki records Ezreal as a ranged marksman whose skillshots reduce cooldowns, mark targets with Essence Flux, and let him reposition with Arcane Shift.",
+        "type": "gameplay",
+        "source": {
+          "title": "Ezreal (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Ezreal/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Shuriman gauntlet",
+      "ruin-raiding explorer",
+      "skillshot barrage",
+      "Arcane Shift mobility"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧤",
+        "meaning": "mystical Shuriman gauntlet",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🏺",
+        "meaning": "ancient catacombs and relic hunting",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Arcane Shift repositioning",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🎯",
+        "meaning": "precision skillshots and Trueshot Barrage",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "✨",
+        "meaning": "arcane energy fired from the gauntlet",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jayce",
+      "Kassadin",
+      "Zoe"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "fiddlesticks",
+    "championName": "Fiddlesticks",
+    "facts": [
+      {
+        "claim": "Fiddlesticks is an ageless horror that feeds on fear, stalks paranoid places, and carries a jagged scythe in a makeshift body.",
+        "type": "lore",
+        "source": {
+          "title": "Fiddlesticks | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fiddlesticks/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit is built around A Harmless Scarecrow, Terrify, Bountiful Harvest, Reap, and Crowstorm; its effigy passive and unseen spells cause fear.",
+        "type": "ability",
+        "source": {
+          "title": "Fiddlesticks | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fiddlesticks/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki describes Fiddlesticks as a fear-feeding demon whose red-black essence is a mass of crows carried by a changing scarecrow body.",
+        "type": "visual",
+        "source": {
+          "title": "Fiddlesticks (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Fiddlesticks",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "scarecrow effigy",
+      "fear-feeding ancient demon",
+      "murder of crows",
+      "jagged scythe"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌾",
+        "meaning": "scarecrow in a field",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🪶",
+        "meaning": "crow essence and Crowstorm",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "😱",
+        "meaning": "fear as Fiddlesticks's food and crowd control",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🪓",
+        "meaning": "jagged scythe-like reaping weapon",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nocturne",
+      "Shaco",
+      "Karthus"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "fiora",
+    "championName": "Fiora",
+    "facts": [
+      {
+        "claim": "Fiora is Valoran's feared Grand Duelist, a Demacian House Laurent champion known for her speed and bluesteel rapier.",
+        "type": "lore",
+        "source": {
+          "title": "Fiora | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fiora/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Fiora's official kit gives Duelist's Dance four Vitals and Grand Challenge, which rewards striking all four with a healing zone.",
+        "type": "ability",
+        "source": {
+          "title": "Fiora | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fiora/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki details Lunge as a dash-and-stab and Riposte as a timed parry that can answer damage or crowd control.",
+        "type": "gameplay",
+        "source": {
+          "title": "Fiora (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Fiora/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "bluesteel rapier duelist",
+      "four Vitals",
+      "Riposte parry",
+      "Grand Challenge healing zone"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🤺",
+        "meaning": "fencing and the Grand Duelist",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🎯",
+        "meaning": "targeting an enemy's exposed Vital",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "4️⃣",
+        "meaning": "the four Vitals of Grand Challenge",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "Riposte's timed parry",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "Fiora's rapier",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Camille",
+      "Irelia",
+      "Yone"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "fizz",
+    "championName": "Fizz",
+    "facts": [
+      {
+        "claim": "Fizz is an amphibious yordle who lives among the reefs near Bilgewater and is mistaken for an unpredictable ocean spirit.",
+        "type": "lore",
+        "source": {
+          "title": "Fizz | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fizz/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit names Nimble Fighter, Urchin Strike, Seastone Trident, Playful/Trickster, and Chum the Waters; its fish lure grows into a shark that knocks enemies up.",
+        "type": "ability",
+        "source": {
+          "title": "Fizz | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/fizz/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki identifies Fizz as an amphibious yordle with a Seastone Trident; Playful/Trickster makes him untargetable and Chum the Waters grows a shark from a fish lure.",
+        "type": "gameplay",
+        "source": {
+          "title": "Fizz (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Fizz/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "amphibious yordle",
+      "Seastone Trident",
+      "fish-to-shark ultimate",
+      "untargetable playful hop"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🌊",
+        "meaning": "Bilgewater reefs and aquatic identity",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🔱",
+        "meaning": "Seastone Trident",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🦈",
+        "meaning": "the shark from Chum the Waters",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🐟",
+        "meaning": "the fish lure that attaches before the shark emerges",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🫧",
+        "meaning": "playful underwater movement",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nami",
+      "Nautilus",
+      "Tahm Kench"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "galio",
+    "championName": "Galio",
+    "facts": [
+      {
+        "claim": "Galio is a stone colossus built outside Demacia as a bulwark against enemy mages; powerful magic wakes him, but each victory eventually leaves him dormant again.",
+        "type": "lore",
+        "source": {
+          "title": "Galio | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/galio/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Galio's official kit includes Shield of Durand, Justice Punch, and Hero's Entrance; Hero's Entrance lands on an ally's position, shields allies, and knocks up nearby enemies.",
+        "type": "ability",
+        "source": {
+          "title": "Galio | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/galio/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki details Shield of Durand as a charged taunt and damage-reduction stance and Hero's Entrance as a long-range ally-targeted leap with an impact knock-up.",
+        "type": "gameplay",
+        "source": {
+          "title": "Galio (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Galio/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "living stone colossus",
+      "anti-mage protection",
+      "Shield of Durand taunt",
+      "ally-targeted Hero's Entrance"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🗿",
+        "meaning": "stone colossus body",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🛡️",
+        "meaning": "magic-resistant protection and Shield of Durand",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛬",
+        "meaning": "Hero's Entrance landing",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "impact knock-up on arrival",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "Winds of War",
+        "strength": "supporting",
+        "basis": [
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Malphite",
+      "Rammus",
+      "Ornn"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "gangplank",
+    "championName": "Gangplank",
+    "facts": [
+      {
+        "claim": "Gangplank is the dethroned reaver king of Bilgewater, determined to reclaim the port with a pistol, cutlass, and barrels of gunpowder.",
+        "type": "lore",
+        "source": {
+          "title": "Gangplank | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gangplank/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit gives Gangplank Trial by Fire and Powder Keg, with attacks that ignite and a keg that explodes to spread damage and slow enemies.",
+        "type": "ability",
+        "source": {
+          "title": "Gangplank | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gangplank/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki documents Remove Scurvy as a citrus cleanse and heal, Powder Keg as a connected powder-barrel chain, and Cannon Barrage as a map-wide threat.",
+        "type": "gameplay",
+        "source": {
+          "title": "Gangplank (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Gangplank/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Bilgewater pirate king",
+      "citrus cleanse",
+      "powder-keg chain explosions",
+      "global cannon barrage"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🏴‍☠️",
+        "meaning": "Bilgewater reaver king and pirate identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🍊",
+        "meaning": "Remove Scurvy's citrus cleanse",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛢️",
+        "meaning": "Powder Keg",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💣",
+        "meaning": "keg chain reaction and Cannon Barrage",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🔫",
+        "meaning": "Gangplank's pistol",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Miss Fortune",
+      "Graves",
+      "Twisted Fate"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "garen",
+    "championName": "Garen",
+    "facts": [
+      {
+        "claim": "Garen is a proud Demacian Dauntless Vanguard warrior from the Crownguard family, clad in magic-resistant armor and carrying a broadsword.",
+        "type": "lore",
+        "source": {
+          "title": "Garen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/garen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit includes Perseverance, Courage, Judgment, and Demacian Justice; Judgment spins his sword while Courage grants a brief defensive shield and tenacity.",
+        "type": "ability",
+        "source": {
+          "title": "Garen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/garen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki details Judgment as a multi-spin sword attack and Demacian Justice as true damage that scales with the target's missing health.",
+        "type": "gameplay",
+        "source": {
+          "title": "Garen (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Garen/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Demacian armored swordsman",
+      "Judgment whirlwind",
+      "Perseverance regeneration",
+      "Demacian Justice finisher"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🛡️",
+        "meaning": "magic-resistant Demacian armor and Courage",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🗡️",
+        "meaning": "mighty broadsword",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Judgment's spinning sword attack",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "⚖️",
+        "meaning": "Demacian Justice",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Darius",
+      "Jarvan IV",
+      "Xin Zhao"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "gnar",
+    "championName": "Gnar",
+    "facts": [
+      {
+        "claim": "Gnar is a primeval yordle frozen in True Ice whose playful mood can erupt into rage and transform him into a massive destructive beast.",
+        "type": "lore",
+        "source": {
+          "title": "Gnar | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gnar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Gnar's official Rage Gene generates Rage until he transforms into Mega Gnar; his boomerang becomes a boulder in the Mega form.",
+        "type": "ability",
+        "source": {
+          "title": "Gnar | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gnar/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki separates Mini and Mega Gnar, describes Rage Gene's transformation threshold, and records GNAR! as a knockback that can stun enemies against terrain.",
+        "type": "gameplay",
+        "source": {
+          "title": "Gnar (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Gnar/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "primeval yordle child",
+      "True Ice imprisonment",
+      "boomerang-to-boulder weapon",
+      "Rage Gene Mini/Mega transformation"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧒",
+        "meaning": "childlike Mini Gnar personality",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🧊",
+        "meaning": "millennia frozen in True Ice",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🪃",
+        "meaning": "bonetooth boomerang",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "👹",
+        "meaning": "Mega Gnar's massive beast form",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💢",
+        "meaning": "Rage Gene and sudden toddler outrage",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Nunu",
+      "Poppy",
+      "Kled"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "gragas",
+    "championName": "Gragas",
+    "facts": [
+      {
+        "claim": "Gragas is a massive, rowdy Freljord brewmaster who searches for ingredients, starts brawls, and turns parties into property damage.",
+        "type": "lore",
+        "source": {
+          "title": "Gragas | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gragas/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit names Happy Hour, Barrel Roll, Drunken Rage, Body Slam, and Explosive Cask; his cask grows more potent before exploding and slowing enemies.",
+        "type": "ability",
+        "source": {
+          "title": "Gragas | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gragas/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki describes Gragas as an enormous bearded brewmaster who carries a massive wooden barrel; barrel abilities and Body Slam form his recognizable brawl-and-explosion pattern.",
+        "type": "visual",
+        "source": {
+          "title": "Gragas (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Gragas",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "rowdy brewmaster",
+      "massive wooden barrel",
+      "Body Slam",
+      "Explosive Cask"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🍺",
+        "meaning": "brewmaster and Drunken Rage",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛢️",
+        "meaning": "the massive wooden barrel and Barrel Roll",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🤸",
+        "meaning": "Body Slam",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "Explosive Cask and party-ending destruction",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🧔",
+        "meaning": "large bearded visual silhouette",
+        "strength": "supporting",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Braum",
+      "Sion",
+      "Ornn"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "graves",
+    "championName": "Graves",
+    "facts": [
+      {
+        "claim": "Malcolm Graves is a mercenary, gambler, and thief whose criminal honor is enforced with his double-barreled shotgun Destiny in Bilgewater.",
+        "type": "lore",
+        "source": {
+          "title": "Graves | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/graves/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "Graves's official New Destiny fires four pellets that cannot pass through units and requires reloading; Quickdraw dashes forward and grants defensive stacks.",
+        "type": "ability",
+        "source": {
+          "title": "Graves | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/graves/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki details Graves's two-shell reload, four-pellet cone, powder-round End of the Line, Smoke Screen, and recoil from Collateral Damage.",
+        "type": "gameplay",
+        "source": {
+          "title": "Graves (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Graves/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Destiny double-barreled shotgun",
+      "two-shell reload",
+      "pellet cone that stops at units",
+      "Smoke Screen and recoil shot"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🔫",
+        "meaning": "Destiny shotgun and outlaw gunfighter",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🔄",
+        "meaning": "the distinctive ammo reload cycle",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "Smoke Screen",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💥",
+        "meaning": "explosive Collateral Damage shell and recoil",
+        "strength": "signature",
+        "basis": [
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jhin",
+      "Caitlyn",
+      "Twisted Fate"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "gwen",
+    "championName": "Gwen",
+    "facts": [
+      {
+        "claim": "Gwen is a doll brought to life by magic who wields the scissors, needles, and sewing thread that once created her, along with the protective Hallowed Mist.",
+        "type": "lore",
+        "source": {
+          "title": "Gwen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gwen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit names A Thousand Cuts, Snip Snip!, Hallowed Mist, Skip 'n Slash, and Needlework; Needlework throws repeated needles and applies A Thousand Cuts.",
+        "type": "ability",
+        "source": {
+          "title": "Gwen | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/gwen/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki describes Gwen as a magically animated doll whose Hallowed Mist protects her from outside attacks while scissors, needles, and thread remain her defining weapons.",
+        "type": "visual",
+        "source": {
+          "title": "Gwen (Character) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Gwen",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Hallowed Seamstress",
+      "living doll origin",
+      "scissors, needles, and thread",
+      "protective Hallowed Mist"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🧵",
+        "meaning": "sewing thread and seamstress origin",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "✂️",
+        "meaning": "Gwen's giant scissors and Snip Snip!",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🪡",
+        "meaning": "Needlework and the needles that animate her craft",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌫️",
+        "meaning": "Hallowed Mist protection",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🧸",
+        "meaning": "doll origin",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Orianna",
+      "Camille",
+      "Morgana"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "hecarim",
+    "championName": "Hecarim",
+    "facts": [
+      {
+        "claim": "Hecarim is a spectral fusion of man and beast, cursed to ride down living souls; the Ruination turned him and his cavalry into agents of the Black Mist.",
+        "type": "lore",
+        "source": {
+          "title": "Hecarim | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/hecarim/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit ties Hecarim's attack damage to bonus movement speed and names Devastating Charge and Onslaught of Shadows; his charged attack knocks the target back.",
+        "type": "ability",
+        "source": {
+          "title": "Hecarim | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/hecarim/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki describes Hecarim as a Shadow Isles wraith of war whose charge summons spectral riders and causes enemies to flee.",
+        "type": "gameplay",
+        "source": {
+          "title": "Hecarim (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Hecarim/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "spectral horse-man",
+      "Shadow Isles war wraith",
+      "speed-scaling charge",
+      "spectral cavalry and fear"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🐴",
+        "meaning": "horse-bodied man-beast silhouette",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "👻",
+        "meaning": "spectral wraith and Ruination",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💨",
+        "meaning": "movement-speed scaling and Devastating Charge",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌫️",
+        "meaning": "Black Mist and Onslaught of Shadows",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Viego",
+      "Thresh",
+      "Karthus"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "heimerdinger",
+    "championName": "Heimerdinger",
+    "facts": [
+      {
+        "claim": "Professor Cecil B. Heimerdinger is an eccentric Piltover inventor and scientist devoted to using unconventional devices to improve lives.",
+        "type": "lore",
+        "source": {
+          "title": "Heimerdinger | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/heimerdinger/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit names H-28 G Evolution Turret, Hextech Micro-Rockets, CH-2 Electron Storm Grenade, and UPGRADE!!!, with movement speed near allied or deployed turrets.",
+        "type": "ability",
+        "source": {
+          "title": "Heimerdinger | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/heimerdinger/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki details H-28G turrets, Hextech Micro-Rockets, Electron Storm Grenades, and UPGRADE!!!'s empowered variants.",
+        "type": "gameplay",
+        "source": {
+          "title": "Heimerdinger (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Heimerdinger/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Piltover scientist inventor",
+      "deployable H-28G turrets",
+      "micro-rocket swarm",
+      "electron storm grenade and UPGRADE"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🔬",
+        "meaning": "scientist and inventor identity",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🗼",
+        "meaning": "H-28G Evolution Turret nest",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🚀",
+        "meaning": "Hextech Micro-Rockets",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "💣",
+        "meaning": "CH-2 Electron Storm Grenade",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🛠️",
+        "meaning": "unconventional devices and engineering",
+        "strength": "supporting",
+        "basis": [
+          "fact-1"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Ziggs",
+      "Corki",
+      "Jayce"
+    ],
+    "unresolved": []
+  },
+  {
+    "championKey": "hwei",
+    "championName": "Hwei",
+    "facts": [
+      {
+        "claim": "Hwei is a brooding Ionia painter who uses a paintbrush and palette to confront criminals, comfort victims, and process the massacre of his temple.",
+        "type": "lore",
+        "source": {
+          "title": "Hwei | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/hwei/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-1"
+      },
+      {
+        "claim": "The official kit is organized around Signature of the Visionary, Subject: Disaster, Subject: Serenity, Subject: Torment, and Spiraling Despair; a second damaging spell completes his signature.",
+        "type": "ability",
+        "source": {
+          "title": "Hwei | League of Legends",
+          "url": "https://www.leagueoflegends.com/en-us/champions/hwei/",
+          "kind": "official",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-2"
+      },
+      {
+        "claim": "The secondary League Wiki classifies Hwei as an artillery mage with three spell subjects—Disaster, Serenity, and Torment—each opening a separate set of paint-based abilities.",
+        "type": "gameplay",
+        "source": {
+          "title": "Hwei (League of Legends) | League of Legends Wiki | Fandom",
+          "url": "https://leagueoflegends.fandom.com/wiki/Hwei/LoL",
+          "kind": "secondary",
+          "accessedAt": "2026-09-09"
+        },
+        "id": "fact-3"
+      }
+    ],
+    "signatureSignals": [
+      "Ionia painter mage",
+      "paintbrush and palette",
+      "three Subject spell branches",
+      "Spiraling Despair signature"
+    ],
+    "emojiCandidates": [
+      {
+        "emoji": "🎨",
+        "meaning": "painting as Hwei's magic medium",
+        "strength": "signature",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🖌️",
+        "meaning": "paintbrush and palette",
+        "strength": "signature",
+        "basis": [
+          "fact-1"
+        ]
+      },
+      {
+        "emoji": "🎭",
+        "meaning": "the Disaster, Serenity, and Torment subjects",
+        "strength": "signature",
+        "basis": [
+          "fact-2",
+          "fact-3"
+        ]
+      },
+      {
+        "emoji": "🌀",
+        "meaning": "Spiraling Despair",
+        "strength": "signature",
+        "basis": [
+          "fact-2"
+        ]
+      },
+      {
+        "emoji": "🌈",
+        "meaning": "the broad color range of his imagined art",
+        "strength": "supporting",
+        "basis": [
+          "fact-1",
+          "fact-3"
+        ]
+      }
+    ],
+    "confusableWith": [
+      "Jhin",
+      "Lux",
+      "Zoe"
+    ],
+    "unresolved": []
+  }
+]

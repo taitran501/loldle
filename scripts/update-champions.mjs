@@ -1,12 +1,11 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { getEmojiClues } from './emoji-config.mjs';
 
 const DDRAGON_VERSION = '16.17.1';
 const CHAMPIONS_DIR = path.resolve('public/assets/champions');
 const ABILITIES_DIR = path.resolve('public/assets/abilities');
 const DATA_FILE = path.resolve('public/data/champions.json');
-const EMOJI_MIN_CLUES = 4;
-const EMOJI_MAX_CLUES = 6;
 
 async function downloadFile(url, dest) {
   try {
@@ -39,7 +38,6 @@ const NEW_CHAMPS_CONFIG = [
       text: 'The age of retribution!',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/804.ogg'
     },
-    emojis: ['🌸', '📿', '🏹', '👻'],
     passiveImg: 'Yunara_Passive.png',
     spells: ['YunaraQ.png', 'YunaraW.png', 'YunaraE.png', 'YunaraR.png'],
     abilityNames: {
@@ -71,7 +69,6 @@ const NEW_CHAMPS_CONFIG = [
       text: 'Gold bends, but it does not break.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/800.ogg'
     },
-    emojis: ['🪙', '🏛️', '✨', '👗'],
     passiveImg: 'Mel_Passive.png',
     spells: ['MelQ.png', 'MelW.png', 'MelE.png', 'MelR.png'],
     abilityNames: {
@@ -103,7 +100,6 @@ const NEW_CHAMPS_CONFIG = [
       text: 'I am the unsundered wrath.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/904.ogg'
     },
-    emojis: ['🗡️', '🩸', '🏜️', '👁️'],
     passiveImg: 'ZaahenP.png',
     spells: ['ZaahenQ.png', 'ZaahenW.png', 'ZaahenE.png', 'ZaahenR.png'],
     abilityNames: {
@@ -134,7 +130,6 @@ const NEW_CHAMPS_CONFIG = [
       text: 'Purge the shadow, salt the earth.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/805.ogg'
     },
-    emojis: ['✝️', '⛓️', '🕯️', '🌫️'],
     passiveImg: 'Locke_Passive.png',
     spells: ['LockeQ.png', 'LockeW.png', 'LockeE.png', 'LockeR.png'],
     abilityNames: {
@@ -178,15 +173,14 @@ async function main() {
   console.log('\n--- Updating champions.json ---');
   const existingData = JSON.parse(await fs.readFile(DATA_FILE, 'utf8'));
   console.log(`Current champion count: ${existingData.length}`);
+  const existingById = new Map(existingData.map(champion => [champion.id.toLowerCase(), champion]));
 
   // Filter out any previous draft versions of these 4
   const existingFiltered = existingData.filter(c => !NEW_CHAMPS_CONFIG.some(nc => nc.id.toLowerCase() === c.id.toLowerCase()));
 
   for (const c of NEW_CHAMPS_CONFIG) {
-    const emojis = [...new Set(c.emojis.filter(emoji => typeof emoji === 'string' && emoji.trim().length > 0))];
-    if (emojis.length < EMOJI_MIN_CLUES || emojis.length > EMOJI_MAX_CLUES) {
-      throw new Error(`Emoji config for ${c.id} must contain ${EMOJI_MIN_CLUES}-${EMOJI_MAX_CLUES} unique clues`);
-    }
+    const emojis = getEmojiClues(c.id);
+    const previousChampion = existingById.get(c.id.toLowerCase());
 
     const abilities = [
       { key: 'P', name: c.abilityNames.P, iconUrl: `/assets/abilities/${c.id}_p.png` },
@@ -221,9 +215,10 @@ async function main() {
       releaseYear: c.releaseYear,
       iconUrl: `/assets/champions/${c.id}.png`,
       abilities,
-      quote: c.quote,
+      quote: previousChampion?.quote || c.quote,
       emojis,
-      skins
+      skins,
+      quotes: previousChampion?.quotes || []
     };
 
     existingFiltered.push(champObj);

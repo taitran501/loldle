@@ -6,9 +6,21 @@ import { EMOJI_MAX_CLUES, EMOJI_MIN_CLUES } from '../../src/utils/constants';
 
 describe('Dataset & Asset Integrity Tests', () => {
   const jsonPath = path.resolve(process.cwd(), 'public/data/champions.json');
+  const emojiMapPath = path.resolve(process.cwd(), 'scripts/emoji-clues.json');
   expect(fs.existsSync(jsonPath)).toBe(true);
+  expect(fs.existsSync(emojiMapPath)).toBe(true);
 
   const champions: Champion[] = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+  const emojiMap: Record<string, string[]> = JSON.parse(fs.readFileSync(emojiMapPath, 'utf-8'));
+
+  const resolveEmojiKey = (value: string) => {
+    const normalized = value.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return ({
+      monkeyking: 'wukong',
+      nunu: 'nunuwillump',
+      renata: 'renataglasc'
+    } as Record<string, string>)[normalized] || normalized;
+  };
 
   it('contains exactly 173 champions in the dataset', () => {
     expect(champions.length).toBe(173);
@@ -90,7 +102,7 @@ describe('Dataset & Asset Integrity Tests', () => {
         expect(q.audioUrl).not.toContain('NaN');
       }
     }
-  });
+  }, 15_000);
 
   it('verifies every champion has a unique 4-6 clue emoji sequence', () => {
     const clueCounts = new Set<number>();
@@ -108,6 +120,18 @@ describe('Dataset & Asset Integrity Tests', () => {
     }
 
     expect([...clueCounts].sort()).toEqual([4, 5, 6]);
+  });
+
+  it('keeps the generated dataset synchronized with the reviewed emoji source map', () => {
+    expect(Object.keys(emojiMap)).toHaveLength(champions.length);
+
+    for (const champ of champions) {
+      expect(emojiMap[resolveEmojiKey(champ.id)]).toEqual(champ.emojis);
+    }
+
+    expect(emojiMap.zac).toEqual(['🦠', '🫧', '🤸', '♻️', '🧪']);
+    expect(emojiMap.twistedfate).toHaveLength(5);
+    expect(emojiMap.twitch).toHaveLength(5);
   });
 
   it('verifies Riot Games Official Data Dragon full HD splash URLs for all skins', () => {

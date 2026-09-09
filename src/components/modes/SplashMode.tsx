@@ -59,6 +59,12 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   const [imageError, setImageError] = useState(false);
   const [usingFallback, setUsingFallback] = useState(false);
   const [imageAttempt, setImageAttempt] = useState(0);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const primaryImageUrl = targetSkin.splashFullUrl || targetSkin.splashCenteredUrl;
+  const fallbackImageUrl = targetSkin.splashCenteredUrl;
+  const imageSource = usingFallback ? fallbackImageUrl : primaryImageUrl;
+
+  const IMAGE_LOAD_TIMEOUT_MS = 5000;
 
   // Bonus Skin Guessing state (secondary mini-quiz after solving champion)
   const [selectedBonusSkin, setSelectedBonusSkin] = useState<Skin | null>(null);
@@ -71,6 +77,36 @@ export const SplashMode: React.FC<SplashModeProps> = ({
     setImageError(false);
     setUsingFallback(false);
     setImageAttempt(0);
+  }, [target.id, targetSkin.id, targetSkin.splashFullUrl, targetSkin.splashCenteredUrl]);
+
+  // A cached image can finish before React receives the onLoad event. Check
+  // the DOM after each source change so the loading overlay cannot stay stuck.
+  useEffect(() => {
+    const image = imageRef.current;
+    if (!image?.complete || image.naturalWidth === 0) return;
+    setImageLoaded(true);
+    setImageError(false);
+  }, [imageSource, imageAttempt, target.id, targetSkin.id]);
+
+  // Remote CDN requests may hang without emitting either load or error.
+  // Bound each attempt and expose the existing retry state instead of leaving
+  // the player on an infinite skeleton.
+  useEffect(() => {
+    if (imageLoaded || imageError) return;
+
+    const timeoutId = window.setTimeout(() => {
+      if (!usingFallback && fallbackImageUrl && primaryImageUrl !== fallbackImageUrl) {
+        setUsingFallback(true);
+        setImageLoaded(false);
+      } else {
+        setImageError(true);
+      }
+    }, IMAGE_LOAD_TIMEOUT_MS);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [fallbackImageUrl, imageError, imageLoaded, imageSource, primaryImageUrl, usingFallback]);
+
+  useEffect(() => {
     const savedBonusSkin = bonus?.selectionSkinId === undefined
       ? (bonus?.status === 'skipped' ? targetSkin : null)
       : target.skins.find(skin => skin.id === bonus.selectionSkinId) || null;
@@ -158,7 +194,8 @@ export const SplashMode: React.FC<SplashModeProps> = ({
           ) : (
             <img
               key={`${target.id}-${targetSkin.id}-${imageAttempt}`}
-              src={usingFallback ? targetSkin.splashCenteredUrl : (targetSkin.splashFullUrl || targetSkin.splashCenteredUrl)}
+              ref={imageRef}
+              src={imageSource}
               alt="Champion Splash Art"
               onLoad={() => {
                 setImageLoaded(true);

@@ -1,0 +1,1991 @@
+[
+  {
+    "championKey": "aatrox",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Aatrox",
+        "Darius",
+        "Riven"
+      ],
+      "after2": [
+        "Aatrox",
+        "Darius",
+        "Vladimir"
+      ],
+      "after3": [
+        "Aatrox",
+        "Rhaast",
+        "Mordekaiser"
+      ],
+      "after4": [
+        "Kayle",
+        "Aatrox",
+        "Morgana"
+      ]
+    },
+    "confusableWith": [
+      "Darius",
+      "Mordekaiser",
+      "Rhaast"
+    ],
+    "issues": [
+      "The globe is padding or depends on knowing the ability name World Ender; it adds little visual signal.",
+      "By clue 4, wings still fit Kayle and Morgana, so the target is plausible but not cleanly distinguished.",
+      "Original blindTest audit: target listed first at 3/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "⚔️",
+      "🩸",
+      "⛓️",
+      "🪽"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Aatrox | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/aatrox/",
+        "kind": "official"
+      },
+      {
+        "title": "Aatrox (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Aatrox",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "ahri",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Ahri",
+        "Neeko",
+        "Lillia"
+      ],
+      "after2": [
+        "Ahri",
+        "Neeko",
+        "Lillia"
+      ],
+      "after3": [
+        "Ahri",
+        "Neeko",
+        "Rakan"
+      ],
+      "after4": [
+        "Ahri",
+        "Neeko",
+        "Rakan"
+      ]
+    },
+    "confusableWith": [
+      "Neeko",
+      "Rakan",
+      "Lillia"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🦊",
+      "9️⃣",
+      "🔮",
+      "💘",
+      "👻"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Ahri | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/ahri/",
+        "kind": "official"
+      },
+      {
+        "title": "ORIGINS: Ahri | League of Legends",
+        "url": "https://nexus.leagueoflegends.com/en-us/2017/09/origins-ahri/",
+        "kind": "official"
+      },
+      {
+        "title": "Ahri (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ahri",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "akali",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Akali",
+        "Zed",
+        "Shen"
+      ],
+      "after2": [
+        "Akali",
+        "Zed",
+        "Shaco"
+      ],
+      "after3": [
+        "Akali",
+        "Katarina",
+        "Zed"
+      ],
+      "after4": [
+        "Akali",
+        "Zed",
+        "Katarina"
+      ]
+    },
+    "confusableWith": [
+      "Zed",
+      "Katarina",
+      "Qiyana"
+    ],
+    "issues": [
+      "The yin-yang symbol is a misleading generic Ionia/Kinkou association and does not represent a specific Akali mechanic.",
+      "Kunai and smoke are strong, but the current fourth clue is a broad dash cue shared by many assassins.",
+      "Original blindTest audit: target listed first at 3/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🥷",
+      "🌫️",
+      "🔪",
+      "💨"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Akali | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/akali/",
+        "kind": "official"
+      },
+      {
+        "title": "Akali, the Rogue Assassin | League of Legends",
+        "url": "https://nexus.leagueoflegends.com/en-us/champion/akali/",
+        "kind": "official"
+      },
+      {
+        "title": "Akali (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Akali",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "akshan",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Akshan",
+        "Gnar",
+        "Sivir"
+      ],
+      "after2": [
+        "Akshan",
+        "Camille",
+        "Nautilus"
+      ],
+      "after3": [
+        "Akshan",
+        "Lucian",
+        "Vayne"
+      ],
+      "after4": [
+        "Akshan",
+        "Lucian",
+        "Tryndamere"
+      ]
+    },
+    "confusableWith": [
+      "Lucian",
+      "Camille",
+      "Vayne"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🪃",
+      "🪝",
+      "🔫",
+      "♻️",
+      "🕵️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Akshan | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/akshan/",
+        "kind": "official"
+      },
+      {
+        "title": "Akshan (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Akshan",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "alistar",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Alistar",
+        "Sion",
+        "Ornn"
+      ],
+      "after2": [
+        "Alistar",
+        "Sett",
+        "Sion"
+      ],
+      "after3": [
+        "Alistar",
+        "Sion",
+        "Malphite"
+      ],
+      "after4": [
+        "Alistar",
+        "Sion",
+        "Ornn"
+      ]
+    },
+    "confusableWith": [
+      "Sion",
+      "Malphite",
+      "Ornn"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐂",
+      "👊",
+      "💥",
+      "📣",
+      "⛓️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Alistar | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/alistar/",
+        "kind": "official"
+      },
+      {
+        "title": "Alistar | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-gb/champions/alistar/",
+        "kind": "official"
+      },
+      {
+        "title": "Alistar (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Alistar",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "ambessa",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 1,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Ambessa",
+        "Warwick",
+        "Kindred"
+      ],
+      "after2": [
+        "Ambessa",
+        "Riven",
+        "Darius"
+      ],
+      "after3": [
+        "Sett",
+        "Ambessa",
+        "Riven"
+      ],
+      "after4": [
+        "Sett",
+        "Ambessa",
+        "Riven"
+      ]
+    },
+    "confusableWith": [
+      "Sett",
+      "Riven",
+      "Warwick"
+    ],
+    "issues": [
+      "Wolf is a lore/skin association rather than Ambessa's clearest core identity; sword, chain, fist and dash are mostly generic.",
+      "The current set does not expose twin drakehound blades or stance switching clearly enough by clue 4.",
+      "Original blindTest audit: target listed first at 0/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐺",
+      "🗡️",
+      "⛓️",
+      "🔀",
+      "💨"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Ambessa | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/ambessa/",
+        "kind": "official"
+      },
+      {
+        "title": "Ambessa (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ambessa",
+        "kind": "secondary"
+      },
+      {
+        "title": "Ambessa (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ambessa/LoL",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "amumu",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Amumu",
+        "Nunu & Willump",
+        "Rammus"
+      ],
+      "after2": [
+        "Amumu",
+        "Vex",
+        "Karthus"
+      ],
+      "after3": [
+        "Amumu",
+        "Karthus",
+        "Sion"
+      ],
+      "after4": [
+        "Amumu",
+        "Karthus",
+        "Sion"
+      ]
+    },
+    "confusableWith": [
+      "Karthus",
+      "Sion",
+      "Nunu & Willump"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🩹",
+      "😭",
+      "🧟",
+      "☠️",
+      "🌀"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Amumu | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-sg/champions/amumu/",
+        "kind": "official"
+      },
+      {
+        "title": "Amumu (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Amumu",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "anivia",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 1,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Anivia",
+        "Ashe",
+        "Xayah"
+      ],
+      "after2": [
+        "Anivia",
+        "Ashe",
+        "Lissandra"
+      ],
+      "after3": [
+        "Anivia",
+        "Ashe",
+        "Lissandra"
+      ],
+      "after4": [
+        "Anivia",
+        "Ashe",
+        "Lissandra"
+      ]
+    },
+    "confusableWith": [
+      "Ashe",
+      "Lissandra",
+      "Braum"
+    ],
+    "issues": [
+      "Snow, ice and blizzard are three near-duplicate cold/weather concepts; the set pads the sequence instead of adding new information.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐦",
+      "❄️",
+      "🥚",
+      "🧊"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Anivia | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/anivia/",
+        "kind": "official"
+      },
+      {
+        "title": "Anivia (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Anivia",
+        "kind": "secondary"
+      },
+      {
+        "title": "The Cryophoenix - Universe | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Universe%3AThe_Cryophoenix",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "annie",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Annie",
+        "Brand",
+        "Shyvana"
+      ],
+      "after2": [
+        "Annie",
+        "Brand",
+        "Ziggs"
+      ],
+      "after3": [
+        "Annie",
+        "Brand",
+        "Veigar"
+      ],
+      "after4": [
+        "Annie",
+        "Brand",
+        "Veigar"
+      ]
+    },
+    "confusableWith": [
+      "Brand",
+      "Veigar",
+      "Nunu & Willump"
+    ],
+    "issues": [
+      "The explosion emoji is redundant with fire/Tibbers and is not a distinctive Annie signal; Tibbers plus four-stack Pyromania already complete the rebus.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "👧",
+      "🔥",
+      "🧸",
+      "4️⃣"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Annie | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/annie/",
+        "kind": "official"
+      },
+      {
+        "title": "Annie (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Annie",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "aphelios",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Aphelios",
+        "Diana",
+        "Senna"
+      ],
+      "after2": [
+        "Aphelios",
+        "Jhin",
+        "K'Sante"
+      ],
+      "after3": [
+        "Aphelios",
+        "Lucian",
+        "Jinx"
+      ],
+      "after4": [
+        "Aphelios",
+        "Jhin",
+        "Diana"
+      ]
+    },
+    "confusableWith": [
+      "Jinx",
+      "Lucian",
+      "Diana"
+    ],
+    "issues": [
+      "The silent-face emoji is generic and target-dependent; it contributes no useful gameplay or lore distinction.",
+      "The five-weapons and swap clues are sufficient, so the fifth emoji is padding.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🌙",
+      "5️⃣",
+      "🔫",
+      "🔄"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Aphelios (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Aphelios",
+        "kind": "secondary"
+      },
+      {
+        "title": "Aphelios Kit Primer | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/news/game-updates/aphelios-kit-primer/",
+        "kind": "official"
+      },
+      {
+        "title": "Aphelios | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/aphelios/",
+        "kind": "official"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "ashe",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Ashe",
+        "Varus",
+        "Sivir"
+      ],
+      "after2": [
+        "Ashe",
+        "Lissandra",
+        "Braum"
+      ],
+      "after3": [
+        "Ashe",
+        "Anivia",
+        "Quinn"
+      ],
+      "after4": [
+        "Ashe",
+        "Varus",
+        "Anivia"
+      ]
+    },
+    "confusableWith": [
+      "Varus",
+      "Sivir",
+      "Anivia"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🏹",
+      "❄️",
+      "🦅",
+      "💎",
+      "👑"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Ashe | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/ashe/",
+        "kind": "official"
+      },
+      {
+        "title": "Ashe (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Ashe",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "aurelionsol",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Aurelion Sol",
+        "Shyvana",
+        "Smolder"
+      ],
+      "after2": [
+        "Aurelion Sol",
+        "Bard",
+        "Zoe"
+      ],
+      "after3": [
+        "Aurelion Sol",
+        "Bard",
+        "Zoe"
+      ],
+      "after4": [
+        "Aurelion Sol",
+        "Bard",
+        "Vel'Koz"
+      ]
+    },
+    "confusableWith": [
+      "Bard",
+      "Shyvana",
+      "Smolder"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐉",
+      "⭐",
+      "🌌",
+      "🕳️",
+      "🔨"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Aurelion Sol | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/aurelionsol/",
+        "kind": "official"
+      },
+      {
+        "title": "Aurelion Sol | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-au/champions/aurelionsol/",
+        "kind": "official"
+      },
+      {
+        "title": "Aurelion Sol (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Aurelion_Sol",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "aurora",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 1,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Aurora",
+        "Lillia",
+        "Vex"
+      ],
+      "after2": [
+        "Aurora",
+        "Lillia",
+        "Vex"
+      ],
+      "after3": [
+        "Aurora",
+        "Vex",
+        "Kindred"
+      ],
+      "after4": [
+        "Aurora",
+        "Vex",
+        "Kindred"
+      ]
+    },
+    "confusableWith": [
+      "Lillia",
+      "Vex",
+      "Kindred"
+    ],
+    "issues": [
+      "Intentionally hard: rabbit plus spirits remains shared with Lillia/Vex until the between-worlds clue, but the chain is coherent and evidence-backed.",
+      "Original blindTest audit: target listed first at 3/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐰",
+      "🧙‍♀️",
+      "👻",
+      "🪄",
+      "🌀"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Aurora | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/aurora/",
+        "kind": "official"
+      },
+      {
+        "title": "Aurora Champion Spotlight | Gameplay - League of Legends",
+        "url": "https://www.youtube.com/watch?v=L8Za9xjMg84",
+        "kind": "official"
+      },
+      {
+        "title": "Category:Aurora | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Category%3AAurora",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "azir",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Azir",
+        "Nasus",
+        "Renekton"
+      ],
+      "after2": [
+        "Azir",
+        "Xerath",
+        "Nasus"
+      ],
+      "after3": [
+        "Azir",
+        "Xerath",
+        "Renekton"
+      ],
+      "after4": [
+        "Azir",
+        "Xerath",
+        "Nasus"
+      ]
+    },
+    "confusableWith": [
+      "Xerath",
+      "Nasus",
+      "Renekton"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "👑",
+      "🏜️",
+      "🪖",
+      "☀️",
+      "🦅"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Azir | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-gb/champions/azir/",
+        "kind": "official"
+      },
+      {
+        "title": "ORIGINS: Azir | League of Legends",
+        "url": "https://nexus.leagueoflegends.com/en-us/2017/06/origins-azir/",
+        "kind": "official"
+      },
+      {
+        "title": "Azir (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Azir",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "bard",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Bard",
+        "Aurelion Sol",
+        "Zoe"
+      ],
+      "after2": [
+        "Bard",
+        "Sona",
+        "Taric"
+      ],
+      "after3": [
+        "Bard",
+        "Kindred",
+        "Vex"
+      ],
+      "after4": [
+        "Bard",
+        "Kindred",
+        "Ryze"
+      ]
+    },
+    "confusableWith": [
+      "Aurelion Sol",
+      "Kindred",
+      "Ryze"
+    ],
+    "issues": [
+      "Music duplicates the sound/chime concept already represented by the bell and does not add a new Bard signal.",
+      "Meeps and Magical Journey are the useful discriminators; the current fifth clue is padding.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🌌",
+      "🔔",
+      "👻",
+      "🌀"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Bard | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/bard/",
+        "kind": "official"
+      },
+      {
+        "title": "Bard (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Bard",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "belveth",
+    "mechanical": {
+      "emojiCount": 6,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Bel'Veth",
+        "Azir",
+        "Cho'Gath"
+      ],
+      "after2": [
+        "Bel'Veth",
+        "Kha'Zix",
+        "Cho'Gath"
+      ],
+      "after3": [
+        "Bel'Veth",
+        "Cho'Gath",
+        "Kha'Zix"
+      ],
+      "after4": [
+        "Bel'Veth",
+        "Cho'Gath",
+        "Kha'Zix"
+      ]
+    },
+    "confusableWith": [
+      "Cho'Gath",
+      "Kha'Zix",
+      "Vel'Koz"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "👑",
+      "👾",
+      "🪻",
+      "🪸",
+      "🧬",
+      "♾️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Bel'Veth | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-au/champions/belveth/",
+        "kind": "official"
+      },
+      {
+        "title": "Champion Insights: Bel'Veth | League of Legends",
+        "url": "https://pre-blades-bw-testing.leagueoflegends.com/en-us/news/dev/champion-insights-bel-veth/",
+        "kind": "official"
+      },
+      {
+        "title": "Bel'Veth (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Bel%27Veth",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "blitzcrank",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Blitzcrank",
+        "Rell",
+        "Rammus"
+      ],
+      "after2": [
+        "Blitzcrank",
+        "Thresh",
+        "Nautilus"
+      ],
+      "after3": [
+        "Blitzcrank",
+        "Urgot",
+        "Rell"
+      ],
+      "after4": [
+        "Blitzcrank",
+        "Urgot",
+        "Viktor"
+      ]
+    },
+    "confusableWith": [
+      "Thresh",
+      "Nautilus",
+      "Rell"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🤖",
+      "🪝",
+      "🦾",
+      "⚡",
+      "🛠️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Blitzcrank | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-ph/champions/blitzcrank/",
+        "kind": "official"
+      },
+      {
+        "title": "Blitzcrank (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Blitzcrank",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "brand",
+    "mechanical": {
+      "emojiCount": 4,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Brand",
+        "Annie",
+        "Rumble"
+      ],
+      "after2": [
+        "Brand",
+        "Annie",
+        "Xerath"
+      ],
+      "after3": [
+        "Brand",
+        "Annie",
+        "Vel'Koz"
+      ],
+      "after4": [
+        "Brand",
+        "Annie",
+        "Vel'Koz"
+      ]
+    },
+    "confusableWith": [
+      "Annie",
+      "Vel'Koz",
+      "Malzahar"
+    ],
+    "issues": [
+      "The fire/orb opening is broad, but three Blaze stacks and detonation provide a reasonable top-three resolution by clue 4.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🔥",
+      "🔮",
+      "💥",
+      "3️⃣"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Brand | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/brand/",
+        "kind": "official"
+      },
+      {
+        "title": "Brand (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Brand",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "braum",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Braum",
+        "Taric",
+        "Poppy"
+      ],
+      "after2": [
+        "Braum",
+        "Ornn",
+        "Poppy"
+      ],
+      "after3": [
+        "Braum",
+        "Ornn",
+        "Sion"
+      ],
+      "after4": [
+        "Braum",
+        "Ornn",
+        "Poppy"
+      ]
+    },
+    "confusableWith": [
+      "Ornn",
+      "Poppy",
+      "Taric"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🛡️",
+      "🚪",
+      "💪",
+      "❄️",
+      "🧔"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Braum | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-gb/champions/braum/",
+        "kind": "official"
+      },
+      {
+        "title": "Braum - Universe | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Universe%3ABraum",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "briar",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Briar",
+        "Warwick",
+        "Vladimir"
+      ],
+      "after2": [
+        "Briar",
+        "Warwick",
+        "Riven"
+      ],
+      "after3": [
+        "Briar",
+        "Warwick",
+        "Jinx"
+      ],
+      "after4": [
+        "Briar",
+        "Warwick",
+        "Vladimir"
+      ]
+    },
+    "confusableWith": [
+      "Warwick",
+      "Vladimir",
+      "Sion"
+    ],
+    "issues": [
+      "The running figure is a generic rush cue and does not distinguish Briar from other dive champions.",
+      "Blood, pillory, frenzy and bite already form a complete, more focused rebus.",
+      "Original blindTest audit: target listed first at 3/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🩸",
+      "⛓️",
+      "😵‍💫",
+      "🦷"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Champion Insights: Briar | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/news/dev/champion-insights-briar/",
+        "kind": "official"
+      },
+      {
+        "title": "Briar (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Briar",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "caitlyn",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Caitlyn",
+        "Jhin",
+        "Vayne"
+      ],
+      "after2": [
+        "Caitlyn",
+        "Lucian",
+        "Jhin"
+      ],
+      "after3": [
+        "Caitlyn",
+        "Jhin",
+        "Teemo"
+      ],
+      "after4": [
+        "Caitlyn",
+        "Jhin",
+        "Jinx"
+      ]
+    },
+    "confusableWith": [
+      "Jhin",
+      "Jinx",
+      "Vi"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🕵️‍♀️",
+      "🔫",
+      "🪤",
+      "🎯",
+      "⚙️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Caitlyn | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-gb/champions/caitlyn/",
+        "kind": "official"
+      },
+      {
+        "title": "Caitlyn (League of Legends) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Caitlyn/LoL",
+        "kind": "secondary"
+      },
+      {
+        "title": "Caitlyn (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Caitlyn",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "camille",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Camille",
+        "Viktor",
+        "Urgot"
+      ],
+      "after2": [
+        "Camille",
+        "Nautilus",
+        "Akshan"
+      ],
+      "after3": [
+        "Camille",
+        "Fiora",
+        "Irelia"
+      ],
+      "after4": [
+        "Camille",
+        "Fiora",
+        "Irelia"
+      ]
+    },
+    "confusableWith": [
+      "Fiora",
+      "Irelia",
+      "Akshan"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🦿",
+      "🪝",
+      "🗡️",
+      "⚙️",
+      "🛡️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Camille | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/camille/",
+        "kind": "official"
+      },
+      {
+        "title": "Camille (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Camille",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "cassiopeia",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Cassiopeia",
+        "Shyvana",
+        "Nidalee"
+      ],
+      "after2": [
+        "Cassiopeia",
+        "Teemo",
+        "Twitch"
+      ],
+      "after3": [
+        "Cassiopeia",
+        "Taliyah",
+        "Malphite"
+      ],
+      "after4": [
+        "Cassiopeia",
+        "Malzahar",
+        "Teemo"
+      ]
+    },
+    "confusableWith": [
+      "Teemo",
+      "Twitch",
+      "Malzahar"
+    ],
+    "issues": [
+      "The skull and test-tube emojis both communicate poison/toxin; the test tube is redundant padding after snake, poison and petrifying gaze are revealed.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🐍",
+      "☠️",
+      "🪨",
+      "👁️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Cassiopeia | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/cassiopeia/",
+        "kind": "official"
+      },
+      {
+        "title": "Cassiopeia (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Cassiopeia",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "chogath",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Cho'Gath",
+        "Kog'Maw",
+        "Vel'Koz"
+      ],
+      "after2": [
+        "Cho'Gath",
+        "Kog'Maw",
+        "Bel'Veth"
+      ],
+      "after3": [
+        "Cho'Gath",
+        "Bel'Veth",
+        "Nasus"
+      ],
+      "after4": [
+        "Cho'Gath",
+        "Bel'Veth",
+        "Kog'Maw"
+      ]
+    },
+    "confusableWith": [
+      "Bel'Veth",
+      "Kog'Maw",
+      "Vel'Koz"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "👾",
+      "🦷",
+      "🍽️",
+      "📈",
+      "💥"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Cho'Gath | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/chogath/",
+        "kind": "official"
+      },
+      {
+        "title": "Cho'Gath | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Chogath",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "corki",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Corki",
+        "Tristana",
+        "Rumble"
+      ],
+      "after2": [
+        "Corki",
+        "Tristana",
+        "Rumble"
+      ],
+      "after3": [
+        "Corki",
+        "Ziggs",
+        "Tristana"
+      ],
+      "after4": [
+        "Corki",
+        "Rumble",
+        "Tristana"
+      ]
+    },
+    "confusableWith": [
+      "Tristana",
+      "Rumble",
+      "Heimerdinger"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🛩️",
+      "🧑‍✈️",
+      "💣",
+      "🚀",
+      "📦"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Corki | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-au/champions/corki/",
+        "kind": "official"
+      },
+      {
+        "title": "Corki | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Template%3AData_Corki",
+        "kind": "secondary"
+      },
+      {
+        "title": "Corki (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Corki",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "darius",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Darius",
+        "Draven",
+        "Sion"
+      ],
+      "after2": [
+        "Darius",
+        "Draven",
+        "Aatrox"
+      ],
+      "after3": [
+        "Darius",
+        "Draven",
+        "Aatrox"
+      ],
+      "after4": [
+        "Darius",
+        "Draven",
+        "Aatrox"
+      ]
+    },
+    "confusableWith": [
+      "Draven",
+      "Aatrox",
+      "Sion"
+    ],
+    "issues": [
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🪓",
+      "🩸",
+      "5️⃣",
+      "⬇️",
+      "🎖️"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Darius | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-gb/champions/darius/",
+        "kind": "official"
+      },
+      {
+        "title": "Darius | League of Legends Wiki",
+        "url": "https://wiki.leagueoflegends.com/en-us/Category%3ADarius",
+        "kind": "secondary"
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "championKey": "diana",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 1,
+      "progression": 1,
+      "distinctiveness": 1,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Diana",
+        "Leona",
+        "Aphelios"
+      ],
+      "after2": [
+        "Diana",
+        "Leona",
+        "Aphelios"
+      ],
+      "after3": [
+        "Diana",
+        "Leona",
+        "Irelia"
+      ],
+      "after4": [
+        "Diana",
+        "Leona",
+        "Nocturne"
+      ]
+    },
+    "confusableWith": [
+      "Leona",
+      "Aphelios",
+      "Nocturne"
+    ],
+    "issues": [
+      "The yin-yang/crescent-star emoji is culturally misleading and duplicates the moon clue; it is not a precise Lunari or Diana signal.",
+      "The remaining dash and pull emojis are generic, so the set should rely on moonblade and Moonfall rather than the current symbol.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🌙",
+      "🗡️",
+      "💨",
+      "🌀"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Diana | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/diana/",
+        "kind": "official"
+      },
+      {
+        "title": "Diana (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Diana",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "drmundo",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Dr. Mundo",
+        "Singed",
+        "Vladimir"
+      ],
+      "after2": [
+        "Dr. Mundo",
+        "Vladimir",
+        "Zac"
+      ],
+      "after3": [
+        "Dr. Mundo",
+        "Olaf",
+        "Sion"
+      ],
+      "after4": [
+        "Dr. Mundo",
+        "Singed",
+        "Vladimir"
+      ]
+    },
+    "confusableWith": [
+      "Singed",
+      "Vladimir",
+      "Warwick"
+    ],
+    "issues": [
+      "The test tube repeats the injection/chemical-treatment idea and is generic Zaun padding; doctor, purple, cleaver and injection already identify Mundo.",
+      "Original blindTest audit: target listed first at 4/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🩺",
+      "💜",
+      "🔪",
+      "💉"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Dr. Mundo | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-sg/champions/drmundo/",
+        "kind": "official"
+      },
+      {
+        "title": "Dr. Mundo (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Dr._Mundo",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  },
+  {
+    "championKey": "draven",
+    "mechanical": {
+      "emojiCount": 5,
+      "uniqueEmoji": true,
+      "evidenceRefsValid": true,
+      "sourcesValid": true
+    },
+    "scores": {
+      "signatureStrength": 2,
+      "semanticClarity": 2,
+      "progression": 2,
+      "distinctiveness": 2,
+      "evidenceQuality": 2
+    },
+    "independentBlindTest": {
+      "after1": [
+        "Draven",
+        "Darius",
+        "Olaf"
+      ],
+      "after2": [
+        "Draven",
+        "Darius",
+        "Gnar"
+      ],
+      "after3": [
+        "Draven",
+        "Jhin",
+        "Darius"
+      ],
+      "after4": [
+        "Draven",
+        "Darius",
+        "Olaf"
+      ]
+    },
+    "confusableWith": [
+      "Darius",
+      "Aatrox",
+      "Olaf"
+    ],
+    "issues": [
+      "The crown is a generic glory/status clue and does not add a Draven-specific signal; spinning axe return plus spectacle already carry the identity.",
+      "Original blindTest audit: target listed first at 3/4 stages; independent lists below were generated without using it."
+    ],
+    "suggestedEmojis": [
+      "🪓",
+      "🔄",
+      "🎭",
+      "🩸"
+    ],
+    "sourcesChecked": [
+      {
+        "title": "Draven | League of Legends",
+        "url": "https://www.leagueoflegends.com/en-us/champions/draven/",
+        "kind": "official"
+      },
+      {
+        "title": "Draven (League of Legends) | League of Legends Wiki",
+        "url": "https://leagueoflegends.fandom.com/wiki/Draven/LoL",
+        "kind": "secondary"
+      },
+      {
+        "title": "Draven (Character) | League of Legends Wiki | Fandom",
+        "url": "https://leagueoflegends.fandom.com/wiki/Draven",
+        "kind": "secondary"
+      }
+    ],
+    "status": "needs_review"
+  }
+]
