@@ -7,7 +7,7 @@ A web-based League of Legends guessing game featuring Daily and Unlimited modes 
 - **Classic:** Deduce the mystery champion by comparing seven attributes: Gender, Positions, Species, Resource, Range type, Regions, and Release year. Clue tokens unlock at 5 guesses (Quote), 10 guesses (Ability), and 15 guesses (Splash).
 - **Quote:** Identify the champion from an iconic spoken quote. An audio clue unlocks after 3 guesses.
 - **Ability:** Guess the champion based on an ability icon (Passive, Q, W, E, or R). Optional Challenge Mode toggles (grayscale, rotation) allow customizable difficulty.
-- **Emoji:** Guess the champion represented by a curated sequence of 4-6 thematic emojis. Each champion can use a different number of clues, unlocked incrementally.
+- **Emoji:** Guess the champion represented by a curated, source-backed sequence of 4-6 thematic emojis. Only approved archive records enter the pool; each champion can use a different number of clues, unlocked incrementally.
 - **Splash:** Identify the champion from a cropped section of official skin splash art. The viewport zooms out with each subsequent guess.
 
 Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized streak mode) are supported across all modes. Active rounds, guesses, completed Daily rounds, and the selected mode persist in versioned `localStorage` state; Daily and Unlimited have separate sessions and statistics.
@@ -73,11 +73,13 @@ public/
     abilities/         Pre-downloaded local ability icons (865 files)
     champions/         Pre-downloaded local champion portraits (173 files)
   data/
-    champions.json     Normalized champion database (stats, quotes, emojis, skins)
+    champions.json     Normalized champion database (stats, quotes, source-backed emojis, skins)
   favicon.ico          Multi-resolution icon (16x16, 32x32, 48x48)
   favicon.png          Transparent Hextech emblem
 scripts/
   generate-dataset.mjs      ETL pipeline aggregating Riot DDragon + CommunityDragon data
+  compile-emoji-clues.mjs  Validates and compiles the approved Emoji catalog
+  emoji-catalog-report.json Compiler report with approved/missing counts and source URLs
   download-assets.mjs       Asset downloader for local offline resilience
   stress-test-50-users.mjs  Concurrency and throughput benchmark script
   take-screenshot.mjs       Playwright-based viewport validation script
@@ -94,6 +96,9 @@ src/
     constants.ts       Shared clue and hint unlock milestones
     gameState.ts       Versioned Daily/Unlimited localStorage persistence
     stats.ts            Versioned statistics, streak, and legacy migration logic
+
+Emoji catalog records live in `scripts/emoji-research/emoji-catalog-{a-d,e-h,i-l,m-p,q-t,u-z}.json`. They contain only exact
+source sequences with HTTPS provenance and review metadata. Run `pnpm compile-emoji-clues` before generating the local dataset.
 tests/
   component/           React Testing Library tests for each game mode
   e2e/                 Playwright browser flows across desktop, tablet, and mobile

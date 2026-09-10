@@ -7,7 +7,7 @@ async function waitForApp(page: import('@playwright/test').Page) {
 
 async function getTargetName(page: import('@playwright/test').Page, playType: 'daily' | 'unlimited', mode: string) {
   return page.evaluate(async ({ playType: selectedPlayType, mode: selectedMode }) => {
-    const state = JSON.parse(localStorage.getItem('loldle_game_state_v2') || '{}');
+    const state = JSON.parse(localStorage.getItem('loldle_game_state_v3') || '{}');
     const targetId = state[selectedPlayType]?.modes?.[selectedMode]?.targetId;
     const champions = await fetch('/data/champions.json').then(response => response.json());
     return champions.find((champion: { id: string }) => champion.id === targetId)?.name as string;
@@ -21,11 +21,11 @@ async function guessChampion(page: import('@playwright/test').Page, name: string
   await page.getByTestId('submit-guess').click();
 }
 
-test.describe('Game state v2 and regression flows', () => {
+test.describe('Game state v3 and regression flows', () => {
   test('keeps Daily and Unlimited rounds separate across switches and reload', async ({ page }) => {
     await waitForApp(page);
 
-    const unlimitedTarget = await page.evaluate(() => JSON.parse(localStorage.getItem('loldle_game_state_v2') || '{}').unlimited.modes.classic.targetId);
+    const unlimitedTarget = await page.evaluate(() => JSON.parse(localStorage.getItem('loldle_game_state_v3') || '{}').unlimited.modes.classic.targetId);
     await guessChampion(page, unlimitedTarget === 'Aatrox' ? 'Ahri' : 'Aatrox');
     await expect(page.getByText(/^Guesses:$/).locator('..')).toContainText('1');
 
@@ -85,14 +85,14 @@ test.describe('Game state v2 and regression flows', () => {
     await waitForApp(page);
 
     const abilityRound = await page.evaluate(() => {
-      const state = JSON.parse(localStorage.getItem('loldle_game_state_v2') || '{}');
+      const state = JSON.parse(localStorage.getItem('loldle_game_state_v3') || '{}');
       const round = state.unlimited.modes.ability;
       round.guesses = [round.targetId];
       round.isSolved = true;
       round.bonus = { status: 'pending' };
       state.currentMode = 'ability';
       state.playType = 'unlimited';
-      localStorage.setItem('loldle_game_state_v2', JSON.stringify(state));
+      localStorage.setItem('loldle_game_state_v3', JSON.stringify(state));
       return round.abilityKey;
     });
     await page.reload();
@@ -103,14 +103,14 @@ test.describe('Game state v2 and regression flows', () => {
     await expect(page.getByTestId('victory-modal')).not.toBeVisible();
 
     const splashSkin = await page.evaluate(() => {
-      const state = JSON.parse(localStorage.getItem('loldle_game_state_v2') || '{}');
+      const state = JSON.parse(localStorage.getItem('loldle_game_state_v3') || '{}');
       const round = state.unlimited.modes.splash;
       const skinId = round.skinId;
       round.guesses = [round.targetId];
       round.isSolved = true;
       round.bonus = { status: 'pending' };
       state.currentMode = 'splash';
-      localStorage.setItem('loldle_game_state_v2', JSON.stringify(state));
+      localStorage.setItem('loldle_game_state_v3', JSON.stringify(state));
       return { targetId: round.targetId, skinId };
     });
     await page.reload();
@@ -182,7 +182,7 @@ test.describe('Game state v2 and regression flows', () => {
     await expect(page.getByRole('button', { name: 'Statistics' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'How to play' })).toBeVisible();
 
-    const targetId = await page.evaluate(() => JSON.parse(localStorage.getItem('loldle_game_state_v2') || '{}').unlimited.modes.classic.targetId);
+    const targetId = await page.evaluate(() => JSON.parse(localStorage.getItem('loldle_game_state_v3') || '{}').unlimited.modes.classic.targetId);
     await guessChampion(page, targetId === 'Aatrox' ? 'Ahri' : 'Aatrox');
     await expect(page.locator('article')).toBeVisible();
     const dimensionsAfterGuess = await page.evaluate(() => ({

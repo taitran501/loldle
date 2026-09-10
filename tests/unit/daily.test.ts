@@ -108,6 +108,17 @@ describe('daily utility tests', () => {
       }
     });
 
+    it('filters Emoji targets to approved source-backed champions', () => {
+      const emojiChampions = mockChampions.map((champion, index) => ({
+        ...champion,
+        emojiClueStatus: index === 1 ? 'approved' as const : 'unavailable' as const,
+        emojiClueRevision: index === 1 ? 'test-revision' : undefined,
+      }));
+
+      expect(getDailyTarget(emojiChampions, 'emoji', '2026-09-07').champion.id).toBe('Ahri');
+      expect(getRandomTarget(emojiChampions, 'emoji').champion.id).toBe('Ahri');
+    });
+
     it('throws error when champion list is empty', () => {
       expect(() => getDailyTarget([], 'classic')).toThrow('Champions list is empty');
     });

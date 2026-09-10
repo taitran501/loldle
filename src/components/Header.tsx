@@ -18,6 +18,7 @@ interface HeaderProps {
   onSelectMode: (mode: GameMode) => void;
   isUnlimited: boolean;
   onToggleUnlimited: (targetVal?: boolean) => void;
+  emojiModeEnabled: boolean;
   onOpenStats: () => void;
   onOpenHelp: () => void;
 }
@@ -33,8 +34,9 @@ const modes: { id: GameMode; label: string; icon: React.ReactNode }[] = [
 const ModeNavigation: React.FC<{
   currentMode: GameMode;
   onSelectMode: (mode: GameMode) => void;
+  emojiModeEnabled: boolean;
   className?: string;
-}> = ({ currentMode, onSelectMode, className = '' }) => {
+}> = ({ currentMode, onSelectMode, emojiModeEnabled, className = '' }) => {
   const navRef = useRef<HTMLElement>(null);
   const [hasMoreModes, setHasMoreModes] = useState(false);
 
@@ -66,16 +68,22 @@ const ModeNavigation: React.FC<{
       >
         {modes.map(mode => {
           const isActive = currentMode === mode.id;
+          const isDisabled = mode.id === 'emoji' && !emojiModeEnabled;
           return (
             <button
               type="button"
               key={mode.id}
               aria-pressed={isActive}
+              aria-disabled={isDisabled}
+              disabled={isDisabled}
               onClick={() => onSelectMode(mode.id)}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
+              title={isDisabled ? 'Emoji catalog is being reviewed' : undefined}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
                 isActive
                   ? 'bg-[#1e2328] text-[#c8aa6e] border border-[#c8aa6e]/60 shadow-[0_0_10px_rgba(200,170,110,0.2)]'
-                  : 'text-[#a09b8c] hover:text-[#f0e6d2] hover:bg-[#1e2328]/50 border border-transparent'
+                  : isDisabled
+                    ? 'text-[#a09b8c]/45 border border-transparent cursor-not-allowed'
+                    : 'text-[#a09b8c] hover:text-[#f0e6d2] hover:bg-[#1e2328]/50 border border-transparent cursor-pointer'
               }`}
             >
               {mode.icon}
@@ -170,6 +178,7 @@ export const Header: React.FC<HeaderProps> = ({
   onSelectMode,
   isUnlimited,
   onToggleUnlimited,
+  emojiModeEnabled,
   onOpenStats,
   onOpenHelp,
 }) => (
@@ -199,10 +208,10 @@ export const Header: React.FC<HeaderProps> = ({
 
       <div className="flex items-center gap-2 w-full min-w-0 lg:hidden">
         <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} compact />
-        <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} className="flex-1 min-w-0" />
+        <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="flex-1 min-w-0" />
       </div>
 
-      <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} className="hidden lg:flex w-auto" />
+      <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="hidden lg:flex w-auto" />
 
       <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
         <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} />

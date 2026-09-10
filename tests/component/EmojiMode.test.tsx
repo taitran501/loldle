@@ -19,6 +19,8 @@ const mockTarget: Champion = {
   abilities: [],
   quotes: [{ text: "Don't you trust me?", audioUrl: '' }],
   emojis: ['🦊', '🔮', '💖', '💎', '✨'],
+  emojiClueStatus: 'approved',
+  emojiClueRevision: 'test-revision',
   skins: []
 };
 
@@ -48,10 +50,10 @@ describe('EmojiMode Component Tests', () => {
     );
 
     // This target has five configured clues, so four remain locked.
-    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(1);
-    expect(emojiImgs[0]).toHaveAttribute('alt', '🦊');
-    expect(emojiImgs[0].getAttribute('src')).toContain('twemoji');
+    const clueItems = screen.getAllByRole('listitem');
+    expect(clueItems.length).toBe(5);
+    expect(screen.getByRole('listitem', { name: 'Emoji clue 1: 🦊' })).toBeInTheDocument();
+    expect(screen.getByTestId('emoji-clues').querySelectorAll('img')).toHaveLength(0);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(4);
     expect(screen.getByRole('list', { name: 'Emoji clues: 1 of 5 revealed' })).toBeInTheDocument();
   });
@@ -68,8 +70,8 @@ describe('EmojiMode Component Tests', () => {
     );
 
     // 1 guess -> 2 revealed, 3 locked
-    let emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(2);
+    let revealedClues = screen.getAllByRole('listitem').filter(item => !item.getAttribute('aria-label')?.includes('locked'));
+    expect(revealedClues.length).toBe(2);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(3);
 
     // 2 guesses -> 3 revealed, 2 locked
@@ -82,8 +84,8 @@ describe('EmojiMode Component Tests', () => {
         allChampions={allChamps}
       />
     );
-    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(3);
+    revealedClues = screen.getAllByRole('listitem').filter(item => !item.getAttribute('aria-label')?.includes('locked'));
+    expect(revealedClues.length).toBe(3);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(2);
 
     // 3 guesses -> 4 revealed, 1 locked
@@ -96,8 +98,8 @@ describe('EmojiMode Component Tests', () => {
         allChampions={allChamps}
       />
     );
-    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(4);
+    revealedClues = screen.getAllByRole('listitem').filter(item => !item.getAttribute('aria-label')?.includes('locked'));
+    expect(revealedClues.length).toBe(4);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(1);
 
     // 4 guesses -> all 5 revealed
@@ -110,8 +112,8 @@ describe('EmojiMode Component Tests', () => {
         allChampions={allChamps}
       />
     );
-    emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(5);
+    revealedClues = screen.getAllByRole('listitem').filter(item => !item.getAttribute('aria-label')?.includes('locked'));
+    expect(revealedClues.length).toBe(5);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
   });
 
@@ -126,8 +128,8 @@ describe('EmojiMode Component Tests', () => {
       />
     );
 
-    const emojiImgs = screen.getAllByRole('img', { name: /🦊|🔮|💖|💎|✨/ });
-    expect(emojiImgs.length).toBe(5);
+    const revealedClues = screen.getAllByRole('listitem').filter(item => !item.getAttribute('aria-label')?.includes('locked'));
+    expect(revealedClues.length).toBe(5);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
   });
 

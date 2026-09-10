@@ -48,12 +48,12 @@
         "iconUrl": "/assets/abilities/Aatrox_r.png"
       }
     ],
-    "emojis": [
-      "⚔️",
-      "🩸",
-      "⛓️",
-      "🪽"
-    ],
+    "quote": {
+      "text": "Now, hear the silence of annihilation!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/266.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 266000,
@@ -1142,13 +1142,18 @@
         "iconUrl": "/assets/abilities/Ahri_r.png"
       }
     ],
+    "quote": {
+      "text": "Don't you trust me?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/103.ogg"
+    },
     "emojis": [
       "🦊",
-      "9️⃣",
-      "🔮",
-      "💘",
-      "👻"
+      "💋",
+      "💫",
+      "🔮"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "2cce9a78c78192a7",
     "skins": [
       {
         "id": 103000,
@@ -4534,12 +4539,19 @@
         "iconUrl": "/assets/abilities/Akali_r.png"
       }
     ],
+    "quote": {
+      "text": "Fear the assassin with no master.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/84.ogg"
+    },
     "emojis": [
       "🥷",
-      "🌫️",
-      "🔪",
-      "💨"
+      "💨",
+      "💚",
+      "🗡️",
+      "🌙"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "92cb358d046a736f",
     "skins": [
       {
         "id": 84000,
@@ -5948,13 +5960,12 @@
         "iconUrl": "/assets/abilities/Akshan_r.png"
       }
     ],
-    "emojis": [
-      "🪃",
-      "🪝",
-      "🔫",
-      "♻️",
-      "🕵️"
-    ],
+    "quote": {
+      "text": "Here's to getting even.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/166.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 166000,
@@ -6640,13 +6651,12 @@
         "iconUrl": "/assets/abilities/Alistar_r.png"
       }
     ],
-    "emojis": [
-      "🐂",
-      "👊",
-      "💥",
-      "📣",
-      "⛓️"
-    ],
+    "quote": {
+      "text": "Nothing can hold me back!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/12.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 12000,
@@ -6849,13 +6859,12 @@
         "iconUrl": "/assets/abilities/Ambessa_r.png"
       }
     ],
-    "emojis": [
-      "🗡️",
-      "⛓️",
-      "👊",
-      "🔀",
-      "💨"
-    ],
+    "quote": {
+      "text": "Only the ruthless survive.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/799.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 799000,
@@ -6965,13 +6974,12 @@
         "iconUrl": "/assets/abilities/Amumu_r.png"
       }
     ],
-    "emojis": [
-      "🩹",
-      "😭",
-      "🧟",
-      "☠️",
-      "🌀"
-    ],
+    "quote": {
+      "text": "I thought you'd never pick me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/32.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 32000,
@@ -7175,12 +7183,12 @@
         "iconUrl": "/assets/abilities/Anivia_r.png"
       }
     ],
-    "emojis": [
-      "🐦",
-      "❄️",
-      "🥚",
-      "🧊"
-    ],
+    "quote": {
+      "text": "On my wings.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/34.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 34000,
@@ -7579,12 +7587,12 @@
         "iconUrl": "/assets/abilities/Annie_r.png"
       }
     ],
-    "emojis": [
-      "👧",
-      "🔥",
-      "🧸",
-      "4️⃣"
-    ],
+    "quote": {
+      "text": "You wanna play too? It'll be fun!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/1.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 1000,
@@ -7889,12 +7897,12 @@
         "iconUrl": "/assets/abilities/Aphelios_r.png"
       }
     ],
-    "emojis": [
-      "🌙",
-      "5️⃣",
-      "🔫",
-      "🔄"
-    ],
+    "quote": {
+      "text": "So many weapons, Aphelios. The deadliest is your faith.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/523.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 523000,
@@ -8671,13 +8679,12 @@
         "iconUrl": "/assets/abilities/Ashe_r.png"
       }
     ],
-    "emojis": [
-      "🏹",
-      "❄️",
-      "🦅",
-      "💎",
-      "👑"
-    ],
+    "quote": {
+      "text": "All the world on one arrow.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/22.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 22000,
@@ -10993,13 +11000,12 @@
         "iconUrl": "/assets/abilities/AurelionSol_r.png"
       }
     ],
-    "emojis": [
-      "🐉",
-      "⭐",
-      "🌌",
-      "🕳️",
-      "🔨"
-    ],
+    "quote": {
+      "text": "Naturally.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/136.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 136000,
@@ -12104,13 +12110,12 @@
         "iconUrl": "/assets/abilities/Aurora_r.png"
       }
     ],
-    "emojis": [
-      "🐰",
-      "🧙‍♀️",
-      "👻",
-      "🪄",
-      "🌀"
-    ],
+    "quote": {
+      "text": "The spirit realm is calling.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/893.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 893000,
@@ -12218,13 +12223,12 @@
         "iconUrl": "/assets/abilities/Azir_r.png"
       }
     ],
-    "emojis": [
-      "👑",
-      "🏜️",
-      "🪖",
-      "☀️",
-      "🦅"
-    ],
+    "quote": {
+      "text": "Shurima! Your emperor has returned!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/268.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 268000,
@@ -12878,12 +12882,12 @@
         "iconUrl": "/assets/abilities/Bard_r.png"
       }
     ],
-    "emojis": [
-      "🔔",
-      "👻",
-      "🌀",
-      "🚪"
-    ],
+    "quote": {
+      "text": "*Whimsical chimes echo*",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/432.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 432000,
@@ -13044,14 +13048,12 @@
         "iconUrl": "/assets/abilities/Belveth_r.png"
       }
     ],
-    "emojis": [
-      "👑",
-      "👾",
-      "🪻",
-      "🪸",
-      "🧬",
-      "♾️"
-    ],
+    "quote": {
+      "text": "All will become the Lavender Sea.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/200.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 200000,
@@ -13749,13 +13751,18 @@
         "iconUrl": "/assets/abilities/Blitzcrank_r.png"
       }
     ],
+    "quote": {
+      "text": "Fired up and ready to serve.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/53.ogg"
+    },
     "emojis": [
-      "🤖",
-      "🪝",
-      "🦾",
-      "⚡",
-      "🛠️"
+      "🥊",
+      "🪢",
+      "🪢",
+      "🤖"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "59c864fd8d6d68a5",
     "skins": [
       {
         "id": 53000,
@@ -14615,12 +14622,12 @@
         "iconUrl": "/assets/abilities/Brand_r.png"
       }
     ],
-    "emojis": [
-      "🔥",
-      "🔮",
-      "💥",
-      "3️⃣"
-    ],
+    "quote": {
+      "text": "Ready to set the world on fire? Heheheh...",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/63.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 63000,
@@ -14926,13 +14933,19 @@
         "iconUrl": "/assets/abilities/Braum_r.png"
       }
     ],
+    "quote": {
+      "text": "The heart is the strongest muscle.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/201.ogg"
+    },
     "emojis": [
       "🛡️",
-      "🚪",
-      "💪",
+      "💙",
       "❄️",
-      "🧔"
+      "🥛",
+      "💪"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "7f73b8258fa6495b",
     "skins": [
       {
         "id": 201000,
@@ -15425,12 +15438,12 @@
         "iconUrl": "/assets/abilities/Briar_r.png"
       }
     ],
-    "emojis": [
-      "🩸",
-      "⛓️",
-      "😵‍💫",
-      "🦷"
-    ],
+    "quote": {
+      "text": "I'm so hungry! Who's first?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/233.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 233000,
@@ -15545,13 +15558,12 @@
         "iconUrl": "/assets/abilities/Caitlyn_r.png"
       }
     ],
-    "emojis": [
-      "🕵️‍♀️",
-      "🔫",
-      "🪤",
-      "🎯",
-      "⚙️"
-    ],
+    "quote": {
+      "text": "I'm on the case.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/51.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 51000,
@@ -17750,13 +17762,19 @@
         "iconUrl": "/assets/abilities/Camille_r.png"
       }
     ],
+    "quote": {
+      "text": "Precision is the difference between a butcher and a surgeon.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/164.ogg"
+    },
     "emojis": [
-      "🦿",
-      "🪝",
       "🗡️",
+      "💙",
+      "🤖",
       "⚙️",
-      "🛡️"
+      "💨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "1355a616105a71d6",
     "skins": [
       {
         "id": 164000,
@@ -19356,12 +19374,12 @@
         "iconUrl": "/assets/abilities/Cassiopeia_r.png"
       }
     ],
-    "emojis": [
-      "🐍",
-      "☠️",
-      "🪨",
-      "👁️"
-    ],
+    "quote": {
+      "text": "There is no antidote for me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/69.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 69000,
@@ -19769,13 +19787,12 @@
         "iconUrl": "/assets/abilities/Chogath_r.png"
       }
     ],
-    "emojis": [
-      "👾",
-      "🦷",
-      "🍽️",
-      "📈",
-      "💥"
-    ],
+    "quote": {
+      "text": "You'd wish the world you know to end! Yesss...",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/31.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 31000,
@@ -20375,13 +20392,12 @@
         "iconUrl": "/assets/abilities/Corki_r.png"
       }
     ],
-    "emojis": [
-      "🛩️",
-      "🧑‍✈️",
-      "💣",
-      "🚀",
-      "📦"
-    ],
+    "quote": {
+      "text": "I'm up to snuff, and gots me an ace machine!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/42.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 42000,
@@ -20591,13 +20607,12 @@
         "iconUrl": "/assets/abilities/Darius_r.png"
       }
     ],
-    "emojis": [
-      "🪓",
-      "🩸",
-      "5️⃣",
-      "⬇️",
-      "🎖️"
-    ],
+    "quote": {
+      "text": "They will regret opposing me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/122.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 122000,
@@ -22294,12 +22309,18 @@
         "iconUrl": "/assets/abilities/Diana_r.png"
       }
     ],
+    "quote": {
+      "text": "A new moon is rising.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/131.ogg"
+    },
     "emojis": [
       "🌙",
       "🗡️",
-      "💨",
-      "🌀"
+      "💫",
+      "👩"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "a70f7078177b8a6d",
     "skins": [
       {
         "id": 131000,
@@ -23175,12 +23196,12 @@
         "iconUrl": "/assets/abilities/DrMundo_r.png"
       }
     ],
-    "emojis": [
-      "🩺",
-      "💜",
-      "🔪",
-      "💉"
-    ],
+    "quote": {
+      "text": "Mundo!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/36.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 36000,
@@ -24446,12 +24467,19 @@
         "iconUrl": "/assets/abilities/Draven_r.png"
       }
     ],
+    "quote": {
+      "text": "Welcome to the League of Draven.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/119.ogg"
+    },
     "emojis": [
       "🪓",
-      "🔄",
-      "🎭",
-      "🩸"
+      "🪓",
+      "👨",
+      "📈",
+      "💰"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "118b4349ad3e31f7",
     "skins": [
       {
         "id": 119000,
@@ -24976,12 +25004,18 @@
         "iconUrl": "/assets/abilities/Ekko_r.png"
       }
     ],
+    "quote": {
+      "text": "It's not about how much time you have, it's how you use it.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/245.ogg"
+    },
     "emojis": [
       "⏳",
+      "⚙️",
       "🌀",
-      "⏪",
-      "🔧"
+      "👦"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "846094c6806cb066",
     "skins": [
       {
         "id": 245000,
@@ -26193,12 +26227,12 @@
         "iconUrl": "/assets/abilities/Elise_r.png"
       }
     ],
-    "emojis": [
-      "🕷️",
-      "🧍",
-      "🪂",
-      "🔄"
-    ],
+    "quote": {
+      "text": "Only the spider is safe in her web.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/60.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 60000,
@@ -26583,12 +26617,12 @@
         "iconUrl": "/assets/abilities/Evelynn_r.png"
       }
     ],
-    "emojis": [
-      "😈",
-      "💋",
-      "🌫️",
-      "☠️"
-    ],
+    "quote": {
+      "text": "You know you want me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/28.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 28000,
@@ -28090,12 +28124,12 @@
         "iconUrl": "/assets/abilities/Ezreal_r.png"
       }
     ],
-    "emojis": [
-      "🧤",
-      "🏺",
-      "🌀",
-      "🎯"
-    ],
+    "quote": {
+      "text": "Time for a true display of skill!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/81.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 81000,
@@ -31296,12 +31330,19 @@
         "iconUrl": "/assets/abilities/Fiddlesticks_r.png"
       }
     ],
+    "quote": {
+      "text": "Fear...",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/9.ogg"
+    },
     "emojis": [
       "🌾",
-      "🐦‍⬛",
       "😱",
-      "🪓"
+      "🔪",
+      "🌑",
+      "👁️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "db463138e100fa2d",
     "skins": [
       {
         "id": 9000,
@@ -32487,12 +32528,12 @@
         "iconUrl": "/assets/abilities/Fiora_r.png"
       }
     ],
-    "emojis": [
-      "🤺",
-      "🎯",
-      "4️⃣",
-      "🛡️"
-    ],
+    "quote": {
+      "text": "I long for a worthy opponent.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/114.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 114000,
@@ -32813,12 +32854,12 @@
         "iconUrl": "/assets/abilities/Fizz_r.png"
       }
     ],
-    "emojis": [
-      "🌊",
-      "🔱",
-      "🦈",
-      "🐟"
-    ],
+    "quote": {
+      "text": "Let me at 'em!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/105.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 105000,
@@ -33095,12 +33136,19 @@
         "iconUrl": "/assets/abilities/Galio_r.png"
       }
     ],
+    "quote": {
+      "text": "Time to make an impact!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/3.ogg"
+    },
     "emojis": [
       "🗿",
-      "🛡️",
-      "⬇️",
-      "💥"
+      "💨",
+      "🆘",
+      "⚖️",
+      "💪"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "a7284084ebd4de7b",
     "skins": [
       {
         "id": 3000,
@@ -35112,12 +35160,12 @@
         "iconUrl": "/assets/abilities/Gangplank_r.png"
       }
     ],
-    "emojis": [
-      "🏴‍☠️",
-      "🍊",
-      "🛢️",
-      "💣"
-    ],
+    "quote": {
+      "text": "Neither the flames nor the depths could claim me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/41.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 41000,
@@ -37414,12 +37462,12 @@
         "iconUrl": "/assets/abilities/Garen_r.png"
       }
     ],
-    "emojis": [
-      "🛡️",
-      "🗡️",
-      "🌀",
-      "⚖️"
-    ],
+    "quote": {
+      "text": "My heart and sword always for Demacia.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/86.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 86000,
@@ -38754,12 +38802,18 @@
         "iconUrl": "/assets/abilities/Gnar_r.png"
       }
     ],
+    "quote": {
+      "text": "Gnar gada!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/150.ogg"
+    },
     "emojis": [
-      "🧒",
-      "🧊",
-      "🪃",
-      "👹"
+      "🦴",
+      "🐒",
+      "🪨",
+      "💢"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "b09e4fd04b2137ea",
     "skins": [
       {
         "id": 150000,
@@ -39124,12 +39178,12 @@
         "iconUrl": "/assets/abilities/Gragas_r.png"
       }
     ],
-    "emojis": [
-      "🍺",
-      "🛢️",
-      "🤼",
-      "💥"
-    ],
+    "quote": {
+      "text": "If you're buying, I'm in!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/79.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 79000,
@@ -39376,12 +39430,12 @@
         "iconUrl": "/assets/abilities/Graves_r.png"
       }
     ],
-    "emojis": [
-      "🔫",
-      "🔄",
-      "🌫️",
-      "💥"
-    ],
+    "quote": {
+      "text": "Dead man walking.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/104.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 104000,
@@ -40263,12 +40317,18 @@
         "iconUrl": "/assets/abilities/Gwen_r.png"
       }
     ],
+    "quote": {
+      "text": "Head high, chin up, scissors ready!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/887.ogg"
+    },
     "emojis": [
+      "👧",
       "🧵",
-      "✂️",
-      "🪡",
-      "🌫️"
+      "👗",
+      "✂️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "8bce9f557dd6bad2",
     "skins": [
       {
         "id": 887000,
@@ -40902,12 +40962,18 @@
         "iconUrl": "/assets/abilities/Hecarim_r.png"
       }
     ],
+    "quote": {
+      "text": "Behold the might of the Shadow Isles.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/120.ogg"
+    },
     "emojis": [
-      "🐴",
-      "👻",
-      "🏇",
-      "🌫️"
+      "🐎",
+      "🔥",
+      "⚔️",
+      "👻"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "5062ee89c89a6730",
     "skins": [
       {
         "id": 120000,
@@ -41169,12 +41235,18 @@
         "iconUrl": "/assets/abilities/Heimerdinger_r.png"
       }
     ],
+    "quote": {
+      "text": "Order, entropy, a never-ending cycle.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/74.ogg"
+    },
     "emojis": [
-      "🔬",
-      "🗼",
+      "🔨",
+      "🪛",
       "🚀",
-      "💣"
+      "🧠"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "22e290053889d18c",
     "skins": [
       {
         "id": 74000,
@@ -42239,12 +42311,12 @@
         "iconUrl": "/assets/abilities/Hwei_r.png"
       }
     ],
-    "emojis": [
-      "🎨",
-      "🔥",
-      "😌",
-      "🌀"
-    ],
+    "quote": {
+      "text": "Pain, painted in every hue.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/910.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 910000,
@@ -42360,13 +42432,19 @@
         "iconUrl": "/assets/abilities/Illaoi_r.png"
       }
     ],
+    "quote": {
+      "text": "I'm not big on sermons; broken bones teach better lessons.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/420.ogg"
+    },
     "emojis": [
-      "🌊",
-      "🗿",
+      "💪",
       "🐙",
-      "👻",
-      "💪"
+      "⚓",
+      "💥",
+      "👁️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "7f7c50f987c058b0",
     "skins": [
       {
         "id": 420000,
@@ -43424,12 +43502,18 @@
         "iconUrl": "/assets/abilities/Irelia_r.png"
       }
     ],
+    "quote": {
+      "text": "Fight for the First Lands!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/39.ogg"
+    },
     "emojis": [
-      "🗡️",
+      "⚔️",
       "💃",
-      "👯",
-      "🧱"
+      "🏮",
+      "🇮🇨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "69c420a19b07e789",
     "skins": [
       {
         "id": 39000,
@@ -45285,12 +45369,19 @@
         "iconUrl": "/assets/abilities/Ivern_r.png"
       }
     ],
+    "quote": {
+      "text": "My favorite color is spring.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/427.ogg"
+    },
     "emojis": [
       "🌳",
+      "😊",
+      "🍄",
       "🌼",
-      "🪨",
-      "🛡️"
+      "🤝"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "e70b72601bdf7331",
     "skins": [
       {
         "id": 427000,
@@ -46736,12 +46827,18 @@
         "iconUrl": "/assets/abilities/Janna_r.png"
       }
     ],
+    "quote": {
+      "text": "The tempest is at your command.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/40.ogg"
+    },
     "emojis": [
       "🌪️",
-      "🙏",
-      "🛡️",
-      "🌀"
+      "💨",
+      "🧚‍♀️",
+      "🪄"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "9624686c5f65209b",
     "skins": [
       {
         "id": 40000,
@@ -47226,13 +47323,19 @@
         "iconUrl": "/assets/abilities/JarvanIV_r.png"
       }
     ],
+    "quote": {
+      "text": "By my will, this shall be finished!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/59.ogg"
+    },
     "emojis": [
+      "⚔️",
       "👑",
-      "🚩",
       "🐉",
       "🛡️",
-      "⭕"
+      "💛"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "4828d8930c9d1cba",
     "skins": [
       {
         "id": 59000,
@@ -47506,13 +47609,12 @@
         "iconUrl": "/assets/abilities/Jax_r.png"
       }
     ],
-    "emojis": [
-      "🏮",
-      "⚔️",
-      "🦘",
-      "🛡️",
-      "🔥"
-    ],
+    "quote": {
+      "text": "Let's do this!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/24.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 24000,
@@ -48251,13 +48353,12 @@
         "iconUrl": "/assets/abilities/Jayce_r.png"
       }
     ],
-    "emojis": [
-      "🔨",
-      "🔫",
-      "🔄",
-      "⚡",
-      "🚪"
-    ],
+    "quote": {
+      "text": "I fight for a brighter tomorrow.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/126.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 126000,
@@ -48568,13 +48669,18 @@
         "iconUrl": "/assets/abilities/Jhin_r.png"
       }
     ],
+    "quote": {
+      "text": "In carnage, I bloom, like a flower in the dawn.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/202.ogg"
+    },
     "emojis": [
-      "4️⃣",
       "🎭",
-      "🌹",
       "🔫",
-      "🎬"
+      "🎻",
+      "💀"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "80ed5d567f35bebf",
     "skins": [
       {
         "id": 202000,
@@ -50193,13 +50299,12 @@
         "iconUrl": "/assets/abilities/Jinx_r.png"
       }
     ],
-    "emojis": [
-      "🚀",
-      "🔫",
-      "🦷",
-      "💣",
-      "⚡"
-    ],
+    "quote": {
+      "text": "Rules are made to be broken. Like buildings! Or people!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/222.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 222000,
@@ -51618,12 +51723,12 @@
         "iconUrl": "/assets/abilities/KSante_r.png"
       }
     ],
-    "emojis": [
-      "🏜️",
-      "🥊",
-      "🔄",
-      "🧱"
-    ],
+    "quote": {
+      "text": "Better to fight than to live in fear.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/897.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 897000,
@@ -53387,13 +53492,12 @@
         "iconUrl": "/assets/abilities/Kaisa_r.png"
       }
     ],
-    "emojis": [
-      "🐚",
-      "🧬",
-      "🔄",
-      "🔫",
-      "🎯"
-    ],
+    "quote": {
+      "text": "Are you the hunter... or the prey?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/145.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 145000,
@@ -54137,13 +54241,18 @@
         "iconUrl": "/assets/abilities/Kalista_r.png"
       }
     ],
+    "quote": {
+      "text": "Death to all betrayers.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/429.ogg"
+    },
     "emojis": [
-      "👻",
       "🗡️",
-      "🤝",
-      "🦘",
-      "🌫️"
+      "👻",
+      "💔",
+      "🩸"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "750e83c600f79284",
     "skins": [
       {
         "id": 429000,
@@ -55047,13 +55156,18 @@
         "iconUrl": "/assets/abilities/Karma_r.png"
       }
     ],
+    "quote": {
+      "text": "Always trust your spirit.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/43.ogg"
+    },
     "emojis": [
-      "♻️",
+      "☯️",
+      "⛓️",
       "🙏",
-      "🔥",
-      "🛡️",
-      "🔗"
+      "👩‍🦱"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "a67c44782dd27f09",
     "skins": [
       {
         "id": 43000,
@@ -55812,12 +55926,12 @@
         "iconUrl": "/assets/abilities/Karthus_r.png"
       }
     ],
-    "emojis": [
-      "💀",
-      "🎶",
-      "🪦",
-      "🌫️"
-    ],
+    "quote": {
+      "text": "Agony, ecstasy, peace. Every passing has a beauty all its own.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/30.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 30000,
@@ -55987,13 +56101,12 @@
         "iconUrl": "/assets/abilities/Kassadin_r.png"
       }
     ],
-    "emojis": [
-      "🕳️",
-      "👾",
-      "🗡️",
-      "🌀",
-      "🛡️"
-    ],
+    "quote": {
+      "text": "The balance of power must be preserved.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/38.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 38000,
@@ -56697,13 +56810,18 @@
         "iconUrl": "/assets/abilities/Katarina_r.png"
       }
     ],
+    "quote": {
+      "text": "Violence solves everything!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/55.ogg"
+    },
     "emojis": [
-      "🗡️",
-      "🪃",
-      "🌀",
-      "🔄",
-      "🩸"
+      "🔪",
+      "🔪",
+      "👩‍🦰",
+      "💃"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "250d5548a43db682",
     "skins": [
       {
         "id": 55000,
@@ -58094,13 +58212,19 @@
         "iconUrl": "/assets/abilities/Kayle_r.png"
       }
     ],
+    "quote": {
+      "text": "They shall tremble at my perfection.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/10.ogg"
+    },
     "emojis": [
-      "👼",
-      "🪽",
+      "😇",
+      "🗡️",
+      "✨",
       "🔥",
-      "⚖️",
-      "🛡️"
+      "🕊️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "48f7ffee51c1faf2",
     "skins": [
       {
         "id": 10000,
@@ -61813,13 +61937,19 @@
         "iconUrl": "/assets/abilities/Kayn_r.png"
       }
     ],
+    "quote": {
+      "text": "Will you prove worthy? Probably not.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/141.ogg"
+    },
     "emojis": [
       "🌑",
       "🗡️",
-      "🔄",
-      "😈",
-      "🧱"
+      "👤",
+      "🔵",
+      "🔴"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "98bd253a16ef3392",
     "skins": [
       {
         "id": 141000,
@@ -62017,13 +62147,19 @@
         "iconUrl": "/assets/abilities/Kennen_r.png"
       }
     ],
+    "quote": {
+      "text": "The eyes never lie.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/85.ogg"
+    },
     "emojis": [
-      "🐹",
-      "🥷",
       "⚡",
-      "🎯",
-      "🌀"
+      "🐾",
+      "🥷",
+      "🌩️",
+      "👀"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "b31698dc2103c1f7",
     "skins": [
       {
         "id": 85000,
@@ -62334,13 +62470,18 @@
         "iconUrl": "/assets/abilities/Khazix_r.png"
       }
     ],
+    "quote": {
+      "text": "Change is good.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/121.ogg"
+    },
     "emojis": [
       "🦗",
-      "🧬",
-      "🎯",
-      "🫥",
-      "🦘"
+      "🔪",
+      "🩸",
+      "🌌"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "00efba2aaf8ba174",
     "skins": [
       {
         "id": 121000,
@@ -63110,13 +63251,12 @@
         "iconUrl": "/assets/abilities/Kindred_r.png"
       }
     ],
-    "emojis": [
-      "🐑",
-      "🐺",
-      "🏹",
-      "☯️",
-      "⏳"
-    ],
+    "quote": {
+      "text": "Never one... without the other.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/203.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 203000,
@@ -64837,12 +64977,19 @@
         "iconUrl": "/assets/abilities/Kled_r.png"
       }
     ],
+    "quote": {
+      "text": "I find courage unpredictable. It's total insanity you can rely on!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/240.ogg"
+    },
     "emojis": [
-      "🦎",
-      "🪤",
-      "🔄",
-      "📣"
+      "🐎",
+      "🦊",
+      "🤪",
+      "😡",
+      "❗"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "b9dee4775a1921e1",
     "skins": [
       {
         "id": 240000,
@@ -65071,13 +65218,12 @@
         "iconUrl": "/assets/abilities/KogMaw_r.png"
       }
     ],
-    "emojis": [
-      "👾",
-      "👄",
-      "🧪",
-      "💥",
-      "🎯"
-    ],
+    "quote": {
+      "text": "Time to feast!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/96.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 96000,
@@ -65796,14 +65942,18 @@
         "iconUrl": "/assets/abilities/Leblanc_r.png"
       }
     ],
+    "quote": {
+      "text": "The Black Rose shall bloom once more.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/7.ogg"
+    },
     "emojis": [
-      "🌹",
-      "🎭",
-      "🪞",
-      "💨",
-      "🔗",
-      "🔁"
+      "🧙‍♀️",
+      "🧙‍♀️",
+      "🪄",
+      "⛓️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "7d4290d2e87c3962",
     "skins": [
       {
         "id": 7000,
@@ -66040,13 +66190,12 @@
         "iconUrl": "/assets/abilities/LeeSin_r.png"
       }
     ],
-    "emojis": [
-      "🦯",
-      "🥋",
-      "🔊",
-      "🐉",
-      "🦶"
-    ],
+    "quote": {
+      "text": "Your will, my hands.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/64.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 64000,
@@ -68017,13 +68166,12 @@
         "iconUrl": "/assets/abilities/Leona_r.png"
       }
     ],
-    "emojis": [
-      "☀️",
-      "🛡️",
-      "🗡️",
-      "🌘",
-      "🏔️"
-    ],
+    "quote": {
+      "text": "The dawn has arrived.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/89.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 89000,
@@ -69492,13 +69640,19 @@
         "iconUrl": "/assets/abilities/Lillia_r.png"
       }
     ],
+    "quote": {
+      "text": "Eep! Can I really help... or am I just dreaming?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/876.ogg"
+    },
     "emojis": [
       "🦌",
-      "🌸",
+      "🌙",
       "💤",
-      "🎳",
-      "🌙"
+      "🌸",
+      "💗"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "acd25dbc3d9ae4bd",
     "skins": [
       {
         "id": 876000,
@@ -70131,13 +70285,18 @@
         "iconUrl": "/assets/abilities/Lissandra_r.png"
       }
     ],
+    "quote": {
+      "text": "I will bury the world in ice.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/127.ogg"
+    },
     "emojis": [
       "❄️",
+      "👑",
       "🧊",
-      "👁️",
-      "🌀",
-      "🧙"
+      "😈"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "9f7df52b1faa75b9",
     "skins": [
       {
         "id": 127000,
@@ -70427,13 +70586,12 @@
         "iconUrl": "/assets/abilities/Locke_r.png"
       }
     ],
-    "emojis": [
-      "🌫️",
-      "👻",
-      "⛓️",
-      "📌",
-      "🔥"
-    ],
+    "quote": {
+      "text": "Purge the shadow, salt the earth.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/805.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 805000,
@@ -70542,13 +70700,19 @@
         "iconUrl": "/assets/abilities/Lucian_r.png"
       }
     ],
+    "quote": {
+      "text": "Everybody dies. Some just need a little help.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/236.ogg"
+    },
     "emojis": [
       "🔫",
-      "👻",
-      "💨",
+      "💡",
+      "😎",
       "⚡",
-      "🖤"
+      "👊"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "19134068b3567fbb",
     "skins": [
       {
         "id": 236000,
@@ -72272,13 +72436,12 @@
         "iconUrl": "/assets/abilities/Lulu_r.png"
       }
     ],
-    "emojis": [
-      "🧚",
-      "✨",
-      "🍄",
-      "⬆️",
-      "🔄"
-    ],
+    "quote": {
+      "text": "Pleased to meet you!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/117.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 117000,
@@ -72557,13 +72720,18 @@
         "iconUrl": "/assets/abilities/Lux_r.png"
       }
     ],
+    "quote": {
+      "text": "Tactical decision, summoner.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/99.ogg"
+    },
     "emojis": [
-      "💡",
-      "🔗",
-      "🛡️",
-      "⚡",
-      "🌈"
+      "🌟",
+      "✨",
+      "🔦",
+      "🙂"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "f65d7d3ad93f97d7",
     "skins": [
       {
         "id": 99000,
@@ -76036,12 +76204,18 @@
         "iconUrl": "/assets/abilities/Malphite_r.png"
       }
     ],
+    "quote": {
+      "text": "Rock solid.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/54.ogg"
+    },
     "emojis": [
       "🪨",
-      "🛡️",
+      "😡",
       "💥",
       "⬆️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "b71c02661ec322a0",
     "skins": [
       {
         "id": 54000,
@@ -76250,12 +76424,12 @@
         "iconUrl": "/assets/abilities/Malzahar_r.png"
       }
     ],
-    "emojis": [
-      "🕳️",
-      "🐜",
-      "🧠",
-      "⛓️"
-    ],
+    "quote": {
+      "text": "Oblivion awaits.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/90.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 90000,
@@ -76500,12 +76674,19 @@
         "iconUrl": "/assets/abilities/Maokai_r.png"
       }
     ],
+    "quote": {
+      "text": "I would end this burden, but it always returns.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/57.ogg"
+    },
     "emojis": [
+      "🌲",
       "🌳",
-      "🌱",
-      "🌫️",
-      "👻"
+      "💧",
+      "🍃",
+      "😡"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "f932ee37fd2b1dec",
     "skins": [
       {
         "id": 57000,
@@ -77357,13 +77538,19 @@
         "iconUrl": "/assets/abilities/MasterYi_r.png"
       }
     ],
+    "quote": {
+      "text": "My blade is yours.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/11.ogg"
+    },
     "emojis": [
-      "🗡️",
-      "2️⃣",
-      "🫥",
-      "🧘",
+      "🧘‍♂️",
+      "⚔️",
+      "🥷",
+      "🏃‍♂️",
       "💨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "e56d80722990d749",
     "skins": [
       {
         "id": 11000,
@@ -78629,12 +78816,12 @@
         "iconUrl": "/assets/abilities/Mel_r.png"
       }
     ],
-    "emojis": [
-      "🌹",
-      "🪞",
-      "☀️",
-      "🪤"
-    ],
+    "quote": {
+      "text": "Gold bends, but it does not break.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/800.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 800000,
@@ -78749,12 +78936,12 @@
         "iconUrl": "/assets/abilities/Milio_r.png"
       }
     ],
-    "emojis": [
-      "🔥",
-      "⚽",
-      "🩹",
-      "🤗"
-    ],
+    "quote": {
+      "text": "Adventure is out there, and I'm gonna find it!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/902.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 902000,
@@ -79385,13 +79572,12 @@
         "iconUrl": "/assets/abilities/MissFortune_r.png"
       }
     ],
-    "emojis": [
-      "🏴‍☠️",
-      "🔫",
-      "💋",
-      "🌧️",
-      "💥"
-    ],
+    "quote": {
+      "text": "Fortune doesn't favor fools.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/21.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 21000,
@@ -81310,13 +81496,18 @@
         "iconUrl": "/assets/abilities/Mordekaiser_r.png"
       }
     ],
+    "quote": {
+      "text": "Destiny. Domination. Deceit.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/82.ogg"
+    },
     "emojis": [
-      "⚙️",
-      "🔨",
-      "👻",
-      "🌀",
-      "⛓️"
+      "🪓",
+      "💀",
+      "🕸️",
+      "🎵"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "7c8603248a9146e3",
     "skins": [
       {
         "id": 82000,
@@ -82472,13 +82663,12 @@
         "iconUrl": "/assets/abilities/Morgana_r.png"
       }
     ],
-    "emojis": [
-      "🪽",
-      "⛓️",
-      "🖤",
-      "🛡️",
-      "🔥"
-    ],
+    "quote": {
+      "text": "Share in my torment!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/25.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 25000,
@@ -83787,13 +83977,12 @@
         "iconUrl": "/assets/abilities/Naafiri_r.png"
       }
     ],
-    "emojis": [
-      "🐕",
-      "🗡️",
-      "👥",
-      "🩸",
-      "🏜️"
-    ],
+    "quote": {
+      "text": "We give chase!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/950.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 950000,
@@ -84479,12 +84668,12 @@
         "iconUrl": "/assets/abilities/Nami_r.png"
       }
     ],
-    "emojis": [
-      "🧜‍♀️",
-      "🫧",
-      "🌊",
-      "🪄"
-    ],
+    "quote": {
+      "text": "I decide what the tide will bring.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/267.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 267000,
@@ -84800,12 +84989,18 @@
         "iconUrl": "/assets/abilities/Nasus_r.png"
       }
     ],
+    "quote": {
+      "text": "The cycle of life and death continues. We will live, they will die.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/75.ogg"
+    },
     "emojis": [
       "🐕",
-      "🏜️",
-      "📈",
-      "🌪️"
+      "👨‍🌾",
+      "🪓",
+      "🏜️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "befd8ae45ffdd4b0",
     "skins": [
       {
         "id": 75000,
@@ -85329,13 +85524,12 @@
         "iconUrl": "/assets/abilities/Nautilus_r.png"
       }
     ],
-    "emojis": [
-      "⚓",
-      "🌊",
-      "🪝",
-      "🤿",
-      "⬆️"
-    ],
+    "quote": {
+      "text": "Beware the depths.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/111.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 111000,
@@ -85551,12 +85745,19 @@
         "iconUrl": "/assets/abilities/Neeko_r.png"
       }
     ],
+    "quote": {
+      "text": "Neeko is best decision!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/518.ogg"
+    },
     "emojis": [
       "🦎",
-      "🎭",
-      "👥",
+      "🌱",
+      "🙂",
+      "🙁",
       "🌸"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "9c52faaaf207bd1b",
     "skins": [
       {
         "id": 518000,
@@ -86267,12 +86468,12 @@
         "iconUrl": "/assets/abilities/Nidalee_r.png"
       }
     ],
-    "emojis": [
-      "🐆",
-      "🌿",
-      "🎯",
-      "🐾"
-    ],
+    "quote": {
+      "text": "They will fear the wild.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/76.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 76000,
@@ -87054,12 +87255,12 @@
         "iconUrl": "/assets/abilities/Nilah_r.png"
       }
     ],
-    "emojis": [
-      "😄",
-      "👹",
-      "🌊",
-      "🌀"
-    ],
+    "quote": {
+      "text": "The world is a tapestry of joy and suffering. I shall embrace it all!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/895.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 895000,
@@ -87726,13 +87927,12 @@
         "iconUrl": "/assets/abilities/Nocturne_r.png"
       }
     ],
-    "emojis": [
-      "😱",
-      "🌑",
-      "🙈",
-      "🗡️",
-      "💨"
-    ],
+    "quote": {
+      "text": "Darkness...",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/56.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 56000,
@@ -88112,13 +88312,12 @@
         "iconUrl": "/assets/abilities/Nunu_r.png"
       }
     ],
-    "emojis": [
-      "🧒",
-      "⛄",
-      "❄️",
-      "⚪",
-      "🌨️"
-    ],
+    "quote": {
+      "text": "Every adventure is better with a friend!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/20.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 20000,
@@ -90337,13 +90536,12 @@
         "iconUrl": "/assets/abilities/Olaf_r.png"
       }
     ],
-    "emojis": [
-      "🪓",
-      "💀",
-      "💢",
-      "🚫",
-      "🩸"
-    ],
+    "quote": {
+      "text": "Leave nothing behind!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/2.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 2000,
@@ -90693,13 +90891,19 @@
         "iconUrl": "/assets/abilities/Orianna_r.png"
       }
     ],
+    "quote": {
+      "text": "We will kill your enemies. That will be fun.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/61.ogg"
+    },
     "emojis": [
       "⚙️",
-      "⚽",
-      "🎛️",
-      "🌪️",
-      "🛡️"
+      "🔮",
+      "♻️",
+      "👩",
+      "🤖"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "50b11b61c09cfe21",
     "skins": [
       {
         "id": 61000,
@@ -90941,13 +91145,18 @@
         "iconUrl": "/assets/abilities/Ornn_r.png"
       }
     ],
+    "quote": {
+      "text": "Name's Ornn. No further pleasantries needed.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/516.ogg"
+    },
     "emojis": [
-      "🐏",
       "🔨",
-      "🌋",
-      "🛠️",
-      "🧱"
+      "🔥",
+      "🐏",
+      "🏔️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "7dcdcd67e1474956",
     "skins": [
       {
         "id": 516000,
@@ -91835,13 +92044,12 @@
         "iconUrl": "/assets/abilities/Pantheon_r.png"
       }
     ],
-    "emojis": [
-      "🛡️",
-      "🔱",
-      "☄️",
-      "⬇️",
-      "💥"
-    ],
+    "quote": {
+      "text": "In battle, we are reborn.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/80.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 80000,
@@ -92518,13 +92726,12 @@
         "iconUrl": "/assets/abilities/Poppy_r.png"
       }
     ],
-    "emojis": [
-      "🔨",
-      "🛡️",
-      "🔄",
-      "🏰",
-      "⛔"
-    ],
+    "quote": {
+      "text": "I'm no hero. Just a Yordle with a hammer.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/78.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 78000,
@@ -93233,13 +93440,18 @@
         "iconUrl": "/assets/abilities/Pyke_r.png"
       }
     ],
+    "quote": {
+      "text": "Sink 'em all.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/555.ogg"
+    },
     "emojis": [
-      "🪝",
-      "🌊",
+      "🎣",
       "👻",
-      "🫥",
-      "☠️"
+      "🔪",
+      "🏴‍☠️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "9aae382ae1ccb4d8",
     "skins": [
       {
         "id": 555000,
@@ -95791,14 +96003,18 @@
         "iconUrl": "/assets/abilities/Qiyana_r.png"
       }
     ],
+    "quote": {
+      "text": "You may now revere me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/246.ogg"
+    },
     "emojis": [
-      "🌿",
-      "💧",
-      "🪨",
-      "💍",
-      "💥",
-      "👑"
+      "👑",
+      "🌪️",
+      "🌊",
+      "🪨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "1a068f5bd0ac7a2e",
     "skins": [
       {
         "id": 246000,
@@ -96574,13 +96790,12 @@
         "iconUrl": "/assets/abilities/Quinn_r.png"
       }
     ],
-    "emojis": [
-      "🦅",
-      "🏹",
-      "👁️",
-      "💨",
-      "🛡️"
-    ],
+    "quote": {
+      "text": "Justice takes wing.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/133.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 133000,
@@ -96835,12 +97050,18 @@
         "iconUrl": "/assets/abilities/Rakan_r.png"
       }
     ],
+    "quote": {
+      "text": "Let's dance!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/497.ogg"
+    },
     "emojis": [
       "🪶",
-      "🕺",
-      "💘",
-      "💨"
+      "💃",
+      "💞",
+      "✨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "6da916ed13415226",
     "skins": [
       {
         "id": 497000,
@@ -99497,13 +99718,12 @@
         "iconUrl": "/assets/abilities/Rammus_r.png"
       }
     ],
-    "emojis": [
-      "🦔",
-      "🛡️",
-      "⚽",
-      "🔄",
-      "👍"
-    ],
+    "quote": {
+      "text": "Alright.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/33.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 33000,
@@ -99682,13 +99902,12 @@
         "iconUrl": "/assets/abilities/RekSai_r.png"
       }
     ],
-    "emojis": [
-      "🏜️",
-      "🦈",
-      "🕳️",
-      "👂",
-      "🦷"
-    ],
+    "quote": {
+      "text": "*Terrifying burrowing screech*",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/421.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 421000,
@@ -99826,13 +100045,12 @@
         "iconUrl": "/assets/abilities/Rell_r.png"
       }
     ],
-    "emojis": [
-      "🧲",
-      "🐴",
-      "🛡️",
-      "⛓️",
-      "🔨"
-    ],
+    "quote": {
+      "text": "Break their armor. Break their wills.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/526.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 526000,
@@ -100438,14 +100656,12 @@
         "iconUrl": "/assets/abilities/Renata_r.png"
       }
     ],
-    "emojis": [
-      "💼",
-      "🧪",
-      "🦾",
-      "🤝",
-      "🔄",
-      "☣️"
-    ],
+    "quote": {
+      "text": "Work for me, or work against me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/888.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 888000,
@@ -101093,13 +101309,12 @@
         "iconUrl": "/assets/abilities/Renekton_r.png"
       }
     ],
-    "emojis": [
-      "🐊",
-      "🏜️",
-      "😡",
-      "🗡️",
-      "☀️"
-    ],
+    "quote": {
+      "text": "As I live, all will die!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/58.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 58000,
@@ -101919,13 +102134,18 @@
         "iconUrl": "/assets/abilities/Rengar_r.png"
       }
     ],
+    "quote": {
+      "text": "Tonight, we hunt!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/107.ogg"
+    },
     "emojis": [
       "🦁",
-      "🌿",
-      "🦴",
       "🔪",
+      "🌿",
       "👁️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "a70c79e1bbba9eec",
     "skins": [
       {
         "id": 107000,
@@ -102223,13 +102443,12 @@
         "iconUrl": "/assets/abilities/Riven_r.png"
       }
     ],
-    "emojis": [
-      "🗡️",
-      "🛡️",
-      "💨",
-      "🧩",
-      "🌪️"
-    ],
+    "quote": {
+      "text": "What is broken can be reforged.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/92.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 92000,
@@ -104114,13 +104333,19 @@
         "iconUrl": "/assets/abilities/Rumble_r.png"
       }
     ],
+    "quote": {
+      "text": "Let's get in the fight!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/68.ogg"
+    },
     "emojis": [
+      "🔥",
       "🤖",
       "⚙️",
-      "🔥",
-      "🪝",
+      "😡",
       "🚀"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "3c5a6c5ac4b56f38",
     "skins": [
       {
         "id": 68000,
@@ -104597,13 +104822,12 @@
         "iconUrl": "/assets/abilities/Ryze_r.png"
       }
     ],
-    "emojis": [
-      "📜",
-      "🌍",
-      "🔒",
-      "🌀",
-      "⚡"
-    ],
+    "quote": {
+      "text": "A step ahead of cataclysm.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/13.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 13000,
@@ -105579,13 +105803,12 @@
         "iconUrl": "/assets/abilities/Samira_r.png"
       }
     ],
-    "emojis": [
-      "🏜️",
-      "🔫",
-      "🗡️",
-      "💃",
-      "🌹"
-    ],
+    "quote": {
+      "text": "You want style? You found her.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/360.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 360000,
@@ -106823,13 +107046,12 @@
         "iconUrl": "/assets/abilities/Sejuani_r.png"
       }
     ],
-    "emojis": [
-      "🐗",
-      "❄️",
-      "⛓️",
-      "🛡️",
-      "🏔️"
-    ],
+    "quote": {
+      "text": "Trust nothing but your strength.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/113.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 113000,
@@ -107231,13 +107453,18 @@
         "iconUrl": "/assets/abilities/Senna_r.png"
       }
     ],
+    "quote": {
+      "text": "No one fights alone in the Mist.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/235.ogg"
+    },
     "emojis": [
-      "🌫️",
-      "👻",
       "🔫",
-      "🕯️",
-      "⛓️"
+      "🕵️‍♀️",
+      "🏮",
+      "👩🏿"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "8c7b06117ea61cdd",
     "skins": [
       {
         "id": 235000,
@@ -108618,13 +108845,19 @@
         "iconUrl": "/assets/abilities/Seraphine_r.png"
       }
     ],
+    "quote": {
+      "text": "Let's change the world!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/147.ogg"
+    },
     "emojis": [
       "🎤",
-      "🪩",
-      "🔁",
-      "👥",
-      "💖"
+      "💗",
+      "🎶",
+      "✨",
+      "📱"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "12065a25e8bbb5a3",
     "skins": [
       {
         "id": 147000,
@@ -109914,13 +110147,18 @@
         "iconUrl": "/assets/abilities/Sett_r.png"
       }
     ],
+    "quote": {
+      "text": "I'm the boss. I'm the one who runs this place.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/875.ogg"
+    },
     "emojis": [
-      "🏟️",
       "🥊",
-      "🤼",
       "💪",
-      "💥"
+      "🐗",
+      "💰"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "901001d0e163497f",
     "skins": [
       {
         "id": 875000,
@@ -111283,13 +111521,12 @@
         "iconUrl": "/assets/abilities/Shaco_r.png"
       }
     ],
-    "emojis": [
-      "🤡",
-      "📦",
-      "🔪",
-      "👥",
-      "🫥"
-    ],
+    "quote": {
+      "text": "How about a magic trick?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/35.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 35000,
@@ -111528,13 +111765,18 @@
         "iconUrl": "/assets/abilities/Shen_r.png"
       }
     ],
+    "quote": {
+      "text": "A demonstration of superior judgment.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/98.ogg"
+    },
     "emojis": [
       "🥷",
-      "👁️",
-      "🗡️",
       "🛡️",
-      "🌀"
+      "⚔️",
+      "☯️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "4109cf8d40d726d8",
     "skins": [
       {
         "id": 98000,
@@ -111776,13 +112018,19 @@
         "iconUrl": "/assets/abilities/Shyvana_r.png"
       }
     ],
+    "quote": {
+      "text": "They are nothing before me.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/102.ogg"
+    },
     "emojis": [
       "🐉",
       "🔥",
-      "🔄",
-      "🪽",
-      "🛡️"
+      "💢",
+      "👑",
+      "💜"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "0c7e79584f1abef2",
     "skins": [
       {
         "id": 102000,
@@ -112033,12 +112281,19 @@
         "iconUrl": "/assets/abilities/Singed_r.png"
       }
     ],
+    "quote": {
+      "text": "How about a drink?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/27.ogg"
+    },
     "emojis": [
-      "🧪",
       "☠️",
-      "🏃",
-      "🌀"
+      "🧪",
+      "💨",
+      "🤢",
+      "🏃‍♂️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "672982a500e222b6",
     "skins": [
       {
         "id": 27000,
@@ -112231,13 +112486,12 @@
         "iconUrl": "/assets/abilities/Sion_r.png"
       }
     ],
-    "emojis": [
-      "🧟",
-      "🪓",
-      "🚂",
-      "💀",
-      "💥"
-    ],
+    "quote": {
+      "text": "Rest is for the living!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/14.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 14000,
@@ -113600,13 +113854,12 @@
         "iconUrl": "/assets/abilities/Sivir_r.png"
       }
     ],
-    "emojis": [
-      "🪃",
-      "🏜️",
-      "🛡️",
-      "💰",
-      "💨"
-    ],
+    "quote": {
+      "text": "I always take my toll. Blood, or gold.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/15.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 15000,
@@ -114637,13 +114890,12 @@
         "iconUrl": "/assets/abilities/Skarner_r.png"
       }
     ],
-    "emojis": [
-      "🦂",
-      "🪨",
-      "📳",
-      "🪝",
-      "🏔️"
-    ],
+    "quote": {
+      "text": "The earth remembers.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/72.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 72000,
@@ -115148,13 +115400,12 @@
         "iconUrl": "/assets/abilities/Smolder_r.png"
       }
     ],
-    "emojis": [
-      "🐉",
-      "🍼",
-      "🔥",
-      "🤧",
-      "🪽"
-    ],
+    "quote": {
+      "text": "I'm a dragon, rawr!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/901.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 901000,
@@ -115264,12 +115515,12 @@
         "iconUrl": "/assets/abilities/Sona_r.png"
       }
     ],
-    "emojis": [
-      "🎻",
-      "🤫",
-      "🎵",
-      "🔊"
-    ],
+    "quote": {
+      "text": "Only you can hear me, Summoner. What masterpiece shall we play today?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/37.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 37000,
@@ -116544,12 +116795,12 @@
         "iconUrl": "/assets/abilities/Soraka_r.png"
       }
     ],
-    "emojis": [
-      "⭐",
-      "🌌",
-      "🩹",
-      "🍌"
-    ],
+    "quote": {
+      "text": "Let me guide you.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/16.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 16000,
@@ -118024,13 +118275,12 @@
         "iconUrl": "/assets/abilities/Swain_r.png"
       }
     ],
-    "emojis": [
-      "🐦‍⬛",
-      "👁️",
-      "😈",
-      "🖐️",
-      "🩸"
-    ],
+    "quote": {
+      "text": "They are five steps from realizing: I am ten steps ahead.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/50.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 50000,
@@ -119204,13 +119454,18 @@
         "iconUrl": "/assets/abilities/Sylas_r.png"
       }
     ],
+    "quote": {
+      "text": "No more cages!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/517.ogg"
+    },
     "emojis": [
+      "©",
       "⛓️",
-      "🔄",
-      "⚡",
-      "✊",
-      "🗝️"
+      "😤",
+      "💨"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "b83e2b1d5456ddbc",
     "skins": [
       {
         "id": 517000,
@@ -120120,12 +120375,12 @@
         "iconUrl": "/assets/abilities/Syndra_r.png"
       }
     ],
-    "emojis": [
-      "🔮",
-      "🌀",
-      "🎯",
-      "👑"
-    ],
+    "quote": {
+      "text": "So much untapped power!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/134.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 134000,
@@ -120396,14 +120651,19 @@
         "iconUrl": "/assets/abilities/TahmKench_r.png"
       }
     ],
+    "quote": {
+      "text": "Call me king, call me demon. Water forgets the names of the drowned.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/223.ogg"
+    },
     "emojis": [
-      "🌊",
       "🐸",
-      "🎩",
-      "👅",
       "🍽️",
-      "🤝"
+      "👑",
+      "😏",
+      "🌊"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "2dba634f86634926",
     "skins": [
       {
         "id": 223000,
@@ -121348,13 +121608,12 @@
         "iconUrl": "/assets/abilities/Taliyah_r.png"
       }
     ],
-    "emojis": [
-      "🪨",
-      "🧶",
-      "🏄‍♀️",
-      "🧱",
-      "🏜️"
-    ],
+    "quote": {
+      "text": "Know the loom, be the stone.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/163.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 163000,
@@ -122703,13 +122962,19 @@
         "iconUrl": "/assets/abilities/Talon_r.png"
       }
     ],
+    "quote": {
+      "text": "Live and die by the blade.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/91.ogg"
+    },
     "emojis": [
       "🗡️",
-      "🥷",
-      "🧗",
-      "🌑",
-      "🩸"
+      "🩸",
+      "🏙️",
+      "🌒",
+      "👤"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "0cc6ea45d470af5a",
     "skins": [
       {
         "id": 91000,
@@ -122964,13 +123229,18 @@
         "iconUrl": "/assets/abilities/Taric_r.png"
       }
     ],
+    "quote": {
+      "text": "More than just precious stones, I bring you an ancient power.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/44.ogg"
+    },
     "emojis": [
       "💎",
-      "🛡️",
       "🔨",
-      "⭐",
-      "🤝"
+      "😏",
+      "🛡️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "90666a721e74b112",
     "skins": [
       {
         "id": 44000,
@@ -123792,13 +124062,12 @@
         "iconUrl": "/assets/abilities/Teemo_r.png"
       }
     ],
-    "emojis": [
-      "🍄",
-      "🎯",
-      "☠️",
-      "👒",
-      "🧭"
-    ],
+    "quote": {
+      "text": "Captain Teemo on duty!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/17.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 17000,
@@ -124936,14 +125205,18 @@
         "iconUrl": "/assets/abilities/Thresh_r.png"
       }
     ],
+    "quote": {
+      "text": "What delightful agony we shall inflict.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/412.ogg"
+    },
     "emojis": [
-      "👻",
+      "🔦",
       "⛓️",
-      "🏮",
-      "🪝",
       "💀",
-      "🔒"
+      "🕯️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "22aebe29e19d485f",
     "skins": [
       {
         "id": 412000,
@@ -126524,12 +126797,12 @@
         "iconUrl": "/assets/abilities/Tristana_r.png"
       }
     ],
-    "emojis": [
-      "🔫",
-      "🚀",
-      "💣",
-      "💨"
-    ],
+    "quote": {
+      "text": "I wanna shoot something!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/18.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 18000,
@@ -127961,13 +128234,18 @@
         "iconUrl": "/assets/abilities/Trundle_r.png"
       }
     ],
+    "quote": {
+      "text": "Time to troll!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/48.ogg"
+    },
     "emojis": [
       "🧌",
-      "🧊",
-      "🪵",
-      "🦷",
-      "👑"
+      "👑",
+      "🏰",
+      "⛰️"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "311e383897ba743a",
     "skins": [
       {
         "id": 48000,
@@ -128337,13 +128615,12 @@
         "iconUrl": "/assets/abilities/Tryndamere_r.png"
       }
     ],
-    "emojis": [
-      "⚔️",
-      "😡",
-      "♾️",
-      "❄️",
-      "👑"
-    ],
+    "quote": {
+      "text": "This'll be a slaughter.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/23.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 23000,
@@ -128617,13 +128894,18 @@
         "iconUrl": "/assets/abilities/TwistedFate_r.png"
       }
     ],
+    "quote": {
+      "text": "Lady Luck is smilin'.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/4.ogg"
+    },
     "emojis": [
-      "🎩",
-      "🎲",
-      "🃏",
+      "🎴",
+      "🤵",
       "💰",
-      "🌀"
+      "🔮"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "e4c4686a5be93771",
     "skins": [
       {
         "id": 4000,
@@ -128985,13 +129267,18 @@
         "iconUrl": "/assets/abilities/Twitch_r.png"
       }
     ],
+    "quote": {
+      "text": "I was hiding! Hehehe.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/29.ogg"
+    },
     "emojis": [
       "🐀",
-      "🧪",
-      "🏹",
-      "🧀",
-      "☣️"
+      "💉",
+      "💰",
+      "🧪"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "1fdc0ab2f611a6ae",
     "skins": [
       {
         "id": 29000,
@@ -129561,13 +129848,12 @@
         "iconUrl": "/assets/abilities/Udyr_r.png"
       }
     ],
-    "emojis": [
-      "🧘",
-      "🐯",
-      "🐢",
-      "🐻",
-      "🔥"
-    ],
+    "quote": {
+      "text": "Our path is made of iron will.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/77.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 77000,
@@ -130889,12 +131175,12 @@
         "iconUrl": "/assets/abilities/Urgot_r.png"
       }
     ],
-    "emojis": [
-      "🦿",
-      "⛓️",
-      "🔫",
-      "💀"
-    ],
+    "quote": {
+      "text": "You cannot know strength until you are broken.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/6.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 6000,
@@ -131980,13 +132266,12 @@
         "iconUrl": "/assets/abilities/Varus_r.png"
       }
     ],
-    "emojis": [
-      "🏹",
-      "☣️",
-      "👥",
-      "⛓️",
-      "🌿"
-    ],
+    "quote": {
+      "text": "The guilty will know agony.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/110.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 110000,
@@ -132710,13 +132995,12 @@
         "iconUrl": "/assets/abilities/Vayne_r.png"
       }
     ],
-    "emojis": [
-      "🏹",
-      "🥈",
-      "🧱",
-      "👹",
-      "🌙"
-    ],
+    "quote": {
+      "text": "Let us hunt those who have fallen to darkness.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/67.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 67000,
@@ -134404,13 +134688,12 @@
         "iconUrl": "/assets/abilities/Veigar_r.png"
       }
     ],
-    "emojis": [
-      "🧙‍♂️",
-      "😈",
-      "☄️",
-      "🔒",
-      "🕳️"
-    ],
+    "quote": {
+      "text": "Know that if the tables were turned, I would show you no mercy!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/45.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 45000,
@@ -134973,13 +135256,12 @@
         "iconUrl": "/assets/abilities/Velkoz_r.png"
       }
     ],
-    "emojis": [
-      "👁️",
-      "🦑",
-      "🔬",
-      "🕳️",
-      "☢️"
-    ],
+    "quote": {
+      "text": "Knowledge through disintegration.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/161.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 161000,
@@ -135279,12 +135561,12 @@
         "iconUrl": "/assets/abilities/Vex_r.png"
       }
     ],
-    "emojis": [
-      "😒",
-      "👤",
-      "😱",
-      "🛑"
-    ],
+    "quote": {
+      "text": "Ugh, do I have to?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/711.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 711000,
@@ -135943,13 +136225,19 @@
         "iconUrl": "/assets/abilities/Vi_r.png"
       }
     ],
+    "quote": {
+      "text": "Punch first. Ask questions while punching.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/254.ogg"
+    },
     "emojis": [
-      "🥊",
-      "🦾",
-      "🧱",
-      "🚓",
-      "⚙️"
+      "👊",
+      "💥",
+      "🔧",
+      "🎀",
+      "🚓"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "8a52ec36fab8adf6",
     "skins": [
       {
         "id": 254000,
@@ -136263,13 +136551,18 @@
         "iconUrl": "/assets/abilities/Viego_r.png"
       }
     ],
+    "quote": {
+      "text": "No price is too great. No atrocity beyond my reach.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/234.ogg"
+    },
     "emojis": [
       "👑",
+      "💔",
       "🗡️",
-      "🌫️",
-      "🎭",
-      "🫥"
+      "👻"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "1e428defdbf37098",
     "skins": [
       {
         "id": 234000,
@@ -137498,13 +137791,18 @@
         "iconUrl": "/assets/abilities/Viktor_r.png"
       }
     ],
+    "quote": {
+      "text": "Join the glorious evolution!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/112.ogg"
+    },
     "emojis": [
-      "🤖",
-      "⚙️",
-      "💠",
-      "🔬",
-      "⚡"
+      "🌩️",
+      "👨‍🔬",
+      "🦾",
+      "🤖"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "dee6024f7a04bfab",
     "skins": [
       {
         "id": 112000,
@@ -137725,13 +138023,12 @@
         "iconUrl": "/assets/abilities/Vladimir_r.png"
       }
     ],
-    "emojis": [
-      "🩸",
-      "🧛‍♂️",
-      "🌊",
-      "🫥",
-      "☣️"
-    ],
+    "quote": {
+      "text": "The rivers will run red.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/8.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 8000,
@@ -138105,12 +138402,12 @@
         "iconUrl": "/assets/abilities/Volibear_r.png"
       }
     ],
-    "emojis": [
-      "🐻",
-      "⚡",
-      "❄️",
-      "🦷"
-    ],
+    "quote": {
+      "text": "Let the storm follow in my wake!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/106.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 106000,
@@ -138804,13 +139101,18 @@
         "iconUrl": "/assets/abilities/Warwick_r.png"
       }
     ],
+    "quote": {
+      "text": "Blood runs... they all run.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/19.ogg"
+    },
     "emojis": [
-      "🐺",
+      "👃",
+      "🍽️",
       "🩸",
-      "🦷",
-      "🧪",
-      "👃"
+      "🐺"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "d4fd29c3cdc0ec7e",
     "skins": [
       {
         "id": 19000,
@@ -139469,12 +139771,19 @@
         "iconUrl": "/assets/abilities/MonkeyKing_r.png"
       }
     ],
+    "quote": {
+      "text": "Every mistake is a lesson.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/62.ogg"
+    },
     "emojis": [
       "🐒",
-      "🪄",
-      "👥",
-      "🌪️"
+      "🌀",
+      "🗡️",
+      "🌫️",
+      "💥"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "250456bba6e3a00a",
     "skins": [
       {
         "id": 62000,
@@ -139711,12 +140020,12 @@
         "iconUrl": "/assets/abilities/Xayah_r.png"
       }
     ],
-    "emojis": [
-      "🪶",
-      "🗡️",
-      "💑",
-      "🪃"
-    ],
+    "quote": {
+      "text": "I'll do the killing. You look good.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/498.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 498000,
@@ -142078,13 +142387,12 @@
         "iconUrl": "/assets/abilities/Xerath_r.png"
       }
     ],
-    "emojis": [
-      "⚡",
-      "🪦",
-      "🏜️",
-      "🔭",
-      "💥"
-    ],
+    "quote": {
+      "text": "I am transcendent!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/101.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 101000,
@@ -142479,12 +142787,12 @@
         "iconUrl": "/assets/abilities/XinZhao_r.png"
       }
     ],
-    "emojis": [
-      "🔱",
-      "3️⃣",
-      "🛡️",
-      "⭕"
-    ],
+    "quote": {
+      "text": "Here's a tip, and a spear behind it!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/5.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 5000,
@@ -142716,12 +143024,12 @@
         "iconUrl": "/assets/abilities/Yasuo_r.png"
       }
     ],
-    "emojis": [
-      "🌪️",
-      "⚔️",
-      "🧱",
-      "🧭"
-    ],
+    "quote": {
+      "text": "Death is like the wind; always by my side.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/157.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 157000,
@@ -144787,12 +145095,12 @@
         "iconUrl": "/assets/abilities/Yone_r.png"
       }
     ],
-    "emojis": [
-      "🎭",
-      "👻",
-      "🗡️",
-      "🌀"
-    ],
+    "quote": {
+      "text": "One blade for the breath, one for the soul.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/777.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 777000,
@@ -146032,13 +146340,12 @@
         "iconUrl": "/assets/abilities/Yorick_r.png"
       }
     ],
-    "emojis": [
-      "🪦",
-      "🧟",
-      "🌫️",
-      "👰",
-      "⛏️"
-    ],
+    "quote": {
+      "text": "I must dig.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/83.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 83000,
@@ -147115,12 +147422,12 @@
         "iconUrl": "/assets/abilities/Yunara_r.png"
       }
     ],
-    "emojis": [
-      "📿",
-      "🏹",
-      "🌀",
-      "⚡"
-    ],
+    "quote": {
+      "text": "The age of retribution!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/804.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 804000,
@@ -147236,13 +147543,12 @@
         "iconUrl": "/assets/abilities/Yuumi_r.png"
       }
     ],
-    "emojis": [
-      "🐱",
-      "📖",
-      "🫂",
-      "✨",
-      "💨"
-    ],
+    "quote": {
+      "text": "You and me, we got this!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/350.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 350000,
@@ -148044,13 +148350,12 @@
         "iconUrl": "/assets/abilities/Zaahen_r.png"
       }
     ],
-    "emojis": [
-      "🔱",
-      "👿",
-      "♾️",
-      "⚔️",
-      "🏜️"
-    ],
+    "quote": {
+      "text": "I am the unsundered wrath.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/904.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 904000,
@@ -148158,13 +148463,18 @@
         "iconUrl": "/assets/abilities/Zac_r.png"
       }
     ],
+    "quote": {
+      "text": "I was made for this. Literally.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/154.ogg"
+    },
     "emojis": [
       "🦠",
-      "🫧",
-      "🤸",
+      "💨",
       "♻️",
       "🧪"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "10ec6ba713cb4bdf",
     "skins": [
       {
         "id": 154000,
@@ -148428,13 +148738,18 @@
         "iconUrl": "/assets/abilities/Zed_r.png"
       }
     ],
+    "quote": {
+      "text": "The unseen blade is the deadliest.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/238.ogg"
+    },
     "emojis": [
-      "🥷",
-      "🌑",
-      "👥",
       "🗡️",
-      "☠️"
+      "🌑",
+      "👤",
+      "🌀"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "5527b9f56a1da859",
     "skins": [
       {
         "id": 238000,
@@ -149726,12 +150041,18 @@
         "iconUrl": "/assets/abilities/Zeri_r.png"
       }
     ],
+    "quote": {
+      "text": "Spark ready!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/221.ogg"
+    },
     "emojis": [
       "⚡",
+      "🏃‍♀️",
       "🔫",
-      "🛼",
-      "🧱"
+      "💚"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "0763ed57dc76f76f",
     "skins": [
       {
         "id": 221000,
@@ -150404,12 +150725,18 @@
         "iconUrl": "/assets/abilities/Ziggs_r.png"
       }
     ],
+    "quote": {
+      "text": "This'll be a blast!",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/115.ogg"
+    },
     "emojis": [
       "💣",
-      "🪤",
-      "🚀",
-      "🏰"
+      "😜",
+      "🏙️",
+      "🔥"
     ],
+    "emojiClueStatus": "approved",
+    "emojiClueRevision": "1eb982cb16619618",
     "skins": [
       {
         "id": 115000,
@@ -150742,12 +151069,12 @@
         "iconUrl": "/assets/abilities/Zilean_r.png"
       }
     ],
-    "emojis": [
-      "⏰",
-      "💣",
-      "🔙",
-      "♻️"
-    ],
+    "quote": {
+      "text": "I knew you would do that.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/26.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 26000,
@@ -150906,13 +151233,12 @@
         "iconUrl": "/assets/abilities/Zoe_r.png"
       }
     ],
-    "emojis": [
-      "✨",
-      "🫧",
-      "🌀",
-      "🪄",
-      "🌌"
-    ],
+    "quote": {
+      "text": "Yes! This'll be fun! Right?",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/142.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 142000,
@@ -152121,12 +152447,12 @@
         "iconUrl": "/assets/abilities/Zyra_r.png"
       }
     ],
-    "emojis": [
-      "🌱",
-      "🌵",
-      "🪢",
-      "🌺"
-    ],
+    "quote": {
+      "text": "Feel the thorns' embrace.",
+      "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/143.ogg"
+    },
+    "emojis": [],
+    "emojiClueStatus": "unavailable",
     "skins": [
       {
         "id": 143000,

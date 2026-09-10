@@ -16,21 +16,20 @@ function normalizeKey(value) {
   return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 }
 
-export function getEmojiClues(championKey) {
+export function getEmojiConfig(championKey) {
   const normalizedKey = normalizeKey(championKey);
   const resolvedKey = KEY_ALIASES[normalizedKey] || normalizedKey;
   const configured = EMOJI_CLUES[resolvedKey];
+  if (!configured || typeof configured !== 'object' || !Array.isArray(configured.clues)) return undefined;
+  return configured;
+}
 
-  if (!Array.isArray(configured)) {
-    throw new Error(`Missing emoji config for ${championKey} (resolved key: ${resolvedKey})`);
-  }
-
-  const clues = [...new Set(configured.filter(emoji => typeof emoji === 'string' && emoji.trim().length > 0))];
-  if (clues.length < EMOJI_MIN_CLUES || clues.length > EMOJI_MAX_CLUES) {
-    throw new Error(`Emoji config for ${championKey} must contain ${EMOJI_MIN_CLUES}-${EMOJI_MAX_CLUES} unique clues`);
-  }
-
-  return clues;
+export function getEmojiClues(championKey) {
+  const configured = getEmojiConfig(championKey);
+  if (!configured) return [];
+  const clues = configured.clues.filter(emoji => typeof emoji === 'string' && emoji.length > 0);
+  if (clues.length < EMOJI_MIN_CLUES || clues.length > EMOJI_MAX_CLUES) return [];
+  return [...clues];
 }
 
 export { EMOJI_MIN_CLUES, EMOJI_MAX_CLUES };

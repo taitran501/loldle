@@ -12,18 +12,6 @@ interface EmojiModeProps {
   allChampions: Champion[];
 }
 
-const getEmojiSvgUrl = (emoji: string): string => {
-  try {
-    const hasZwj = emoji.includes('\u200d');
-    const codePoints = Array.from(emoji)
-      .map(char => char.codePointAt(0)!.toString(16))
-      .filter(cp => hasZwj ? true : cp !== 'fe0f');
-    return `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/${codePoints.join('-')}.svg`;
-  } catch {
-    return '';
-  }
-};
-
 export const EmojiMode: React.FC<EmojiModeProps> = ({
   target,
   guesses,
@@ -67,19 +55,12 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
               }`}
             >
               {isUnlocked ? (
-                <>
-                  <img
-                    src={getEmojiSvgUrl(emoji)}
-                    alt={emoji}
-                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain drop-shadow pointer-events-none select-none"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      const sibling = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (sibling) sibling.style.display = 'inline';
-                    }}
-                  />
-                  <span style={{ display: 'none' }} className="text-3xl sm:text-4xl">{emoji}</span>
-                </>
+                <span
+                  aria-hidden="true"
+                  className="font-emoji text-3xl sm:text-4xl leading-none drop-shadow pointer-events-none select-none"
+                >
+                  {emoji}
+                </span>
               ) : (
                 <Lock className="w-5 h-5 text-[#785a28]/80" />
               )}

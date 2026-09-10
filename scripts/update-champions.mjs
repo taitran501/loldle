@@ -1,11 +1,24 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { getEmojiClues } from './emoji-config.mjs';
+import { getEmojiConfig } from './emoji-config.mjs';
 
 const DDRAGON_VERSION = '16.17.1';
 const CHAMPIONS_DIR = path.resolve('public/assets/champions');
 const ABILITIES_DIR = path.resolve('public/assets/abilities');
 const DATA_FILE = path.resolve('public/data/champions.json');
+
+function getEmojiFields(championKey) {
+  const config = getEmojiConfig(championKey);
+  if (config?.status !== 'approved') {
+    return { emojis: [], emojiClueStatus: 'unavailable' };
+  }
+
+  return {
+    emojis: [...config.clues],
+    emojiClueStatus: 'approved',
+    ...(config.revision ? { emojiClueRevision: config.revision } : {})
+  };
+}
 
 async function downloadFile(url, dest) {
   try {
@@ -179,7 +192,7 @@ async function main() {
   const existingFiltered = existingData.filter(c => !NEW_CHAMPS_CONFIG.some(nc => nc.id.toLowerCase() === c.id.toLowerCase()));
 
   for (const c of NEW_CHAMPS_CONFIG) {
-    const emojis = getEmojiClues(c.id);
+    const emojiFields = getEmojiFields(c.id);
     const previousChampion = existingById.get(c.id.toLowerCase());
 
     const abilities = [
@@ -216,7 +229,7 @@ async function main() {
       iconUrl: `/assets/champions/${c.id}.png`,
       abilities,
       quote: previousChampion?.quote || c.quote,
-      emojis,
+      ...emojiFields,
       skins,
       quotes: previousChampion?.quotes || []
     };
