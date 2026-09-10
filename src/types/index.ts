@@ -32,8 +32,10 @@ export interface Champion {
     text: string;
     audioUrl: string;
   }[];
-  /** Curated per-champion clue sequence; each dataset entry contains 4-6 clues. */
+  /** Source-backed clue sequence. Unavailable champions have an empty array. */
   emojis: string[];
+  emojiClueStatus: 'approved' | 'unavailable';
+  emojiClueRevision?: string;
   skins: Skin[];
 }
 

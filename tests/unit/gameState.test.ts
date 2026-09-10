@@ -1,7 +1,8 @@
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { Champion } from '../../src/types';
 import {
   GAME_STATE_STORAGE_KEY,
+  LEGACY_GAME_STATE_STORAGE_KEY,
   createEmptySessionState,
   hydrateModeState,
   loadPersistedGameState,
@@ -30,10 +31,14 @@ const champion: Champion = {
     { text: 'Second', audioUrl: '/audio/second.ogg' },
   ],
   emojis: ['🦊', '🔮', '💖', '💎'],
+  emojiClueStatus: 'approved',
+  emojiClueRevision: 'test-revision',
   skins: [{ id: 103000, num: 0, name: 'default', splashCenteredUrl: '/skin.jpg', splashFullUrl: '/skin.jpg' }],
 };
 
 describe('game state persistence contract', () => {
+  beforeEach(() => localStorage.clear());
+
   it('serializes compact IDs and hydrates champion objects for both sessions', () => {
     const sessions = createEmptySessionState();
     sessions.unlimited.classic = {
@@ -88,7 +93,7 @@ describe('game state persistence contract', () => {
   });
 
   it('drops corrupted target records instead of throwing during hydration', () => {
-    localStorage.setItem(GAME_STATE_STORAGE_KEY, JSON.stringify({
+    localStorage.setItem(LEGACY_GAME_STATE_STORAGE_KEY, JSON.stringify({
       version: 2,
       currentMode: 'classic',
       playType: 'unlimited',
@@ -97,6 +102,51 @@ describe('game state persistence contract', () => {
     }));
     const loaded = loadPersistedGameState(localStorage, '2026-09-09');
     expect(hydrateModeState(loaded.daily.modes.classic, [champion], 'classic')).toBeNull();
+  });
+
+  it('migrates v2 while resetting only Emoji sessions', () => {
+    localStorage.setItem(LEGACY_GAME_STATE_STORAGE_KEY, JSON.stringify({
+      version: 2,
+      currentMode: 'classic',
+      playType: 'unlimited',
+      daily: {
+        utcDate: '2026-09-09',
+        modes: {
+          classic: { targetId: 'Ahri', guesses: ['Ahri'], isSolved: false },
+          emoji: { targetId: 'Ahri', guesses: [], isSolved: false },
+        },
+      },
+      unlimited: {
+        modes: {
+          classic: { targetId: 'Ahri', guesses: ['Ahri'], isSolved: false },
+          emoji: { targetId: 'Ahri', guesses: [], isSolved: false },
+        },
+      },
+    }));
+
+    const loaded = loadPersistedGameState(localStorage, '2026-09-09');
+    expect(loaded.version).toBe(3);
+    expect(loaded.unlimited.modes.classic?.targetId).toBe('Ahri');
+    expect(loaded.daily.modes.classic?.targetId).toBe('Ahri');
+    expect(loaded.daily.modes.emoji).toBeNull();
+    expect(loaded.unlimited.modes.emoji).toBeNull();
+  });
+
+  it('persists the Emoji catalog revision and rejects stale revisions', () => {
+    const sessions = createEmptySessionState();
+    sessions.unlimited.emoji = {
+      target: champion,
+      abilityKey: 'Q',
+      quoteIndex: 0,
+      guesses: [],
+      isSolved: false,
+    };
+    const serialized = serializeGameState('emoji', 'unlimited', sessions, '2026-09-09');
+    expect(serialized.unlimited.modes.emoji?.emojiClueRevision).toBe('test-revision');
+    localStorage.setItem(GAME_STATE_STORAGE_KEY, JSON.stringify(serialized));
+    const loaded = loadPersistedGameState(localStorage, '2026-09-09');
+    expect(hydrateModeState(loaded.unlimited.modes.emoji, [champion], 'emoji')).toBeTruthy();
+    expect(hydrateModeState({ ...serialized.unlimited.modes.emoji!, emojiClueRevision: 'old' }, [champion], 'emoji')).toBeNull();
   });
 
   it('drops records with stale guesses or incomplete completed bonuses', () => {

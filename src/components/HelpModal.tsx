@@ -104,7 +104,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
               <li><strong className="text-[#f0e6d2]">Quote:</strong> Identify who says the iconic quote. Audio voice line unlocks after {QUOTE_AUDIO_UNLOCK_GUESSES} guesses.</li>
               <li><strong className="text-[#f0e6d2]">Ability:</strong> Identify the champion by their skill icon. Key hint unlocks after 3 guesses.</li>
               <li><strong className="text-[#f0e6d2]">Splash:</strong> Zooms out from over 2,000+ official skins with each guess.</li>
-              <li><strong className="text-[#f0e6d2]">Emoji:</strong> Guess the champion from {EMOJI_MIN_CLUES}-{EMOJI_MAX_CLUES} thematic emoji clues. Each champion can use a different number of clues.</li>
+              <li><strong className="text-[#f0e6d2]">Emoji:</strong> Guess the champion from a curated, source-backed sequence of {EMOJI_MIN_CLUES}-{EMOJI_MAX_CLUES} thematic emoji clues. Each champion can use a different number of clues.</li>
             </ul>
           </div>
 

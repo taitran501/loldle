@@ -2,16 +2,44 @@ import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
 import { Champion } from '../../src/types';
-import { EMOJI_MAX_CLUES, EMOJI_MIN_CLUES } from '../../src/utils/constants';
+import { EMOJI_MAX_CLUES, EMOJI_MIN_CLUES, EMOJI_RELEASE_GATE } from '../../src/utils/constants';
+
+type CompiledEmojiRecord = {
+  clues: string[];
+  status: 'approved';
+  revision: string;
+  source: {
+    title: string;
+    url: string;
+    puzzleDate: string;
+    accessedAt: string;
+    kind: 'official-loldle' | 'loldle-archive';
+  };
+  verification: {
+    sourceMatched: boolean;
+    reviewedBy: string;
+    reviewedAt: string;
+    notes?: string;
+  };
+};
 
 describe('Dataset & Asset Integrity Tests', () => {
   const jsonPath = path.resolve(process.cwd(), 'public/data/champions.json');
   const emojiMapPath = path.resolve(process.cwd(), 'scripts/emoji-clues.json');
+  const reportPath = path.resolve(process.cwd(), 'scripts/emoji-catalog-report.json');
   expect(fs.existsSync(jsonPath)).toBe(true);
   expect(fs.existsSync(emojiMapPath)).toBe(true);
+  expect(fs.existsSync(reportPath)).toBe(true);
 
   const champions: Champion[] = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-  const emojiMap: Record<string, string[]> = JSON.parse(fs.readFileSync(emojiMapPath, 'utf-8'));
+  const emojiMap: Record<string, CompiledEmojiRecord> = JSON.parse(fs.readFileSync(emojiMapPath, 'utf-8'));
+  const report: {
+    approved: number;
+    candidate: number;
+    rejected: number;
+    missing: string[];
+    sources: Array<{ championKey: string; url: string; puzzleDate: string }>;
+  } = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
 
   const resolveEmojiKey = (value: string) => {
     const normalized = value.toLowerCase().replace(/[^a-z0-9]/g, '');
@@ -94,7 +122,6 @@ describe('Dataset & Asset Integrity Tests', () => {
       for (const q of champ.quotes) {
         expect(typeof q.text).toBe('string');
         expect(q.text.trim().length).toBeGreaterThan(0);
-
         expect(typeof q.audioUrl).toBe('string');
         expect(q.audioUrl.length).toBeGreaterThan(0);
         expect(q.audioUrl.startsWith('https://') || q.audioUrl.startsWith('/')).toBe(true);
@@ -104,34 +131,47 @@ describe('Dataset & Asset Integrity Tests', () => {
     }
   }, 15_000);
 
-  it('verifies every champion has a unique 4-6 clue emoji sequence', () => {
-    const clueCounts = new Set<number>();
+  it('keeps only source-backed approved emoji records in the runtime dataset', () => {
+    const approvedChampions = champions.filter(champ => champ.emojiClueStatus === 'approved');
+    expect(approvedChampions.length).toBeGreaterThanOrEqual(EMOJI_RELEASE_GATE);
+    expect(report.approved).toBe(approvedChampions.length);
+    expect(report.candidate).toBe(0);
+    expect(report.rejected).toBe(0);
+    expect(report.missing.length).toBe(champions.length - approvedChampions.length);
+    expect(report.sources).toHaveLength(approvedChampions.length);
 
     for (const champ of champions) {
-      expect(champ.emojis).toBeDefined();
-      expect(champ.emojis.length).toBeGreaterThanOrEqual(EMOJI_MIN_CLUES);
-      expect(champ.emojis.length).toBeLessThanOrEqual(EMOJI_MAX_CLUES);
-      expect(new Set(champ.emojis).size).toBe(champ.emojis.length);
-      clueCounts.add(champ.emojis.length);
-      champ.emojis.forEach(emoji => {
-        expect(typeof emoji).toBe('string');
-        expect(emoji.length).toBeGreaterThan(0);
-      });
-    }
+      const key = resolveEmojiKey(champ.id);
+      const compiled = emojiMap[key];
 
-    expect([...clueCounts].sort()).toEqual([4, 5, 6]);
+      expect(['approved', 'unavailable']).toContain(champ.emojiClueStatus);
+      if (champ.emojiClueStatus === 'approved') {
+        expect(compiled).toBeDefined();
+        expect(compiled.status).toBe('approved');
+        expect(compiled.revision).toMatch(/^[a-f0-9]{16}$/);
+        expect(compiled.clues).toEqual(champ.emojis);
+        expect(champ.emojis.length).toBeGreaterThanOrEqual(EMOJI_MIN_CLUES);
+        expect(champ.emojis.length).toBeLessThanOrEqual(EMOJI_MAX_CLUES);
+        expect(compiled.source.url).toMatch(/^https:\/\//);
+        expect(compiled.source.puzzleDate).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+        expect(compiled.verification.sourceMatched).toBe(true);
+        expect(compiled.verification.reviewedBy).toBeTruthy();
+        expect(compiled.verification.reviewedAt).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      } else {
+        expect(champ.emojis).toEqual([]);
+        expect(compiled).toBeUndefined();
+      }
+    }
   });
 
-  it('keeps the generated dataset synchronized with the reviewed emoji source map', () => {
-    expect(Object.keys(emojiMap)).toHaveLength(champions.length);
-
-    for (const champ of champions) {
-      expect(emojiMap[resolveEmojiKey(champ.id)]).toEqual(champ.emojis);
-    }
-
-    expect(emojiMap.zac).toEqual(['🦠', '🫧', '🤸', '♻️', '🧪']);
-    expect(emojiMap.twistedfate).toHaveLength(5);
-    expect(emojiMap.twitch).toHaveLength(5);
+  it('preserves verified source fixtures, including repeated clues', () => {
+    expect(emojiMap.sylas.clues).toEqual(['©', '⛓️', '😤', '💨']);
+    expect(emojiMap.lux.clues).toEqual(['🌟', '✨', '🔦', '🙂']);
+    expect(emojiMap.orianna.clues).toEqual(['⚙️', '🔮', '♻️', '👩', '🤖']);
+    expect(emojiMap.talon.clues).toEqual(['🗡️', '🩸', '🏙️', '🌒', '👤']);
+    expect(emojiMap.rumble.clues).toEqual(['🔥', '🤖', '⚙️', '😡', '🚀']);
+    expect(emojiMap.ivern.clues).toEqual(['🌳', '😊', '🍄', '🌼', '🤝']);
+    expect(emojiMap.blitzcrank.clues).toEqual(['🥊', '🪢', '🪢', '🤖']);
   });
 
   it('verifies Riot Games Official Data Dragon full HD splash URLs for all skins', () => {

@@ -8,3 +8,4 @@ export const CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES = 10;
 export const CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES = 15;
 export const EMOJI_MIN_CLUES = 4;
 export const EMOJI_MAX_CLUES = 6;
+export const EMOJI_RELEASE_GATE = 50;

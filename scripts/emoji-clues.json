@@ -1,1155 +1,1616 @@
 {
-  "aatrox": [
-    "⚔️",
-    "🩸",
-    "⛓️",
-    "🪽"
-  ],
-  "ahri": [
-    "🦊",
-    "9️⃣",
-    "🔮",
-    "💘",
-    "👻"
-  ],
-  "akali": [
-    "🥷",
-    "🌫️",
-    "🔪",
-    "💨"
-  ],
-  "akshan": [
-    "🪃",
-    "🪝",
-    "🔫",
-    "♻️",
-    "🕵️"
-  ],
-  "alistar": [
-    "🐂",
-    "👊",
-    "💥",
-    "📣",
-    "⛓️"
-  ],
-  "ambessa": [
-    "🗡️",
-    "⛓️",
-    "👊",
-    "🔀",
-    "💨"
-  ],
-  "amumu": [
-    "🩹",
-    "😭",
-    "🧟",
-    "☠️",
-    "🌀"
-  ],
-  "anivia": [
-    "🐦",
-    "❄️",
-    "🥚",
-    "🧊"
-  ],
-  "annie": [
-    "👧",
-    "🔥",
-    "🧸",
-    "4️⃣"
-  ],
-  "aphelios": [
-    "🌙",
-    "5️⃣",
-    "🔫",
-    "🔄"
-  ],
-  "ashe": [
-    "🏹",
-    "❄️",
-    "🦅",
-    "💎",
-    "👑"
-  ],
-  "aurelionsol": [
-    "🐉",
-    "⭐",
-    "🌌",
-    "🕳️",
-    "🔨"
-  ],
-  "aurora": [
-    "🐰",
-    "🧙‍♀️",
-    "👻",
-    "🪄",
-    "🌀"
-  ],
-  "azir": [
-    "👑",
-    "🏜️",
-    "🪖",
-    "☀️",
-    "🦅"
-  ],
-  "bard": [
-    "🔔",
-    "👻",
-    "🌀",
-    "🚪"
-  ],
-  "belveth": [
-    "👑",
-    "👾",
-    "🪻",
-    "🪸",
-    "🧬",
-    "♾️"
-  ],
-  "blitzcrank": [
-    "🤖",
-    "🪝",
-    "🦾",
-    "⚡",
-    "🛠️"
-  ],
-  "brand": [
-    "🔥",
-    "🔮",
-    "💥",
-    "3️⃣"
-  ],
-  "braum": [
-    "🛡️",
-    "🚪",
-    "💪",
-    "❄️",
-    "🧔"
-  ],
-  "briar": [
-    "🩸",
-    "⛓️",
-    "😵‍💫",
-    "🦷"
-  ],
-  "caitlyn": [
-    "🕵️‍♀️",
-    "🔫",
-    "🪤",
-    "🎯",
-    "⚙️"
-  ],
-  "camille": [
-    "🦿",
-    "🪝",
-    "🗡️",
-    "⚙️",
-    "🛡️"
-  ],
-  "cassiopeia": [
-    "🐍",
-    "☠️",
-    "🪨",
-    "👁️"
-  ],
-  "chogath": [
-    "👾",
-    "🦷",
-    "🍽️",
-    "📈",
-    "💥"
-  ],
-  "corki": [
-    "🛩️",
-    "🧑‍✈️",
-    "💣",
-    "🚀",
-    "📦"
-  ],
-  "darius": [
-    "🪓",
-    "🩸",
-    "5️⃣",
-    "⬇️",
-    "🎖️"
-  ],
-  "diana": [
-    "🌙",
-    "🗡️",
-    "💨",
-    "🌀"
-  ],
-  "draven": [
-    "🪓",
-    "🔄",
-    "🎭",
-    "🩸"
-  ],
-  "drmundo": [
-    "🩺",
-    "💜",
-    "🔪",
-    "💉"
-  ],
-  "ekko": [
-    "⏳",
-    "🌀",
-    "⏪",
-    "🔧"
-  ],
-  "elise": [
-    "🕷️",
-    "🧍",
-    "🪂",
-    "🔄"
-  ],
-  "evelynn": [
-    "😈",
-    "💋",
-    "🌫️",
-    "☠️"
-  ],
-  "ezreal": [
-    "🧤",
-    "🏺",
-    "🌀",
-    "🎯"
-  ],
-  "fiddlesticks": [
-    "🌾",
-    "🐦‍⬛",
-    "😱",
-    "🪓"
-  ],
-  "fiora": [
-    "🤺",
-    "🎯",
-    "4️⃣",
-    "🛡️"
-  ],
-  "fizz": [
-    "🌊",
-    "🔱",
-    "🦈",
-    "🐟"
-  ],
-  "galio": [
-    "🗿",
-    "🛡️",
-    "⬇️",
-    "💥"
-  ],
-  "gangplank": [
-    "🏴‍☠️",
-    "🍊",
-    "🛢️",
-    "💣"
-  ],
-  "garen": [
-    "🛡️",
-    "🗡️",
-    "🌀",
-    "⚖️"
-  ],
-  "gnar": [
-    "🧒",
-    "🧊",
-    "🪃",
-    "👹"
-  ],
-  "gragas": [
-    "🍺",
-    "🛢️",
-    "🤼",
-    "💥"
-  ],
-  "graves": [
-    "🔫",
-    "🔄",
-    "🌫️",
-    "💥"
-  ],
-  "gwen": [
-    "🧵",
-    "✂️",
-    "🪡",
-    "🌫️"
-  ],
-  "hecarim": [
-    "🐴",
-    "👻",
-    "🏇",
-    "🌫️"
-  ],
-  "heimerdinger": [
-    "🔬",
-    "🗼",
-    "🚀",
-    "💣"
-  ],
-  "hwei": [
-    "🎨",
-    "🔥",
-    "😌",
-    "🌀"
-  ],
-  "illaoi": [
-    "🌊",
-    "🗿",
-    "🐙",
-    "👻",
-    "💪"
-  ],
-  "irelia": [
-    "🗡️",
-    "💃",
-    "👯",
-    "🧱"
-  ],
-  "ivern": [
-    "🌳",
-    "🌼",
-    "🪨",
-    "🛡️"
-  ],
-  "janna": [
-    "🌪️",
-    "🙏",
-    "🛡️",
-    "🌀"
-  ],
-  "jarvaniv": [
-    "👑",
-    "🚩",
-    "🐉",
-    "🛡️",
-    "⭕"
-  ],
-  "jax": [
-    "🏮",
-    "⚔️",
-    "🦘",
-    "🛡️",
-    "🔥"
-  ],
-  "jayce": [
-    "🔨",
-    "🔫",
-    "🔄",
-    "⚡",
-    "🚪"
-  ],
-  "jhin": [
-    "4️⃣",
-    "🎭",
-    "🌹",
-    "🔫",
-    "🎬"
-  ],
-  "jinx": [
-    "🚀",
-    "🔫",
-    "🦷",
-    "💣",
-    "⚡"
-  ],
-  "kaisa": [
-    "🐚",
-    "🧬",
-    "🔄",
-    "🔫",
-    "🎯"
-  ],
-  "kalista": [
-    "👻",
-    "🗡️",
-    "🤝",
-    "🦘",
-    "🌫️"
-  ],
-  "karma": [
-    "♻️",
-    "🙏",
-    "🔥",
-    "🛡️",
-    "🔗"
-  ],
-  "karthus": [
-    "💀",
-    "🎶",
-    "🪦",
-    "🌫️"
-  ],
-  "kassadin": [
-    "🕳️",
-    "👾",
-    "🗡️",
-    "🌀",
-    "🛡️"
-  ],
-  "katarina": [
-    "🗡️",
-    "🪃",
-    "🌀",
-    "🔄",
-    "🩸"
-  ],
-  "kayle": [
-    "👼",
-    "🪽",
-    "🔥",
-    "⚖️",
-    "🛡️"
-  ],
-  "kayn": [
-    "🌑",
-    "🗡️",
-    "🔄",
-    "😈",
-    "🧱"
-  ],
-  "kennen": [
-    "🐹",
-    "🥷",
-    "⚡",
-    "🎯",
-    "🌀"
-  ],
-  "khazix": [
-    "🦗",
-    "🧬",
-    "🎯",
-    "🫥",
-    "🦘"
-  ],
-  "kindred": [
-    "🐑",
-    "🐺",
-    "🏹",
-    "☯️",
-    "⏳"
-  ],
-  "kled": [
-    "🦎",
-    "🪤",
-    "🔄",
-    "📣"
-  ],
-  "kogmaw": [
-    "👾",
-    "👄",
-    "🧪",
-    "💥",
-    "🎯"
-  ],
-  "ksante": [
-    "🏜️",
-    "🥊",
-    "🔄",
-    "🧱"
-  ],
-  "leblanc": [
-    "🌹",
-    "🎭",
-    "🪞",
-    "💨",
-    "🔗",
-    "🔁"
-  ],
-  "leesin": [
-    "🦯",
-    "🥋",
-    "🔊",
-    "🐉",
-    "🦶"
-  ],
-  "leona": [
-    "☀️",
-    "🛡️",
-    "🗡️",
-    "🌘",
-    "🏔️"
-  ],
-  "lillia": [
-    "🦌",
-    "🌸",
-    "💤",
-    "🎳",
-    "🌙"
-  ],
-  "lissandra": [
-    "❄️",
-    "🧊",
-    "👁️",
-    "🌀",
-    "🧙"
-  ],
-  "locke": [
-    "🌫️",
-    "👻",
-    "⛓️",
-    "📌",
-    "🔥"
-  ],
-  "lucian": [
-    "🔫",
-    "👻",
-    "💨",
-    "⚡",
-    "🖤"
-  ],
-  "lulu": [
-    "🧚",
-    "✨",
-    "🍄",
-    "⬆️",
-    "🔄"
-  ],
-  "lux": [
-    "💡",
-    "🔗",
-    "🛡️",
-    "⚡",
-    "🌈"
-  ],
-  "malphite": [
-    "🪨",
-    "🛡️",
-    "💥",
-    "⬆️"
-  ],
-  "malzahar": [
-    "🕳️",
-    "🐜",
-    "🧠",
-    "⛓️"
-  ],
-  "maokai": [
-    "🌳",
-    "🌱",
-    "🌫️",
-    "👻"
-  ],
-  "masteryi": [
-    "🗡️",
-    "2️⃣",
-    "🫥",
-    "🧘",
-    "💨"
-  ],
-  "mel": [
-    "🌹",
-    "🪞",
-    "☀️",
-    "🪤"
-  ],
-  "milio": [
-    "🔥",
-    "⚽",
-    "🩹",
-    "🤗"
-  ],
-  "missfortune": [
-    "🏴‍☠️",
-    "🔫",
-    "💋",
-    "🌧️",
-    "💥"
-  ],
-  "mordekaiser": [
-    "⚙️",
-    "🔨",
-    "👻",
-    "🌀",
-    "⛓️"
-  ],
-  "morgana": [
-    "🪽",
-    "⛓️",
-    "🖤",
-    "🛡️",
-    "🔥"
-  ],
-  "naafiri": [
-    "🐕",
-    "🗡️",
-    "👥",
-    "🩸",
-    "🏜️"
-  ],
-  "nami": [
-    "🧜‍♀️",
-    "🫧",
-    "🌊",
-    "🪄"
-  ],
-  "nasus": [
-    "🐕",
-    "🏜️",
-    "📈",
-    "🌪️"
-  ],
-  "nautilus": [
-    "⚓",
-    "🌊",
-    "🪝",
-    "🤿",
-    "⬆️"
-  ],
-  "neeko": [
-    "🦎",
-    "🎭",
-    "👥",
-    "🌸"
-  ],
-  "nidalee": [
-    "🐆",
-    "🌿",
-    "🎯",
-    "🐾"
-  ],
-  "nilah": [
-    "😄",
-    "👹",
-    "🌊",
-    "🌀"
-  ],
-  "nocturne": [
-    "😱",
-    "🌑",
-    "🙈",
-    "🗡️",
-    "💨"
-  ],
-  "nunuwillump": [
-    "🧒",
-    "⛄",
-    "❄️",
-    "⚪",
-    "🌨️"
-  ],
-  "olaf": [
-    "🪓",
-    "💀",
-    "💢",
-    "🚫",
-    "🩸"
-  ],
-  "orianna": [
-    "⚙️",
-    "⚽",
-    "🎛️",
-    "🌪️",
-    "🛡️"
-  ],
-  "ornn": [
-    "🐏",
-    "🔨",
-    "🌋",
-    "🛠️",
-    "🧱"
-  ],
-  "pantheon": [
-    "🛡️",
-    "🔱",
-    "☄️",
-    "⬇️",
-    "💥"
-  ],
-  "poppy": [
-    "🔨",
-    "🛡️",
-    "🔄",
-    "🏰",
-    "⛔"
-  ],
-  "pyke": [
-    "🪝",
-    "🌊",
-    "👻",
-    "🫥",
-    "☠️"
-  ],
-  "qiyana": [
-    "🌿",
-    "💧",
-    "🪨",
-    "💍",
-    "💥",
-    "👑"
-  ],
-  "quinn": [
-    "🦅",
-    "🏹",
-    "👁️",
-    "💨",
-    "🛡️"
-  ],
-  "rakan": [
-    "🪶",
-    "🕺",
-    "💘",
-    "💨"
-  ],
-  "rammus": [
-    "🦔",
-    "🛡️",
-    "⚽",
-    "🔄",
-    "👍"
-  ],
-  "reksai": [
-    "🏜️",
-    "🦈",
-    "🕳️",
-    "👂",
-    "🦷"
-  ],
-  "rell": [
-    "🧲",
-    "🐴",
-    "🛡️",
-    "⛓️",
-    "🔨"
-  ],
-  "renataglasc": [
-    "💼",
-    "🧪",
-    "🦾",
-    "🤝",
-    "🔄",
-    "☣️"
-  ],
-  "renekton": [
-    "🐊",
-    "🏜️",
-    "😡",
-    "🗡️",
-    "☀️"
-  ],
-  "rengar": [
-    "🦁",
-    "🌿",
-    "🦴",
-    "🔪",
-    "👁️"
-  ],
-  "riven": [
-    "🗡️",
-    "🛡️",
-    "💨",
-    "🧩",
-    "🌪️"
-  ],
-  "rumble": [
-    "🤖",
-    "⚙️",
-    "🔥",
-    "🪝",
-    "🚀"
-  ],
-  "ryze": [
-    "📜",
-    "🌍",
-    "🔒",
-    "🌀",
-    "⚡"
-  ],
-  "samira": [
-    "🏜️",
-    "🔫",
-    "🗡️",
-    "💃",
-    "🌹"
-  ],
-  "sejuani": [
-    "🐗",
-    "❄️",
-    "⛓️",
-    "🛡️",
-    "🏔️"
-  ],
-  "senna": [
-    "🌫️",
-    "👻",
-    "🔫",
-    "🕯️",
-    "⛓️"
-  ],
-  "seraphine": [
-    "🎤",
-    "🪩",
-    "🔁",
-    "👥",
-    "💖"
-  ],
-  "sett": [
-    "🏟️",
-    "🥊",
-    "🤼",
-    "💪",
-    "💥"
-  ],
-  "shaco": [
-    "🤡",
-    "📦",
-    "🔪",
-    "👥",
-    "🫥"
-  ],
-  "shen": [
-    "🥷",
-    "👁️",
-    "🗡️",
-    "🛡️",
-    "🌀"
-  ],
-  "shyvana": [
-    "🐉",
-    "🔥",
-    "🔄",
-    "🪽",
-    "🛡️"
-  ],
-  "singed": [
-    "🧪",
-    "☠️",
-    "🏃",
-    "🌀"
-  ],
-  "sion": [
-    "🧟",
-    "🪓",
-    "🚂",
-    "💀",
-    "💥"
-  ],
-  "sivir": [
-    "🪃",
-    "🏜️",
-    "🛡️",
-    "💰",
-    "💨"
-  ],
-  "skarner": [
-    "🦂",
-    "🪨",
-    "📳",
-    "🪝",
-    "🏔️"
-  ],
-  "smolder": [
-    "🐉",
-    "🍼",
-    "🔥",
-    "🤧",
-    "🪽"
-  ],
-  "sona": [
-    "🎻",
-    "🤫",
-    "🎵",
-    "🔊"
-  ],
-  "soraka": [
-    "⭐",
-    "🌌",
-    "🩹",
-    "🍌"
-  ],
-  "swain": [
-    "🐦‍⬛",
-    "👁️",
-    "😈",
-    "🖐️",
-    "🩸"
-  ],
-  "sylas": [
-    "⛓️",
-    "🔄",
-    "⚡",
-    "✊",
-    "🗝️"
-  ],
-  "syndra": [
-    "🔮",
-    "🌀",
-    "🎯",
-    "👑"
-  ],
-  "tahmkench": [
-    "🌊",
-    "🐸",
-    "🎩",
-    "👅",
-    "🍽️",
-    "🤝"
-  ],
-  "taliyah": [
-    "🪨",
-    "🧶",
-    "🏄‍♀️",
-    "🧱",
-    "🏜️"
-  ],
-  "talon": [
-    "🗡️",
-    "🥷",
-    "🧗",
-    "🌑",
-    "🩸"
-  ],
-  "taric": [
-    "💎",
-    "🛡️",
-    "🔨",
-    "⭐",
-    "🤝"
-  ],
-  "teemo": [
-    "🍄",
-    "🎯",
-    "☠️",
-    "👒",
-    "🧭"
-  ],
-  "thresh": [
-    "👻",
-    "⛓️",
-    "🏮",
-    "🪝",
-    "💀",
-    "🔒"
-  ],
-  "tristana": [
-    "🔫",
-    "🚀",
-    "💣",
-    "💨"
-  ],
-  "trundle": [
-    "🧌",
-    "🧊",
-    "🪵",
-    "🦷",
-    "👑"
-  ],
-  "tryndamere": [
-    "⚔️",
-    "😡",
-    "♾️",
-    "❄️",
-    "👑"
-  ],
-  "twistedfate": [
-    "🎩",
-    "🎲",
-    "🃏",
-    "💰",
-    "🌀"
-  ],
-  "twitch": [
-    "🐀",
-    "🧪",
-    "🏹",
-    "🧀",
-    "☣️"
-  ],
-  "udyr": [
-    "🧘",
-    "🐯",
-    "🐢",
-    "🐻",
-    "🔥"
-  ],
-  "urgot": [
-    "🦿",
-    "⛓️",
-    "🔫",
-    "💀"
-  ],
-  "varus": [
-    "🏹",
-    "☣️",
-    "👥",
-    "⛓️",
-    "🌿"
-  ],
-  "vayne": [
-    "🏹",
-    "🥈",
-    "🧱",
-    "👹",
-    "🌙"
-  ],
-  "veigar": [
-    "🧙‍♂️",
-    "😈",
-    "☄️",
-    "🔒",
-    "🕳️"
-  ],
-  "velkoz": [
-    "👁️",
-    "🦑",
-    "🔬",
-    "🕳️",
-    "☢️"
-  ],
-  "vex": [
-    "😒",
-    "👤",
-    "😱",
-    "🛑"
-  ],
-  "vi": [
-    "🥊",
-    "🦾",
-    "🧱",
-    "🚓",
-    "⚙️"
-  ],
-  "viego": [
-    "👑",
-    "🗡️",
-    "🌫️",
-    "🎭",
-    "🫥"
-  ],
-  "viktor": [
-    "🤖",
-    "⚙️",
-    "💠",
-    "🔬",
-    "⚡"
-  ],
-  "vladimir": [
-    "🩸",
-    "🧛‍♂️",
-    "🌊",
-    "🫥",
-    "☣️"
-  ],
-  "volibear": [
-    "🐻",
-    "⚡",
-    "❄️",
-    "🦷"
-  ],
-  "warwick": [
-    "🐺",
-    "🩸",
-    "🦷",
-    "🧪",
-    "👃"
-  ],
-  "wukong": [
-    "🐒",
-    "🪄",
-    "👥",
-    "🌪️"
-  ],
-  "xayah": [
-    "🪶",
-    "🗡️",
-    "💑",
-    "🪃"
-  ],
-  "xerath": [
-    "⚡",
-    "🪦",
-    "🏜️",
-    "🔭",
-    "💥"
-  ],
-  "xinzhao": [
-    "🔱",
-    "3️⃣",
-    "🛡️",
-    "⭕"
-  ],
-  "yasuo": [
-    "🌪️",
-    "⚔️",
-    "🧱",
-    "🧭"
-  ],
-  "yone": [
-    "🎭",
-    "👻",
-    "🗡️",
-    "🌀"
-  ],
-  "yorick": [
-    "🪦",
-    "🧟",
-    "🌫️",
-    "👰",
-    "⛏️"
-  ],
-  "yunara": [
-    "📿",
-    "🏹",
-    "🌀",
-    "⚡"
-  ],
-  "yuumi": [
-    "🐱",
-    "📖",
-    "🫂",
-    "✨",
-    "💨"
-  ],
-  "zaahen": [
-    "🔱",
-    "👿",
-    "♾️",
-    "⚔️",
-    "🏜️"
-  ],
-  "zac": [
-    "🦠",
-    "🫧",
-    "🤸",
-    "♻️",
-    "🧪"
-  ],
-  "zed": [
-    "🥷",
-    "🌑",
-    "👥",
-    "🗡️",
-    "☠️"
-  ],
-  "zeri": [
-    "⚡",
-    "🔫",
-    "🛼",
-    "🧱"
-  ],
-  "ziggs": [
-    "💣",
-    "🪤",
-    "🚀",
-    "🏰"
-  ],
-  "zilean": [
-    "⏰",
-    "💣",
-    "🔙",
-    "♻️"
-  ],
-  "zoe": [
-    "✨",
-    "🫧",
-    "🌀",
-    "🪄",
-    "🌌"
-  ],
-  "zyra": [
-    "🌱",
-    "🌵",
-    "🪢",
-    "🌺"
-  ]
+  "ahri": {
+    "clues": [
+      "🦊",
+      "💋",
+      "💫",
+      "🔮"
+    ],
+    "status": "approved",
+    "revision": "2cce9a78c78192a7",
+    "source": {
+      "title": "“Don’t you trust me?” League of Legends LoLdle answers today (Saturday, November 8, 2025)",
+      "url": "https://lolnow.gg/dont-you-trust-me-league-of-legends-loldle-answers-today-saturday-november-8-2025/",
+      "puzzleDate": "2025-11-08",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "akali": {
+    "clues": [
+      "🥷",
+      "💨",
+      "💚",
+      "🗡️",
+      "🌙"
+    ],
+    "status": "approved",
+    "revision": "92cb358d046a736f",
+    "source": {
+      "title": "“En garde” League of Legends LoLdle answers today (Thursday, December 4, 2025)",
+      "url": "https://lolnow.gg/en-garde-league-of-legends-loldle-answers-today-thursday-december-4-2025/",
+      "puzzleDate": "2025-12-04",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "blitzcrank": {
+    "clues": [
+      "🥊",
+      "🪢",
+      "🪢",
+      "🤖"
+    ],
+    "status": "approved",
+    "revision": "59c864fd8d6d68a5",
+    "source": {
+      "title": "“Cleansing blood with silver” League of Legends LoLdle answers today (Monday, September 22, 2025)",
+      "url": "https://lolnow.gg/loldle-answers-today-september-22-2025/",
+      "puzzleDate": "2025-09-22",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "braum": {
+    "clues": [
+      "🛡️",
+      "💙",
+      "❄️",
+      "🥛",
+      "💪"
+    ],
+    "status": "approved",
+    "revision": "7f73b8258fa6495b",
+    "source": {
+      "title": "“Can’t light cigars” League of Legends LoLdle answers today (Wednesday, December 3, 2025)",
+      "url": "https://lolnow.gg/cant-light-cigars-league-of-legends-loldle-answers-today-wednesday-december-3-2025/",
+      "puzzleDate": "2025-12-03",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "camille": {
+    "clues": [
+      "🗡️",
+      "💙",
+      "🤖",
+      "⚙️",
+      "💨"
+    ],
+    "status": "approved",
+    "revision": "1355a616105a71d6",
+    "source": {
+      "title": "“Let me make myself crystal clear” League of Legends LoLdle answers today (Saturday, November 29, 2025)",
+      "url": "https://lolnow.gg/let-me-make-myself-crystal-clear-league-of-legends-loldle-answers-today-saturday-november-29-2025/",
+      "puzzleDate": "2025-11-29",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "diana": {
+    "clues": [
+      "🌙",
+      "🗡️",
+      "💫",
+      "👩"
+    ],
+    "status": "approved",
+    "revision": "a70f7078177b8a6d",
+    "source": {
+      "title": "“The symphony of light and sound begins” League of Legends LoLdle answers today (Saturday, November 1, 2025)",
+      "url": "https://lolnow.gg/the-symphony-of-light-and-sound-begins-league-of-legends-loldle-answers-today-saturday-november-1-2025/",
+      "puzzleDate": "2025-11-01",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "draven": {
+    "clues": [
+      "🪓",
+      "🪓",
+      "👨",
+      "📈",
+      "💰"
+    ],
+    "status": "approved",
+    "revision": "118b4349ad3e31f7",
+    "source": {
+      "title": "“Easy, Bristle” League of Legends LoLdle answers today (Thursday, September 18, 2025)",
+      "url": "https://lolnow.gg/easy-bristle-league-of-legends-loldle-answers-today-thursday-september-18-2025/",
+      "puzzleDate": "2025-09-18",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "ekko": {
+    "clues": [
+      "⏳",
+      "⚙️",
+      "🌀",
+      "👦"
+    ],
+    "status": "approved",
+    "revision": "846094c6806cb066",
+    "source": {
+      "title": "“By the power of the stars” League of Legends LoLdle answers today (Monday, October 20, 2025)",
+      "url": "https://lolnow.gg/by-the-power-of-the-stars-league-of-legends-loldle-answers-today-monday-october-20-2025/",
+      "puzzleDate": "2025-10-20",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "fiddlesticks": {
+    "clues": [
+      "🌾",
+      "😱",
+      "🔪",
+      "🌑",
+      "👁️"
+    ],
+    "status": "approved",
+    "revision": "db463138e100fa2d",
+    "source": {
+      "title": "“Ride” League of Legends LoLdle answers today (Tuesday, November 18, 2025)",
+      "url": "https://lolnow.gg/ride-league-of-legends-loldle-answers-today-tuesday-november-18-2025/",
+      "puzzleDate": "2025-11-18",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "galio": {
+    "clues": [
+      "🗿",
+      "💨",
+      "🆘",
+      "⚖️",
+      "💪"
+    ],
+    "status": "approved",
+    "revision": "a7284084ebd4de7b",
+    "source": {
+      "title": "“I will be the best” League of Legends LoLdle answers today (Saturday, October 11, 2025)",
+      "url": "https://lolnow.gg/i-will-be-the-best-league-of-legends-loldle-answers-today-saturday-october-11-2025/",
+      "puzzleDate": "2025-10-11",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "gnar": {
+    "clues": [
+      "🦴",
+      "🐒",
+      "🪨",
+      "💢"
+    ],
+    "status": "approved",
+    "revision": "b09e4fd04b2137ea",
+    "source": {
+      "title": "“Skaarl! We got ‘em good, didn’t we?” League of Legends LoLdle answers today (Thursday, October 23, 2025)",
+      "url": "https://lolnow.gg/skaarl-we-got-em-good-didnt-we-league-of-legends-loldle-answers-today-thursday-october-23-2025/",
+      "puzzleDate": "2025-10-23",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "gwen": {
+    "clues": [
+      "👧",
+      "🧵",
+      "👗",
+      "✂️"
+    ],
+    "status": "approved",
+    "revision": "8bce9f557dd6bad2",
+    "source": {
+      "title": "“My shield is my sword” League of Legends LoLdle answers today (Thursday, September 26, 2025)",
+      "url": "https://lolnow.gg/my-shield-is-my-sword-league-of-legends-loldle-answers-today-thursday-september-26-2025/",
+      "puzzleDate": "2025-09-26",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "hecarim": {
+    "clues": [
+      "🐎",
+      "🔥",
+      "⚔️",
+      "👻"
+    ],
+    "status": "approved",
+    "revision": "5062ee89c89a6730",
+    "source": {
+      "title": "“How about a cup of acid?” League of Legends LoLdle answers today (Thursday, October 30, 2025)",
+      "url": "https://lolnow.gg/how-about-a-cup-of-acid-league-of-legends-loldle-answers-today-thursday-october-30-2025/",
+      "puzzleDate": "2025-10-30",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "heimerdinger": {
+    "clues": [
+      "🔨",
+      "🪛",
+      "🚀",
+      "🧠"
+    ],
+    "status": "approved",
+    "revision": "22e290053889d18c",
+    "source": {
+      "title": "“Guns and swords go together like rice and saffron” League of Legends LoLdle answers today (Sunday, October 5, 2025)",
+      "url": "https://lolnow.gg/guns-and-swords-go-together-like-rice-and-saffron-league-of-legends-loldle-answers-today-sunday-october-5-2025/",
+      "puzzleDate": "2025-10-05",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "illaoi": {
+    "clues": [
+      "💪",
+      "🐙",
+      "⚓",
+      "💥",
+      "👁️"
+    ],
+    "status": "approved",
+    "revision": "7f7c50f987c058b0",
+    "source": {
+      "title": "“Chop chop” League of Legends LoLdle answers today (Sunday, November 16, 2025)",
+      "url": "https://lolnow.gg/chop-chop-league-of-legends-loldle-answers-today-sunday-november-16-2025/",
+      "puzzleDate": "2025-11-16",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "irelia": {
+    "clues": [
+      "⚔️",
+      "💃",
+      "🏮",
+      "🇮🇨"
+    ],
+    "status": "approved",
+    "revision": "69c420a19b07e789",
+    "source": {
+      "title": "“So much blood. Wonderful.” League of Legends LoLdle answers today (Saturday, October 18, 2025)",
+      "url": "https://lolnow.gg/so-much-blood-wonderful-league-of-legends-loldle-answers-today-saturday-october-18-2025/",
+      "puzzleDate": "2025-10-18",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "ivern": {
+    "clues": [
+      "🌳",
+      "😊",
+      "🍄",
+      "🌼",
+      "🤝"
+    ],
+    "status": "approved",
+    "revision": "e70b72601bdf7331",
+    "source": {
+      "title": "“The Freljord awakens” League of Legends LoLdle answers today (Monday, November 24, 2025)",
+      "url": "https://lolnow.gg/the-freljord-awakens-league-of-legends-loldle-answers-today-monday-november-24-2025/",
+      "puzzleDate": "2025-11-24",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "janna": {
+    "clues": [
+      "🌪️",
+      "💨",
+      "🧚‍♀️",
+      "🪄"
+    ],
+    "status": "approved",
+    "revision": "9624686c5f65209b",
+    "source": {
+      "title": "“Violence solves everything” League of Legends LoLdle answers today (Monday, November 3, 2025)",
+      "url": "https://lolnow.gg/violence-solves-everything-league-of-legends-loldle-answers-today-monday-november-3-2025/",
+      "puzzleDate": "2025-11-03",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "jarvaniv": {
+    "clues": [
+      "⚔️",
+      "👑",
+      "🐉",
+      "🛡️",
+      "💛"
+    ],
+    "status": "approved",
+    "revision": "4828d8930c9d1cba",
+    "source": {
+      "title": "“Lightning bolt” League of Legends LoLdle answers today (Sunday, November 30, 2025)",
+      "url": "https://lolnow.gg/lightning-bolt-league-of-legends-loldle-answers-today-sunday-november-30-2025/",
+      "puzzleDate": "2025-11-30",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "jhin": {
+    "clues": [
+      "🎭",
+      "🔫",
+      "🎻",
+      "💀"
+    ],
+    "status": "approved",
+    "revision": "80ed5d567f35bebf",
+    "source": {
+      "title": "“The scent of prey carries the promise of glory” League of Legends LoLdle answers today (Wednesday, October 29, 2025)",
+      "url": "https://lolnow.gg/the-scent-of-prey-carries-the-promise-of-glory-league-of-legends-loldle-answers-today-wednesday-october-29-2025/",
+      "puzzleDate": "2025-10-29",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "kalista": {
+    "clues": [
+      "🗡️",
+      "👻",
+      "💔",
+      "🩸"
+    ],
+    "status": "approved",
+    "revision": "750e83c600f79284",
+    "source": {
+      "title": "“I’ll save you, or die trying!” League of Legends LoLdle answers today (Friday, November 14, 2025)",
+      "url": "https://lolnow.gg/ill-save-you-or-die-trying-league-of-legends-loldle-answers-today-friday-november-14-2025/",
+      "puzzleDate": "2025-11-14",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "karma": {
+    "clues": [
+      "☯️",
+      "⛓️",
+      "🙏",
+      "👩‍🦱"
+    ],
+    "status": "approved",
+    "revision": "a67c44782dd27f09",
+    "source": {
+      "title": "“Ahh, feels good to stretch my wings” League of Legends LoLdle answers today (Tuesday, September 23, 2025)",
+      "url": "https://lolnow.gg/oldle-answers-today-tuesday-september-23-2025/",
+      "puzzleDate": "2025-09-23",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "katarina": {
+    "clues": [
+      "🔪",
+      "🔪",
+      "👩‍🦰",
+      "💃"
+    ],
+    "status": "approved",
+    "revision": "250d5548a43db682",
+    "source": {
+      "title": "“So much untapped power” League of Legends LoLdle answers today (Wednesday, September 10, 2025)",
+      "url": "https://lolnow.gg/so-much-untapped-power-league-of-legends-loldle-answers-today-wednesday-september-10-2025/",
+      "puzzleDate": "2025-09-10",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "kayle": {
+    "clues": [
+      "😇",
+      "🗡️",
+      "✨",
+      "🔥",
+      "🕊️"
+    ],
+    "status": "approved",
+    "revision": "48f7ffee51c1faf2",
+    "source": {
+      "title": "“Let’s make snow tracks” League of Legends LoLdle answers today (Tuesday, November 25, 2025)",
+      "url": "https://lolnow.gg/lets-make-snow-tracks-league-of-legends-loldle-answers-today-tuesday-november-25-2025/",
+      "puzzleDate": "2025-11-25",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "kayn": {
+    "clues": [
+      "🌑",
+      "🗡️",
+      "👤",
+      "🔵",
+      "🔴"
+    ],
+    "status": "approved",
+    "revision": "98bd253a16ef3392",
+    "source": {
+      "title": "“Defy Noxus and taste your own blood” League of Legends LoLdle answers today (Sunday, November 23, 2025)",
+      "url": "https://lolnow.gg/defy-noxus-and-taste-your-own-blood-league-of-legends-loldle-answers-today-sunday-november-23-2025/",
+      "puzzleDate": "2025-11-23",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "kennen": {
+    "clues": [
+      "⚡",
+      "🐾",
+      "🥷",
+      "🌩️",
+      "👀"
+    ],
+    "status": "approved",
+    "revision": "b31698dc2103c1f7",
+    "source": {
+      "title": "“You’re only in the way” League of Legends LoLdle answers today (Friday, November 28, 2025)",
+      "url": "https://lolnow.gg/youre-only-in-the-way-league-of-legends-loldle-answers-today-friday-november-28-2025/",
+      "puzzleDate": "2025-11-28",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "khazix": {
+    "clues": [
+      "🦗",
+      "🔪",
+      "🩸",
+      "🌌"
+    ],
+    "status": "approved",
+    "revision": "00efba2aaf8ba174",
+    "source": {
+      "title": "“Everyone has a song inside them” League of Legends LoLdle answers today (Monday, November 10, 2025)",
+      "url": "https://lolnow.gg/everyone-has-a-song-inside-them-league-of-legends-loldle-answers-today-monday-november-10-2025/",
+      "puzzleDate": "2025-11-10",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "kled": {
+    "clues": [
+      "🐎",
+      "🦊",
+      "🤪",
+      "😡",
+      "❗"
+    ],
+    "status": "approved",
+    "revision": "b9dee4775a1921e1",
+    "source": {
+      "title": "“Naptime for you!” League of Legends LoLdle answers today (Wednesday, October 8, 2025)",
+      "url": "https://lolnow.gg/naptime-for-you-league-of-legends-loldle-answers-today-wednesday-october-8-2025/",
+      "puzzleDate": "2025-10-08",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "leblanc": {
+    "clues": [
+      "🧙‍♀️",
+      "🧙‍♀️",
+      "🪄",
+      "⛓️"
+    ],
+    "status": "approved",
+    "revision": "7d4290d2e87c3962",
+    "source": {
+      "title": "“The spirits at the heart of the Freljord have need of me” League of Legends LoLdle answers today (Friday, September 27, 2025)",
+      "url": "https://lolnow.gg/the-spirits-at-the-heart-of-the-freljord-have-need-of-me-league-of-legends-loldle-answers-today-friday-september-27-2025/",
+      "puzzleDate": "2025-09-27",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "lillia": {
+    "clues": [
+      "🦌",
+      "🌙",
+      "💤",
+      "🌸",
+      "💗"
+    ],
+    "status": "approved",
+    "revision": "acd25dbc3d9ae4bd",
+    "source": {
+      "title": "“Yep” League of Legends LoLdle answers today (Tuesday, December 2, 2025)",
+      "url": "https://lolnow.gg/yep-league-of-legends-loldle-answers-today-tuesday-december-2-2025/",
+      "puzzleDate": "2025-12-02",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "lissandra": {
+    "clues": [
+      "❄️",
+      "👑",
+      "🧊",
+      "😈"
+    ],
+    "status": "approved",
+    "revision": "9f7df52b1faa75b9",
+    "source": {
+      "title": "“Knowledge is a real weapon – arm yourself well.” League of Legends LoLdle answers today (Wednesday, November 12, 2025)",
+      "url": "https://lolnow.gg/knowledge-is-a-real-weapon-arm-yourself-well-league-of-legends-loldle-answers-today-wednesday-november-12-2025/",
+      "puzzleDate": "2025-11-12",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "lucian": {
+    "clues": [
+      "🔫",
+      "💡",
+      "😎",
+      "⚡",
+      "👊"
+    ],
+    "status": "approved",
+    "revision": "19134068b3567fbb",
+    "source": {
+      "title": "“Do I scare you” League of Legends LoLdle answers today (Wednesday, November 19, 2025)",
+      "url": "https://lolnow.gg/do-i-scare-you-league-of-legends-loldle-answers-today-wednesday-november-19-2025/",
+      "puzzleDate": "2025-11-19",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "lux": {
+    "clues": [
+      "🌟",
+      "✨",
+      "🔦",
+      "🙂"
+    ],
+    "status": "approved",
+    "revision": "f65d7d3ad93f97d7",
+    "source": {
+      "title": "“I am the blade in the darkness” League of Legends LoLdle answers today (Thursday, September 4, 2025)",
+      "url": "https://lolnow.gg/i-am-the-blade-in-the-darkness-league-of-legends-loldle-answers-today-thursday-september-4-2025/",
+      "puzzleDate": "2025-09-04",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "malphite": {
+    "clues": [
+      "🪨",
+      "😡",
+      "💥",
+      "⬆️"
+    ],
+    "status": "approved",
+    "revision": "b71c02661ec322a0",
+    "source": {
+      "title": "“For my next trick” League of Legends LoLdle answers today (Thursday, September 11, 2025)",
+      "url": "https://lolnow.gg/for-my-next-trick-league-of-legends-loldle-answers-today-thursday-september-11-2025/",
+      "puzzleDate": "2025-09-11",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "maokai": {
+    "clues": [
+      "🌲",
+      "🌳",
+      "💧",
+      "🍃",
+      "😡"
+    ],
+    "status": "approved",
+    "revision": "f932ee37fd2b1dec",
+    "source": {
+      "title": "“Want meat” League of Legends LoLdle answers today (Saturday, November 15, 2025)",
+      "url": "https://lolnow.gg/want-meat-league-of-legends-loldle-answers-today-saturday-november-15-2025/",
+      "puzzleDate": "2025-11-15",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "masteryi": {
+    "clues": [
+      "🧘‍♂️",
+      "⚔️",
+      "🥷",
+      "🏃‍♂️",
+      "💨"
+    ],
+    "status": "approved",
+    "revision": "e56d80722990d749",
+    "source": {
+      "title": "“Come to my desert” League of Legends LoLdle answers today (Monday, September 15, 2025)",
+      "url": "https://lolnow.gg/come-to-my-desert-league-of-legends-loldle-answers-today-monday-september-15-2025/",
+      "puzzleDate": "2025-09-15",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "mordekaiser": {
+    "clues": [
+      "🪓",
+      "💀",
+      "🕸️",
+      "🎵"
+    ],
+    "status": "approved",
+    "revision": "7c8603248a9146e3",
+    "source": {
+      "title": "“There’s joy to be found even in the depths” League of Legends LoLdle answers today (Friday, October 24, 2025)",
+      "url": "https://lolnow.gg/theres-joy-to-be-found-even-in-the-depths-league-of-legends-loldle-answers-today-friday-october-24-2025/",
+      "puzzleDate": "2025-10-24",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "nasus": {
+    "clues": [
+      "🐕",
+      "👨‍🌾",
+      "🪓",
+      "🏜️"
+    ],
+    "status": "approved",
+    "revision": "befd8ae45ffdd4b0",
+    "source": {
+      "title": "“Even now, your loved ones suffer!” League of Legends LoLdle answers today (Friday, October 10, 2025)",
+      "url": "https://lolnow.gg/even-now-your-loved-ones-suffer-league-of-legends-loldle-answers-today-friday-october-10-2025/",
+      "puzzleDate": "2025-10-10",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "neeko": {
+    "clues": [
+      "🦎",
+      "🌱",
+      "🙂",
+      "🙁",
+      "🌸"
+    ],
+    "status": "approved",
+    "revision": "9c52faaaf207bd1b",
+    "source": {
+      "title": "“King of trolls, coming through” League of Legends LoLdle answers today (Sunday, September 21, 2025)",
+      "url": "https://lolnow.gg/loldle-answers-today-sunday-september-21-2025/",
+      "puzzleDate": "2025-09-21",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "orianna": {
+    "clues": [
+      "⚙️",
+      "🔮",
+      "♻️",
+      "👩",
+      "🤖"
+    ],
+    "status": "approved",
+    "revision": "50b11b61c09cfe21",
+    "source": {
+      "title": "“Tentakill!” League Of Legends LoLdle Answers Today (Wednesday, September 3, 2025)",
+      "url": "https://lolnow.gg/tentakill-league-of-legends-loldle-answers-today-wednesday-september-3-2025/",
+      "puzzleDate": "2025-09-03",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "ornn": {
+    "clues": [
+      "🔨",
+      "🔥",
+      "🐏",
+      "🏔️"
+    ],
+    "status": "approved",
+    "revision": "7dcdcd67e1474956",
+    "source": {
+      "title": "“A true master is an eternal student” League of Legends LoLdle answers today (Tuesday, October 28, 2025)",
+      "url": "https://lolnow.gg/a-true-master-is-an-eternal-student-league-of-legends-loldle-answers-today-tuesday-october-28-2025/",
+      "puzzleDate": "2025-10-28",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "pyke": {
+    "clues": [
+      "🎣",
+      "👻",
+      "🔪",
+      "🏴‍☠️"
+    ],
+    "status": "approved",
+    "revision": "9aae382ae1ccb4d8",
+    "source": {
+      "title": "“I like angry Yordle! STAB STAB! TACOS! SKAAAARL!” League of Legends LoLdle answers today (Tuesday, October 7, 2025)",
+      "url": "https://lolnow.gg/i-like-angry-yordle-stab-stab-tacos-skaaaarl-league-of-legends-loldle-answers-today-tuesday-october-7-2025/",
+      "puzzleDate": "2025-10-07",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "qiyana": {
+    "clues": [
+      "👑",
+      "🌪️",
+      "🌊",
+      "🪨"
+    ],
+    "status": "approved",
+    "revision": "1a068f5bd0ac7a2e",
+    "source": {
+      "title": "“The cost of your life is one arrow” League of Legends LoLdle answers today (Sunday, October 26, 2025)",
+      "url": "https://lolnow.gg/the-cost-of-your-life-is-one-arrow-league-of-legends-loldle-answers-today-sunday-october-26-2025/",
+      "puzzleDate": "2025-10-26",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "rakan": {
+    "clues": [
+      "🪶",
+      "💃",
+      "💞",
+      "✨"
+    ],
+    "status": "approved",
+    "revision": "6da916ed13415226",
+    "source": {
+      "title": "“They took my wings, but they’ll never take my freedom” League of Legends LoLdle answers today (Tuesday, November 11, 2025)",
+      "url": "https://lolnow.gg/they-took-my-wings-but-theyll-never-take-my-freedom-league-of-legends-loldle-answers-today-tuesday-november-11-2025/",
+      "puzzleDate": "2025-11-11",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "rengar": {
+    "clues": [
+      "🦁",
+      "🔪",
+      "🌿",
+      "👁️"
+    ],
+    "status": "approved",
+    "revision": "a70c79e1bbba9eec",
+    "source": {
+      "title": "“Never one… without the other” League of Legends LoLdle answers today (Friday, October 31, 2025)",
+      "url": "https://lolnow.gg/never-one-without-the-other-league-of-legends-loldle-answers-today-friday-october-31-2025/",
+      "puzzleDate": "2025-10-31",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "rumble": {
+    "clues": [
+      "🔥",
+      "🤖",
+      "⚙️",
+      "😡",
+      "🚀"
+    ],
+    "status": "approved",
+    "revision": "3c5a6c5ac4b56f38",
+    "source": {
+      "title": "“I’m not as squishy as I look” League of Legends LoLdle answers today (Sunday, December 7, 2025)",
+      "url": "https://lolnow.gg/loldle-answers-sunday-december-7-2025/",
+      "puzzleDate": "2025-12-07",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "senna": {
+    "clues": [
+      "🔫",
+      "🕵️‍♀️",
+      "🏮",
+      "👩🏿"
+    ],
+    "status": "approved",
+    "revision": "8c7b06117ea61cdd",
+    "source": {
+      "title": "“Humans; simple, messy, yet exceptional” League of Legends LoLdle answers today (Saturday, September 28, 2025)",
+      "url": "https://lolnow.gg/humans-simple-messy-yet-exceptional-league-of-legends-loldle-answers-today-saturday-september-28-2025/",
+      "puzzleDate": "2025-09-28",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "seraphine": {
+    "clues": [
+      "🎤",
+      "💗",
+      "🎶",
+      "✨",
+      "📱"
+    ],
+    "status": "approved",
+    "revision": "12065a25e8bbb5a3",
+    "source": {
+      "title": "“Back to going forward” League of Legends LoLdle answers today (Thursday, November 27, 2025)",
+      "url": "https://lolnow.gg/back-to-going-forward-league-of-legends-loldle-answers-today-thursday-november-27-2025/",
+      "puzzleDate": "2025-11-27",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "sett": {
+    "clues": [
+      "🥊",
+      "💪",
+      "🐗",
+      "💰"
+    ],
+    "status": "approved",
+    "revision": "901001d0e163497f",
+    "source": {
+      "title": "“The stars were not kind to you” League of Legends LoLdle answers today (Saturday, October 25, 2025)",
+      "url": "https://lolnow.gg/the-stars-were-not-kind-to-you-league-of-legends-loldle-answers-today-saturday-october-25-2025/",
+      "puzzleDate": "2025-10-25",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "shen": {
+    "clues": [
+      "🥷",
+      "🛡️",
+      "⚔️",
+      "☯️"
+    ],
+    "status": "approved",
+    "revision": "4109cf8d40d726d8",
+    "source": {
+      "title": "“A raven’s eye view” League Of Legends LoLdle Answers Today (Monday, September 1, 2025)",
+      "url": "https://lolnow.gg/a-ravens-eye-view-league-of-legends-loldle-answers-today-monday-september-1-2025/",
+      "puzzleDate": "2025-09-01",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "shyvana": {
+    "clues": [
+      "🐉",
+      "🔥",
+      "💢",
+      "👑",
+      "💜"
+    ],
+    "status": "approved",
+    "revision": "0c7e79584f1abef2",
+    "source": {
+      "title": "“Now I’m angry” League of Legends LoLdle answers today (Saturday, December 6, 2025)",
+      "url": "https://lolnow.gg/loldle-answers-saturday-december-6-2025/",
+      "puzzleDate": "2025-12-06",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "singed": {
+    "clues": [
+      "☠️",
+      "🧪",
+      "💨",
+      "🤢",
+      "🏃‍♂️"
+    ],
+    "status": "approved",
+    "revision": "672982a500e222b6",
+    "source": {
+      "title": "“My right arm is a lot stronger” League of Legends LoLdle answers today (Saturday, November 22, 2025)",
+      "url": "https://lolnow.gg/my-right-arm-is-a-lot-stronger-league-of-legends-loldle-answers-today-saturday-november-22-2025/",
+      "puzzleDate": "2025-11-22",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "sylas": {
+    "clues": [
+      "©",
+      "⛓️",
+      "😤",
+      "💨"
+    ],
+    "status": "approved",
+    "revision": "b83e2b1d5456ddbc",
+    "source": {
+      "title": "“Cut fast, cut strong!” League of Legends LoLdle answers today (Saturday, October 4, 2025)",
+      "url": "https://lolnow.gg/cut-fast-cut-strong-league-of-legends-loldle-answers-today-saturday-october-4-2025/",
+      "puzzleDate": "2025-10-04",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "tahmkench": {
+    "clues": [
+      "🐸",
+      "🍽️",
+      "👑",
+      "😏",
+      "🌊"
+    ],
+    "status": "approved",
+    "revision": "2dba634f86634926",
+    "source": {
+      "title": "“I got two guns” League of Legends LoLdle answers today (Wednesday, December 10, 2025)",
+      "url": "https://lolnow.gg/i-got-two-guns-league-of-legends-loldle-answers-today-wednesday-december-10-2025/",
+      "puzzleDate": "2025-12-10",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "talon": {
+    "clues": [
+      "🗡️",
+      "🩸",
+      "🏙️",
+      "🌒",
+      "👤"
+    ],
+    "status": "approved",
+    "revision": "0cc6ea45d470af5a",
+    "source": {
+      "title": "“You wanna see how to disarm a bomb” League of Legends LoLdle answers today (Friday, December 5, 2025)",
+      "url": "https://lolnow.gg/loldle-answers-friday-december-5-2025/",
+      "puzzleDate": "2025-12-05",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "taric": {
+    "clues": [
+      "💎",
+      "🔨",
+      "😏",
+      "🛡️"
+    ],
+    "status": "approved",
+    "revision": "90666a721e74b112",
+    "source": {
+      "title": "“Never trust a butterfly with a secret” League of Legends LoLdle answers today (Tuesday, October 14, 2025)",
+      "url": "https://lolnow.gg/never-trust-a-butterfly-with-a-secret-league-of-legends-loldle-answers-today-tuesday-october-14-2025/",
+      "puzzleDate": "2025-10-14",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "thresh": {
+    "clues": [
+      "🔦",
+      "⛓️",
+      "💀",
+      "🕯️"
+    ],
+    "status": "approved",
+    "revision": "22aebe29e19d485f",
+    "source": {
+      "title": "“Only the guilty need fear me” League of Legends LoLdle answers today (Monday, October 27, 2025)",
+      "url": "https://lolnow.gg/only-the-guilty-need-fear-me-league-of-legends-loldle-answers-today-monday-october-27-2025/",
+      "puzzleDate": "2025-10-27",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "trundle": {
+    "clues": [
+      "🧌",
+      "👑",
+      "🏰",
+      "⛰️"
+    ],
+    "status": "approved",
+    "revision": "311e383897ba743a",
+    "source": {
+      "title": "“You cannot know hunger until you’ve been denied.” League of Legends LoLdle answers today (Wednesday, October 15, 2025)",
+      "url": "https://lolnow.gg/you-cannot-know-hunger-until-youve-been-denied-league-of-legends-loldle-answers-today-wednesday-october-15-2025/",
+      "puzzleDate": "2025-10-15",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "twistedfate": {
+    "clues": [
+      "🎴",
+      "🤵",
+      "💰",
+      "🔮"
+    ],
+    "status": "approved",
+    "revision": "e4c4686a5be93771",
+    "source": {
+      "title": "“Strength isn’t shaped by what you build. It’s shaped by what you break.” League of Legends LoLdle answers today (Wednesday, November 5, 2025)",
+      "url": "https://lolnow.gg/strength-isnt-shaped-by-what-you-build-its-shaped-by-what-you-break-league-of-legends-loldle-answers-today-wednesday-november-5-2025/",
+      "puzzleDate": "2025-11-05",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "twitch": {
+    "clues": [
+      "🐀",
+      "💉",
+      "💰",
+      "🧪"
+    ],
+    "status": "approved",
+    "revision": "1fdc0ab2f611a6ae",
+    "source": {
+      "title": "“The whole world’s a river, and I’m its king.” League of Legends LoLdle answers today (Friday, November 7, 2025)",
+      "url": "https://lolnow.gg/the-whole-worlds-a-river-and-im-its-king-league-of-legends-loldle-answers-today-friday-november-7-2025/",
+      "puzzleDate": "2025-11-07",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "vi": {
+    "clues": [
+      "👊",
+      "💥",
+      "🔧",
+      "🎀",
+      "🚓"
+    ],
+    "status": "approved",
+    "revision": "8a52ec36fab8adf6",
+    "source": {
+      "title": "“You must be coded as a minion” League of Legends LoLdle answers today (Wednesday, November 26, 2025)",
+      "url": "https://lolnow.gg/you-must-be-coded-as-a-minion-league-of-legends-loldle-answers-today-wednesday-november-26-2025/",
+      "puzzleDate": "2025-11-26",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "viego": {
+    "clues": [
+      "👑",
+      "💔",
+      "🗡️",
+      "👻"
+    ],
+    "status": "approved",
+    "revision": "1e428defdbf37098",
+    "source": {
+      "title": "“A bird’s eye view is the best advantage” League of Legends LoLdle answers today (Tuesday, October 21, 2025)",
+      "url": "https://lolnow.gg/a-birds-eye-view-is-the-best-advantage-league-of-legends-loldle-answers-today-tuesday-october-21-2025/",
+      "puzzleDate": "2025-10-21",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "viktor": {
+    "clues": [
+      "🌩️",
+      "👨‍🔬",
+      "🦾",
+      "🤖"
+    ],
+    "status": "approved",
+    "revision": "dee6024f7a04bfab",
+    "source": {
+      "title": "“Blood is the wine of victory” League of Legends LoLdle answers today (Tuesday, September 9, 2025)",
+      "url": "https://lolnow.gg/blood-is-the-wine-of-victory-league-of-legends-loldle-answers-today-tuesday-september-9-2025/",
+      "puzzleDate": "2025-09-09",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "warwick": {
+    "clues": [
+      "👃",
+      "🍽️",
+      "🩸",
+      "🐺"
+    ],
+    "status": "approved",
+    "revision": "d4fd29c3cdc0ec7e",
+    "source": {
+      "title": "“Electrify” League of Legends LoLdle answers today (Tuesday, October 1, 2025)",
+      "url": "https://lolnow.gg/electrify-league-of-legends-loldle-answers-today-tuesday-october-1-2025/",
+      "puzzleDate": "2025-10-01",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "wukong": {
+    "clues": [
+      "🐒",
+      "🌀",
+      "🗡️",
+      "🌫️",
+      "💥"
+    ],
+    "status": "approved",
+    "revision": "250456bba6e3a00a",
+    "source": {
+      "title": "“If you’re buying, I’m in” League of Legends LoLdle answers today (Monday, December 8, 2025)",
+      "url": "https://lolnow.gg/if-youre-buying-im-in-league-of-legends-loldle-answers-today-monday-december-8-2025/",
+      "puzzleDate": "2025-12-08",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "zac": {
+    "clues": [
+      "🦠",
+      "💨",
+      "♻️",
+      "🧪"
+    ],
+    "status": "approved",
+    "revision": "10ec6ba713cb4bdf",
+    "source": {
+      "title": "“Arise, death” League of Legends LoLdle answers today (Wednesday, September 17, 2025)",
+      "url": "https://lolnow.gg/arise-death-league-of-legends-loldle-answers-today-wednesday-september-17-2025/",
+      "puzzleDate": "2025-09-17",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "zed": {
+    "clues": [
+      "🗡️",
+      "🌑",
+      "👤",
+      "🌀"
+    ],
+    "status": "approved",
+    "revision": "5527b9f56a1da859",
+    "source": {
+      "title": "“All the world on one arrow” League of Legends LoLdle answers today (Thursday, November 6, 2025)",
+      "url": "https://lolnow.gg/all-the-world-on-one-arrow-league-of-legends-loldle-answers-today-thursday-november-6-2025/",
+      "puzzleDate": "2025-11-06",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "zeri": {
+    "clues": [
+      "⚡",
+      "🏃‍♀️",
+      "🔫",
+      "💚"
+    ],
+    "status": "approved",
+    "revision": "0763ed57dc76f76f",
+    "source": {
+      "title": "“We will kill your enemies. That will be fun.” League of Legends LoLdle answers today (Tuesday, November 4, 2025)",
+      "url": "https://lolnow.gg/we-will-kill-your-enemies-that-will-be-fun-league-of-legends-loldle-answers-today-tuesday-november-4-2025/",
+      "puzzleDate": "2025-11-04",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  },
+  "ziggs": {
+    "clues": [
+      "💣",
+      "😜",
+      "🏙️",
+      "🔥"
+    ],
+    "status": "approved",
+    "revision": "1eb982cb16619618",
+    "source": {
+      "title": "“Rules are made to be broken… like buildings! Or people!” League of Legends LoLdle answers today (Sunday, November 9, 2025)",
+      "url": "https://lolnow.gg/rules-are-made-to-be-broken-like-buildings-or-people-league-of-legends-loldle-answers-today-sunday-november-9-2025/",
+      "puzzleDate": "2025-11-09",
+      "accessedAt": "2026-09-10",
+      "kind": "loldle-archive"
+    },
+    "verification": {
+      "sourceMatched": true,
+      "reviewedBy": "codex",
+      "reviewedAt": "2026-09-10",
+      "notes": "Transcribed from the source Emoji answer block; champion, order, count, and repeated clues were reviewed."
+    }
+  }
 }

@@ -22,6 +22,8 @@ import { StatsModal } from './components/StatsModal';
 import { HelpModal } from './components/HelpModal';
 import { SurrenderModal } from './components/SurrenderModal';
 import { RefreshCw, Flag, Loader2, RotateCcw } from 'lucide-react';
+import { EMOJI_RELEASE_GATE } from './utils/constants';
+import { getEmojiPool } from './utils/emoji';
 
 interface RoundIdentity {
   playType: PlayType;
@@ -77,6 +79,8 @@ export const App: React.FC = () => {
   const surrenderIdentityRef = useRef<RoundIdentity | null>(null);
   const toastTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  const emojiPool = getEmojiPool(champions);
+  const emojiModeEnabled = emojiPool.length >= EMOJI_RELEASE_GATE;
   const currentState = sessions[playType][currentMode];
 
   useEffect(() => {
@@ -140,9 +144,11 @@ export const App: React.FC = () => {
   }, [loadAttempt]);
 
   const initModeState = useCallback((mode: GameMode, type: PlayType, champList: Champion[], excludeIds: string[] = []): ModeState => {
+    const targetPool = mode === 'emoji' ? getEmojiPool(champList) : champList;
+    if (targetPool.length === 0) throw new Error(`No champions available for ${mode}`);
     const result = type === 'unlimited'
-      ? getRandomTarget(champList, mode, excludeIds)
-      : getDailyTarget(champList, mode, getTodayDateString());
+      ? getRandomTarget(targetPool, mode, excludeIds)
+      : getDailyTarget(targetPool, mode, getTodayDateString());
 
     return {
       target: result.champion,
@@ -162,6 +168,10 @@ export const App: React.FC = () => {
 
     (['daily', 'unlimited'] as const).forEach(type => {
       (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[]).forEach(mode => {
+        if (mode === 'emoji' && !emojiModeEnabled) {
+          nextSessions[type][mode] = null;
+          return;
+        }
         const restored = hydrateModeState(persisted[type].modes[mode], champions, mode);
         nextSessions[type][mode] = restored || initModeState(mode, type, champions);
       });
@@ -169,11 +179,11 @@ export const App: React.FC = () => {
 
     roundSerialRef.current += 1;
     setSessions(nextSessions);
-    setCurrentMode(persisted.currentMode);
+    setCurrentMode(persisted.currentMode === 'emoji' && !emojiModeEnabled ? 'classic' : persisted.currentMode);
     setPlayType(persisted.playType);
     dailyDateRef.current = getTodayDateString();
     setStateHydrated(true);
-  }, [champions, initModeState, stateHydrated]);
+  }, [champions, emojiModeEnabled, initModeState, stateHydrated]);
 
   useEffect(() => {
     if (!stateHydrated) return;
@@ -224,7 +234,7 @@ export const App: React.FC = () => {
       dailyDateRef.current = today;
       const nextDaily = Object.fromEntries(
         (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[])
-          .map(mode => [mode, initModeState(mode, 'daily', champions)])
+          .map(mode => [mode, mode === 'emoji' && !emojiModeEnabled ? null : initModeState(mode, 'daily', champions)])
       ) as SessionState['daily'];
 
       if (playTypeRef.current === 'daily') {
@@ -238,7 +248,7 @@ export const App: React.FC = () => {
 
     const interval = window.setInterval(checkForNewDaily, 30_000);
     return () => window.clearInterval(interval);
-  }, [champions, clearVictoryTimer, initModeState, stateHydrated]);
+  }, [champions, clearVictoryTimer, emojiModeEnabled, initModeState, stateHydrated]);
 
   const closeVictory = useCallback(() => {
     clearVictoryTimer();
@@ -365,7 +375,8 @@ export const App: React.FC = () => {
 
   const handleNextRound = useCallback(() => {
     const state = sessions[playType][currentMode];
-    if (!champions.length || playType !== 'unlimited' || !state?.isSolved) return;
+    if (!champions.length || playType !== 'unlimited' || !state?.isSolved
+      || (currentMode === 'emoji' && !emojiModeEnabled)) return;
 
     closeVictory();
     setIsSurrenderModalOpen(false);
@@ -376,9 +387,13 @@ export const App: React.FC = () => {
       currentMode,
       initModeState(currentMode, 'unlimited', champions, [state.target.id])
     );
-  }, [champions, closeVictory, currentMode, initModeState, playType, sessions, updateModeState]);
+  }, [champions, closeVictory, currentMode, emojiModeEnabled, initModeState, playType, sessions, updateModeState]);
 
   const handleSelectMode = useCallback((mode: GameMode) => {
+    if (mode === 'emoji' && !emojiModeEnabled) {
+      showToast('Emoji catalog is being reviewed.');
+      return;
+    }
     if (mode === currentMode) return;
     clearVictoryTimer();
     setIsVictoryOpen(false);
@@ -387,7 +402,7 @@ export const App: React.FC = () => {
     surrenderIdentityRef.current = null;
     roundSerialRef.current += 1;
     setCurrentMode(mode);
-  }, [clearVictoryTimer, currentMode]);
+  }, [clearVictoryTimer, currentMode, emojiModeEnabled, showToast]);
 
   const handleTogglePlayType = useCallback((targetVal?: boolean) => {
     const nextType: PlayType = typeof targetVal === 'boolean'
@@ -548,6 +563,7 @@ export const App: React.FC = () => {
         onSelectMode={handleSelectMode}
         isUnlimited={isUnlimited}
         onToggleUnlimited={handleTogglePlayType}
+        emojiModeEnabled={emojiModeEnabled}
         onOpenStats={openStats}
         onOpenHelp={openHelp}
       />
@@ -631,6 +647,13 @@ export const App: React.FC = () => {
             isSolved={currentState.isSolved}
             allChampions={champions}
           />
+        )}
+
+        {currentMode === 'emoji' && !emojiModeEnabled && (
+          <div className="w-full max-w-md rounded-xl border border-[#785a28]/50 bg-[#1e2328] px-5 py-6 text-center" role="status">
+            <h2 className="font-serif text-lg font-bold text-[#c8aa6e]">Emoji catalog is being reviewed</h2>
+            <p className="mt-2 text-sm text-[#a09b8c]">This mode will return when at least {EMOJI_RELEASE_GATE} source-backed clue sets are approved.</p>
+          </div>
         )}
 
         {currentState && currentMode === 'splash' && (

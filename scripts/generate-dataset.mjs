@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { getEmojiClues } from './emoji-config.mjs';
+import { getEmojiConfig } from './emoji-config.mjs';
 
 const LOLDLE_URL = 'https://raw.githubusercontent.com/joulsen/loldle-information-theory/main/resources/loldle-champ-data.json';
 const MERAKI_URL = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json';
@@ -10,6 +10,19 @@ const CDRAGON_SUMMARY_URL = 'https://raw.communitydragon.org/latest/plugins/rcp-
 function normalize(str) {
   if (!str) return '';
   return str.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function getEmojiFields(championKey) {
+  const config = getEmojiConfig(championKey);
+  if (config?.status !== 'approved') {
+    return { emojis: [], emojiClueStatus: 'unavailable' };
+  }
+
+  return {
+    emojis: [...config.clues],
+    emojiClueStatus: 'approved',
+    ...(config.revision ? { emojiClueRevision: config.revision } : {})
+  };
 }
 
 // Verified official Champion Select Pick quotes (100% matched with champion-choose-vo audio)
@@ -412,8 +425,9 @@ async function main() {
     const audioUrl = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/${numericId}.ogg`;
     const previousChampion = existingChampions.get(normKey);
 
-    // Emojis
-    const emojis = getEmojiClues(normKey);
+    // Emoji clues are source-backed build-time data. Missing records remain in
+    // the roster for other modes but are unavailable to Emoji mode.
+    const emojiFields = getEmojiFields(normKey);
 
     finalChampions.push({
       id: champKey,
@@ -433,7 +447,7 @@ async function main() {
         text: quoteText,
         audioUrl
       },
-      emojis,
+      ...emojiFields,
       skins,
       quotes: previousChampion?.quotes || []
     });
@@ -447,7 +461,7 @@ async function main() {
     if (!generatedKeys.has(key)) {
       finalChampions.push({
         ...champion,
-        emojis: getEmojiClues(key)
+        ...getEmojiFields(key)
       });
     }
   }

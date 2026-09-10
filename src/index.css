@@ -13,6 +13,10 @@
       radial-gradient(circle at 50% 100%, rgba(1, 10, 19, 1) 0%, rgba(9, 20, 40, 1) 100%);
     background-attachment: fixed;
   }
+
+  .font-emoji {
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  }
 }
 
 @keyframes flip-in {

@@ -1,7 +1,10 @@
 import { AbilityKey, BonusState, Champion, GameMode, PlayType, Skin } from '../types';
+import { isEmojiEligible } from './emoji';
 
-export const GAME_STATE_STORAGE_KEY = 'loldle_game_state_v2';
-export const GAME_STATE_VERSION = 2 as const;
+export const GAME_STATE_STORAGE_KEY = 'loldle_game_state_v3';
+export const LEGACY_GAME_STATE_STORAGE_KEY = 'loldle_game_state_v2';
+export const GAME_STATE_VERSION = 3 as const;
+export const LEGACY_GAME_STATE_VERSION = 2 as const;
 export const GAME_MODES: GameMode[] = ['classic', 'quote', 'ability', 'emoji', 'splash'];
 
 export interface PersistedModeState {
@@ -13,6 +16,7 @@ export interface PersistedModeState {
   isSolved: boolean;
   isSurrendered?: boolean;
   bonus?: BonusState;
+  emojiClueRevision?: string;
 }
 
 export interface PersistedGameState {
@@ -120,12 +124,42 @@ const sanitizeMode = (value: unknown): PersistedModeState | null => {
     isSolved: raw.isSolved === true,
     ...(raw.isSurrendered === true ? { isSurrendered: true } : {}),
     ...(bonus ? { bonus } : {}),
+    ...(typeof raw.emojiClueRevision === 'string' && raw.emojiClueRevision.length > 0
+      ? { emojiClueRevision: raw.emojiClueRevision }
+      : {}),
   };
 };
 
-const sanitizeModes = (value: unknown): Record<GameMode, PersistedModeState | null> => {
+const sanitizeModes = (value: unknown, resetEmoji = false): Record<GameMode, PersistedModeState | null> => {
   const raw = value && typeof value === 'object' ? value as Partial<Record<GameMode, unknown>> : {};
-  return Object.fromEntries(GAME_MODES.map(mode => [mode, sanitizeMode(raw[mode])])) as Record<GameMode, PersistedModeState | null>;
+  return Object.fromEntries(GAME_MODES.map(mode => [mode, resetEmoji && mode === 'emoji' ? null : sanitizeMode(raw[mode])])) as Record<GameMode, PersistedModeState | null>;
+};
+
+const getPersistedDailyDate = (value: unknown, utcDate: string): string => {
+  const daily = value && typeof value === 'object' ? (value as { daily?: unknown }).daily : undefined;
+  return daily && typeof daily === 'object' && typeof (daily as { utcDate?: unknown }).utcDate === 'string'
+    ? (daily as { utcDate: string }).utcDate
+    : utcDate;
+};
+
+const deserializeState = (parsed: Partial<PersistedGameState>, utcDate: string, resetEmoji: boolean): PersistedGameState => {
+  const fallback = createDefaultPersistedGameState(utcDate);
+  const daily = parsed.daily && typeof parsed.daily === 'object' ? parsed.daily : undefined;
+  const dailyDate = getPersistedDailyDate(parsed, utcDate);
+  return {
+    version: GAME_STATE_VERSION,
+    currentMode: isGameMode(parsed.currentMode) && !(resetEmoji && parsed.currentMode === 'emoji')
+      ? parsed.currentMode
+      : fallback.currentMode,
+    playType: isPlayType(parsed.playType) ? parsed.playType : fallback.playType,
+    daily: {
+      utcDate,
+      modes: dailyDate === utcDate ? sanitizeModes(daily?.modes, resetEmoji) : emptyModes(),
+    },
+    unlimited: {
+      modes: sanitizeModes(parsed.unlimited?.modes, resetEmoji),
+    },
+  };
 };
 
 export function loadPersistedGameState(
@@ -137,27 +171,26 @@ export function loadPersistedGameState(
 
   try {
     const saved = storage.getItem(GAME_STATE_STORAGE_KEY);
-    if (!saved) return fallback;
-    const parsed: unknown = JSON.parse(saved);
-    if (!parsed || typeof parsed !== 'object' || (parsed as { version?: unknown }).version !== GAME_STATE_VERSION) {
-      return fallback;
+    if (saved) {
+      const parsed: unknown = JSON.parse(saved);
+      if (parsed && typeof parsed === 'object' && (parsed as { version?: unknown }).version === GAME_STATE_VERSION) {
+        return deserializeState(parsed as Partial<PersistedGameState>, utcDate, false);
+      }
     }
 
-    const raw = parsed as Partial<PersistedGameState>;
-    const daily = raw.daily && typeof raw.daily === 'object' ? raw.daily : undefined;
-    const dailyDate = daily && typeof daily.utcDate === 'string' ? daily.utcDate : utcDate;
-    return {
-      version: GAME_STATE_VERSION,
-      currentMode: isGameMode(raw.currentMode) ? raw.currentMode : fallback.currentMode,
-      playType: isPlayType(raw.playType) ? raw.playType : fallback.playType,
-      daily: {
-        utcDate,
-        modes: dailyDate === utcDate ? sanitizeModes(daily?.modes) : emptyModes(),
-      },
-      unlimited: {
-        modes: sanitizeModes(raw.unlimited?.modes),
-      },
-    };
+    const legacySaved = storage.getItem(LEGACY_GAME_STATE_STORAGE_KEY);
+    if (legacySaved) {
+      const legacyParsed: unknown = JSON.parse(legacySaved);
+      if (legacyParsed && typeof legacyParsed === 'object'
+        && (legacyParsed as { version?: unknown }).version === LEGACY_GAME_STATE_VERSION) {
+        // v2 did not persist the catalog revision, so only Emoji records are
+        // discarded. All other modes remain restorable and stats are stored
+        // under a separate key.
+        return deserializeState(legacyParsed as Partial<PersistedGameState>, utcDate, true);
+      }
+    }
+
+    return fallback;
   } catch {
     return fallback;
   }
@@ -183,6 +216,9 @@ export function serializeGameState(
           isSolved: state.isSolved,
           ...(state.isSurrendered ? { isSurrendered: true } : {}),
           ...(state.bonus ? { bonus: state.bonus } : {}),
+          ...(mode === 'emoji' && state.target.emojiClueRevision
+            ? { emojiClueRevision: state.target.emojiClueRevision }
+            : {}),
         } satisfies PersistedModeState];
       })
     ) as Record<GameMode, PersistedModeState | null>;
@@ -204,6 +240,10 @@ export function hydrateModeState(
   if (!persisted) return null;
   const target = champions.find(champion => champion.id === persisted.targetId);
   if (!target) return null;
+
+  if (mode === 'emoji' && (!isEmojiEligible(target)
+    || !persisted.emojiClueRevision
+    || persisted.emojiClueRevision !== target.emojiClueRevision)) return null;
 
   // A round is only safe to restore when every referenced champion still
   // exists in the current dataset. Otherwise regenerate the whole record

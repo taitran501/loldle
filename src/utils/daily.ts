@@ -1,4 +1,5 @@
 import { Champion, GameMode, Skin } from '../types';
+import { isEmojiEligible } from './emoji';
 
 function stringHash(str: string): number {
   let hash = 5381;
@@ -22,11 +23,12 @@ export function getDailyTarget(
   mode: GameMode,
   dateStr = getTodayDateString()
 ): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R'; quoteIndex?: number } {
-  if (!champions.length) throw new Error('Champions list is empty');
+  const pool = mode === 'emoji' ? champions.filter(isEmojiEligible) : champions;
+  if (!pool.length) throw new Error(mode === 'emoji' ? 'No champions available for emoji' : 'Champions list is empty');
 
   const seed = stringHash(`${dateStr}-${mode}`);
-  const champIndex = seed % champions.length;
-  const champion = champions[champIndex];
+  const champIndex = seed % pool.length;
+  const champion = pool[champIndex];
 
   let skin: Skin | undefined;
   if (mode === 'splash' && champion.skins.length > 0) {
@@ -56,8 +58,11 @@ export function getRandomTarget(
   mode: GameMode,
   excludeIds: string[] = []
 ): { champion: Champion; skin?: Skin; abilityKey?: 'P' | 'Q' | 'W' | 'E' | 'R'; quoteIndex?: number } {
-  const available = champions.filter(c => !excludeIds.includes(c.id));
-  const pool = available.length > 0 ? available : champions;
+  const eligibleChampions = mode === 'emoji' ? champions.filter(isEmojiEligible) : champions;
+  const available = eligibleChampions.filter(c => !excludeIds.includes(c.id));
+  const pool = available.length > 0 ? available : eligibleChampions;
+
+  if (!pool.length) throw new Error(mode === 'emoji' ? 'No champions available for emoji' : 'Champions list is empty');
 
   const randomIndex = Math.floor(Math.random() * pool.length);
   const champion = pool[randomIndex];

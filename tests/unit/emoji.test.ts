@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { getEmojiRevealCount, normalizeEmojiClues } from '../../src/utils/emoji';
 
 describe('emoji clue utilities', () => {
-  it('keeps the configured clue sequence flexible and removes empty duplicates', () => {
-    expect(normalizeEmojiClues(['🦊', '🔮', '🦊', '', null, '💖'])).toEqual(['🦊', '🔮', '💖']);
+  it('preserves source order and repeated clues while removing invalid entries', () => {
+    expect(normalizeEmojiClues(['🦊', '🔮', '🦊', '', null, '💖'])).toEqual(['🦊', '🔮', '🦊', '💖']);
   });
 
   it('reveals one additional clue per guess for any configured clue count', () => {
