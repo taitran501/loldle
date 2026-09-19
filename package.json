@@ -17,6 +17,7 @@
     "test:load": "node scripts/stress-test-50-users.mjs"
   },
   "dependencies": {
+    "@emoji-mart/data": "1.2.1",
     "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.16.0",
     "react": "^19.0.0",

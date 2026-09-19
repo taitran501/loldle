@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { BonusState, Champion, Skin } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
-import { CheckCircle, XCircle, Sparkles, Search, ChevronDown, ArrowRight } from 'lucide-react';
+import { CheckCircle, XCircle, Sparkles, Search, ChevronDown, ArrowRight, Maximize2, X } from 'lucide-react';
 
 interface SplashModeProps {
   target: Champion;
@@ -70,7 +70,24 @@ export const SplashMode: React.FC<SplashModeProps> = ({
   const [selectedBonusSkin, setSelectedBonusSkin] = useState<Skin | null>(null);
   const [skinQuery, setSkinQuery] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsLightboxOpen(false);
+  }, [target.id, targetSkin.id]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsLightboxOpen(false);
+      }
+    };
+    if (isLightboxOpen) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen]);
 
   useEffect(() => {
     setImageLoaded(false);
@@ -172,13 +189,23 @@ export const SplashMode: React.FC<SplashModeProps> = ({
           Splash Art Mode
         </h2>
         <p className="text-sm text-[#a09b8c] mt-1">
-          Guess the champion from their skin artwork. The image zooms out gradually with every guess!
+          Uncover the champion from a cropped splash art snippet. The view expands with each guess!
         </p>
       </div>
 
       {/* Splash Art Viewport */}
       <div className="relative z-30 my-3 flex flex-col items-center">
-        <div className="w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] rounded-2xl overflow-hidden border-2 border-[#c8aa6e]/80 shadow-[0_0_30px_rgba(200,170,110,0.25)] bg-[#091428] relative flex items-center justify-center">
+        <div
+          onClick={() => {
+            if (isSolved) setIsLightboxOpen(true);
+          }}
+          className={`rounded-2xl overflow-hidden border-2 border-[#c8aa6e]/80 shadow-[0_0_30px_rgba(200,170,110,0.25)] bg-[#091428] relative flex items-center justify-center transition-all duration-700 ease-out ${
+            isSolved
+              ? 'w-[94vw] max-w-[580px] sm:max-w-[640px] aspect-[1215/717] cursor-pointer group'
+              : 'w-[300px] h-[300px] sm:w-[350px] sm:h-[350px]'
+          }`}
+          title={isSolved ? 'Click to view full image' : undefined}
+        >
           {!imageLoaded && !imageError && (
             <div className="absolute inset-0 bg-[#1e2328] animate-pulse flex items-center justify-center z-10">
               <Sparkles className="w-8 h-8 text-[#c8aa6e]/40 animate-spin" />
@@ -207,12 +234,23 @@ export const SplashMode: React.FC<SplashModeProps> = ({
               }}
               style={{
                 transform: `scale(${currentScale})`,
-                transformOrigin: `${focalX}% ${focalY}%`,
+                transformOrigin: isSolved ? 'center center' : `${focalX}% ${focalY}%`,
                 transition: 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease',
                 opacity: imageLoaded ? 1 : 0,
               }}
-              className="w-full h-full object-cover select-none pointer-events-none"
+              className={`w-full h-full select-none ${
+                isSolved
+                  ? 'object-contain transition-transform duration-300 group-hover:scale-[1.01]'
+                  : 'object-cover pointer-events-none'
+              }`}
             />
+          )}
+
+          {isSolved && imageLoaded && (
+            <div className="absolute bottom-2.5 right-2.5 bg-black/70 hover:bg-black/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-[#c8aa6e]/40 text-[#c8aa6e] text-xs font-semibold flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+              <Maximize2 className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">View Full</span>
+            </div>
           )}
         </div>
 
@@ -384,6 +422,48 @@ export const SplashMode: React.FC<SplashModeProps> = ({
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Fullscreen Splash Lightbox */}
+      {isLightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Full Splash Art View"
+          onClick={() => setIsLightboxOpen(false)}
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-fade-in cursor-zoom-out"
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsLightboxOpen(false);
+            }}
+            aria-label="Close full view"
+            className="absolute top-4 right-4 p-2 text-[#a09b8c] hover:text-[#f0e6d2] bg-white/10 hover:bg-white/20 rounded-full transition-colors cursor-pointer z-10"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-[95vw] max-h-[88vh] flex flex-col items-center cursor-default"
+          >
+            <img
+              src={imageSource}
+              alt={`${target.name} - ${targetSkin.name}`}
+              className="max-w-full max-h-[80vh] object-contain rounded-xl border-2 border-[#c8aa6e]/60 shadow-[0_0_50px_rgba(200,170,110,0.3)] animate-flip-in"
+            />
+            <div className="mt-3 text-center">
+              <div className="text-base sm:text-lg font-bold text-[#f0e6d2] font-serif">
+                {target.name}
+              </div>
+              <div className="text-xs sm:text-sm text-[#c8aa6e]">
+                {targetSkin.name}
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -4,9 +4,9 @@ import { EmojiMode } from '../../src/components/modes/EmojiMode';
 import { Champion } from '../../src/types';
 
 const mockTarget: Champion = {
-  id: 'Ahri',
+  id: 'TestChampion',
   numericId: 103,
-  name: 'Ahri',
+  name: 'Test Champion',
   title: 'the Nine-Tailed Fox',
   gender: 'Female',
   positions: ['Middle'],
@@ -34,6 +34,12 @@ const champ1 = createMockChamp('Champ1', 'Champion One');
 const champ2 = createMockChamp('Champ2', 'Champion Two');
 const champ3 = createMockChamp('Champ3', 'Champion Three');
 const champ4 = createMockChamp('Champ4', 'Champion Four');
+const warwickTarget: Champion = {
+  ...mockTarget,
+  id: 'Warwick',
+  name: 'Warwick',
+  emojis: ['👃', '🍽️', '🩸', '🐺'],
+};
 
 const allChamps = [mockTarget, champ1, champ2, champ3, champ4];
 
@@ -53,7 +59,7 @@ describe('EmojiMode Component Tests', () => {
     const clueItems = screen.getAllByRole('listitem');
     expect(clueItems.length).toBe(5);
     expect(screen.getByRole('listitem', { name: 'Emoji clue 1: 🦊' })).toBeInTheDocument();
-    expect(screen.getByTestId('emoji-clues').querySelectorAll('img')).toHaveLength(0);
+    expect(screen.getByTestId('emoji-clues').querySelectorAll('[data-testid="emoji-render"]')).toHaveLength(1);
     expect(container.querySelectorAll('.lucide-lock').length).toBe(4);
     expect(screen.getByRole('list', { name: 'Emoji clues: 1 of 5 revealed' })).toBeInTheDocument();
   });
@@ -133,26 +139,30 @@ describe('EmojiMode Component Tests', () => {
     expect(container.querySelectorAll('.lucide-lock').length).toBe(0);
   });
 
-  it('reports the configured clue count instead of assuming four', () => {
+  it('renders the source sequence as pure rendered emoji cards without text hints', () => {
     render(
       <EmojiMode
-        target={mockTarget}
-        guesses={[]}
+        target={warwickTarget}
+        guesses={[champ1]}
         onGuess={vi.fn()}
         isSolved={false}
-        allChampions={allChamps}
+        allChampions={[...allChamps, warwickTarget]}
       />
     );
 
-    expect(screen.getByText('1 of 5 clues revealed')).toBeInTheDocument();
-    expect(screen.getByText(/One new clue unlocks with each guess/)).toBeInTheDocument();
+    expect(screen.getAllByRole('listitem')).toHaveLength(4);
+    expect(screen.getByTestId('emoji-clue-0').querySelectorAll('[data-testid="emoji-render"]')).toHaveLength(1);
+    expect(screen.getByTestId('emoji-clue-1').querySelectorAll('[data-testid="emoji-render"]')).toHaveLength(1);
+    expect(screen.queryByText(/Region:|Role:/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/clues revealed/)).not.toBeInTheDocument();
   });
 
-  it('displays region clue when player has 4 or more failed guesses', () => {
-    render(
+  it('displays progressive clues (Region, Role) when player has 4 or more wrong guesses', () => {
+    const fourGuesses = [champ1, champ2, champ3, champ4];
+    const { rerender } = render(
       <EmojiMode
         target={mockTarget}
-        guesses={[champ1, champ2, champ3, champ4]}
+        guesses={fourGuesses}
         onGuess={vi.fn()}
         isSolved={false}
         allChampions={allChamps}
@@ -161,5 +171,23 @@ describe('EmojiMode Component Tests', () => {
 
     expect(screen.getByText(/Clue \(4 tries\): Region:/)).toBeInTheDocument();
     expect(screen.getByText('Ionia')).toBeInTheDocument();
+
+    // 7 guesses -> includes Role
+    const sevenGuesses = Array.from({ length: 7 }, (_, i) => ({
+      ...champ1,
+      id: `Champ${i}`,
+      name: `Champ ${i}`,
+    }));
+    rerender(
+      <EmojiMode
+        target={mockTarget}
+        guesses={sevenGuesses}
+        onGuess={vi.fn()}
+        isSolved={false}
+        allChampions={allChamps}
+      />
+    );
+    expect(screen.getByText(/Role:/)).toBeInTheDocument();
+    expect(screen.getByText('Middle')).toBeInTheDocument();
   });
 });

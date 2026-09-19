@@ -14,9 +14,6 @@
     background-attachment: fixed;
   }
 
-  .font-emoji {
-    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
-  }
 }
 
 @keyframes flip-in {

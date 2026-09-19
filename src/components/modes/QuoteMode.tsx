@@ -57,6 +57,9 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
 
   // 3. Quote 3: Prioritize iconic signature / champion select pick quote
   const quote3 = useMemo(() => {
+    if (target.quote && target.quote.text !== quote1Text && (!quote2 || target.quote.text !== quote2.text)) {
+      return target.quote;
+    }
     if (!target.quotes || target.quotes.length <= 2) return null;
     const signature = target.quotes.find((q, idx) => {
       if (idx === quoteIndex || q.text === quote1Text || (quote2 && q.text === quote2.text)) return false;
@@ -69,7 +72,7 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
       return firstQuote;
     }
     return target.quotes.find((q, idx) => idx !== quoteIndex && q.text !== quote1Text && (!quote2 || q.text !== quote2.text)) ?? null;
-  }, [target.id, target.quotes, quoteIndex, quote1Text, quote2]);
+  }, [target.quote, target.quotes, quoteIndex, quote1Text, quote2]);
 
   // Stop and reset audio if target champion or quotes change
   useEffect(() => {
@@ -301,9 +304,9 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
                 <span>
                   {guesses.length < QUOTE_AUDIO_UNLOCK_GUESSES ? (
                     `Audio clue in ${QUOTE_AUDIO_UNLOCK_GUESSES - guesses.length} ${QUOTE_AUDIO_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
-                  ) : guesses.length < QUOTE_TWO_UNLOCK_GUESSES ? (
+                  ) : guesses.length < QUOTE_TWO_UNLOCK_GUESSES && quote2 ? (
                     `Quote #2 (Interaction) in ${QUOTE_TWO_UNLOCK_GUESSES - guesses.length} ${QUOTE_TWO_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
-                  ) : guesses.length < QUOTE_THREE_UNLOCK_GUESSES ? (
+                  ) : guesses.length < QUOTE_THREE_UNLOCK_GUESSES && quote3 ? (
                     `Signature Quote in ${QUOTE_THREE_UNLOCK_GUESSES - guesses.length} ${QUOTE_THREE_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
                   ) : guesses.length < QUOTE_REGION_UNLOCK_GUESSES ? (
                     `Region clue in ${QUOTE_REGION_UNLOCK_GUESSES - guesses.length} ${QUOTE_REGION_UNLOCK_GUESSES - guesses.length === 1 ? 'try' : 'tries'}`
