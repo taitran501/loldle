@@ -18,7 +18,7 @@ Both **Daily** (UTC-deterministic seed) and **Unlimited** (client-randomized str
 - **Bundler:** Vite 6
 - **Styling:** Tailwind CSS v4, Lucide React
 - **Testing:** Vitest 5 (Unit & Component), Playwright (End-to-End), Testing Library
-- **Dataset & Assets:** Local static assets for champions (173) and abilities (865); CommunityDragon & Riot DDragon CDN for splash art and voice audio.
+- **Dataset & Assets:** Local static assets for champions (173) and abilities (865); pinned emoji-mart Apple data and spritesheet renders for the exact Emoji catalog strings; CommunityDragon & Riot DDragon CDN for splash art and voice audio.
 
 ## Getting Started
 

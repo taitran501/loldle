@@ -17,6 +17,8 @@ dist-ssr
 coverage
 playwright-report
 test-results
+.playwright-cli
+output
 
 # Editor directories and files
 .vscode/*

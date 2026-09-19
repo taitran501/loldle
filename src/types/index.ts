@@ -28,6 +28,10 @@ export interface Champion {
   releaseYear: number;
   iconUrl: string;
   abilities: Ability[];
+  quote?: {
+    text: string;
+    audioUrl: string;
+  };
   quotes: {
     text: string;
     audioUrl: string;

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, within } from '@testing-library/react';
 import { SplashMode } from '../../src/components/modes/SplashMode';
 import { Champion, Skin } from '../../src/types';
 
@@ -323,5 +323,38 @@ describe('SplashMode Component Tests', () => {
     fireEvent.click(skipBtn);
 
     expect(onOpenVictoryMock).toHaveBeenCalled();
+  });
+
+  it('displays full uncropped widescreen splash and opens/closes lightbox modal when solved', () => {
+    render(
+      <SplashMode
+        target={mockTarget}
+        targetSkin={mockSkinDynasty}
+        guesses={[mockTarget]}
+        onGuess={vi.fn()}
+        isSolved={true}
+        allChampions={allChamps}
+      />
+    );
+
+    const img = screen.getByAltText('Champion Splash Art') as HTMLImageElement;
+    expect(img.style.transformOrigin).toBe('center center');
+    expect(img.className).toContain('object-contain');
+
+    // Viewport container has widescreen aspect ratio class
+    const viewport = img.closest('[title="Click to view full image"]');
+    expect(viewport).not.toBeNull();
+    expect(viewport?.className).toContain('aspect-[1215/717]');
+
+    // Click viewport to open lightbox
+    fireEvent.click(viewport!);
+    const dialog = screen.getByRole('dialog', { name: /Full Splash Art View/i });
+    expect(dialog).toBeInTheDocument();
+    expect(within(dialog).getByText('Dynasty Ahri')).toBeInTheDocument();
+
+    // Close lightbox
+    const closeBtn = screen.getByRole('button', { name: /Close full view/i });
+    fireEvent.click(closeBtn);
+    expect(screen.queryByRole('dialog', { name: /Full Splash Art View/i })).not.toBeInTheDocument();
   });
 });
