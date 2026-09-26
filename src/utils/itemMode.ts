@@ -76,6 +76,118 @@ function getSortedSubCounts(item: LoLItem, byId: Map<string, LoLItem>): string {
     .join('-');
 }
 
+export function getDailyItemTarget(allItems: LoLItem[], dateStr: string): LoLItem {
+  const eligible = getTargetItems(allItems);
+  if (eligible.length === 0) {
+    throw new Error('No eligible completed items found');
+  }
+  const seed = hashSeed(`${dateStr}-item-daily`);
+  return eligible[seed % eligible.length];
+}
+
+export function getRandomItemTarget(allItems: LoLItem[], excludeIds: string[] = []): LoLItem {
+  const eligible = getTargetItems(allItems);
+  if (eligible.length === 0) {
+    throw new Error('No eligible completed items found');
+  }
+  const available = eligible.filter(item => !excludeIds.includes(item.id));
+  const pool = available.length > 0 ? available : eligible;
+  const randomIndex = Math.floor(Math.random() * pool.length);
+  return pool[randomIndex];
+}
+
+export function getItemPuzzleForTarget(
+  targetItem: LoLItem,
+  allItems: LoLItem[],
+  seed = Math.floor(Math.random() * 1_000_000)
+): {
+  targetItem: LoLItem;
+  choices: LoLItem[];
+  components: LoLItem[];
+  recipeTree: RecipeBranchNode[];
+} {
+  const eligible = getTargetItems(allItems);
+  const byId = new Map(allItems.map(item => [item.id, item]));
+  const components = resolveItemComponents(targetItem, allItems);
+  const recipeTree = resolveRecipeTree(targetItem, allItems);
+  const firstCompId = targetItem.from[0];
+  const targetRecipeSignature = [...targetItem.from].sort().join(',');
+  const targetSubCounts = getSortedSubCounts(targetItem, byId);
+  const targetArchetype = getPrimaryArchetype(targetItem);
+
+  // Score candidate decoys
+  const scoredCandidates = eligible
+    .filter(item => item.id !== targetItem.id)
+    .map(item => {
+      const itemRecipeSignature = [...item.from].sort().join(',');
+      const itemSubCounts = getSortedSubCounts(item, byId);
+      const itemArchetype = getPrimaryArchetype(item);
+
+      let score = 0;
+
+      if (itemArchetype === targetArchetype) {
+        score += 300;
+      } else if (item.tags.some(tag => targetItem.tags.includes(tag))) {
+        score += 120;
+      }
+
+      if (firstCompId && item.from.includes(firstCompId)) {
+        score += 65;
+      }
+      const sharedComps = item.from.filter(compId => targetItem.from.includes(compId)).length;
+      if (sharedComps >= 1) {
+        score += 40 + Math.min(sharedComps, 2) * 15;
+      }
+
+      const tieBreaker = hashSeed(`${seed}-${item.id}`) % 25;
+      return {
+        item,
+        recipeSignature: itemRecipeSignature,
+        subCounts: itemSubCounts,
+        score: score + tieBreaker,
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+
+  const decoys: LoLItem[] = [];
+  const usedRecipes = new Set<string>([targetRecipeSignature]);
+  const usedSubCounts = new Set<string>([targetSubCounts]);
+
+  for (const candidate of scoredCandidates) {
+    if (decoys.length >= ITEM_CHOICE_COUNT - 1) break;
+    if (usedRecipes.has(candidate.recipeSignature)) continue;
+    if (usedSubCounts.has(candidate.subCounts)) continue;
+
+    decoys.push(candidate.item);
+    usedRecipes.add(candidate.recipeSignature);
+    usedSubCounts.add(candidate.subCounts);
+  }
+
+  for (const candidate of scoredCandidates) {
+    if (decoys.length >= ITEM_CHOICE_COUNT - 1) break;
+    if (!decoys.some(d => d.id === candidate.item.id) && !usedRecipes.has(candidate.recipeSignature)) {
+      decoys.push(candidate.item);
+      usedRecipes.add(candidate.recipeSignature);
+    }
+  }
+
+  const rawChoices = [targetItem, ...decoys];
+  const choices = rawChoices
+    .map(item => ({
+      item,
+      order: hashSeed(`${seed}-shuffle-${item.id}`),
+    }))
+    .sort((a, b) => a.order - b.order)
+    .map(entry => entry.item);
+
+  return {
+    targetItem,
+    choices,
+    components,
+    recipeTree,
+  };
+}
+
 export function pickTargetItemAndChoices(
   allItems: LoLItem[],
   playType: PlayType,
@@ -93,7 +205,6 @@ export function pickTargetItemAndChoices(
     throw new Error('No eligible completed items found');
   }
 
-  const byId = new Map(allItems.map(item => [item.id, item]));
   const availableTargets = excludeId
     ? eligible.filter(item => item.id !== excludeId)
     : eligible;
@@ -102,93 +213,8 @@ export function pickTargetItemAndChoices(
   const baseSeed =
     playType === 'daily'
       ? hashSeed(`${dateStr}-item-daily`)
-      : hashSeed(`unlimited-item-${roundSeed}-${excludeId || ''}`);
+      : (roundSeed !== 0 ? hashSeed(`unlimited-item-${roundSeed}-${excludeId || ''}`) : Math.floor(Math.random() * 1_000_000));
 
   const targetItem = pool[baseSeed % pool.length];
-  const components = resolveItemComponents(targetItem, allItems);
-  const recipeTree = resolveRecipeTree(targetItem, allItems);
-  const firstCompId = targetItem.from[0];
-  const targetRecipeSignature = [...targetItem.from].sort().join(',');
-  const targetSubCounts = getSortedSubCounts(targetItem, byId);
-  const targetArchetype = getPrimaryArchetype(targetItem);
-
-  // Score candidate decoys:
-  // 1. Strongly require the SAME primary archetype (AD Fighter with AD Fighter, AP Mage with AP Mage, Crit/AS with Crit/AS, Tank with Tank)
-  // 2. Reward sharing components (including `firstCompId`) so players can't guess just by AD/AP tag or a single component name
-  // 3. Strictly exclude identical recipes AND identical branch sub-component structures (`sortedSubCounts`) so every candidate has a distinct tree shape on Guess #1
-  const scoredCandidates = eligible
-    .filter(item => item.id !== targetItem.id)
-    .map(item => {
-      const itemRecipeSignature = [...item.from].sort().join(',');
-      const itemSubCounts = getSortedSubCounts(item, byId);
-      const itemArchetype = getPrimaryArchetype(item);
-
-      let score = 0;
-
-      // Same archetype is top priority so all 5 items belong to the same class (AD / AP / Crit / Tank / Support)
-      if (itemArchetype === targetArchetype) {
-        score += 300;
-      } else if (item.tags.some(tag => targetItem.tags.includes(tag))) {
-        score += 120;
-      }
-
-      // Reward sharing components from the same build family (e.g. Warhammer / B.F. Sword / Lost Chapter / Kindlegem)
-      if (firstCompId && item.from.includes(firstCompId)) {
-        score += 65;
-      }
-      const sharedComps = item.from.filter(compId => targetItem.from.includes(compId)).length;
-      if (sharedComps >= 1) {
-        score += 40 + Math.min(sharedComps, 2) * 15;
-      }
-
-      const tieBreaker = hashSeed(`${baseSeed}-${item.id}`) % 25;
-      return {
-        item,
-        recipeSignature: itemRecipeSignature,
-        subCounts: itemSubCounts,
-        score: score + tieBreaker,
-      };
-    })
-    .sort((a, b) => b.score - a.score);
-
-  // Pick 4 decoys from the same archetype/component family, strictly enforcing unique recipe AND unique branch sub-component structure
-  const decoys: LoLItem[] = [];
-  const usedRecipes = new Set<string>([targetRecipeSignature]);
-  const usedSubCounts = new Set<string>([targetSubCounts]);
-
-  for (const candidate of scoredCandidates) {
-    if (decoys.length >= ITEM_CHOICE_COUNT - 1) break;
-    if (usedRecipes.has(candidate.recipeSignature)) continue;
-    if (usedSubCounts.has(candidate.subCounts)) continue;
-
-    decoys.push(candidate.item);
-    usedRecipes.add(candidate.recipeSignature);
-    usedSubCounts.add(candidate.subCounts);
-  }
-
-  // Fallback fill if the item pool is small (e.g. unit test mock pool)
-  for (const candidate of scoredCandidates) {
-    if (decoys.length >= ITEM_CHOICE_COUNT - 1) break;
-    if (!decoys.some(d => d.id === candidate.item.id) && !usedRecipes.has(candidate.recipeSignature)) {
-      decoys.push(candidate.item);
-      usedRecipes.add(candidate.recipeSignature);
-    }
-  }
-
-  // Deterministically shuffle the 5 choices
-  const rawChoices = [targetItem, ...decoys];
-  const choices = rawChoices
-    .map(item => ({
-      item,
-      order: hashSeed(`${baseSeed}-shuffle-${item.id}`),
-    }))
-    .sort((a, b) => a.order - b.order)
-    .map(entry => entry.item);
-
-  return {
-    targetItem,
-    choices,
-    components,
-    recipeTree,
-  };
+  return getItemPuzzleForTarget(targetItem, allItems, baseSeed);
 }

@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import confetti from 'canvas-confetti';
 import { LoLItem, PlayType } from '../../types';
-import { pickTargetItemAndChoices } from '../../utils/itemMode';
+import {
+  getDailyItemTarget,
+  getItemPuzzleForTarget,
+  getRandomItemTarget,
+} from '../../utils/itemMode';
 import {
   Lock,
   Sparkles,
@@ -23,6 +27,46 @@ interface ItemModeProps {
   onShareResult?: (text: string) => void;
 }
 
+interface PersistedItemRecord {
+  targetId: string;
+  guessedIds: string[];
+  extraReveals: number;
+  isSolved: boolean;
+  dateStr?: string;
+  seed: number;
+}
+
+const STORAGE_ITEM_KEY = 'loldle_item_state_v2';
+
+function loadPersistedItemRecord(playType: PlayType, dateStr: string): PersistedItemRecord | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_ITEM_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    const record: PersistedItemRecord | undefined = parsed?.[playType];
+    if (!record || typeof record.targetId !== 'string' || !Array.isArray(record.guessedIds)) {
+      return null;
+    }
+    if (playType === 'daily' && record.dateStr !== dateStr) {
+      return null;
+    }
+    return record;
+  } catch {
+    return null;
+  }
+}
+
+function savePersistedItemRecord(playType: PlayType, record: PersistedItemRecord) {
+  try {
+    const raw = localStorage.getItem(STORAGE_ITEM_KEY);
+    const parsed = raw ? JSON.parse(raw) : {};
+    parsed[playType] = record;
+    localStorage.setItem(STORAGE_ITEM_KEY, JSON.stringify(parsed));
+  } catch {
+    // Ignore localStorage failures
+  }
+}
+
 export const ItemMode: React.FC<ItemModeProps> = ({
   allItems,
   playType,
@@ -30,25 +74,81 @@ export const ItemMode: React.FC<ItemModeProps> = ({
   onRoundComplete,
   onShareResult,
 }) => {
-  const [roundSeed, setRoundSeed] = useState(1);
-  const [lastTargetId, setLastTargetId] = useState<string | undefined>(undefined);
-  const [guessedIds, setGuessedIds] = useState<string[]>([]);
-  const [extraReveals, setExtraReveals] = useState(0);
-  const [isSolved, setIsSolved] = useState(false);
+  // Initialize state from storage or generate new round
+  const [targetItem, setTargetItem] = useState<LoLItem>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    if (saved) {
+      const found = allItems.find(i => i.id === saved.targetId);
+      if (found) return found;
+    }
+    return playType === 'daily'
+      ? getDailyItemTarget(allItems, dateStr)
+      : getRandomItemTarget(allItems);
+  });
 
-  const puzzle = useMemo(
-    () => pickTargetItemAndChoices(allItems, playType, dateStr, roundSeed, lastTargetId),
-    [allItems, playType, dateStr, roundSeed, lastTargetId]
-  );
+  const [puzzleSeed, setPuzzleSeed] = useState<number>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    return saved?.seed ?? Math.floor(Math.random() * 1_000_000);
+  });
 
-  const { targetItem, choices, recipeTree } = puzzle;
+  const [guessedIds, setGuessedIds] = useState<string[]>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    return saved?.guessedIds ?? [];
+  });
 
-  // Reset state when playType or dateStr changes
+  const [extraReveals, setExtraReveals] = useState<number>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    return saved?.extraReveals ?? 0;
+  });
+
+  const [isSolved, setIsSolved] = useState<boolean>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    return saved?.isSolved ?? false;
+  });
+
+  // Re-hydrate when playType or dateStr changes
   useEffect(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    if (saved) {
+      const found = allItems.find(i => i.id === saved.targetId);
+      if (found) {
+        setTargetItem(found);
+        setPuzzleSeed(saved.seed);
+        setGuessedIds(saved.guessedIds);
+        setExtraReveals(saved.extraReveals);
+        setIsSolved(saved.isSolved);
+        return;
+      }
+    }
+
+    const nextTarget =
+      playType === 'daily'
+        ? getDailyItemTarget(allItems, dateStr)
+        : getRandomItemTarget(allItems);
+    const nextSeed = Math.floor(Math.random() * 1_000_000);
+
+    setTargetItem(nextTarget);
+    setPuzzleSeed(nextSeed);
     setGuessedIds([]);
     setExtraReveals(0);
     setIsSolved(false);
-  }, [playType, dateStr, targetItem.id]);
+
+    savePersistedItemRecord(playType, {
+      targetId: nextTarget.id,
+      guessedIds: [],
+      extraReveals: 0,
+      isSolved: false,
+      dateStr: playType === 'daily' ? dateStr : undefined,
+      seed: nextSeed,
+    });
+  }, [playType, dateStr, allItems]);
+
+  const puzzle = useMemo(
+    () => getItemPuzzleForTarget(targetItem, allItems, puzzleSeed),
+    [targetItem, allItems, puzzleSeed]
+  );
+
+  const { choices, recipeTree } = puzzle;
 
   // Total effective clue progress = wrong guesses + manual clue unlocks
   const wrongGuessCount = guessedIds.filter(id => id !== targetItem.id).length;
@@ -68,9 +168,10 @@ export const ItemMode: React.FC<ItemModeProps> = ({
     if (isSolved || guessedIds.includes(item.id)) return;
 
     const nextGuesses = [...guessedIds, item.id];
+    const solvedNow = item.id === targetItem.id;
     setGuessedIds(nextGuesses);
 
-    if (item.id === targetItem.id) {
+    if (solvedNow) {
       setIsSolved(true);
       try {
         confetti({
@@ -84,20 +185,50 @@ export const ItemMode: React.FC<ItemModeProps> = ({
       }
       onRoundComplete?.(nextGuesses.length + extraReveals, targetItem);
     }
+
+    savePersistedItemRecord(playType, {
+      targetId: targetItem.id,
+      guessedIds: nextGuesses,
+      extraReveals,
+      isSolved: solvedNow,
+      dateStr: playType === 'daily' ? dateStr : undefined,
+      seed: puzzleSeed,
+    });
   };
 
   const handleRevealNextClue = () => {
     if (isSolved || clueStep >= 4) return;
-    setExtraReveals(prev => prev + 1);
+    const nextReveals = extraReveals + 1;
+    setExtraReveals(nextReveals);
+
+    savePersistedItemRecord(playType, {
+      targetId: targetItem.id,
+      guessedIds,
+      extraReveals: nextReveals,
+      isSolved,
+      dateStr: playType === 'daily' ? dateStr : undefined,
+      seed: puzzleSeed,
+    });
   };
 
   const handleNextRound = () => {
     if (playType !== 'unlimited') return;
-    setLastTargetId(targetItem.id);
-    setRoundSeed(prev => prev + 1);
+    const nextTarget = getRandomItemTarget(allItems, [targetItem.id]);
+    const nextSeed = Math.floor(Math.random() * 1_000_000);
+
+    setTargetItem(nextTarget);
+    setPuzzleSeed(nextSeed);
     setGuessedIds([]);
     setExtraReveals(0);
     setIsSolved(false);
+
+    savePersistedItemRecord('unlimited', {
+      targetId: nextTarget.id,
+      guessedIds: [],
+      extraReveals: 0,
+      isSolved: false,
+      seed: nextSeed,
+    });
   };
 
   const handleShare = () => {
