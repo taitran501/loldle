@@ -4,6 +4,16 @@ All notable changes, new game modes, dataset updates, and UX improvements to **L
 
 ---
 
+## [1.2.2] - 2026-09-26
+
+### Fixed & Enhanced
+- **Data Dragon `16.19.1` Asset Fallback Modernization & Item Surrender** ([PR #10](https://github.com/taitran501/loldle/pull/10)):
+  - Replaced all legacy hardcoded `14.24.1` image fallback URLs across `AutocompleteInput`, `VictoryModal`, and all mode components (`ClassicMode`, `QuoteMode`, `AbilityMode`, `SplashMode`, `EmojiMode`, `HigherLowerMode`, `ItemMode`) with centralized `getChampionIconUrl` and `getItemIconUrl` helper functions using current Data Dragon version `16.19.1`.
+  - Fixed missing champion icon fallbacks for newer champions (e.g., *Ambessa*, *Aurora*, *Smolder*).
+  - Added "Give Up" surrender flow in Unlimited **Item Shop Mode** allowing players to reveal the recipe and solution without getting stuck.
+
+---
+
 ## [1.2.1] - 2026-09-26
 
 ### Fixed & Enhanced

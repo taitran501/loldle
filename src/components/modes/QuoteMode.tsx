@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
-import { QUOTE_AUDIO_UNLOCK_GUESSES, QUOTE_REGION_UNLOCK_GUESSES, QUOTE_THREE_UNLOCK_GUESSES, QUOTE_TWO_UNLOCK_GUESSES } from '../../utils/constants';
+import { QUOTE_AUDIO_UNLOCK_GUESSES, QUOTE_REGION_UNLOCK_GUESSES, QUOTE_THREE_UNLOCK_GUESSES, QUOTE_TWO_UNLOCK_GUESSES, getChampionIconUrl } from '../../utils/constants';
 import { Volume2, VolumeX, Quote as QuoteIcon, CheckCircle, XCircle, Sparkles, Crown, MapPin } from 'lucide-react';
 
 interface QuoteModeProps {
@@ -348,7 +348,7 @@ export const QuoteMode: React.FC<QuoteModeProps> = ({
                     src={guess.iconUrl}
                     alt={guess.name}
                     onError={e => {
-                      e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${guess.id}.png`;
+                      e.currentTarget.src = getChampionIconUrl(guess.id);
                     }}
                     className="w-8 h-8 rounded-full border border-[#c8aa6e]/40 object-cover"
                   />

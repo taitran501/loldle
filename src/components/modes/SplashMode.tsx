@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { BonusState, Champion, Skin } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
+import { getChampionIconUrl } from '../../utils/constants';
 import { CheckCircle, XCircle, Sparkles, Search, ChevronDown, ArrowRight, Maximize2, X } from 'lucide-react';
 
 interface SplashModeProps {
@@ -406,7 +407,7 @@ export const SplashMode: React.FC<SplashModeProps> = ({
                     src={guess.iconUrl}
                     alt={guess.name}
                     onError={e => {
-                      e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${guess.id}.png`;
+                      e.currentTarget.src = getChampionIconUrl(guess.id);
                     }}
                     className="w-8 h-8 rounded-full border border-[#c8aa6e]/40 object-cover"
                   />

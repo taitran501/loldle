@@ -4,6 +4,7 @@ import { AutocompleteInput } from '../AutocompleteInput';
 import { EmojiRender } from '../EmojiRender';
 import { CheckCircle, XCircle, Lock, Sparkles } from 'lucide-react';
 import { getEmojiRevealCount, normalizeEmojiClues } from '../../utils/emoji';
+import { getChampionIconUrl } from '../../utils/constants';
 
 interface EmojiModeProps {
   target: Champion;
@@ -116,7 +117,7 @@ export const EmojiMode: React.FC<EmojiModeProps> = ({
                     src={guess.iconUrl}
                     alt={guess.name}
                     onError={e => {
-                      e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${guess.id}.png`;
+                      e.currentTarget.src = getChampionIconUrl(guess.id);
                     }}
                     className="w-8 h-8 rounded-full border border-[#c8aa6e]/40 object-cover"
                   />

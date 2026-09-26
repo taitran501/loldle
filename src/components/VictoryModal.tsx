@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import confetti from 'canvas-confetti';
 import { AbilityKey, BonusState, Champion, GameMode, PlayType, Skin } from '../types';
+import { getChampionIconUrl } from '../utils/constants';
 import {
   Trophy,
   ArrowRight,
@@ -103,7 +104,7 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
   ];
   const otherModes = allModes.filter(m => m.id !== mode);
   const primaryImage = skin?.splashFullUrl || `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`;
-  const fallbackImage = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${champion.id}.png`;
+  const fallbackImage = getChampionIconUrl(champion.id);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300 animate-fade-in" data-testid="victory-modal">

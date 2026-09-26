@@ -12,6 +12,7 @@ import {
   getMetricValue,
   pickNextComparison,
 } from '../../utils/higherLower';
+import { getChampionIconUrl } from '../../utils/constants';
 import {
   ArrowUp,
   ArrowDown,
@@ -603,7 +604,7 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
               src={leftChampion.iconUrl}
               alt={leftChampion.name}
               onError={e => {
-                e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${leftChampion.id}.png`;
+                e.currentTarget.src = getChampionIconUrl(leftChampion.id);
               }}
               className="w-12 h-12 rounded-full border-2 border-[#c8aa6e] object-cover shadow-md"
             />
@@ -682,7 +683,7 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
               src={rightChampion.iconUrl}
               alt={rightChampion.name}
               onError={e => {
-                e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${rightChampion.id}.png`;
+                e.currentTarget.src = getChampionIconUrl(rightChampion.id);
               }}
               className="w-12 h-12 rounded-full border-2 border-[#c8aa6e] object-cover shadow-md"
             />

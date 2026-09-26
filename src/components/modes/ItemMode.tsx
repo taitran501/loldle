@@ -17,7 +17,9 @@ import {
   Eye,
   HelpCircle,
   ShoppingBag,
+  Flag,
 } from 'lucide-react';
+import { getItemIconUrl } from '../../utils/constants';
 
 interface ItemModeProps {
   allItems: LoLItem[];
@@ -32,6 +34,7 @@ interface PersistedItemRecord {
   guessedIds: string[];
   extraReveals: number;
   isSolved: boolean;
+  isSurrendered?: boolean;
   dateStr?: string;
   seed: number;
 }
@@ -106,6 +109,11 @@ export const ItemMode: React.FC<ItemModeProps> = ({
     return saved?.isSolved ?? false;
   });
 
+  const [isSurrendered, setIsSurrendered] = useState<boolean>(() => {
+    const saved = loadPersistedItemRecord(playType, dateStr);
+    return saved?.isSurrendered ?? false;
+  });
+
   // Re-hydrate when playType or dateStr changes
   useEffect(() => {
     const saved = loadPersistedItemRecord(playType, dateStr);
@@ -117,6 +125,7 @@ export const ItemMode: React.FC<ItemModeProps> = ({
         setGuessedIds(saved.guessedIds);
         setExtraReveals(saved.extraReveals);
         setIsSolved(saved.isSolved);
+        setIsSurrendered(saved.isSurrendered ?? false);
         return;
       }
     }
@@ -132,12 +141,14 @@ export const ItemMode: React.FC<ItemModeProps> = ({
     setGuessedIds([]);
     setExtraReveals(0);
     setIsSolved(false);
+    setIsSurrendered(false);
 
     savePersistedItemRecord(playType, {
       targetId: nextTarget.id,
       guessedIds: [],
       extraReveals: 0,
       isSolved: false,
+      isSurrendered: false,
       dateStr: playType === 'daily' ? dateStr : undefined,
       seed: nextSeed,
     });
@@ -191,6 +202,7 @@ export const ItemMode: React.FC<ItemModeProps> = ({
       guessedIds: nextGuesses,
       extraReveals,
       isSolved: solvedNow,
+      isSurrendered,
       dateStr: playType === 'daily' ? dateStr : undefined,
       seed: puzzleSeed,
     });
@@ -206,13 +218,29 @@ export const ItemMode: React.FC<ItemModeProps> = ({
       guessedIds,
       extraReveals: nextReveals,
       isSolved,
+      isSurrendered,
+      dateStr: playType === 'daily' ? dateStr : undefined,
+      seed: puzzleSeed,
+    });
+  };
+
+  const handleGiveUp = () => {
+    if (isSolved) return;
+    setIsSolved(true);
+    setIsSurrendered(true);
+
+    savePersistedItemRecord(playType, {
+      targetId: targetItem.id,
+      guessedIds,
+      extraReveals: 4,
+      isSolved: true,
+      isSurrendered: true,
       dateStr: playType === 'daily' ? dateStr : undefined,
       seed: puzzleSeed,
     });
   };
 
   const handleNextRound = () => {
-    if (playType !== 'unlimited') return;
     const nextTarget = getRandomItemTarget(allItems, [targetItem.id]);
     const nextSeed = Math.floor(Math.random() * 1_000_000);
 
@@ -221,12 +249,14 @@ export const ItemMode: React.FC<ItemModeProps> = ({
     setGuessedIds([]);
     setExtraReveals(0);
     setIsSolved(false);
+    setIsSurrendered(false);
 
     savePersistedItemRecord('unlimited', {
       targetId: nextTarget.id,
       guessedIds: [],
       extraReveals: 0,
       isSolved: false,
+      isSurrendered: false,
       seed: nextSeed,
     });
   };
@@ -235,9 +265,7 @@ export const ItemMode: React.FC<ItemModeProps> = ({
     const totalAttempts = Math.max(1, guessedIds.length + extraReveals);
     const text = `LoLdle (ITEM SHOP) - ${
       playType === 'daily' ? `Daily ${dateStr}` : 'Unlimited'
-    }\nSolved "${targetItem.name}" in ${totalAttempts} ${
-      totalAttempts === 1 ? 'try' : 'tries'
-    }! 🗡️\nPlay at: ${window.location.origin}`;
+    }\n${isSurrendered ? 'Surrendered item' : `Solved "${targetItem.name}" in ${totalAttempts} ${totalAttempts === 1 ? 'try' : 'tries'}! 🗡️`}\nPlay at: ${window.location.origin}`;
 
     if (onShareResult) {
       onShareResult(text);
@@ -263,7 +291,7 @@ export const ItemMode: React.FC<ItemModeProps> = ({
         data-testid="item-recipe-tree"
         className="w-full max-w-2xl bg-[#1e2328]/95 border-2 border-[#785a28]/70 rounded-2xl p-4 sm:p-6 shadow-2xl relative overflow-hidden mb-5"
       >
-        {/* Top Row: Attempts & Optional Unlock Clue Button */}
+        {/* Top Row: Attempts & Optional Unlock Clue Button / Give Up */}
         <div className="flex items-center justify-between mb-3 text-xs">
           <div className="flex items-center gap-2">
             <ShoppingBag className="w-4 h-4 text-[#c8aa6e]" />
@@ -273,17 +301,31 @@ export const ItemMode: React.FC<ItemModeProps> = ({
             </span>
           </div>
 
-          {!isSolved && clueStep < 4 && (
-            <button
-              type="button"
-              data-testid="item-unlock-clue"
-              onClick={handleRevealNextClue}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#091428] hover:bg-[#c8aa6e]/20 text-[#c8aa6e] border border-[#c8aa6e]/50 font-semibold transition cursor-pointer"
-            >
-              <Eye className="w-3.5 h-3.5" />
-              <span>Open Next Clue (+1)</span>
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            {!isSolved && playType === 'unlimited' && (guessedIds.length >= 2 || clueStep >= 2) && (
+              <button
+                type="button"
+                data-testid="item-give-up"
+                onClick={handleGiveUp}
+                className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#091428] hover:bg-rose-950/40 text-rose-400 border border-rose-600/50 font-semibold transition cursor-pointer"
+              >
+                <Flag className="w-3.5 h-3.5" />
+                <span>Give Up</span>
+              </button>
+            )}
+
+            {!isSolved && clueStep < 4 && (
+              <button
+                type="button"
+                data-testid="item-unlock-clue"
+                onClick={handleRevealNextClue}
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#091428] hover:bg-[#c8aa6e]/20 text-[#c8aa6e] border border-[#c8aa6e]/50 font-semibold transition cursor-pointer"
+              >
+                <Eye className="w-3.5 h-3.5" />
+                <span>Open Next Clue (+1)</span>
+              </button>
+            )}
+          </div>
         </div>
 
         {/* LEVEL 1: TARGET COMPLETED ITEM (ROOT OF TREE) */}
@@ -291,7 +333,9 @@ export const ItemMode: React.FC<ItemModeProps> = ({
           <div
             className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl border-2 flex items-center justify-center overflow-hidden transition-all duration-500 ${
               isSolved
-                ? 'border-emerald-400 bg-[#091428] shadow-[0_0_28px_rgba(16,185,129,0.5)] scale-105'
+                ? isSurrendered
+                  ? 'border-rose-500 bg-[#091428] shadow-[0_0_28px_rgba(244,63,94,0.4)] scale-105'
+                  : 'border-emerald-400 bg-[#091428] shadow-[0_0_28px_rgba(16,185,129,0.5)] scale-105'
                 : 'border-[#c8aa6e] bg-[#091428] shadow-[0_0_18px_rgba(200,170,110,0.3)]'
             }`}
           >
@@ -299,6 +343,9 @@ export const ItemMode: React.FC<ItemModeProps> = ({
               <img
                 src={targetItem.iconUrl}
                 alt={isSolved ? targetItem.name : 'Blurred Mystery Item'}
+                onError={e => {
+                  e.currentTarget.src = getItemIconUrl(targetItem.id);
+                }}
                 style={{
                   filter: isSolved ? 'none' : 'blur(10px) saturate(1.2)',
                   transform: isSolved ? 'scale(1)' : 'scale(1.15)',
@@ -385,6 +432,9 @@ export const ItemMode: React.FC<ItemModeProps> = ({
                           <img
                             src={comp.iconUrl}
                             alt={comp.name}
+                            onError={e => {
+                              e.currentTarget.src = getItemIconUrl(comp.id);
+                            }}
                             className="w-full h-full object-cover"
                           />
                         ) : (
@@ -459,6 +509,9 @@ export const ItemMode: React.FC<ItemModeProps> = ({
                                     <img
                                       src={sub.iconUrl}
                                       alt={sub.name}
+                                      onError={e => {
+                                        e.currentTarget.src = getItemIconUrl(sub.id);
+                                      }}
                                       className="w-full h-full object-cover"
                                     />
                                   ) : (
@@ -554,6 +607,9 @@ export const ItemMode: React.FC<ItemModeProps> = ({
                 <img
                   src={choice.iconUrl}
                   alt={choice.name}
+                  onError={e => {
+                    e.currentTarget.src = getItemIconUrl(choice.id);
+                  }}
                   className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg border border-[#c8aa6e]/60 object-cover shadow-md"
                 />
 
@@ -578,9 +634,24 @@ export const ItemMode: React.FC<ItemModeProps> = ({
           data-testid="item-solved-banner"
           className="w-full max-w-lg mt-6 bg-[#1e2328] border-2 border-[#c8aa6e] rounded-2xl p-5 text-center shadow-[0_0_30px_rgba(200,170,110,0.3)] animate-flip-in"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-2">
-            <CheckCircle className="w-3.5 h-3.5" />
-            <span>Recipe Completed!</span>
+          <div
+            className={`inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border text-xs font-bold uppercase tracking-wider mb-2 ${
+              isSurrendered
+                ? 'bg-rose-500/20 border-rose-400/50 text-rose-300'
+                : 'bg-emerald-500/20 border-emerald-400/50 text-emerald-300'
+            }`}
+          >
+            {isSurrendered ? (
+              <>
+                <XCircle className="w-3.5 h-3.5" />
+                <span>Recipe Surrendered</span>
+              </>
+            ) : (
+              <>
+                <CheckCircle className="w-3.5 h-3.5" />
+                <span>Recipe Completed!</span>
+              </>
+            )}
           </div>
 
           <h4 className="text-xl font-serif font-bold text-[#f0e6d2]">
