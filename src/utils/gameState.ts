@@ -5,7 +5,7 @@ export const GAME_STATE_STORAGE_KEY = 'loldle_game_state_v3';
 export const LEGACY_GAME_STATE_STORAGE_KEY = 'loldle_game_state_v2';
 export const GAME_STATE_VERSION = 3 as const;
 export const LEGACY_GAME_STATE_VERSION = 2 as const;
-export const GAME_MODES: GameMode[] = ['classic', 'quote', 'ability', 'emoji', 'splash'];
+export const GAME_MODES: GameMode[] = ['classic', 'quote', 'ability', 'emoji', 'splash', 'higherlower', 'item'];
 
 export interface PersistedModeState {
   targetId: string;
@@ -60,6 +60,8 @@ const emptyModes = (): Record<GameMode, PersistedModeState | null> => ({
   ability: null,
   emoji: null,
   splash: null,
+  higherlower: null,
+  item: null,
 });
 
 export const createEmptyModeStateMap = (): ModeStateMap => ({
@@ -68,6 +70,8 @@ export const createEmptyModeStateMap = (): ModeStateMap => ({
   ability: null,
   emoji: null,
   splash: null,
+  higherlower: null,
+  item: null,
 });
 
 export const createEmptySessionState = (): SessionState => ({
