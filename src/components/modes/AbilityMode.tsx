@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AbilityKey, BonusState, Champion } from '../../types';
 import { AutocompleteInput } from '../AutocompleteInput';
-import { ABILITY_KEY_HINT_UNLOCK_GUESSES } from '../../utils/constants';
+import { ABILITY_KEY_HINT_UNLOCK_GUESSES, getChampionIconUrl } from '../../utils/constants';
 import { CheckCircle, XCircle, Sparkles, SlidersHorizontal, RotateCw, Palette, ArrowRight } from 'lucide-react';
 
 interface AbilityModeProps {
@@ -342,7 +342,7 @@ export const AbilityMode: React.FC<AbilityModeProps> = ({
                     src={guess.iconUrl}
                     alt={guess.name}
                     onError={e => {
-                      e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${guess.id}.png`;
+                      e.currentTarget.src = getChampionIconUrl(guess.id);
                     }}
                     className="w-8 h-8 rounded-full border border-[#c8aa6e]/40 object-cover"
                   />

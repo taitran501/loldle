@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Champion, ClassicComparison, MatchStatus } from '../../types';
 import { compareChampions } from '../../utils/compare';
-import { CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES, CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES, CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES } from '../../utils/constants';
+import { CLASSIC_ABILITY_CLUE_UNLOCK_GUESSES, CLASSIC_QUOTE_CLUE_UNLOCK_GUESSES, CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES, getChampionIconUrl } from '../../utils/constants';
 import { AutocompleteInput } from '../AutocompleteInput';
 import { ArrowUp, ArrowDown, Check, Lock, Quote as QuoteIcon, Sparkles, Image as ImageIcon, X } from 'lucide-react';
 
@@ -302,7 +302,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
                       src={c.champion.iconUrl}
                       alt={c.champion.name}
                       onError={e => {
-                        e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${c.champion.id}.png`;
+                        e.currentTarget.src = getChampionIconUrl(c.champion.id);
                       }}
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border border-[#c8aa6e]/50"
                     />
@@ -426,7 +426,7 @@ export const ClassicMode: React.FC<ClassicModeProps> = ({
                       src={c.champion.iconUrl}
                       alt={c.champion.name}
                       onError={e => {
-                        e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${c.champion.id}.png`;
+                        e.currentTarget.src = getChampionIconUrl(c.champion.id);
                       }}
                       className="w-12 h-12 rounded-full object-cover border border-[#c8aa6e]/50"
                     />

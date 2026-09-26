@@ -9,3 +9,12 @@ export const CLASSIC_SPLASH_CLUE_UNLOCK_GUESSES = 15;
 export const EMOJI_MIN_CLUES = 4;
 export const EMOJI_MAX_CLUES = 6;
 export const EMOJI_RELEASE_GATE = 50;
+export const DDRAGON_VERSION = '16.19.1';
+
+export const getChampionIconUrl = (championId: string): string =>
+  `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}/img/champion/${championId}.png`;
+
+export const getItemIconUrl = (itemId: string): string =>
+  `https://ddragon.leagueoflegends.com/cdn/${DDRAGON_VERSION}/img/item/${itemId}.png`;
+
+

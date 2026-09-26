@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useId } from 'react';
 import { Champion } from '../types';
 import { Search } from 'lucide-react';
 import { championNameMatchesQuery, normalizeChampionSearch } from '../utils/search';
+import { getChampionIconUrl } from '../utils/constants';
 
 interface AutocompleteInputProps {
   champions: Champion[];
@@ -163,7 +164,7 @@ export const AutocompleteInput: React.FC<AutocompleteInputProps> = ({
                   alt={champ.name}
                   loading="lazy"
                   onError={e => {
-                    e.currentTarget.src = `https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${champ.id}.png`;
+                    e.currentTarget.src = getChampionIconUrl(champ.id);
                   }}
                   className="w-9 h-9 rounded-md object-cover border border-[#785a28]/50 flex-shrink-0"
                 />
