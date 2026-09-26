@@ -26,6 +26,10 @@ export interface Champion {
   rangeType: string[];
   regions: string[];
   releaseYear: number;
+  releaseDate?: string;
+  attackRange?: number;
+  lastSkinDate?: string;
+  lastSkinName?: string;
   iconUrl: string;
   abilities: Ability[];
   quote?: {
@@ -43,7 +47,24 @@ export interface Champion {
   skins: Skin[];
 }
 
-export type GameMode = 'classic' | 'quote' | 'ability' | 'emoji' | 'splash';
+export interface LoLItem {
+  id: string;
+  name: string;
+  iconUrl: string;
+  totalGold: number;
+  combineGold: number;
+  from: string[];
+  statsSummary: string[];
+  passiveHint: string;
+  tags: string[];
+  isTargetEligible: boolean;
+}
+
+export type HigherLowerMetric = 'skins' | 'releaseYear' | 'attackRange' | 'daysSinceLastSkin';
+
+export type HigherLowerFilter = 'all' | HigherLowerMetric;
+
+export type GameMode = 'classic' | 'quote' | 'ability' | 'emoji' | 'splash' | 'higherlower' | 'item';
 
 export type PlayType = 'daily' | 'unlimited';
 

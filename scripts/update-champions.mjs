@@ -47,6 +47,10 @@ const NEW_CHAMPS_CONFIG = [
     rangeType: ['Ranged'],
     regions: ['Ionia'],
     releaseYear: 2025,
+    releaseDate: '2025-07-16',
+    attackRange: 550,
+    lastSkinDate: '2025-09-10',
+    lastSkinName: 'T1 Yunara',
     quote: {
       text: 'The age of retribution!',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/804.ogg'
@@ -78,6 +82,10 @@ const NEW_CHAMPS_CONFIG = [
     rangeType: ['Ranged'],
     regions: ['Noxus', 'Piltover'],
     releaseYear: 2025,
+    releaseDate: '2025-01-23',
+    attackRange: 550,
+    lastSkinDate: '2025-12-04',
+    lastSkinName: 'Prestige Winterblessed Mel',
     quote: {
       text: 'Gold bends, but it does not break.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/800.ogg'
@@ -109,6 +117,10 @@ const NEW_CHAMPS_CONFIG = [
     rangeType: ['Melee'],
     regions: ['Shurima', 'Runeterra'],
     releaseYear: 2025,
+    releaseDate: '2025-11-19',
+    attackRange: 175,
+    lastSkinDate: '2025-11-19',
+    lastSkinName: 'Immortal Journey Zaahen',
     quote: {
       text: 'I am the unsundered wrath.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/904.ogg'
@@ -139,6 +151,10 @@ const NEW_CHAMPS_CONFIG = [
     rangeType: ['Melee'],
     regions: ['Demacia'],
     releaseYear: 2026,
+    releaseDate: '2026-06-24',
+    attackRange: 150,
+    lastSkinDate: '2026-06-24',
+    lastSkinName: 'High Noon Locke',
     quote: {
       text: 'Purge the shadow, salt the earth.',
       audioUrl: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-choose-vo/805.ogg'
@@ -226,6 +242,10 @@ async function main() {
       rangeType: c.rangeType,
       regions: c.regions,
       releaseYear: c.releaseYear,
+      releaseDate: c.releaseDate,
+      attackRange: c.attackRange,
+      lastSkinDate: c.lastSkinDate,
+      lastSkinName: c.lastSkinName,
       iconUrl: `/assets/champions/${c.id}.png`,
       abilities,
       quote: previousChampion?.quote || c.quote,

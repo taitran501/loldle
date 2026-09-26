@@ -20,6 +20,10 @@
       "Shurima"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-06-13",
+    "attackRange": 175,
+    "lastSkinDate": "2024-07-31",
+    "lastSkinName": "Primordian",
     "iconUrl": "/assets/champions/Aatrox.png",
     "abilities": [
       {
@@ -1114,6 +1118,10 @@
       "Ionia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-12-14",
+    "attackRange": 550,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "After Hours Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Ahri.png",
     "abilities": [
       {
@@ -3471,6 +3479,10 @@
       "Ionia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-05-11",
+    "attackRange": 125,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Akali.png",
     "abilities": [
       {
@@ -4884,6 +4896,10 @@
       "Shurima"
     ],
     "releaseYear": 2021,
+    "releaseDate": "2021-07-22",
+    "attackRange": 500,
+    "lastSkinDate": "2024-01-24",
+    "lastSkinName": "Three Honors",
     "iconUrl": "/assets/champions/Akshan.png",
     "abilities": [
       {
@@ -5579,6 +5595,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 125,
+    "lastSkinDate": "2021-02-04",
+    "lastSkinName": "Lunar Beast",
     "iconUrl": "/assets/champions/Alistar.png",
     "abilities": [
       {
@@ -5787,6 +5807,10 @@
       "Noxus"
     ],
     "releaseYear": 2024,
+    "releaseDate": "2024-11-06",
+    "attackRange": 125,
+    "lastSkinDate": "2024-11-06",
+    "lastSkinName": "Chosen of the Wolf",
     "iconUrl": "/assets/champions/Ambessa.png",
     "abilities": [
       {
@@ -5870,6 +5894,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-06-26",
+    "attackRange": 125,
+    "lastSkinDate": "2025-02-05",
+    "lastSkinName": "Dumpling Darlings",
     "iconUrl": "/assets/champions/Amumu.png",
     "abilities": [
       {
@@ -6079,6 +6107,10 @@
       "Freljord"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-07-10",
+    "attackRange": 600,
+    "lastSkinDate": "2023-07-17",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/Anivia.png",
     "abilities": [
       {
@@ -6483,6 +6515,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 625,
+    "lastSkinDate": "2024-08-28",
+    "lastSkinName": "Battle Princess",
     "iconUrl": "/assets/champions/Annie.png",
     "abilities": [
       {
@@ -6793,6 +6829,10 @@
       "Targon"
     ],
     "releaseYear": 2019,
+    "releaseDate": "2019-12-11",
+    "attackRange": 550,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "Prestige Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Aphelios.png",
     "abilities": [
       {
@@ -7575,6 +7615,10 @@
       "Freljord"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 600,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Ashe.png",
     "abilities": [
       {
@@ -9896,6 +9940,10 @@
       "Targon"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-03-24",
+    "attackRange": 550,
+    "lastSkinDate": "2024-02-22",
+    "lastSkinName": "Porcelain Protector",
     "iconUrl": "/assets/champions/AurelionSol.png",
     "abilities": [
       {
@@ -11006,6 +11054,10 @@
       "Freljord"
     ],
     "releaseYear": 2024,
+    "releaseDate": "2024-07-17",
+    "attackRange": 550,
+    "lastSkinDate": "2024-07-17",
+    "lastSkinName": "Battle Bunny",
     "iconUrl": "/assets/champions/Aurora.png",
     "abilities": [
       {
@@ -11087,6 +11139,10 @@
       "Shurima"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-09-16",
+    "attackRange": 525,
+    "lastSkinDate": "2024-09-11",
+    "lastSkinName": "Attorney",
     "iconUrl": "/assets/champions/Azir.png",
     "abilities": [
       {
@@ -11746,6 +11802,10 @@
       "Runeterra"
     ],
     "releaseYear": 2015,
+    "releaseDate": "2015-03-12",
+    "attackRange": 500,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Bard.png",
     "abilities": [
       {
@@ -11916,6 +11976,10 @@
       "Void"
     ],
     "releaseYear": 2022,
+    "releaseDate": "2022-06-09",
+    "attackRange": 150,
+    "lastSkinDate": "2024-07-17",
+    "lastSkinName": "Primordian",
     "iconUrl": "/assets/champions/Belveth.png",
     "abilities": [
       {
@@ -12623,6 +12687,10 @@
       "Zaun"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-02",
+    "attackRange": 125,
+    "lastSkinDate": "2023-11-22",
+    "lastSkinName": "Beezcrank",
     "iconUrl": "/assets/champions/Blitzcrank.png",
     "abilities": [
       {
@@ -13478,6 +13546,10 @@
       "Runeterra"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-04-12",
+    "attackRange": 550,
+    "lastSkinDate": "2024-05-01",
+    "lastSkinName": "Empyrean",
     "iconUrl": "/assets/champions/Brand.png",
     "abilities": [
       {
@@ -13789,6 +13861,10 @@
       "Freljord"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-05-12",
+    "attackRange": 125,
+    "lastSkinDate": "2025-04-02",
+    "lastSkinName": "Grill Master",
     "iconUrl": "/assets/champions/Braum.png",
     "abilities": [
       {
@@ -14294,6 +14370,10 @@
       "Noxus"
     ],
     "releaseYear": 2023,
+    "releaseDate": "2023-09-13",
+    "attackRange": 125,
+    "lastSkinDate": "2024-07-31",
+    "lastSkinName": "Primordian",
     "iconUrl": "/assets/champions/Briar.png",
     "abilities": [
       {
@@ -14382,6 +14462,10 @@
       "Piltover"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-01-04",
+    "attackRange": 650,
+    "lastSkinDate": "2024-11-20",
+    "lastSkinName": "Prestige Arcane Commander",
     "iconUrl": "/assets/champions/Caitlyn.png",
     "abilities": [
       {
@@ -16586,6 +16670,10 @@
       "Piltover"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-12-07",
+    "attackRange": 125,
+    "lastSkinDate": "2023-12-06",
+    "lastSkinName": "Prestige Winterblessed",
     "iconUrl": "/assets/champions/Camille.png",
     "abilities": [
       {
@@ -18198,6 +18286,10 @@
       "Shurima"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-12-14",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-23",
+    "lastSkinName": "Prestige Mythmaker",
     "iconUrl": "/assets/champions/Cassiopeia.png",
     "abilities": [
       {
@@ -18611,6 +18703,10 @@
       "Void"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-06-26",
+    "attackRange": 125,
+    "lastSkinDate": "2024-04-03",
+    "lastSkinName": "Toy Terror",
     "iconUrl": "/assets/champions/Chogath.png",
     "abilities": [
       {
@@ -19220,6 +19316,10 @@
       "Piltover"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-19",
+    "attackRange": 550,
+    "lastSkinDate": "2021-07-01",
+    "lastSkinName": "Astronaut",
     "iconUrl": "/assets/champions/Corki.png",
     "abilities": [
       {
@@ -19435,6 +19535,10 @@
       "Noxus"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-05-23",
+    "attackRange": 175,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Prestige Triumphant General",
     "iconUrl": "/assets/champions/Darius.png",
     "abilities": [
       {
@@ -21137,6 +21241,10 @@
       "Targon"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-08-07",
+    "attackRange": 150,
+    "lastSkinDate": "2024-10-23",
+    "lastSkinName": "Prestige Dark Cosmic",
     "iconUrl": "/assets/champions/Diana.png",
     "abilities": [
       {
@@ -22024,6 +22132,10 @@
       "Zaun"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-02",
+    "attackRange": 125,
+    "lastSkinDate": "2023-09-13",
+    "lastSkinName": "Street Demons",
     "iconUrl": "/assets/champions/DrMundo.png",
     "abilities": [
       {
@@ -23299,6 +23411,10 @@
       "Noxus"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-06-06",
+    "attackRange": 550,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Grand Reckoning",
     "iconUrl": "/assets/champions/Draven.png",
     "abilities": [
       {
@@ -23836,6 +23952,10 @@
       "Zaun"
     ],
     "releaseYear": 2015,
+    "releaseDate": "2015-05-29",
+    "attackRange": 125,
+    "lastSkinDate": "2024-12-11",
+    "lastSkinName": "Arcane Last Stand",
     "iconUrl": "/assets/champions/Ekko.png",
     "abilities": [
       {
@@ -25063,6 +25183,10 @@
       "Noxus"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-10-26",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Masque of the Black Rose",
     "iconUrl": "/assets/champions/Elise.png",
     "abilities": [
       {
@@ -25453,6 +25577,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-05-01",
+    "attackRange": 125,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Nightbringer",
     "iconUrl": "/assets/champions/Evelynn.png",
     "abilities": [
       {
@@ -26960,6 +27088,10 @@
       "Piltover"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-03-16",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Masque of the Black Rose",
     "iconUrl": "/assets/champions/Ezreal.png",
     "abilities": [
       {
@@ -30166,6 +30298,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 480,
+    "lastSkinDate": "2024-04-18",
+    "lastSkinName": "Blood Moon",
     "iconUrl": "/assets/champions/Fiddlesticks.png",
     "abilities": [
       {
@@ -31360,6 +31496,10 @@
       "Demacia"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-02-29",
+    "attackRange": 150,
+    "lastSkinDate": "2024-08-28",
+    "lastSkinName": "Battle Queen",
     "iconUrl": "/assets/champions/Fiora.png",
     "abilities": [
       {
@@ -31686,6 +31826,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-11-15",
+    "attackRange": 175,
+    "lastSkinDate": "2024-06-26",
+    "lastSkinName": "Rain Shepherd",
     "iconUrl": "/assets/champions/Fizz.png",
     "abilities": [
       {
@@ -31968,6 +32112,10 @@
       "Demacia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-08-10",
+    "attackRange": 150,
+    "lastSkinDate": "2023-01-12",
+    "lastSkinName": "Mythmaker",
     "iconUrl": "/assets/champions/Galio.png",
     "abilities": [
       {
@@ -33988,6 +34136,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-08-19",
+    "attackRange": 125,
+    "lastSkinDate": "2024-03-06",
+    "lastSkinName": "PROJECT",
     "iconUrl": "/assets/champions/Gangplank.png",
     "abilities": [
       {
@@ -35030,6 +35182,10 @@
       "Demacia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-04-27",
+    "attackRange": 175,
+    "lastSkinDate": "2024-08-28",
+    "lastSkinName": "Fallen God-King",
     "iconUrl": "/assets/champions/Garen.png",
     "abilities": [
       {
@@ -36370,6 +36526,10 @@
       "Freljord"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-08-14",
+    "attackRange": 175,
+    "lastSkinDate": "2023-09-27",
+    "lastSkinName": "La Ilusión",
     "iconUrl": "/assets/champions/Gnar.png",
     "abilities": [
       {
@@ -36714,6 +36874,10 @@
       "Freljord"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-02-02",
+    "attackRange": 125,
+    "lastSkinDate": "2024-10-09",
+    "lastSkinName": "Music Fan",
     "iconUrl": "/assets/champions/Gragas.png",
     "abilities": [
       {
@@ -36966,6 +37130,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-10-19",
+    "attackRange": 425,
+    "lastSkinDate": "2024-02-22",
+    "lastSkinName": "Porcelain",
     "iconUrl": "/assets/champions/Graves.png",
     "abilities": [
       {
@@ -37857,6 +38025,10 @@
       "Camavor"
     ],
     "releaseYear": 2021,
+    "releaseDate": "2021-04-15",
+    "attackRange": 150,
+    "lastSkinDate": "2024-08-28",
+    "lastSkinName": "Battle Queen",
     "iconUrl": "/assets/champions/Gwen.png",
     "abilities": [
       {
@@ -38502,6 +38674,10 @@
       "Camavor"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-04-18",
+    "attackRange": 175,
+    "lastSkinDate": "2025-07-16",
+    "lastSkinName": "Nightbringer",
     "iconUrl": "/assets/champions/Hecarim.png",
     "abilities": [
       {
@@ -38779,6 +38955,10 @@
       "Piltover"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-10-10",
+    "attackRange": 550,
+    "lastSkinDate": "2024-12-11",
+    "lastSkinName": "Arcane Professor",
     "iconUrl": "/assets/champions/Heimerdinger.png",
     "abilities": [
       {
@@ -39859,6 +40039,10 @@
       "Ionia"
     ],
     "releaseYear": 2023,
+    "releaseDate": "2023-12-06",
+    "attackRange": 550,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Hwei.png",
     "abilities": [
       {
@@ -39948,6 +40132,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2015,
+    "releaseDate": "2015-11-24",
+    "attackRange": 125,
+    "lastSkinDate": "2024-07-31",
+    "lastSkinName": "Battle Bear",
     "iconUrl": "/assets/champions/Illaoi.png",
     "abilities": [
       {
@@ -41022,6 +41210,10 @@
       "Ionia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-11-16",
+    "attackRange": 200,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Irelia.png",
     "abilities": [
       {
@@ -42889,6 +43081,10 @@
       "Freljord"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-10-05",
+    "attackRange": 475,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Ivern.png",
     "abilities": [
       {
@@ -44347,6 +44543,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-02",
+    "attackRange": 550,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Dawnbringer",
     "iconUrl": "/assets/champions/Janna.png",
     "abilities": [
       {
@@ -44839,6 +45039,10 @@
       "Demacia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-03-01",
+    "attackRange": 175,
+    "lastSkinDate": "2025-01-23",
+    "lastSkinName": "Mythmaker",
     "iconUrl": "/assets/champions/JarvanIV.png",
     "abilities": [
       {
@@ -45129,6 +45333,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 125,
+    "lastSkinDate": "2024-03-06",
+    "lastSkinName": "PROJECT",
     "iconUrl": "/assets/champions/Jax.png",
     "abilities": [
       {
@@ -45873,6 +46081,10 @@
       "Piltover"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-07-07",
+    "attackRange": 125,
+    "lastSkinDate": "2024-11-20",
+    "lastSkinName": "Arcane Survivor",
     "iconUrl": "/assets/champions/Jayce.png",
     "abilities": [
       {
@@ -46189,6 +46401,10 @@
       "Ionia"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-02-01",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-23",
+    "lastSkinName": "Mythmaker",
     "iconUrl": "/assets/champions/Jhin.png",
     "abilities": [
       {
@@ -47819,6 +48035,10 @@
       "Zaun"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-10-10",
+    "attackRange": 525,
+    "lastSkinDate": "2024-12-11",
+    "lastSkinName": "Arcane Fractured",
     "iconUrl": "/assets/champions/Jinx.png",
     "abilities": [
       {
@@ -49247,6 +49467,10 @@
       "Shurima"
     ],
     "releaseYear": 2022,
+    "releaseDate": "2022-11-02",
+    "attackRange": 150,
+    "lastSkinDate": "2023-11-08",
+    "lastSkinName": "HEARTSTEEL",
     "iconUrl": "/assets/champions/KSante.png",
     "abilities": [
       {
@@ -49892,6 +50116,10 @@
       "Void"
     ],
     "releaseYear": 2018,
+    "releaseDate": "2018-03-07",
+    "attackRange": 525,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Risen Legend",
     "iconUrl": "/assets/champions/Kaisa.png",
     "abilities": [
       {
@@ -51737,6 +51965,10 @@
       "Camavor"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-11-20",
+    "attackRange": 525,
+    "lastSkinDate": "2025-07-16",
+    "lastSkinName": "Dawnbringer",
     "iconUrl": "/assets/champions/Kalista.png",
     "abilities": [
       {
@@ -52436,6 +52668,10 @@
       "Ionia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-02-01",
+    "attackRange": 525,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Karma.png",
     "abilities": [
       {
@@ -53414,6 +53650,10 @@
       "Noxus"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-06-12",
+    "attackRange": 450,
+    "lastSkinDate": "2023-06-28",
+    "lastSkinName": "Elderwood",
     "iconUrl": "/assets/champions/Karthus.png",
     "abilities": [
       {
@@ -54129,6 +54369,10 @@
       "Void"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-08-07",
+    "attackRange": 150,
+    "lastSkinDate": "2024-01-09",
+    "lastSkinName": "Dragonmancer",
     "iconUrl": "/assets/champions/Kassadin.png",
     "abilities": [
       {
@@ -54302,6 +54546,10 @@
       "Noxus"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-19",
+    "attackRange": 125,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Prestige Masque of the Black Rose",
     "iconUrl": "/assets/champions/Katarina.png",
     "abilities": [
       {
@@ -55088,6 +55336,10 @@
       "Targon"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 175,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Kayle.png",
     "abilities": [
       {
@@ -56485,6 +56737,10 @@
       "Shurima"
     ],
     "releaseYear": 2017,
+    "releaseDate": "2017-07-12",
+    "attackRange": 175,
+    "lastSkinDate": "2025-03-19",
+    "lastSkinName": "Battle Academia",
     "iconUrl": "/assets/champions/Kayn.png",
     "abilities": [
       {
@@ -59555,6 +59811,10 @@
       "Ionia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-04-08",
+    "attackRange": 550,
+    "lastSkinDate": "2023-02-24",
+    "lastSkinName": "Astronaut",
     "iconUrl": "/assets/champions/Kennen.png",
     "abilities": [
       {
@@ -59786,6 +60046,10 @@
       "Void"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-09-27",
+    "attackRange": 125,
+    "lastSkinDate": "2024-03-20",
+    "lastSkinName": "Crystalis Indomitus",
     "iconUrl": "/assets/champions/Khazix.png",
     "abilities": [
       {
@@ -60099,6 +60363,10 @@
       "Runeterra"
     ],
     "releaseYear": 2015,
+    "releaseDate": "2015-10-14",
+    "attackRange": 500,
+    "lastSkinDate": "2024-11-06",
+    "lastSkinName": "Chosen of the Wolf",
     "iconUrl": "/assets/champions/Kindred.png",
     "abilities": [
       {
@@ -60877,6 +61145,10 @@
       "Noxus"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-08-10",
+    "attackRange": 250,
+    "lastSkinDate": "2023-04-06",
+    "lastSkinName": "Kibble-Head",
     "iconUrl": "/assets/champions/Kled.png",
     "abilities": [
       {
@@ -62578,6 +62850,10 @@
       "Void"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-06-24",
+    "attackRange": 500,
+    "lastSkinDate": "2024-05-17",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/KogMaw.png",
     "abilities": [
       {
@@ -62890,6 +63166,10 @@
       "Noxus"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-11-02",
+    "attackRange": 525,
+    "lastSkinDate": "2024-06-12",
+    "lastSkinName": "Risen Legend",
     "iconUrl": "/assets/champions/Leblanc.png",
     "abilities": [
       {
@@ -63138,6 +63418,10 @@
       "Ionia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-04-01",
+    "attackRange": 125,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Inkshadow",
     "iconUrl": "/assets/champions/LeeSin.png",
     "abilities": [
       {
@@ -65114,6 +65398,10 @@
       "Targon"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-07-13",
+    "attackRange": 125,
+    "lastSkinDate": "2024-07-31",
+    "lastSkinName": "Prestige Battle Lion",
     "iconUrl": "/assets/champions/Leona.png",
     "abilities": [
       {
@@ -66588,6 +66876,10 @@
       "Ionia"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-07-22",
+    "attackRange": 325,
+    "lastSkinDate": "2024-05-15",
+    "lastSkinName": "Faerie Court",
     "iconUrl": "/assets/champions/Lillia.png",
     "abilities": [
       {
@@ -67237,6 +67529,10 @@
       "Freljord"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-04-30",
+    "attackRange": 550,
+    "lastSkinDate": "2023-01-26",
+    "lastSkinName": "Prestige Porcelain",
     "iconUrl": "/assets/champions/Lissandra.png",
     "abilities": [
       {
@@ -67597,7 +67893,11 @@
         "text": "Darkness will find you nonetheless.",
         "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-ban-vo/805.ogg"
       }
-    ]
+    ],
+    "releaseDate": "2026-06-24",
+    "attackRange": 150,
+    "lastSkinDate": "2026-06-24",
+    "lastSkinName": "High Noon Locke"
   },
   {
     "id": "Lucian",
@@ -67620,6 +67920,10 @@
       "Shadow Isles"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-08-22",
+    "attackRange": 500,
+    "lastSkinDate": "2025-02-20",
+    "lastSkinName": "Masked Justice",
     "iconUrl": "/assets/champions/Lucian.png",
     "abilities": [
       {
@@ -69276,6 +69580,10 @@
       "Bandle City"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-03-20",
+    "attackRange": 550,
+    "lastSkinDate": "2023-10-25",
+    "lastSkinName": "Cafe Cuties",
     "iconUrl": "/assets/champions/Lulu.png",
     "abilities": [
       {
@@ -69560,6 +69868,10 @@
       "Demacia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-10-19",
+    "attackRange": 550,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Prestige Spirit Blossom",
     "iconUrl": "/assets/champions/Lux.png",
     "abilities": [
       {
@@ -73048,6 +73360,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-09-02",
+    "attackRange": 125,
+    "lastSkinDate": "2025-04-02",
+    "lastSkinName": "Pool Party",
     "iconUrl": "/assets/champions/Malphite.png",
     "abilities": [
       {
@@ -73268,6 +73584,10 @@
       "Void"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-06-01",
+    "attackRange": 500,
+    "lastSkinDate": "2025-04-16",
+    "lastSkinName": "Fatebreaker",
     "iconUrl": "/assets/champions/Malzahar.png",
     "abilities": [
       {
@@ -73522,6 +73842,10 @@
       "Shadow Isles"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-02-16",
+    "attackRange": 125,
+    "lastSkinDate": "2023-06-01",
+    "lastSkinName": "DRX",
     "iconUrl": "/assets/champions/Maokai.png",
     "abilities": [
       {
@@ -74386,6 +74710,10 @@
       "Ionia"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 175,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/MasterYi.png",
     "abilities": [
       {
@@ -75730,7 +76058,11 @@
         "text": "Power is not given, it is taken.",
         "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-ban-vo/800.ogg"
       }
-    ]
+    ],
+    "releaseDate": "2025-01-23",
+    "attackRange": 550,
+    "lastSkinDate": "2025-12-04",
+    "lastSkinName": "Prestige Winterblessed Mel"
   },
   {
     "id": "Milio",
@@ -75752,6 +76084,10 @@
       "Ixtal"
     ],
     "releaseYear": 2023,
+    "releaseDate": "2023-03-22",
+    "attackRange": 525,
+    "lastSkinDate": "2024-06-26",
+    "lastSkinName": "Rain Shepherd",
     "iconUrl": "/assets/champions/Milio.png",
     "abilities": [
       {
@@ -76392,6 +76728,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-09-08",
+    "attackRange": 550,
+    "lastSkinDate": "2024-08-28",
+    "lastSkinName": "Battle Queen",
     "iconUrl": "/assets/champions/MissFortune.png",
     "abilities": [
       {
@@ -78312,6 +78652,10 @@
       "Noxus"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-02-24",
+    "attackRange": 175,
+    "lastSkinDate": "2025-04-16",
+    "lastSkinName": "Sahn-Uzal",
     "iconUrl": "/assets/champions/Mordekaiser.png",
     "abilities": [
       {
@@ -79475,6 +79819,10 @@
       "Targon"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 450,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Morgana.png",
     "abilities": [
       {
@@ -80789,6 +81137,10 @@
       "Shurima"
     ],
     "releaseYear": 2023,
+    "releaseDate": "2023-07-19",
+    "attackRange": 125,
+    "lastSkinDate": "2025-04-02",
+    "lastSkinName": "Glizzy",
     "iconUrl": "/assets/champions/Naafiri.png",
     "abilities": [
       {
@@ -81480,6 +81832,10 @@
       "Runeterra"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-12-07",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-23",
+    "lastSkinName": "Mythmaker",
     "iconUrl": "/assets/champions/Nami.png",
     "abilities": [
       {
@@ -81801,6 +82157,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-10-01",
+    "attackRange": 125,
+    "lastSkinDate": "2025-04-16",
+    "lastSkinName": "Fatemaker",
     "iconUrl": "/assets/champions/Nasus.png",
     "abilities": [
       {
@@ -82336,6 +82696,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-02-14",
+    "attackRange": 175,
+    "lastSkinDate": "2024-09-11",
+    "lastSkinName": "Crystalis Indomitus",
     "iconUrl": "/assets/champions/Nautilus.png",
     "abilities": [
       {
@@ -82557,6 +82921,10 @@
       "Ixtal"
     ],
     "releaseYear": 2018,
+    "releaseDate": "2018-12-05",
+    "attackRange": 550,
+    "lastSkinDate": "2024-10-09",
+    "lastSkinName": "Cosplayer",
     "iconUrl": "/assets/champions/Neeko.png",
     "abilities": [
       {
@@ -83276,6 +83644,10 @@
       "Ixtal"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-12-17",
+    "attackRange": 525,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Nidalee.png",
     "abilities": [
       {
@@ -84067,6 +84439,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2022,
+    "releaseDate": "2022-07-13",
+    "attackRange": 225,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Inkshadow",
     "iconUrl": "/assets/champions/Nilah.png",
     "abilities": [
       {
@@ -84743,6 +85119,10 @@
       "Runeterra"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-03-15",
+    "attackRange": 125,
+    "lastSkinDate": "2024-05-01",
+    "lastSkinName": "Empyrean",
     "iconUrl": "/assets/champions/Nocturne.png",
     "abilities": [
       {
@@ -85128,6 +85508,10 @@
       "Freljord"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 125,
+    "lastSkinDate": "2024-09-25",
+    "lastSkinName": "Fright Night",
     "iconUrl": "/assets/champions/Nunu.png",
     "abilities": [
       {
@@ -87356,6 +87740,10 @@
       "Freljord"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-06-09",
+    "attackRange": 125,
+    "lastSkinDate": "2024-05-30",
+    "lastSkinName": "Infernal",
     "iconUrl": "/assets/champions/Olaf.png",
     "abilities": [
       {
@@ -87711,6 +88099,10 @@
       "Piltover"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-06-01",
+    "attackRange": 525,
+    "lastSkinDate": "2024-08-14",
+    "lastSkinName": "T1",
     "iconUrl": "/assets/champions/Orianna.png",
     "abilities": [
       {
@@ -87965,6 +88357,10 @@
       "Freljord"
     ],
     "releaseYear": 2017,
+    "releaseDate": "2017-08-23",
+    "attackRange": 175,
+    "lastSkinDate": "2024-04-03",
+    "lastSkinName": "Choo-Choo",
     "iconUrl": "/assets/champions/Ornn.png",
     "abilities": [
       {
@@ -88864,6 +89260,10 @@
       "Targon"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-02-02",
+    "attackRange": 175,
+    "lastSkinDate": "2024-11-06",
+    "lastSkinName": "Chosen of the Wolf",
     "iconUrl": "/assets/champions/Pantheon.png",
     "abilities": [
       {
@@ -89546,6 +89946,10 @@
       "Demacia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-01-13",
+    "attackRange": 125,
+    "lastSkinDate": "2023-10-25",
+    "lastSkinName": "Cafe Cuties",
     "iconUrl": "/assets/champions/Poppy.png",
     "abilities": [
       {
@@ -90268,6 +90672,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2018,
+    "releaseDate": "2018-05-31",
+    "attackRange": 150,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Inkshadow",
     "iconUrl": "/assets/champions/Pyke.png",
     "abilities": [
       {
@@ -92591,6 +92999,10 @@
       "Ixtal"
     ],
     "releaseYear": 2019,
+    "releaseDate": "2019-06-28",
+    "attackRange": 150,
+    "lastSkinDate": "2025-03-19",
+    "lastSkinName": "Prestige Battle Academia",
     "iconUrl": "/assets/champions/Qiyana.png",
     "abilities": [
       {
@@ -93382,6 +93794,10 @@
       "Demacia"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-03-01",
+    "attackRange": 525,
+    "lastSkinDate": "2022-07-28",
+    "lastSkinName": "Star Guardian",
     "iconUrl": "/assets/champions/Quinn.png",
     "abilities": [
       {
@@ -93642,6 +94058,10 @@
       "Ionia"
     ],
     "releaseYear": 2017,
+    "releaseDate": "2017-04-19",
+    "attackRange": 300,
+    "lastSkinDate": "2025-03-19",
+    "lastSkinName": "Battle Academia",
     "iconUrl": "/assets/champions/Rakan.png",
     "abilities": [
       {
@@ -96302,6 +96722,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-07-10",
+    "attackRange": 125,
+    "lastSkinDate": "2024-04-03",
+    "lastSkinName": "Durian Defender",
     "iconUrl": "/assets/champions/Rammus.png",
     "abilities": [
       {
@@ -96486,6 +96910,10 @@
       "Void"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-12-11",
+    "attackRange": 175,
+    "lastSkinDate": "2024-07-17",
+    "lastSkinName": "Primordian",
     "iconUrl": "/assets/champions/RekSai.png",
     "abilities": [
       {
@@ -96633,6 +97061,10 @@
       "Noxus"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-12-10",
+    "attackRange": 175,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Grand Reckoning",
     "iconUrl": "/assets/champions/Rell.png",
     "abilities": [
       {
@@ -97248,6 +97680,10 @@
       "Zaun"
     ],
     "releaseYear": 2022,
+    "releaseDate": "2022-02-17",
+    "attackRange": 550,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Masque of the Black Rose",
     "iconUrl": "/assets/champions/Renata.png",
     "abilities": [
       {
@@ -97905,6 +98341,10 @@
       "Shurima"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-01-18",
+    "attackRange": 125,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Inkshadow",
     "iconUrl": "/assets/champions/Renekton.png",
     "abilities": [
       {
@@ -98730,6 +99170,10 @@
       "Shurima"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-08-21",
+    "attackRange": 125,
+    "lastSkinDate": "2023-09-13",
+    "lastSkinName": "Street Demons",
     "iconUrl": "/assets/champions/Rengar.png",
     "abilities": [
       {
@@ -99039,6 +99483,10 @@
       "Noxus"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-09-14",
+    "attackRange": 125,
+    "lastSkinDate": "2024-01-24",
+    "lastSkinName": "Primal Ambush",
     "iconUrl": "/assets/champions/Riven.png",
     "abilities": [
       {
@@ -100929,6 +101377,10 @@
       "Bandle City"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-04-26",
+    "attackRange": 125,
+    "lastSkinDate": "2023-10-25",
+    "lastSkinName": "Cafe Cuties",
     "iconUrl": "/assets/champions/Rumble.png",
     "abilities": [
       {
@@ -101418,6 +101870,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 550,
+    "lastSkinDate": "2025-05-14",
+    "lastSkinName": "Blood Moon",
     "iconUrl": "/assets/champions/Ryze.png",
     "abilities": [
       {
@@ -102399,6 +102855,10 @@
       "Noxus"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-09-21",
+    "attackRange": 500,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Masque of the Black Rose",
     "iconUrl": "/assets/champions/Samira.png",
     "abilities": [
       {
@@ -103646,6 +104106,10 @@
       "Freljord"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-01-17",
+    "attackRange": 150,
+    "lastSkinDate": "2022-11-15",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/Sejuani.png",
     "abilities": [
       {
@@ -104053,6 +104517,10 @@
       "Shadow Isles"
     ],
     "releaseYear": 2019,
+    "releaseDate": "2019-11-10",
+    "attackRange": 600,
+    "lastSkinDate": "2025-02-20",
+    "lastSkinName": "Masked Justice",
     "iconUrl": "/assets/champions/Senna.png",
     "abilities": [
       {
@@ -105517,6 +105985,10 @@
       "Zaun"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-10-29",
+    "attackRange": 525,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Dumpling Darlings",
     "iconUrl": "/assets/champions/Seraphine.png",
     "abilities": [
       {
@@ -106819,6 +107291,10 @@
       "Ionia"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-01-14",
+    "attackRange": 125,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Sett.png",
     "abilities": [
       {
@@ -108197,6 +108673,10 @@
       "Runeterra"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-10-10",
+    "attackRange": 125,
+    "lastSkinDate": "2025-04-02",
+    "lastSkinName": "Cat-in-the-Box",
     "iconUrl": "/assets/champions/Shaco.png",
     "abilities": [
       {
@@ -108441,6 +108921,10 @@
       "Ionia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-03-24",
+    "attackRange": 125,
+    "lastSkinDate": "2025-01-23",
+    "lastSkinName": "Three Honors",
     "iconUrl": "/assets/champions/Shen.png",
     "abilities": [
       {
@@ -108698,6 +109182,10 @@
       "Demacia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-11-01",
+    "attackRange": 125,
+    "lastSkinDate": "2023-08-16",
+    "lastSkinName": "Immortal Journey",
     "iconUrl": "/assets/champions/Shyvana.png",
     "abilities": [
       {
@@ -108961,6 +109449,10 @@
       "Piltover"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-04-18",
+    "attackRange": 125,
+    "lastSkinDate": "2024-11-26",
+    "lastSkinName": "Arcane Shimmer Lab",
     "iconUrl": "/assets/champions/Singed.png",
     "abilities": [
       {
@@ -109166,6 +109658,10 @@
       "Noxus"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 175,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Grand Reckoning",
     "iconUrl": "/assets/champions/Sion.png",
     "abilities": [
       {
@@ -110538,6 +111034,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 500,
+    "lastSkinDate": "2024-10-17",
+    "lastSkinName": "Ann-Sivir-sary",
     "iconUrl": "/assets/champions/Sivir.png",
     "abilities": [
       {
@@ -111578,6 +112078,10 @@
       "Shurima"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-08-09",
+    "attackRange": 150,
+    "lastSkinDate": "2020-11-24",
+    "lastSkinName": "Cosmic Sting",
     "iconUrl": "/assets/champions/Skarner.png",
     "abilities": [
       {
@@ -112092,6 +112596,10 @@
       "Runeterra"
     ],
     "releaseYear": 2024,
+    "releaseDate": "2024-01-31",
+    "attackRange": 550,
+    "lastSkinDate": "2024-01-31",
+    "lastSkinName": "Heavenscale",
     "iconUrl": "/assets/champions/Smolder.png",
     "abilities": [
       {
@@ -112175,6 +112683,10 @@
       "Ionia"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-09-21",
+    "attackRange": 550,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Sona.png",
     "abilities": [
       {
@@ -113455,6 +113967,10 @@
       "Ionia"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 550,
+    "lastSkinDate": "2024-05-15",
+    "lastSkinName": "Faerie Court",
     "iconUrl": "/assets/champions/Soraka.png",
     "abilities": [
       {
@@ -114935,6 +115451,10 @@
       "Noxus"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-10-05",
+    "attackRange": 525,
+    "lastSkinDate": "2024-11-06",
+    "lastSkinName": "Prestige Chosen of the Wolf",
     "iconUrl": "/assets/champions/Swain.png",
     "abilities": [
       {
@@ -116114,6 +116634,10 @@
       "Freljord"
     ],
     "releaseYear": 2019,
+    "releaseDate": "2019-01-25",
+    "attackRange": 175,
+    "lastSkinDate": "2024-10-23",
+    "lastSkinName": "Dark Star",
     "iconUrl": "/assets/champions/Sylas.png",
     "abilities": [
       {
@@ -117035,6 +117559,10 @@
       "Ionia"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-09-13",
+    "attackRange": 550,
+    "lastSkinDate": "2025-02-05",
+    "lastSkinName": "Dumpling Darlings",
     "iconUrl": "/assets/champions/Syndra.png",
     "abilities": [
       {
@@ -117311,6 +117839,10 @@
       "Runeterra"
     ],
     "releaseYear": 2015,
+    "releaseDate": "2015-07-09",
+    "attackRange": 175,
+    "lastSkinDate": "2023-06-14",
+    "lastSkinName": "Shan Hai Scrolls",
     "iconUrl": "/assets/champions/TahmKench.png",
     "abilities": [
       {
@@ -118268,6 +118800,10 @@
       "Shurima"
     ],
     "releaseYear": 2016,
+    "releaseDate": "2016-05-18",
+    "attackRange": 525,
+    "lastSkinDate": "2023-09-13",
+    "lastSkinName": "Crystalis Motus",
     "iconUrl": "/assets/champions/Taliyah.png",
     "abilities": [
       {
@@ -119626,6 +120162,10 @@
       "Noxus"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-08-24",
+    "attackRange": 125,
+    "lastSkinDate": "2025-03-05",
+    "lastSkinName": "Grand Reckoning",
     "iconUrl": "/assets/champions/Talon.png",
     "abilities": [
       {
@@ -119893,6 +120433,10 @@
       "Demacia"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-08-19",
+    "attackRange": 150,
+    "lastSkinDate": "2025-04-16",
+    "lastSkinName": "Fatebreaker",
     "iconUrl": "/assets/champions/Taric.png",
     "abilities": [
       {
@@ -120730,6 +121274,10 @@
       "Bandle City"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 500,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Teemo.png",
     "abilities": [
       {
@@ -121877,6 +122425,10 @@
       "Shadow Isles"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-01-23",
+    "attackRange": 450,
+    "lastSkinDate": "2024-09-11",
+    "lastSkinName": "Janitor",
     "iconUrl": "/assets/champions/Thresh.png",
     "abilities": [
       {
@@ -123349,6 +123901,10 @@
       "Bandle City"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 550,
+    "lastSkinDate": "2024-05-15",
+    "lastSkinName": "Faerie Court",
     "iconUrl": "/assets/champions/Tristana.png",
     "abilities": [
       {
@@ -124790,6 +125346,10 @@
       "Freljord"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-12-01",
+    "attackRange": 175,
+    "lastSkinDate": "2024-10-09",
+    "lastSkinName": "Esports Fan",
     "iconUrl": "/assets/champions/Trundle.png",
     "abilities": [
       {
@@ -125171,6 +125731,10 @@
       "Freljord"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-05-01",
+    "attackRange": 175,
+    "lastSkinDate": "2024-03-20",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/Tryndamere.png",
     "abilities": [
       {
@@ -125450,6 +126014,10 @@
       "Bilgewater"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 525,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Victorious",
     "iconUrl": "/assets/champions/TwistedFate.png",
     "abilities": [
       {
@@ -125823,6 +126391,10 @@
       "Zaun"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-05-01",
+    "attackRange": 550,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Pool Party",
     "iconUrl": "/assets/champions/Twitch.png",
     "abilities": [
       {
@@ -126408,6 +126980,10 @@
       "Ionia"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-12-02",
+    "attackRange": 125,
+    "lastSkinDate": "2023-05-03",
+    "lastSkinName": "Inkshadow",
     "iconUrl": "/assets/champions/Udyr.png",
     "abilities": [
       {
@@ -127739,6 +128315,10 @@
       "Zaun"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-08-24",
+    "attackRange": 350,
+    "lastSkinDate": "2025-04-02",
+    "lastSkinName": "Urgot the Clogfather",
     "iconUrl": "/assets/champions/Urgot.png",
     "abilities": [
       {
@@ -128834,6 +129414,10 @@
       "Shurima"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-05-08",
+    "attackRange": 575,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Varus.png",
     "abilities": [
       {
@@ -129563,6 +130147,10 @@
       "Demacia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-05-10",
+    "attackRange": 550,
+    "lastSkinDate": "2025-06-11",
+    "lastSkinName": "Risen Legend",
     "iconUrl": "/assets/champions/Vayne.png",
     "abilities": [
       {
@@ -131256,6 +131844,10 @@
       "Bandle City"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-07-24",
+    "attackRange": 550,
+    "lastSkinDate": "2024-09-25",
+    "lastSkinName": "Fright Night",
     "iconUrl": "/assets/champions/Veigar.png",
     "abilities": [
       {
@@ -131824,6 +132416,10 @@
       "Void"
     ],
     "releaseYear": 2014,
+    "releaseDate": "2014-02-27",
+    "attackRange": 525,
+    "lastSkinDate": "2023-11-22",
+    "lastSkinName": "Bee'Koz",
     "iconUrl": "/assets/champions/Velkoz.png",
     "abilities": [
       {
@@ -132133,6 +132729,10 @@
       "Bandle City"
     ],
     "releaseYear": 2021,
+    "releaseDate": "2021-09-23",
+    "attackRange": 550,
+    "lastSkinDate": "2025-05-14",
+    "lastSkinName": "Stargazer",
     "iconUrl": "/assets/champions/Vex.png",
     "abilities": [
       {
@@ -132801,6 +133401,10 @@
       "Zaun"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-12-19",
+    "attackRange": 125,
+    "lastSkinDate": "2024-11-20",
+    "lastSkinName": "Arcane Brawler",
     "iconUrl": "/assets/champions/Vi.png",
     "abilities": [
       {
@@ -133127,6 +133731,10 @@
       "Camavor"
     ],
     "releaseYear": 2021,
+    "releaseDate": "2021-01-21",
+    "attackRange": 200,
+    "lastSkinDate": "2024-09-25",
+    "lastSkinName": "Worlds 2024",
     "iconUrl": "/assets/champions/Viego.png",
     "abilities": [
       {
@@ -134371,6 +134979,10 @@
       "Zaun"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-12-29",
+    "attackRange": 525,
+    "lastSkinDate": "2024-12-11",
+    "lastSkinName": "Arcane Savior",
     "iconUrl": "/assets/champions/Viktor.png",
     "abilities": [
       {
@@ -134607,6 +135219,10 @@
       "Camavor"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-07-27",
+    "attackRange": 450,
+    "lastSkinDate": "2025-01-09",
+    "lastSkinName": "Masque of the Black Rose",
     "iconUrl": "/assets/champions/Vladimir.png",
     "abilities": [
       {
@@ -134986,6 +135602,10 @@
       "Freljord"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-11-29",
+    "attackRange": 150,
+    "lastSkinDate": "2025-07-30",
+    "lastSkinName": "Spirit Blossom Springs",
     "iconUrl": "/assets/champions/Volibear.png",
     "abilities": [
       {
@@ -135689,6 +136309,10 @@
       "Zaun"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-02-21",
+    "attackRange": 125,
+    "lastSkinDate": "2024-12-11",
+    "lastSkinName": "Arcane Vander",
     "iconUrl": "/assets/champions/Warwick.png",
     "abilities": [
       {
@@ -136351,6 +136975,10 @@
       "Ionia"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-07-26",
+    "attackRange": 175,
+    "lastSkinDate": "2023-06-28",
+    "lastSkinName": "Elderwood",
     "iconUrl": "/assets/champions/MonkeyKing.png",
     "abilities": [
       {
@@ -136600,6 +137228,10 @@
       "Ionia"
     ],
     "releaseYear": 2017,
+    "releaseDate": "2017-04-19",
+    "attackRange": 525,
+    "lastSkinDate": "2025-03-19",
+    "lastSkinName": "Battle Academia",
     "iconUrl": "/assets/champions/Xayah.png",
     "abilities": [
       {
@@ -138983,6 +139615,10 @@
       "Shurima"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-10-05",
+    "attackRange": 525,
+    "lastSkinDate": "2024-06-12",
+    "lastSkinName": "Crystalis Indomitus",
     "iconUrl": "/assets/champions/Xerath.png",
     "abilities": [
       {
@@ -139387,6 +140023,10 @@
       "Noxus"
     ],
     "releaseYear": 2010,
+    "releaseDate": "2010-07-13",
+    "attackRange": 175,
+    "lastSkinDate": "2022-01-26",
+    "lastSkinName": "Firecracker",
     "iconUrl": "/assets/champions/XinZhao.png",
     "abilities": [
       {
@@ -139624,6 +140264,10 @@
       "Ionia"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-12-13",
+    "attackRange": 175,
+    "lastSkinDate": "2024-10-09",
+    "lastSkinName": "Genesis Nightbringer",
     "iconUrl": "/assets/champions/Yasuo.png",
     "abilities": [
       {
@@ -141699,6 +142343,10 @@
       "Ionia"
     ],
     "releaseYear": 2020,
+    "releaseDate": "2020-08-06",
+    "attackRange": 175,
+    "lastSkinDate": "2025-02-20",
+    "lastSkinName": "Masked Justice",
     "iconUrl": "/assets/champions/Yone.png",
     "abilities": [
       {
@@ -142948,6 +143596,10 @@
       "Shadow Isles"
     ],
     "releaseYear": 2011,
+    "releaseDate": "2011-06-22",
+    "attackRange": 175,
+    "lastSkinDate": "2025-05-14",
+    "lastSkinName": "High Noon",
     "iconUrl": "/assets/champions/Yorick.png",
     "abilities": [
       {
@@ -144104,7 +144756,11 @@
         "text": "You will regret this defiance.",
         "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-ban-vo/804.ogg"
       }
-    ]
+    ],
+    "releaseDate": "2025-07-16",
+    "attackRange": 550,
+    "lastSkinDate": "2025-09-10",
+    "lastSkinName": "T1 Yunara"
   },
   {
     "id": "Yuumi",
@@ -144127,6 +144783,10 @@
       "Bandle City"
     ],
     "releaseYear": 2019,
+    "releaseDate": "2019-05-14",
+    "attackRange": 425,
+    "lastSkinDate": "2025-07-16",
+    "lastSkinName": "Nightbringer",
     "iconUrl": "/assets/champions/Yuumi.png",
     "abilities": [
       {
@@ -144993,7 +145653,11 @@
         "text": "Fools cannot delay the inevitable.",
         "audioUrl": "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-ban-vo/904.ogg"
       }
-    ]
+    ],
+    "releaseDate": "2025-11-19",
+    "attackRange": 175,
+    "lastSkinDate": "2025-11-19",
+    "lastSkinName": "Immortal Journey Zaahen"
   },
   {
     "id": "Zac",
@@ -145015,6 +145679,10 @@
       "Zaun"
     ],
     "releaseYear": 2013,
+    "releaseDate": "2013-03-29",
+    "attackRange": 175,
+    "lastSkinDate": "2024-04-03",
+    "lastSkinName": "Zesty Dip",
     "iconUrl": "/assets/champions/Zac.png",
     "abilities": [
       {
@@ -145294,6 +145962,10 @@
       "Ionia"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-11-13",
+    "attackRange": 125,
+    "lastSkinDate": "2025-06-25",
+    "lastSkinName": "Prestige Spirit Blossom",
     "iconUrl": "/assets/champions/Zed.png",
     "abilities": [
       {
@@ -146597,6 +147269,10 @@
       "Zaun"
     ],
     "releaseYear": 2022,
+    "releaseDate": "2022-01-20",
+    "attackRange": 500,
+    "lastSkinDate": "2024-09-25",
+    "lastSkinName": "Prestige Fright Night",
     "iconUrl": "/assets/champions/Zeri.png",
     "abilities": [
       {
@@ -147285,6 +147961,10 @@
       "Zaun"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-02-01",
+    "attackRange": 550,
+    "lastSkinDate": "2023-09-27",
+    "lastSkinName": "La Ilusión",
     "iconUrl": "/assets/champions/Ziggs.png",
     "abilities": [
       {
@@ -147629,6 +148309,10 @@
       "Shurima"
     ],
     "releaseYear": 2009,
+    "releaseDate": "2009-04-18",
+    "attackRange": 550,
+    "lastSkinDate": "2022-12-08",
+    "lastSkinName": "Winterblessed",
     "iconUrl": "/assets/champions/Zilean.png",
     "abilities": [
       {
@@ -147797,6 +148481,10 @@
       "Targon"
     ],
     "releaseYear": 2017,
+    "releaseDate": "2017-11-21",
+    "attackRange": 550,
+    "lastSkinDate": "2024-10-23",
+    "lastSkinName": "Dark Star",
     "iconUrl": "/assets/champions/Zoe.png",
     "abilities": [
       {
@@ -149011,6 +149699,10 @@
       "Ixtal"
     ],
     "releaseYear": 2012,
+    "releaseDate": "2012-07-24",
+    "attackRange": 575,
+    "lastSkinDate": "2025-04-30",
+    "lastSkinName": "Spirit Blossom",
     "iconUrl": "/assets/champions/Zyra.png",
     "abilities": [
       {
