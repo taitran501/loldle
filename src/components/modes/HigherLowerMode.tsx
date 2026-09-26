@@ -48,6 +48,80 @@ interface MatchHistoryItem {
 }
 
 const STORAGE_BEST_KEY = 'loldle_higherlower_best_streak';
+const STORAGE_HIGHERLOWER_KEY = 'loldle_higherlower_state_v2';
+
+interface PersistedHigherLowerRecord {
+  leftChampionId: string;
+  rightChampionId: string;
+  metric: HigherLowerMetric;
+  filter: HigherLowerFilter;
+  score: number;
+  lives: number;
+  roundNumber: number;
+  recentIds: string[];
+  history: MatchHistoryItem[];
+  gameStatus: 'playing' | 'won' | 'lost';
+  dateStr?: string;
+}
+
+function loadPersistedHLRecord(
+  playType: PlayType,
+  dateStr: string,
+  allChampions: Champion[]
+): {
+  leftChampion: Champion;
+  rightChampion: Champion;
+  metric: HigherLowerMetric;
+  filter: HigherLowerFilter;
+  score: number;
+  lives: number;
+  roundNumber: number;
+  recentIds: string[];
+  history: MatchHistoryItem[];
+  gameStatus: 'playing' | 'won' | 'lost';
+} | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_HIGHERLOWER_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    const record: PersistedHigherLowerRecord | undefined = parsed?.[playType];
+    if (!record || typeof record.leftChampionId !== 'string' || typeof record.rightChampionId !== 'string') {
+      return null;
+    }
+    if (playType === 'daily' && record.dateStr !== dateStr) {
+      return null;
+    }
+    const leftChampion = allChampions.find(c => c.id === record.leftChampionId);
+    const rightChampion = allChampions.find(c => c.id === record.rightChampionId);
+    if (!leftChampion || !rightChampion) return null;
+
+    return {
+      leftChampion,
+      rightChampion,
+      metric: record.metric,
+      filter: record.filter || 'all',
+      score: record.score ?? 0,
+      lives: record.lives ?? 1,
+      roundNumber: record.roundNumber ?? 1,
+      recentIds: Array.isArray(record.recentIds) ? record.recentIds : [leftChampion.id, rightChampion.id],
+      history: Array.isArray(record.history) ? record.history : [],
+      gameStatus: record.gameStatus || 'playing',
+    };
+  } catch {
+    return null;
+  }
+}
+
+function savePersistedHLRecord(playType: PlayType, record: PersistedHigherLowerRecord) {
+  try {
+    const raw = localStorage.getItem(STORAGE_HIGHERLOWER_KEY);
+    const parsed = raw ? JSON.parse(raw) : {};
+    parsed[playType] = record;
+    localStorage.setItem(STORAGE_HIGHERLOWER_KEY, JSON.stringify(parsed));
+  } catch {
+    // Ignore localStorage failures
+  }
+}
 
 const metricIcons: Record<HigherLowerMetric, React.ReactNode> = {
   skins: <Palette className="w-3.5 h-3.5" />,
@@ -70,18 +144,30 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
   onRoundComplete,
   onShareResult,
 }) => {
-  const [filter, setFilter] = useState<HigherLowerFilter>('all');
-
-  const initialPair = React.useMemo(
-    () => getInitialHigherLowerPair(allChampions, playType, filter, dateStr),
-    [allChampions, playType, filter, dateStr]
+  const savedInitial = React.useMemo(
+    () => loadPersistedHLRecord(playType, dateStr, allChampions),
+    [allChampions, playType, dateStr]
   );
 
-  const [leftChampion, setLeftChampion] = useState<Champion>(initialPair.leftChampion);
-  const [rightChampion, setRightChampion] = useState<Champion>(initialPair.rightChampion);
-  const [metric, setMetric] = useState<HigherLowerMetric>(initialPair.metric);
+  const fallbackInitialPair = React.useMemo(
+    () => getInitialHigherLowerPair(allChampions, playType, 'all', dateStr),
+    [allChampions, playType, dateStr]
+  );
 
-  const [score, setScore] = useState(0);
+  const [filter, setFilter] = useState<HigherLowerFilter>(
+    () => savedInitial?.filter ?? 'all'
+  );
+  const [leftChampion, setLeftChampion] = useState<Champion>(
+    () => savedInitial?.leftChampion ?? fallbackInitialPair.leftChampion
+  );
+  const [rightChampion, setRightChampion] = useState<Champion>(
+    () => savedInitial?.rightChampion ?? fallbackInitialPair.rightChampion
+  );
+  const [metric, setMetric] = useState<HigherLowerMetric>(
+    () => savedInitial?.metric ?? fallbackInitialPair.metric
+  );
+
+  const [score, setScore] = useState<number>(() => savedInitial?.score ?? 0);
   const [bestStreak, setBestStreak] = useState<number>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_BEST_KEY);
@@ -92,19 +178,24 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
   });
 
   const [lives, setLives] = useState<number>(
-    playType === 'daily' ? DAILY_HIGHER_LOWER_LIVES : 1
+    () => savedInitial?.lives ?? (playType === 'daily' ? DAILY_HIGHER_LOWER_LIVES : 1)
   );
-  const [roundNumber, setRoundNumber] = useState(1);
-  const [recentIds, setRecentIds] = useState<string[]>([
-    initialPair.leftChampion.id,
-    initialPair.rightChampion.id,
-  ]);
-  const [history, setHistory] = useState<MatchHistoryItem[]>([]);
+  const [roundNumber, setRoundNumber] = useState<number>(
+    () => savedInitial?.roundNumber ?? 1
+  );
+  const [recentIds, setRecentIds] = useState<string[]>(
+    () => savedInitial?.recentIds ?? [fallbackInitialPair.leftChampion.id, fallbackInitialPair.rightChampion.id]
+  );
+  const [history, setHistory] = useState<MatchHistoryItem[]>(
+    () => savedInitial?.history ?? []
+  );
 
   // Reveal & Animation States
   const [revealState, setRevealState] = useState<'idle' | 'correct' | 'wrong'>('idle');
   const [displayedRightVal, setDisplayedRightVal] = useState<number | null>(null);
-  const [gameStatus, setGameStatus] = useState<'playing' | 'won' | 'lost'>('playing');
+  const [gameStatus, setGameStatus] = useState<'playing' | 'won' | 'lost'>(
+    () => savedInitial?.gameStatus ?? 'playing'
+  );
 
   const advanceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const counterIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -137,14 +228,44 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
       setRevealState('idle');
       setDisplayedRightVal(null);
       setGameStatus('playing');
+
+      savePersistedHLRecord(playType, {
+        leftChampionId: pair.leftChampion.id,
+        rightChampionId: pair.rightChampion.id,
+        metric: pair.metric,
+        filter: nextFilter,
+        score: 0,
+        lives: playType === 'daily' ? DAILY_HIGHER_LOWER_LIVES : 1,
+        roundNumber: 1,
+        recentIds: [pair.leftChampion.id, pair.rightChampion.id],
+        history: [],
+        gameStatus: 'playing',
+        dateStr: playType === 'daily' ? dateStr : undefined,
+      });
     },
     [allChampions, clearTimers, dateStr, filter, playType]
   );
 
-  // Reset when switching between Daily and Unlimited
+  // Re-hydrate or start new game when switching between Daily and Unlimited
   useEffect(() => {
-    startNewGame(filter);
-  }, [playType, dateStr]);
+    const saved = loadPersistedHLRecord(playType, dateStr, allChampions);
+    if (saved) {
+      setLeftChampion(saved.leftChampion);
+      setRightChampion(saved.rightChampion);
+      setMetric(saved.metric);
+      setFilter(saved.filter);
+      setScore(saved.score);
+      setLives(saved.lives);
+      setRoundNumber(saved.roundNumber);
+      setRecentIds(saved.recentIds);
+      setHistory(saved.history);
+      setGameStatus(saved.gameStatus);
+      setRevealState('idle');
+      setDisplayedRightVal(null);
+    } else {
+      startNewGame(filter);
+    }
+  }, [playType, dateStr, allChampions]);
 
   const handleChangeFilter = (nextFilter: HigherLowerFilter) => {
     if (nextFilter === filter) return;
@@ -216,11 +337,26 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
       setRightChampion(next.rightChampion);
       setMetric(next.metric);
       setRoundNumber(nextRound);
-      setRecentIds([...updatedRecentIds.slice(-6), effectiveLeft.id, next.rightChampion.id]);
+      const nextRecent = [...updatedRecentIds.slice(-6), effectiveLeft.id, next.rightChampion.id];
+      setRecentIds(nextRecent);
       setRevealState('idle');
       setDisplayedRightVal(null);
+
+      savePersistedHLRecord(playType, {
+        leftChampionId: effectiveLeft.id,
+        rightChampionId: next.rightChampion.id,
+        metric: next.metric,
+        filter,
+        score,
+        lives,
+        roundNumber: nextRound,
+        recentIds: nextRecent,
+        history,
+        gameStatus: 'playing',
+        dateStr: playType === 'daily' ? dateStr : undefined,
+      });
     },
-    [allChampions, dateStr, filter, playType]
+    [allChampions, dateStr, filter, history, lives, playType, score]
   );
 
   const handleChoice = (choice: 'higher' | 'lower') => {
@@ -238,7 +374,8 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
       rightVal,
       wasCorrect: isCorrect,
     };
-    setHistory(prev => [record, ...prev]);
+    const nextHistory = [record, ...history];
+    setHistory(nextHistory);
 
     const updatedRecentIds = [...recentIds, rightChampion.id];
 
@@ -259,6 +396,19 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
       if (playType === 'daily' && roundNumber >= DAILY_HIGHER_LOWER_ROUNDS) {
         advanceTimerRef.current = setTimeout(() => {
           setGameStatus('won');
+          savePersistedHLRecord(playType, {
+            leftChampionId: leftChampion.id,
+            rightChampionId: rightChampion.id,
+            metric,
+            filter,
+            score: nextScore,
+            lives,
+            roundNumber,
+            recentIds: updatedRecentIds,
+            history: nextHistory,
+            gameStatus: 'won',
+            dateStr: playType === 'daily' ? dateStr : undefined,
+          });
           onRoundComplete?.(true, nextScore, rightChampion);
         }, 1000);
         return;
@@ -274,6 +424,19 @@ export const HigherLowerMode: React.FC<HigherLowerModeProps> = ({
       if (remainingLives <= 0) {
         advanceTimerRef.current = setTimeout(() => {
           setGameStatus('lost');
+          savePersistedHLRecord(playType, {
+            leftChampionId: leftChampion.id,
+            rightChampionId: rightChampion.id,
+            metric,
+            filter,
+            score,
+            lives: 0,
+            roundNumber,
+            recentIds: updatedRecentIds,
+            history: nextHistory,
+            gameStatus: 'lost',
+            dateStr: playType === 'daily' ? dateStr : undefined,
+          });
           onRoundComplete?.(false, Math.max(1, score), rightChampion);
         }, 1100);
       } else {
