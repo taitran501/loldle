@@ -1,0 +1,4350 @@
+[
+  {
+    "id": "8020",
+    "name": "Abyssal Mask",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/8020.png",
+    "totalGold": 2650,
+    "combineGold": 1000,
+    "from": [
+      "3067",
+      "1057"
+    ],
+    "statsSummary": [
+      "350 Health",
+      "45 Magic Resist",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "CooldownReduction",
+      "MagicResist",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2522",
+    "name": "Actualizer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2522.png",
+    "totalGold": 2800,
+    "combineGold": 750,
+    "from": [
+      "3802",
+      "1026"
+    ],
+    "statsSummary": [
+      "90 Ability Power",
+      "300 Mana",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3113",
+    "name": "Aether Wisp",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3113.png",
+    "totalGold": 900,
+    "combineGold": 500,
+    "from": [
+      "1052"
+    ],
+    "statsSummary": [
+      "30 Ability Power",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "NonbootsMovement",
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1052",
+    "name": "Amplifying Tome",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1052.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "20 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3003",
+    "name": "Archangel's Staff",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3003.png",
+    "totalGold": 2900,
+    "combineGold": 450,
+    "from": [
+      "3070",
+      "3802",
+      "3108"
+    ],
+    "statsSummary": [
+      "70 Ability Power",
+      "600 Mana",
+      "25 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3504",
+    "name": "Ardent Censer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3504.png",
+    "totalGold": 2200,
+    "combineGold": 700,
+    "from": [
+      "3113",
+      "3114"
+    ],
+    "statsSummary": [
+      "45 Ability Power",
+      "10% Heal and Shield Power",
+      "125% Base Mana Regen",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed",
+      "SpellDamage",
+      "ManaRegen",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3174",
+    "name": "Armored Advance",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3174.png",
+    "totalGold": 1200,
+    "combineGold": 0,
+    "from": [
+      "3047"
+    ],
+    "statsSummary": [
+      "35 Armor",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6696",
+    "name": "Axiom Arc",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6696.png",
+    "totalGold": 2750,
+    "combineGold": 363,
+    "from": [
+      "2020",
+      "3133"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "18 Lethality",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1038",
+    "name": "B. F. Sword",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1038.png",
+    "totalGold": 1300,
+    "combineGold": 1300,
+    "from": [],
+    "statsSummary": [
+      "40 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6660",
+    "name": "Bami's Cinder",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6660.png",
+    "totalGold": 900,
+    "combineGold": 250,
+    "from": [
+      "1028",
+      "2022"
+    ],
+    "statsSummary": [
+      "150 Health",
+      "5 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4642",
+    "name": "Bandleglass Mirror",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4642.png",
+    "totalGold": 900,
+    "combineGold": 50,
+    "from": [
+      "1052",
+      "2022"
+    ],
+    "statsSummary": [
+      "20 Ability Power",
+      "100% Base Mana Regen",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2524",
+    "name": "Bandlepipes",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2524.png",
+    "totalGold": 2300,
+    "combineGold": 800,
+    "from": [
+      "3067",
+      "1029",
+      "1033"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "15 Ability Haste",
+      "20 Armor",
+      "20 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "Armor",
+      "AttackSpeed",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3102",
+    "name": "Banshee's Veil",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3102.png",
+    "totalGold": 3000,
+    "combineGold": 200,
+    "from": [
+      "1058",
+      "4632"
+    ],
+    "statsSummary": [
+      "105 Ability Power",
+      "40 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "SpellDamage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2520",
+    "name": "Bastionbreaker",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2520.png",
+    "totalGold": 3000,
+    "combineGold": 663,
+    "from": [
+      "2020",
+      "3134"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "22 Lethality",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3006",
+    "name": "Berserker's Greaves",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3006.png",
+    "totalGold": 1100,
+    "combineGold": 300,
+    "from": [
+      "1001",
+      "1042",
+      "1042"
+    ],
+    "statsSummary": [
+      "30% Attack Speed",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3071",
+    "name": "Black Cleaver",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3071.png",
+    "totalGold": 3000,
+    "combineGold": 225,
+    "from": [
+      "3044",
+      "3067",
+      "1037"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "400 Health",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "CooldownReduction",
+      "OnHit",
+      "NonbootsMovement",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2503",
+    "name": "Blackfire Torch",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2503.png",
+    "totalGold": 2800,
+    "combineGold": 700,
+    "from": [
+      "3802",
+      "2508"
+    ],
+    "statsSummary": [
+      "80 Ability Power",
+      "600 Mana",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3153",
+    "name": "Blade of The Ruined King",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3153.png",
+    "totalGold": 3200,
+    "combineGold": 725,
+    "from": [
+      "1053",
+      "1043",
+      "1037"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "25% Attack Speed",
+      "10% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "LifeSteal",
+      "Slow",
+      "OnHit"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1026",
+    "name": "Blasting Wand",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1026.png",
+    "totalGold": 850,
+    "combineGold": 850,
+    "from": [],
+    "statsSummary": [
+      "45 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4630",
+    "name": "Blighting Jewel",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4630.png",
+    "totalGold": 1100,
+    "combineGold": 700,
+    "from": [
+      "1052"
+    ],
+    "statsSummary": [
+      "25 Ability Power",
+      "13% Magic Penetration"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "MagicPenetration",
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "8010",
+    "name": "Bloodletter's Curse",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/8010.png",
+    "totalGold": 2900,
+    "combineGold": 750,
+    "from": [
+      "3147",
+      "3108"
+    ],
+    "statsSummary": [
+      "65 Ability Power",
+      "400 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "CooldownReduction",
+      "MagicPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3072",
+    "name": "Bloodthirster",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3072.png",
+    "totalGold": 3400,
+    "combineGold": 325,
+    "from": [
+      "1038",
+      "1037",
+      "1053"
+    ],
+    "statsSummary": [
+      "80 Attack Damage",
+      "15% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "LifeSteal"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1001",
+    "name": "Boots",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1001.png",
+    "totalGold": 300,
+    "combineGold": 300,
+    "from": [],
+    "statsSummary": [
+      "25 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3009",
+    "name": "Boots of Swiftness",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3009.png",
+    "totalGold": 1000,
+    "combineGold": 700,
+    "from": [
+      "1001"
+    ],
+    "statsSummary": [
+      "55 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3076",
+    "name": "Bramble Vest",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3076.png",
+    "totalGold": 800,
+    "combineGold": 200,
+    "from": [
+      "1029",
+      "1029"
+    ],
+    "statsSummary": [
+      "30 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3803",
+    "name": "Catalyst of Aeons",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3803.png",
+    "totalGold": 1300,
+    "combineGold": 200,
+    "from": [
+      "1028",
+      "1028",
+      "1027"
+    ],
+    "statsSummary": [
+      "300 Health",
+      "375 Mana"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "Mana",
+      "ManaRegen"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3133",
+    "name": "Caulfield's Warhammer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3133.png",
+    "totalGold": 1050,
+    "combineGold": 100,
+    "from": [
+      "1036",
+      "2022",
+      "1036"
+    ],
+    "statsSummary": [
+      "20 Attack Damage",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1031",
+    "name": "Chain Vest",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1031.png",
+    "totalGold": 800,
+    "combineGold": 500,
+    "from": [
+      "1029"
+    ],
+    "statsSummary": [
+      "40 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3173",
+    "name": "Chainlaced Crushers",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3173.png",
+    "totalGold": 1250,
+    "combineGold": 0,
+    "from": [
+      "3111"
+    ],
+    "statsSummary": [
+      "25 Magic Resist",
+      "45 Move Speed",
+      "30% Tenacity"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "Boots",
+      "Tenacity",
+      "MagicResist"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6609",
+    "name": "Chempunk Chainsword",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6609.png",
+    "totalGold": 3000,
+    "combineGold": 250,
+    "from": [
+      "3123",
+      "1011",
+      "3133"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "450 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1018",
+    "name": "Cloak of Agility",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1018.png",
+    "totalGold": 600,
+    "combineGold": 600,
+    "from": [],
+    "statsSummary": [
+      "15% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1029",
+    "name": "Cloth Armor",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1029.png",
+    "totalGold": 300,
+    "combineGold": 300,
+    "from": [],
+    "statsSummary": [
+      "15 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4629",
+    "name": "Cosmic Drive",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4629.png",
+    "totalGold": 3000,
+    "combineGold": 450,
+    "from": [
+      "3067",
+      "3113",
+      "3108"
+    ],
+    "statsSummary": [
+      "70 Ability Power",
+      "350 Health",
+      "25 Ability Haste",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3171",
+    "name": "Crimson Lucidity",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3171.png",
+    "totalGold": 900,
+    "combineGold": 0,
+    "from": [
+      "3158"
+    ],
+    "statsSummary": [
+      "20 Ability Haste",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CooldownReduction",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3137",
+    "name": "Cryptbloom",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3137.png",
+    "totalGold": 3000,
+    "combineGold": 200,
+    "from": [
+      "4630",
+      "3108",
+      "3108"
+    ],
+    "statsSummary": [
+      "75 Ability Power",
+      "30% Magic Penetration",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "MagicPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3801",
+    "name": "Crystalline Bracer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3801.png",
+    "totalGold": 800,
+    "combineGold": 100,
+    "from": [
+      "1028",
+      "1006"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1083",
+    "name": "Cull",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1083.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [
+      "7 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "OnHit",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1042",
+    "name": "Dagger",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1042.png",
+    "totalGold": 250,
+    "combineGold": 250,
+    "from": [],
+    "statsSummary": [
+      "10% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1082",
+    "name": "Dark Seal",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1082.png",
+    "totalGold": 350,
+    "combineGold": 350,
+    "from": [],
+    "statsSummary": [
+      "15 Ability Power",
+      "50 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6621",
+    "name": "Dawncore",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6621.png",
+    "totalGold": 2500,
+    "combineGold": 450,
+    "from": [
+      "1026",
+      "3114",
+      "3114"
+    ],
+    "statsSummary": [
+      "45 Ability Power",
+      "16% Heal and Shield Power",
+      "100% Base Mana Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3742",
+    "name": "Dead Man's Plate",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3742.png",
+    "totalGold": 2900,
+    "combineGold": 900,
+    "from": [
+      "3066",
+      "1028",
+      "1031"
+    ],
+    "statsSummary": [
+      "350 Health",
+      "55 Armor",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor",
+      "Slow",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6333",
+    "name": "Death's Dance",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6333.png",
+    "totalGold": 3300,
+    "combineGold": 275,
+    "from": [
+      "2019",
+      "1037",
+      "3133"
+    ],
+    "statsSummary": [
+      "60 Attack Damage",
+      "50 Armor",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Damage",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1055",
+    "name": "Doran's Blade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1055.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [
+      "10 Attack Damage",
+      "80 Health",
+      "2.5% Omnivamp"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "LifeSteal",
+      "SpellVamp",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1086",
+    "name": "Doran's Bow",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1086.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "8 Attack Damage",
+      "15% Attack Speed",
+      "1.5% Omnivamp"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "SpellVamp",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1120",
+    "name": "Doran's Helm",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1120.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [
+      "150 Health",
+      "8 Armor",
+      "8 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "Armor",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1056",
+    "name": "Doran's Ring",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1056.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "18 Ability Power",
+      "90 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Lane",
+      "ManaRegen",
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1054",
+    "name": "Doran's Shield",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1054.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [
+      "110 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2510",
+    "name": "Dusk and Dawn",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2510.png",
+    "totalGold": 3100,
+    "combineGold": 300,
+    "from": [
+      "3057",
+      "1026",
+      "3067",
+      "1042"
+    ],
+    "statsSummary": [
+      "300 Health",
+      "60 Ability Power",
+      "20 Ability Haste",
+      "20% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "AttackSpeed",
+      "SpellDamage",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6620",
+    "name": "Echoes of Helia",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6620.png",
+    "totalGold": 2200,
+    "combineGold": 500,
+    "from": [
+      "3067",
+      "4642"
+    ],
+    "statsSummary": [
+      "35 Ability Power",
+      "200 Health",
+      "20 Ability Haste",
+      "125% Base Mana Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6692",
+    "name": "Eclipse",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6692.png",
+    "totalGold": 2900,
+    "combineGold": 625,
+    "from": [
+      "3133",
+      "1037",
+      "1036"
+    ],
+    "statsSummary": [
+      "60 Attack Damage",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3814",
+    "name": "Edge of Night",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3814.png",
+    "totalGold": 3000,
+    "combineGold": 850,
+    "from": [
+      "3134",
+      "2021"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "15 Lethality",
+      "250 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2517",
+    "name": "Endless Hunger",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2517.png",
+    "totalGold": 3100,
+    "combineGold": 825,
+    "from": [
+      "3133",
+      "1037",
+      "1036"
+    ],
+    "statsSummary": [
+      "65 Attack Damage",
+      "5% Omnivamp",
+      "20% Tenacity"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "LifeSteal",
+      "SpellVamp",
+      "Tenacity",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3508",
+    "name": "Essence Reaver",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3508.png",
+    "totalGold": 3050,
+    "combineGold": 500,
+    "from": [
+      "3057",
+      "3133",
+      "1018"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "20 Ability Haste",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "ManaRegen",
+      "CooldownReduction",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3123",
+    "name": "Executioner's Calling",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3123.png",
+    "totalGold": 800,
+    "combineGold": 450,
+    "from": [
+      "1036"
+    ],
+    "statsSummary": [
+      "15 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3073",
+    "name": "Experimental Hexplate",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3073.png",
+    "totalGold": 3000,
+    "combineGold": 500,
+    "from": [
+      "2021",
+      "1042",
+      "3044"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "20% Attack Speed",
+      "450 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "AttackSpeed",
+      "CooldownReduction",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2508",
+    "name": "Fated Ashes",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2508.png",
+    "totalGold": 900,
+    "combineGold": 500,
+    "from": [
+      "1052"
+    ],
+    "statsSummary": [
+      "30 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2512",
+    "name": "Fiendhunter Bolts",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2512.png",
+    "totalGold": 2650,
+    "combineGold": 850,
+    "from": [
+      "3086",
+      "3144"
+    ],
+    "statsSummary": [
+      "45% Attack Speed",
+      "25% Critical Strike Chance",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3108",
+    "name": "Fiendish Codex",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3108.png",
+    "totalGold": 850,
+    "combineGold": 200,
+    "from": [
+      "1052",
+      "2022"
+    ],
+    "statsSummary": [
+      "25 Ability Power",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3114",
+    "name": "Forbidden Idol",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3114.png",
+    "totalGold": 600,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "50% Base Mana Regen",
+      "8% Heal and Shield Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "ManaRegen"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4401",
+    "name": "Force of Nature",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4401.png",
+    "totalGold": 2800,
+    "combineGold": 750,
+    "from": [
+      "1057",
+      "1028",
+      "3066"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "55 Magic Resist",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3110",
+    "name": "Frozen Heart",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3110.png",
+    "totalGold": 2500,
+    "combineGold": 600,
+    "from": [
+      "3082",
+      "3024"
+    ],
+    "statsSummary": [
+      "75 Armor",
+      "400 Mana",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Mana",
+      "Aura",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1011",
+    "name": "Giant's Belt",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1011.png",
+    "totalGold": 900,
+    "combineGold": 500,
+    "from": [
+      "1028"
+    ],
+    "statsSummary": [
+      "350 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3024",
+    "name": "Glacial Buckler",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3024.png",
+    "totalGold": 900,
+    "combineGold": 50,
+    "from": [
+      "1029",
+      "1027",
+      "2022"
+    ],
+    "statsSummary": [
+      "25 Armor",
+      "300 Mana",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Mana",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2022",
+    "name": "Glowing Mote",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2022.png",
+    "totalGold": 250,
+    "combineGold": 250,
+    "from": [],
+    "statsSummary": [
+      "5 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CooldownReduction"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3008",
+    "name": "Gluttonous Greaves",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3008.png",
+    "totalGold": 1000,
+    "combineGold": 700,
+    "from": [
+      "1001"
+    ],
+    "statsSummary": [
+      "45 Move Speed",
+      "4% Omnivamp"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "LifeSteal",
+      "SpellVamp",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3026",
+    "name": "Guardian Angel",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3026.png",
+    "totalGold": 3200,
+    "combineGold": 800,
+    "from": [
+      "2019",
+      "1038"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "45 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Damage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3177",
+    "name": "Guardian's Blade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3177.png",
+    "totalGold": 950,
+    "combineGold": 950,
+    "from": [],
+    "statsSummary": [
+      "30 Attack Damage",
+      "150 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "Lane",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3184",
+    "name": "Guardian's Hammer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3184.png",
+    "totalGold": 950,
+    "combineGold": 950,
+    "from": [],
+    "statsSummary": [
+      "25 Attack Damage",
+      "150 Health",
+      "5% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "LifeSteal",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2051",
+    "name": "Guardian's Horn",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2051.png",
+    "totalGold": 950,
+    "combineGold": 950,
+    "from": [],
+    "statsSummary": [
+      "150 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3112",
+    "name": "Guardian's Orb",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3112.png",
+    "totalGold": 950,
+    "combineGold": 950,
+    "from": [],
+    "statsSummary": [
+      "50 Ability Power",
+      "150 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "ManaRegen",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3124",
+    "name": "Guinsoo's Rageblade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3124.png",
+    "totalGold": 3000,
+    "combineGold": 1025,
+    "from": [
+      "1052",
+      "1043",
+      "1037"
+    ],
+    "statsSummary": [
+      "30 Attack Damage",
+      "30 Ability Power",
+      "25% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "SpellDamage",
+      "OnHit"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3172",
+    "name": "Gunmetal Greaves",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3172.png",
+    "totalGold": 1100,
+    "combineGold": 0,
+    "from": [
+      "3006"
+    ],
+    "statsSummary": [
+      "45% Attack Speed",
+      "45 Move Speed",
+      "5% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed",
+      "LifeSteal",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1102",
+    "name": "Gustwalker Hatchling",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1102.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1106",
+    "name": "Gustwalker Hatchling",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1106.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3147",
+    "name": "Haunting Guise",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3147.png",
+    "totalGold": 1300,
+    "combineGold": 500,
+    "from": [
+      "1052",
+      "1028"
+    ],
+    "statsSummary": [
+      "30 Ability Power",
+      "200 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3051",
+    "name": "Hearthbound Axe",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3051.png",
+    "totalGold": 1200,
+    "combineGold": 250,
+    "from": [
+      "1036",
+      "1042",
+      "1036"
+    ],
+    "statsSummary": [
+      "20 Attack Damage",
+      "20% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3084",
+    "name": "Heartsteel",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3084.png",
+    "totalGold": 3000,
+    "combineGold": 400,
+    "from": [
+      "1011",
+      "3801",
+      "1011"
+    ],
+    "statsSummary": [
+      "900 Health",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3155",
+    "name": "Hexdrinker",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3155.png",
+    "totalGold": 1300,
+    "combineGold": 200,
+    "from": [
+      "1036",
+      "1033",
+      "1036"
+    ],
+    "statsSummary": [
+      "25 Attack Damage",
+      "25 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "SpellBlock"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2523",
+    "name": "Hexoptics C44",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2523.png",
+    "totalGold": 2800,
+    "combineGold": 275,
+    "from": [
+      "1037",
+      "6670",
+      "1036"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3145",
+    "name": "Hextech Alternator",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3145.png",
+    "totalGold": 1100,
+    "combineGold": 300,
+    "from": [
+      "1052",
+      "1052"
+    ],
+    "statsSummary": [
+      "45 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3146",
+    "name": "Hextech Gunblade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3146.png",
+    "totalGold": 3000,
+    "combineGold": 600,
+    "from": [
+      "1053",
+      "3145",
+      "1052"
+    ],
+    "statsSummary": [
+      "80 Ability Power",
+      "40 Attack Damage",
+      "10% Omnivamp"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "LifeSteal",
+      "SpellDamage",
+      "Active",
+      "SpellVamp"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3152",
+    "name": "Hextech Rocketbelt",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3152.png",
+    "totalGold": 2650,
+    "combineGold": 350,
+    "from": [
+      "3145",
+      "3067",
+      "1028"
+    ],
+    "statsSummary": [
+      "60 Ability Power",
+      "350 Health",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "Active",
+      "CooldownReduction",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6664",
+    "name": "Hollow Radiance",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6664.png",
+    "totalGold": 2800,
+    "combineGold": 650,
+    "from": [
+      "6660",
+      "3211"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "40 Magic Resist",
+      "10 Ability Haste",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "HealthRegen",
+      "Aura",
+      "MagicResist",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "4628",
+    "name": "Horizon Focus",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4628.png",
+    "totalGold": 2700,
+    "combineGold": 600,
+    "from": [
+      "3108",
+      "3108",
+      "1052"
+    ],
+    "statsSummary": [
+      "75 Ability Power",
+      "25 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6697",
+    "name": "Hubris",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6697.png",
+    "totalGold": 2800,
+    "combineGold": 750,
+    "from": [
+      "3134",
+      "3133"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "18 Lethality",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Active",
+      "CooldownReduction",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3181",
+    "name": "Hullbreaker",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3181.png",
+    "totalGold": 3000,
+    "combineGold": 175,
+    "from": [
+      "2021",
+      "3066",
+      "1037"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "500 Health",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6662",
+    "name": "Iceborn Gauntlet",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6662.png",
+    "totalGold": 2900,
+    "combineGold": 800,
+    "from": [
+      "3057",
+      "1028",
+      "1031"
+    ],
+    "statsSummary": [
+      "300 Health",
+      "50 Armor",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor",
+      "CooldownReduction",
+      "Slow",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3168",
+    "name": "Immortal Path",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3168.png",
+    "totalGold": 1000,
+    "combineGold": 0,
+    "from": [
+      "3008"
+    ],
+    "statsSummary": [
+      "45 Move Speed",
+      "4% Omnivamp"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "LifeSteal",
+      "SpellVamp",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6673",
+    "name": "Immortal Shieldbow",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6673.png",
+    "totalGold": 3000,
+    "combineGold": 825,
+    "from": [
+      "1037",
+      "6670"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "4005",
+    "name": "Imperial Mandate",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4005.png",
+    "totalGold": 2400,
+    "combineGold": 700,
+    "from": [
+      "1052",
+      "4642",
+      "1052"
+    ],
+    "statsSummary": [
+      "60 Ability Power",
+      "15 Ability Haste",
+      "150% Base Mana Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3031",
+    "name": "Infinity Edge",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3031.png",
+    "totalGold": 3500,
+    "combineGold": 725,
+    "from": [
+      "1038",
+      "1037",
+      "1018"
+    ],
+    "statsSummary": [
+      "75 Attack Damage",
+      "25% Critical Strike Chance",
+      "30% Critical Strike Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "Damage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3158",
+    "name": "Ionian Boots of Lucidity",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3158.png",
+    "totalGold": 900,
+    "combineGold": 350,
+    "from": [
+      "1001",
+      "2022"
+    ],
+    "statsSummary": [
+      "10 Ability Haste",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots",
+      "CooldownReduction"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6665",
+    "name": "Jak'Sho, The Protean",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6665.png",
+    "totalGold": 3200,
+    "combineGold": 650,
+    "from": [
+      "1011",
+      "1031",
+      "1057"
+    ],
+    "statsSummary": [
+      "350 Health",
+      "45 Armor",
+      "45 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "Armor",
+      "MagicResist"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2504",
+    "name": "Kaenic Rookern",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2504.png",
+    "totalGold": 2900,
+    "combineGold": 800,
+    "from": [
+      "3211",
+      "1057"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "80 Magic Resist",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "HealthRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3067",
+    "name": "Kindlegem",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3067.png",
+    "totalGold": 800,
+    "combineGold": 150,
+    "from": [
+      "1028",
+      "2022"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3109",
+    "name": "Knight's Vow",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3109.png",
+    "totalGold": 2300,
+    "combineGold": 400,
+    "from": [
+      "3067",
+      "1031",
+      "1006"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "40 Armor",
+      "10 Ability Haste",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "Armor",
+      "Aura",
+      "Active",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6672",
+    "name": "Kraken Slayer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6672.png",
+    "totalGold": 3000,
+    "combineGold": 325,
+    "from": [
+      "6690",
+      "3051",
+      "1043"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "40% Attack Speed",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "OnHit",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3035",
+    "name": "Last Whisper",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3035.png",
+    "totalGold": 1450,
+    "combineGold": 750,
+    "from": [
+      "1036",
+      "1036"
+    ],
+    "statsSummary": [
+      "20 Attack Damage",
+      "18% Armor Penetration"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "ArmorPenetration",
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6653",
+    "name": "Liandry's Torment",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6653.png",
+    "totalGold": 3000,
+    "combineGold": 800,
+    "from": [
+      "3147",
+      "2508"
+    ],
+    "statsSummary": [
+      "60 Ability Power",
+      "300 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3100",
+    "name": "Lich Bane",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3100.png",
+    "totalGold": 2900,
+    "combineGold": 250,
+    "from": [
+      "3057",
+      "3113",
+      "1026"
+    ],
+    "statsSummary": [
+      "100 Ability Power",
+      "6% Move Speed",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "OnHit",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3190",
+    "name": "Locket of the Iron Solari",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3190.png",
+    "totalGold": 2200,
+    "combineGold": 700,
+    "from": [
+      "3067",
+      "1029",
+      "1033"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "30 Armor",
+      "30 Magic Resist",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "Armor",
+      "Aura",
+      "Active",
+      "MagicResist",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1036",
+    "name": "Long Sword",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1036.png",
+    "totalGold": 350,
+    "combineGold": 350,
+    "from": [],
+    "statsSummary": [
+      "10 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Lane"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3036",
+    "name": "Lord Dominik's Regards",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3036.png",
+    "totalGold": 3300,
+    "combineGold": 550,
+    "from": [
+      "3035",
+      "6670"
+    ],
+    "statsSummary": [
+      "35 Attack Damage",
+      "35% Armor Penetration",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3802",
+    "name": "Lost Chapter",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3802.png",
+    "totalGold": 1200,
+    "combineGold": 250,
+    "from": [
+      "1052",
+      "1027",
+      "2022"
+    ],
+    "statsSummary": [
+      "40 Ability Power",
+      "300 Mana",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6655",
+    "name": "Luden's Echo",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6655.png",
+    "totalGold": 2750,
+    "combineGold": 450,
+    "from": [
+      "3802",
+      "3145"
+    ],
+    "statsSummary": [
+      "100 Ability Power",
+      "600 Mana",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3118",
+    "name": "Malignance",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3118.png",
+    "totalGold": 2700,
+    "combineGold": 650,
+    "from": [
+      "3802",
+      "1026"
+    ],
+    "statsSummary": [
+      "90 Ability Power",
+      "600 Mana",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "Mana",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3004",
+    "name": "Manamune",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3004.png",
+    "totalGold": 2900,
+    "combineGold": 1100,
+    "from": [
+      "3070",
+      "3133",
+      "1036"
+    ],
+    "statsSummary": [
+      "35 Attack Damage",
+      "500 Mana",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Mana",
+      "CooldownReduction",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3156",
+    "name": "Maw of Malmortius",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3156.png",
+    "totalGold": 3100,
+    "combineGold": 750,
+    "from": [
+      "3155",
+      "3133"
+    ],
+    "statsSummary": [
+      "60 Attack Damage",
+      "15 Ability Haste",
+      "40 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "Damage",
+      "LifeSteal",
+      "SpellVamp",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3041",
+    "name": "Mejai's Soulstealer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3041.png",
+    "totalGold": 1500,
+    "combineGold": 1150,
+    "from": [
+      "1082"
+    ],
+    "statsSummary": [
+      "20 Ability Power",
+      "100 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3139",
+    "name": "Mercurial Scimitar",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3139.png",
+    "totalGold": 3200,
+    "combineGold": 125,
+    "from": [
+      "3140",
+      "1037",
+      "1053"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "35 Magic Resist",
+      "10% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "Damage",
+      "LifeSteal",
+      "Active",
+      "NonbootsMovement",
+      "Tenacity"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3111",
+    "name": "Mercury's Treads",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3111.png",
+    "totalGold": 1250,
+    "combineGold": 550,
+    "from": [
+      "1001",
+      "1033"
+    ],
+    "statsSummary": [
+      "20 Magic Resist",
+      "45 Move Speed",
+      "30% Tenacity"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots",
+      "SpellBlock",
+      "Tenacity"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3222",
+    "name": "Mikael's Blessing",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3222.png",
+    "totalGold": 2300,
+    "combineGold": 900,
+    "from": [
+      "3067",
+      "3114"
+    ],
+    "statsSummary": [
+      "250 Health",
+      "100% Base Mana Regen",
+      "12% Heal and Shield Power",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "ManaRegen",
+      "Active",
+      "CooldownReduction",
+      "Tenacity",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6617",
+    "name": "Moonstone Renewer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6617.png",
+    "totalGold": 2200,
+    "combineGold": 500,
+    "from": [
+      "3067",
+      "4642"
+    ],
+    "statsSummary": [
+      "25 Ability Power",
+      "200 Health",
+      "20 Ability Haste",
+      "125% Base Mana Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3165",
+    "name": "Morellonomicon",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3165.png",
+    "totalGold": 2850,
+    "combineGold": 400,
+    "from": [
+      "3916",
+      "1026",
+      "3067"
+    ],
+    "statsSummary": [
+      "75 Ability Power",
+      "350 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3033",
+    "name": "Mortal Reminder",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3033.png",
+    "totalGold": 3000,
+    "combineGold": 150,
+    "from": [
+      "3123",
+      "3035",
+      "1018"
+    ],
+    "statsSummary": [
+      "35 Attack Damage",
+      "30% Armor Penetration",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1103",
+    "name": "Mosstomper Seedling",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1103.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1105",
+    "name": "Mosstomper Seedling",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1105.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3115",
+    "name": "Nashor's Tooth",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3115.png",
+    "totalGold": 2900,
+    "combineGold": 500,
+    "from": [
+      "1043",
+      "1026",
+      "3108"
+    ],
+    "statsSummary": [
+      "80 Ability Power",
+      "50% Attack Speed",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed",
+      "SpellDamage",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6675",
+    "name": "Navori Flickerblade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6675.png",
+    "totalGold": 2650,
+    "combineGold": 950,
+    "from": [
+      "1042",
+      "3086",
+      "1042"
+    ],
+    "statsSummary": [
+      "40% Attack Speed",
+      "25% Critical Strike Chance",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1058",
+    "name": "Needlessly Large Rod",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1058.png",
+    "totalGold": 1200,
+    "combineGold": 1200,
+    "from": [],
+    "statsSummary": [
+      "65 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1057",
+    "name": "Negatron Cloak",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1057.png",
+    "totalGold": 850,
+    "combineGold": 450,
+    "from": [
+      "1033"
+    ],
+    "statsSummary": [
+      "45 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6670",
+    "name": "Noonquiver",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6670.png",
+    "totalGold": 1300,
+    "combineGold": 350,
+    "from": [
+      "1036",
+      "1018"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "20% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1033",
+    "name": "Null-Magic Mantle",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1033.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "20 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3916",
+    "name": "Oblivion Orb",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3916.png",
+    "totalGold": 800,
+    "combineGold": 400,
+    "from": [
+      "1052"
+    ],
+    "statsSummary": [
+      "25 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2501",
+    "name": "Overlord's Bloodmail",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2501.png",
+    "totalGold": 3300,
+    "combineGold": 1000,
+    "from": [
+      "2021",
+      "2021"
+    ],
+    "statsSummary": [
+      "30 Attack Damage",
+      "550 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3044",
+    "name": "Phage",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3044.png",
+    "totalGold": 1100,
+    "combineGold": 350,
+    "from": [
+      "1028",
+      "1036"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "200 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3046",
+    "name": "Phantom Dancer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3046.png",
+    "totalGold": 2650,
+    "combineGold": 950,
+    "from": [
+      "1042",
+      "3086",
+      "1042"
+    ],
+    "statsSummary": [
+      "65% Attack Speed",
+      "25% Critical Strike Chance",
+      "10% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1037",
+    "name": "Pickaxe",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1037.png",
+    "totalGold": 875,
+    "combineGold": 875,
+    "from": [],
+    "statsSummary": [
+      "25 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3047",
+    "name": "Plated Steelcaps",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3047.png",
+    "totalGold": 1200,
+    "combineGold": 600,
+    "from": [
+      "1001",
+      "1029"
+    ],
+    "statsSummary": [
+      "25 Armor",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6698",
+    "name": "Profane Hydra",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6698.png",
+    "totalGold": 2850,
+    "combineGold": 313,
+    "from": [
+      "3077",
+      "2020"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "18 Lethality",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Active",
+      "CooldownReduction",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2525",
+    "name": "Protoplasm Harness",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2525.png",
+    "totalGold": 2600,
+    "combineGold": 900,
+    "from": [
+      "3067",
+      "1011"
+    ],
+    "statsSummary": [
+      "600 Health",
+      "20 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "NonbootsMovement",
+      "Tenacity",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3140",
+    "name": "Quicksilver Sash",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3140.png",
+    "totalGold": 1300,
+    "combineGold": 900,
+    "from": [
+      "1033"
+    ],
+    "statsSummary": [
+      "30 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Active",
+      "SpellBlock"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3089",
+    "name": "Rabadon's Deathcap",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3089.png",
+    "totalGold": 3500,
+    "combineGold": 1100,
+    "from": [
+      "1058",
+      "1058"
+    ],
+    "statsSummary": [
+      "130 Ability Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3143",
+    "name": "Randuin's Omen",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3143.png",
+    "totalGold": 2700,
+    "combineGold": 800,
+    "from": [
+      "3082",
+      "1011"
+    ],
+    "statsSummary": [
+      "350 Health",
+      "75 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor",
+      "Active",
+      "Slow"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3094",
+    "name": "Rapid Firecannon",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3094.png",
+    "totalGold": 2650,
+    "combineGold": 850,
+    "from": [
+      "3086",
+      "3144"
+    ],
+    "statsSummary": [
+      "35% Attack Speed",
+      "25% Critical Strike Chance",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3074",
+    "name": "Ravenous Hydra",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3074.png",
+    "totalGold": 3300,
+    "combineGold": 150,
+    "from": [
+      "3077",
+      "1053",
+      "3133"
+    ],
+    "statsSummary": [
+      "65 Attack Damage",
+      "15 Ability Haste",
+      "12% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "LifeSteal",
+      "CooldownReduction",
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6690",
+    "name": "Rectrix",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6690.png",
+    "totalGold": 775,
+    "combineGold": 425,
+    "from": [
+      "1036"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1043",
+    "name": "Recurve Bow",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1043.png",
+    "totalGold": 700,
+    "combineGold": 450,
+    "from": [
+      "1042"
+    ],
+    "statsSummary": [
+      "15% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed",
+      "OnHit"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3107",
+    "name": "Redemption",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3107.png",
+    "totalGold": 2300,
+    "combineGold": 850,
+    "from": [
+      "3108",
+      "3114"
+    ],
+    "statsSummary": [
+      "30 Ability Power",
+      "15 Ability Haste",
+      "100% Base Mana Regen",
+      "10% Heal and Shield Power"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1006",
+    "name": "Rejuvenation Bead",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1006.png",
+    "totalGold": 300,
+    "combineGold": 300,
+    "from": [],
+    "statsSummary": [
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "HealthRegen"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4633",
+    "name": "Riftmaker",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4633.png",
+    "totalGold": 3100,
+    "combineGold": 950,
+    "from": [
+      "3147",
+      "3108"
+    ],
+    "statsSummary": [
+      "70 Ability Power",
+      "350 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "CooldownReduction",
+      "SpellVamp"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6657",
+    "name": "Rod of Ages",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6657.png",
+    "totalGold": 2600,
+    "combineGold": 450,
+    "from": [
+      "1026",
+      "3803"
+    ],
+    "statsSummary": [
+      "45 Ability Power",
+      "350 Health",
+      "500 Mana"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "SpellDamage",
+      "Mana",
+      "ManaRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1028",
+    "name": "Ruby Crystal",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1028.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "150 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3085",
+    "name": "Runaan's Hurricane",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3085.png",
+    "totalGold": 2650,
+    "combineGold": 850,
+    "from": [
+      "3086",
+      "3144"
+    ],
+    "statsSummary": [
+      "40% Attack Speed",
+      "25% Critical Strike Chance",
+      "5% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "OnHit",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3116",
+    "name": "Rylai's Crystal Scepter",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3116.png",
+    "totalGold": 2600,
+    "combineGold": 450,
+    "from": [
+      "1026",
+      "1011",
+      "1052"
+    ],
+    "statsSummary": [
+      "65 Ability Power",
+      "400 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellDamage",
+      "Slow"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1027",
+    "name": "Sapphire Crystal",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1027.png",
+    "totalGold": 300,
+    "combineGold": 300,
+    "from": [],
+    "statsSummary": [
+      "300 Mana"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Mana"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1101",
+    "name": "Scorchclaw Pup",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1101.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "1107",
+    "name": "Scorchclaw Pup",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1107.png",
+    "totalGold": 450,
+    "combineGold": 450,
+    "from": [],
+    "statsSummary": [],
+    "passiveHint": "",
+    "tags": [
+      "Jungle"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3144",
+    "name": "Scout's Slingshot",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3144.png",
+    "totalGold": 600,
+    "combineGold": 100,
+    "from": [
+      "1042",
+      "1042"
+    ],
+    "statsSummary": [
+      "20% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "AttackSpeed"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2420",
+    "name": "Seeker's Armguard",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2420.png",
+    "totalGold": 1600,
+    "combineGold": 500,
+    "from": [
+      "1052",
+      "1029",
+      "1052"
+    ],
+    "statsSummary": [
+      "40 Ability Power",
+      "25 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "SpellDamage",
+      "Active"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6695",
+    "name": "Serpent's Fang",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6695.png",
+    "totalGold": 2500,
+    "combineGold": 625,
+    "from": [
+      "3134",
+      "1037"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "15 Lethality"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3134",
+    "name": "Serrated Dirk",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3134.png",
+    "totalGold": 1000,
+    "combineGold": 300,
+    "from": [
+      "1036",
+      "1036"
+    ],
+    "statsSummary": [
+      "20 Attack Damage",
+      "10 Lethality"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6694",
+    "name": "Serylda's Grudge",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6694.png",
+    "totalGold": 3000,
+    "combineGold": 500,
+    "from": [
+      "3133",
+      "3035"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "35% Armor Penetration",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CooldownReduction",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "4645",
+    "name": "Shadowflame",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4645.png",
+    "totalGold": 3200,
+    "combineGold": 900,
+    "from": [
+      "3145",
+      "1058"
+    ],
+    "statsSummary": [
+      "110 Ability Power",
+      "15 Magic Penetration"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "MagicPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2421",
+    "name": "Shattered Armguard",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2421.png",
+    "totalGold": 1600,
+    "combineGold": 500,
+    "from": [
+      "1052",
+      "1029",
+      "1052"
+    ],
+    "statsSummary": [
+      "40 Ability Power",
+      "25 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3057",
+    "name": "Sheen",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3057.png",
+    "totalGold": 900,
+    "combineGold": 650,
+    "from": [
+      "2022"
+    ],
+    "statsSummary": [
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "OnHit",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2065",
+    "name": "Shurelya's Battlesong",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2065.png",
+    "totalGold": 2200,
+    "combineGold": 400,
+    "from": [
+      "3113",
+      "4642"
+    ],
+    "statsSummary": [
+      "50 Ability Power",
+      "15 Ability Haste",
+      "4% Move Speed",
+      "125% Base Mana Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen",
+      "Active",
+      "CooldownReduction",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3020",
+    "name": "Sorcerer's Shoes",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3020.png",
+    "totalGold": 1100,
+    "combineGold": 800,
+    "from": [
+      "1001"
+    ],
+    "statsSummary": [
+      "12 Magic Penetration",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots",
+      "MagicPenetration"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3161",
+    "name": "Spear of Shojin",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3161.png",
+    "totalGold": 3100,
+    "combineGold": 675,
+    "from": [
+      "1037",
+      "2021",
+      "1028"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "450 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3211",
+    "name": "Spectre's Cowl",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3211.png",
+    "totalGold": 1250,
+    "combineGold": 150,
+    "from": [
+      "1028",
+      "1033",
+      "1006"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "35 Magic Resist",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "SpellBlock"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3175",
+    "name": "Spellslinger's Shoes",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3175.png",
+    "totalGold": 1100,
+    "combineGold": 0,
+    "from": [
+      "3020"
+    ],
+    "statsSummary": [
+      "20 Magic Penetration",
+      "8% Magic Penetration",
+      "45 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots",
+      "MagicPenetration"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3065",
+    "name": "Spirit Visage",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3065.png",
+    "totalGold": 2700,
+    "combineGold": 650,
+    "from": [
+      "3211",
+      "3067"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "50 Magic Resist",
+      "10 Ability Haste",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "HealthRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6616",
+    "name": "Staff of Flowing Water",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6616.png",
+    "totalGold": 2250,
+    "combineGold": 800,
+    "from": [
+      "3108",
+      "3114"
+    ],
+    "statsSummary": [
+      "35 Ability Power",
+      "10% Heal and Shield Power",
+      "125% Base Mana Regen",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "ManaRegen",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3087",
+    "name": "Statikk Shiv",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3087.png",
+    "totalGold": 3000,
+    "combineGold": 625,
+    "from": [
+      "3144",
+      "3113",
+      "1037"
+    ],
+    "statsSummary": [
+      "45 Attack Damage",
+      "45 Ability Power",
+      "30% Attack Speed",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "SpellDamage",
+      "OnHit",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2019",
+    "name": "Steel Sigil",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2019.png",
+    "totalGold": 1100,
+    "combineGold": 150,
+    "from": [
+      "1029",
+      "1036",
+      "1029"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "30 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3053",
+    "name": "Sterak's Gage",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3053.png",
+    "totalGold": 3200,
+    "combineGold": 775,
+    "from": [
+      "1037",
+      "2021",
+      "1028"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "20% Tenacity"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "Tenacity"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3095",
+    "name": "Stormrazor",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3095.png",
+    "totalGold": 3200,
+    "combineGold": 700,
+    "from": [
+      "1038",
+      "1018",
+      "3144"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "25% Attack Speed",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "4646",
+    "name": "Stormsurge",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4646.png",
+    "totalGold": 2800,
+    "combineGold": 800,
+    "from": [
+      "3145",
+      "3113"
+    ],
+    "statsSummary": [
+      "90 Ability Power",
+      "15 Magic Penetration",
+      "6% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellDamage",
+      "GoldPer",
+      "NonbootsMovement",
+      "MagicPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6631",
+    "name": "Stridebreaker",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6631.png",
+    "totalGold": 3300,
+    "combineGold": 750,
+    "from": [
+      "3077",
+      "3044",
+      "1042"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "25% Attack Speed",
+      "450 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "AttackSpeed",
+      "Slow"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6610",
+    "name": "Sundered Sky",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6610.png",
+    "totalGold": 3100,
+    "combineGold": 900,
+    "from": [
+      "2021",
+      "3133"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "400 Health",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3068",
+    "name": "Sunfire Aegis",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3068.png",
+    "totalGold": 2800,
+    "combineGold": 700,
+    "from": [
+      "6660",
+      "1031",
+      "1028"
+    ],
+    "statsSummary": [
+      "350 Health",
+      "50 Armor",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor",
+      "Aura",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3170",
+    "name": "Swiftmarch",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3170.png",
+    "totalGold": 1000,
+    "combineGold": 0,
+    "from": [
+      "3009"
+    ],
+    "statsSummary": [
+      "65 Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Boots"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3070",
+    "name": "Tear of the Goddess",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3070.png",
+    "totalGold": 400,
+    "combineGold": 400,
+    "from": [],
+    "statsSummary": [
+      "240 Mana"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Mana",
+      "ManaRegen"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3302",
+    "name": "Terminus",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3302.png",
+    "totalGold": 3000,
+    "combineGold": 1100,
+    "from": [
+      "3051",
+      "1043"
+    ],
+    "statsSummary": [
+      "30 Attack Damage",
+      "35% Attack Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "AttackSpeed",
+      "OnHit",
+      "MagicPenetration",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2020",
+    "name": "The Brutalizer",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2020.png",
+    "totalGold": 1337,
+    "combineGold": 212,
+    "from": [
+      "2022",
+      "1037"
+    ],
+    "statsSummary": [
+      "25 Attack Damage",
+      "10 Ability Haste",
+      "5 Lethality"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CooldownReduction",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "6676",
+    "name": "The Collector",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6676.png",
+    "totalGold": 3000,
+    "combineGold": 525,
+    "from": [
+      "1037",
+      "3134",
+      "1018"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "10 Lethality",
+      "25% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3075",
+    "name": "Thornmail",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3075.png",
+    "totalGold": 2450,
+    "combineGold": 450,
+    "from": [
+      "3076",
+      "1031",
+      "1028"
+    ],
+    "statsSummary": [
+      "150 Health",
+      "75 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3077",
+    "name": "Tiamat",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3077.png",
+    "totalGold": 1200,
+    "combineGold": 500,
+    "from": [
+      "1036",
+      "1036"
+    ],
+    "statsSummary": [
+      "25 Attack Damage"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "OnHit"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3748",
+    "name": "Titanic Hydra",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3748.png",
+    "totalGold": 3300,
+    "combineGold": 50,
+    "from": [
+      "3077",
+      "2021",
+      "1011"
+    ],
+    "statsSummary": [
+      "40 Attack Damage",
+      "600 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen",
+      "Damage",
+      "OnHit"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3078",
+    "name": "Trinity Force",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3078.png",
+    "totalGold": 3333,
+    "combineGold": 133,
+    "from": [
+      "3057",
+      "3044",
+      "3051"
+    ],
+    "statsSummary": [
+      "36 Attack Damage",
+      "30% Attack Speed",
+      "333 Health",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage",
+      "AttackSpeed",
+      "CooldownReduction",
+      "OnHit",
+      "NonbootsMovement",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2021",
+    "name": "Tunneler",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2021.png",
+    "totalGold": 1150,
+    "combineGold": 400,
+    "from": [
+      "1036",
+      "1028"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "250 Health"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Damage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "2502",
+    "name": "Unending Despair",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2502.png",
+    "totalGold": 2800,
+    "combineGold": 800,
+    "from": [
+      "1031",
+      "3067",
+      "1028"
+    ],
+    "statsSummary": [
+      "400 Health",
+      "50 Armor",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Armor",
+      "CooldownReduction",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "1053",
+    "name": "Vampiric Scepter",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/1053.png",
+    "totalGold": 900,
+    "combineGold": 550,
+    "from": [
+      "1036"
+    ],
+    "statsSummary": [
+      "15 Attack Damage",
+      "7% Life Steal"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "LifeSteal"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "4632",
+    "name": "Verdant Barrier",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/4632.png",
+    "totalGold": 1600,
+    "combineGold": 400,
+    "from": [
+      "1052",
+      "1033",
+      "1052"
+    ],
+    "statsSummary": [
+      "40 Ability Power",
+      "25 Magic Resist"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "SpellDamage"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3135",
+    "name": "Void Staff",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3135.png",
+    "totalGold": 3000,
+    "combineGold": 1050,
+    "from": [
+      "4630",
+      "1026"
+    ],
+    "statsSummary": [
+      "95 Ability Power",
+      "40% Magic Penetration"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "MagicPenetration",
+      "SpellDamage"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "6699",
+    "name": "Voltaic Cyclosword",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/6699.png",
+    "totalGold": 3000,
+    "combineGold": 963,
+    "from": [
+      "2020",
+      "1036",
+      "1036"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "10 Lethality",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Active",
+      "CooldownReduction",
+      "ArmorPenetration",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3082",
+    "name": "Warden's Mail",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3082.png",
+    "totalGold": 1000,
+    "combineGold": 400,
+    "from": [
+      "1029",
+      "1029"
+    ],
+    "statsSummary": [
+      "40 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3083",
+    "name": "Warmog's Armor",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3083.png",
+    "totalGold": 3100,
+    "combineGold": 500,
+    "from": [
+      "1011",
+      "1011",
+      "3801"
+    ],
+    "statsSummary": [
+      "1000 Health",
+      "100% Base Health Regen"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "HealthRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "2526",
+    "name": "Whispering Circlet",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/2526.png",
+    "totalGold": 2250,
+    "combineGold": 850,
+    "from": [
+      "3114",
+      "1028",
+      "3070"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "8% Heal and Shield Power",
+      "75% Base Mana Regen",
+      "300 Mana"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Mana",
+      "ManaRegen"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3066",
+    "name": "Winged Moonplate",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3066.png",
+    "totalGold": 800,
+    "combineGold": 400,
+    "from": [
+      "1028"
+    ],
+    "statsSummary": [
+      "200 Health",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3119",
+    "name": "Winter's Approach",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3119.png",
+    "totalGold": 2400,
+    "combineGold": 300,
+    "from": [
+      "3070",
+      "1011",
+      "3067"
+    ],
+    "statsSummary": [
+      "550 Health",
+      "500 Mana",
+      "15 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "Mana",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3091",
+    "name": "Wit's End",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3091.png",
+    "totalGold": 2800,
+    "combineGold": 550,
+    "from": [
+      "1043",
+      "1057",
+      "1043"
+    ],
+    "statsSummary": [
+      "50% Attack Speed",
+      "45 Magic Resist",
+      "20% Tenacity"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "SpellBlock",
+      "AttackSpeed",
+      "OnHit",
+      "Tenacity"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3142",
+    "name": "Youmuu's Ghostblade",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3142.png",
+    "totalGold": 2800,
+    "combineGold": 675,
+    "from": [
+      "3134",
+      "6690",
+      "1036"
+    ],
+    "statsSummary": [
+      "55 Attack Damage",
+      "18 Lethality",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "Active",
+      "NonbootsMovement",
+      "ArmorPenetration"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3032",
+    "name": "Yun Tal Wildarrows",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3032.png",
+    "totalGold": 3000,
+    "combineGold": 750,
+    "from": [
+      "1038",
+      "3144",
+      "1036"
+    ],
+    "statsSummary": [
+      "50 Attack Damage",
+      "45% Attack Speed",
+      "0% Critical Strike Chance"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Damage",
+      "CriticalStrike",
+      "AttackSpeed"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3086",
+    "name": "Zeal",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3086.png",
+    "totalGold": 1200,
+    "combineGold": 350,
+    "from": [
+      "1018",
+      "1042"
+    ],
+    "statsSummary": [
+      "15% Attack Speed",
+      "15% Critical Strike Chance",
+      "4% Move Speed"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "CriticalStrike",
+      "AttackSpeed",
+      "NonbootsMovement"
+    ],
+    "isTargetEligible": false
+  },
+  {
+    "id": "3050",
+    "name": "Zeke's Convergence",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3050.png",
+    "totalGold": 2200,
+    "combineGold": 700,
+    "from": [
+      "3067",
+      "1029",
+      "1033"
+    ],
+    "statsSummary": [
+      "300 Health",
+      "25 Armor",
+      "25 Magic Resist",
+      "10 Ability Haste"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Health",
+      "SpellBlock",
+      "Armor",
+      "AbilityHaste"
+    ],
+    "isTargetEligible": true
+  },
+  {
+    "id": "3157",
+    "name": "Zhonya's Hourglass",
+    "iconUrl": "https://ddragon.leagueoflegends.com/cdn/16.19.1/img/item/3157.png",
+    "totalGold": 3250,
+    "combineGold": 450,
+    "from": [
+      "1058",
+      "2420"
+    ],
+    "statsSummary": [
+      "105 Ability Power",
+      "50 Armor"
+    ],
+    "passiveHint": "",
+    "tags": [
+      "Armor",
+      "SpellDamage",
+      "Active"
+    ],
+    "isTargetEligible": true
+  }
+]
