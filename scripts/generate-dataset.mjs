@@ -390,6 +390,21 @@ async function main() {
     let regions = loldleData?.regions || (champ.faction && champ.faction !== 'unaffiliated' ? [champ.faction.charAt(0).toUpperCase() + champ.faction.slice(1)] : ['Runeterra']);
     let releaseDateStr = loldleData?.release_date || champ.releaseDate || '2020-01-01';
     let releaseYear = parseInt(releaseDateStr.split('-')[0], 10) || 2020;
+    let attackRange = typeof champ.stats?.attackRange?.flat === 'number' && champ.stats.attackRange.flat > 0
+      ? champ.stats.attackRange.flat
+      : (rangeType.includes('Ranged') ? 550 : 175);
+
+    // Find latest skin release date & name from Meraki skins
+    let lastSkinDate = releaseDateStr;
+    let lastSkinName = `${champ.name} (Base)`;
+    for (const s of (champ.skins || [])) {
+      if (s.release && /^\d{4}-\d{2}-\d{2}$/.test(s.release)) {
+        if (s.release >= lastSkinDate) {
+          lastSkinDate = s.release;
+          lastSkinName = s.name === 'default' || s.name === 'Original' ? `${champ.name} (Base)` : s.name;
+        }
+      }
+    }
 
     const champKey = champ.key || champ.id;
 
@@ -441,6 +456,10 @@ async function main() {
       rangeType,
       regions,
       releaseYear,
+      releaseDate: releaseDateStr,
+      attackRange,
+      lastSkinDate,
+      lastSkinName,
       iconUrl: `/assets/champions/${champKey}.png`,
       abilities,
       quote: previousChampion?.quote || {
