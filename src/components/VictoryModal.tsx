@@ -12,6 +12,8 @@ import {
   Sparkles,
   Smile,
   Image as ImageIcon,
+  ArrowUpDown,
+  ShoppingBag,
   Flag,
 } from 'lucide-react';
 
@@ -96,6 +98,8 @@ export const VictoryModal: React.FC<VictoryModalProps> = ({
     { id: 'ability', label: 'Ability', icon: <Sparkles className="w-3.5 h-3.5" /> },
     { id: 'emoji', label: 'Emoji', icon: <Smile className="w-3.5 h-3.5" /> },
     { id: 'splash', label: 'Splash', icon: <ImageIcon className="w-3.5 h-3.5" /> },
+    { id: 'higherlower', label: 'High/Low', icon: <ArrowUpDown className="w-3.5 h-3.5" /> },
+    { id: 'item', label: 'Items', icon: <ShoppingBag className="w-3.5 h-3.5" /> },
   ];
   const otherModes = allModes.filter(m => m.id !== mode);
   const primaryImage = skin?.splashFullUrl || `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`;

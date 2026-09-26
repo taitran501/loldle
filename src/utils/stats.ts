@@ -3,7 +3,7 @@ import { GameMode, GameStatsV2, ModeStats, PlayType, StatsBucket } from '../type
 export const STATS_STORAGE_KEY = 'loldle_stats_v2';
 export const LEGACY_STATS_STORAGE_KEY = 'loldle_stats';
 
-const GAME_MODES: GameMode[] = ['classic', 'quote', 'ability', 'emoji', 'splash'];
+const GAME_MODES: GameMode[] = ['classic', 'quote', 'ability', 'emoji', 'splash', 'higherlower', 'item'];
 
 const emptyModeStats = (): ModeStats => ({
   played: 0,

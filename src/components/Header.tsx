@@ -6,6 +6,8 @@ import {
   Sparkles,
   Image as ImageIcon,
   Smile,
+  ArrowUpDown,
+  ShoppingBag,
   Infinity as InfinityIcon,
   Calendar,
   BarChart2,
@@ -24,11 +26,13 @@ interface HeaderProps {
 }
 
 const modes: { id: GameMode; label: string; icon: React.ReactNode }[] = [
-  { id: 'classic', label: 'Classic', icon: <Swords className="w-5 h-5" /> },
-  { id: 'quote', label: 'Quote', icon: <QuoteIcon className="w-5 h-5" /> },
-  { id: 'ability', label: 'Ability', icon: <Sparkles className="w-5 h-5" /> },
-  { id: 'emoji', label: 'Emoji', icon: <Smile className="w-5 h-5" /> },
-  { id: 'splash', label: 'Splash', icon: <ImageIcon className="w-5 h-5" /> },
+  { id: 'classic', label: 'Classic', icon: <Swords className="w-4 h-4 shrink-0" /> },
+  { id: 'quote', label: 'Quote', icon: <QuoteIcon className="w-4 h-4 shrink-0" /> },
+  { id: 'ability', label: 'Ability', icon: <Sparkles className="w-4 h-4 shrink-0" /> },
+  { id: 'emoji', label: 'Emoji', icon: <Smile className="w-4 h-4 shrink-0" /> },
+  { id: 'splash', label: 'Splash', icon: <ImageIcon className="w-4 h-4 shrink-0" /> },
+  { id: 'higherlower', label: 'High/Low', icon: <ArrowUpDown className="w-4 h-4 shrink-0" /> },
+  { id: 'item', label: 'Items', icon: <ShoppingBag className="w-4 h-4 shrink-0" /> },
 ];
 
 const ModeNavigation: React.FC<{
@@ -64,7 +68,8 @@ const ModeNavigation: React.FC<{
       <nav
         ref={navRef}
         aria-label="Game modes"
-        className="flex w-full items-center justify-start sm:justify-center gap-1 sm:gap-2 overflow-x-auto max-w-full px-0.5 pb-1 lg:pb-0 select-none flex-shrink-0"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className="flex w-full items-center justify-start sm:justify-center gap-1 xl:gap-1.5 overflow-x-auto max-w-full px-0.5 py-0.5 select-none [&::-webkit-scrollbar]:hidden"
       >
         {modes.map(mode => {
           const isActive = currentMode === mode.id;
@@ -78,7 +83,7 @@ const ModeNavigation: React.FC<{
               disabled={isDisabled}
               onClick={() => onSelectMode(mode.id)}
               title={isDisabled ? 'Emoji catalog is being reviewed' : undefined}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
+              className={`flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 rounded-lg text-xs xl:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 ${
                 isActive
                   ? 'bg-[#1e2328] text-[#c8aa6e] border border-[#c8aa6e]/60 shadow-[0_0_10px_rgba(200,170,110,0.2)]'
                   : isDisabled
@@ -95,7 +100,7 @@ const ModeNavigation: React.FC<{
       {hasMoreModes && (
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-0 top-0 bottom-1 flex w-9 items-center justify-end bg-gradient-to-r from-transparent via-[#091428]/80 to-[#091428] pr-0.5 lg:hidden"
+          className="pointer-events-none absolute right-0 top-0 bottom-0 flex w-9 items-center justify-end bg-gradient-to-r from-transparent via-[#091428]/80 to-[#091428] pr-0.5 xl:hidden"
         >
           <ChevronRight className="h-4 w-4 text-[#c8aa6e]" />
         </div>
@@ -183,20 +188,21 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenHelp,
 }) => (
   <header className="w-full max-w-full overflow-hidden border-b border-[#785a28]/40 bg-[#091428]/95 backdrop-blur sticky top-0 z-40">
-    <div className="max-w-7xl mx-auto px-3 sm:px-6 py-2.5 flex flex-col lg:flex-row items-center lg:justify-between gap-2.5 lg:gap-4 min-w-0">
-        <div className="flex items-center justify-between w-full lg:w-auto gap-2 min-w-0">
-        <div className="flex items-center gap-2.5 flex-shrink-0 min-w-0">
+    <div className="max-w-7xl mx-auto px-3 sm:px-5 py-2.5 flex flex-col xl:flex-row items-center xl:justify-between gap-2 xl:gap-3 min-w-0">
+      <div className="flex items-center justify-between w-full xl:w-auto gap-2 min-w-0">
+        <div className="flex items-center gap-2 flex-shrink-0 min-w-0">
           <img
             src="/favicon.png"
             alt="LoLdle Emblem"
-            className="w-9 h-9 object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.5)] transition-transform hover:scale-110"
+            className="w-8 h-8 sm:w-9 sm:h-9 object-contain drop-shadow-[0_0_10px_rgba(0,180,255,0.5)] transition-transform hover:scale-110"
           />
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-wider text-[#f0e6d2] font-serif uppercase bg-gradient-to-b from-[#f0e6d2] to-[#c8aa6e] bg-clip-text text-transparent drop-shadow">
+          <h1 className="text-xl sm:text-2xl xl:text-3xl font-bold tracking-wider text-[#f0e6d2] font-serif uppercase bg-gradient-to-b from-[#f0e6d2] to-[#c8aa6e] bg-clip-text text-transparent drop-shadow">
             LoLdle
           </h1>
         </div>
 
-        <div className="flex items-center gap-1 lg:hidden flex-shrink-0">
+        <div className="flex items-center gap-1.5 xl:hidden flex-shrink-0">
+          <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} compact />
           <IconButton label="Statistics" title="Statistics" onClick={onOpenStats}>
             <BarChart2 className="w-4 h-4" />
           </IconButton>
@@ -206,15 +212,14 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      <div className="flex items-center gap-2 w-full min-w-0 lg:hidden">
-        <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} compact />
-        <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="flex-1 min-w-0" />
+      <div className="flex items-center justify-center w-full min-w-0 xl:hidden">
+        <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="w-full min-w-0" />
       </div>
 
-      <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="hidden lg:flex w-auto" />
+      <ModeNavigation currentMode={currentMode} onSelectMode={onSelectMode} emojiModeEnabled={emojiModeEnabled} className="hidden xl:flex flex-1 min-w-0 justify-center" />
 
-      <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-        <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} />
+      <div className="hidden xl:flex items-center gap-2.5 flex-shrink-0">
+        <PlayTypeSwitcher isUnlimited={isUnlimited} onToggleUnlimited={onToggleUnlimited} compact />
         <IconButton label="Statistics" title="Statistics" onClick={onOpenStats}>
           <BarChart2 className="w-4 h-4" />
         </IconButton>

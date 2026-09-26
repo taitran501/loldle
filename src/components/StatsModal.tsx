@@ -16,6 +16,8 @@ const modeLabels: Record<GameMode, string> = {
   ability: 'Ability',
   emoji: 'Emoji',
   splash: 'Splash',
+  higherlower: 'High/Low',
+  item: 'Items',
 };
 
 export const StatsModal: React.FC<StatsModalProps> = ({

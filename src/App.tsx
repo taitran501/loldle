@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Champion, GameMode, GameStatsV2, PlayType, Skin, BonusState } from './types';
+import { Champion, GameMode, GameStatsV2, LoLItem, PlayType, Skin, BonusState } from './types';
 import { getDailyTarget, getRandomTarget, getTodayDateString } from './utils/daily';
 import {
   GAME_STATE_STORAGE_KEY,
@@ -17,6 +17,9 @@ import { QuoteMode } from './components/modes/QuoteMode';
 import { AbilityMode } from './components/modes/AbilityMode';
 import { SplashMode } from './components/modes/SplashMode';
 import { EmojiMode } from './components/modes/EmojiMode';
+import { HigherLowerMode } from './components/modes/HigherLowerMode';
+import { ItemMode } from './components/modes/ItemMode';
+import { DEFAULT_FALLBACK_ITEMS } from './utils/itemMode';
 import { VictoryModal } from './components/VictoryModal';
 import { StatsModal } from './components/StatsModal';
 import { HelpModal } from './components/HelpModal';
@@ -49,6 +52,7 @@ const BONUS_MODES: GameMode[] = ['ability', 'splash'];
 
 export const App: React.FC = () => {
   const [champions, setChampions] = useState<Champion[]>([]);
+  const [items, setItems] = useState<LoLItem[]>(DEFAULT_FALLBACK_ITEMS);
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [loadAttempt, setLoadAttempt] = useState(0);
@@ -126,6 +130,19 @@ export const App: React.FC = () => {
         const data: Champion[] = await response.json();
         if (!Array.isArray(data) || data.length === 0) throw new Error('Dataset is empty');
         if (!cancelled) setChampions(data);
+
+        // Load item shop dataset opportunistically (falls back to DEFAULT_FALLBACK_ITEMS if unavailable)
+        try {
+          const itemRes = await fetch('/data/items.json', { cache: 'no-store' });
+          if (itemRes.ok) {
+            const itemData: LoLItem[] = await itemRes.json();
+            if (!cancelled && Array.isArray(itemData) && itemData.length > 0) {
+              setItems(itemData);
+            }
+          }
+        } catch {
+          // Keep DEFAULT_FALLBACK_ITEMS when running in isolated unit tests
+        }
       } catch (error) {
         if (!cancelled) {
           console.error('Data loading error:', error);
@@ -167,7 +184,7 @@ export const App: React.FC = () => {
     const nextSessions = createEmptySessionState();
 
     (['daily', 'unlimited'] as const).forEach(type => {
-      (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[]).forEach(mode => {
+      (['classic', 'quote', 'ability', 'emoji', 'splash', 'higherlower', 'item'] as GameMode[]).forEach(mode => {
         if (mode === 'emoji' && !emojiModeEnabled) {
           nextSessions[type][mode] = null;
           return;
@@ -233,7 +250,7 @@ export const App: React.FC = () => {
 
       dailyDateRef.current = today;
       const nextDaily = Object.fromEntries(
-        (['classic', 'quote', 'ability', 'emoji', 'splash'] as GameMode[])
+        (['classic', 'quote', 'ability', 'emoji', 'splash', 'higherlower', 'item'] as GameMode[])
           .map(mode => [mode, mode === 'emoji' && !emojiModeEnabled ? null : initModeState(mode, 'daily', champions)])
       ) as SessionState['daily'];
 
@@ -569,7 +586,7 @@ export const App: React.FC = () => {
       />
 
       <main className="flex-1 max-w-4xl w-full mx-auto px-3 sm:px-4 py-6 flex flex-col items-center min-w-0">
-        {currentState && (
+        {currentState && currentMode !== 'higherlower' && currentMode !== 'item' && (
           <div className="w-full flex items-center justify-between max-w-md mb-2 text-xs">
             <div className="flex items-center gap-2">
               <span className="text-[#a09b8c]">Guesses:</span>
@@ -668,6 +685,46 @@ export const App: React.FC = () => {
             bonus={currentState.bonus}
             onBonusComplete={handleSplashBonus}
             onBonusSkip={handleSplashBonusSkip}
+          />
+        )}
+
+        {currentMode === 'higherlower' && (
+          <HigherLowerMode
+            key={`${playType}-higherlower`}
+            allChampions={champions}
+            playType={playType}
+            dateStr={getTodayDateString()}
+            onRoundComplete={(won, scoreCount) => {
+              const nextStats = won || scoreCount >= 1
+                ? recordWin(statsRef.current, playType, 'higherlower', Math.max(1, scoreCount))
+                : recordLoss(statsRef.current, playType, 'higherlower');
+              statsRef.current = nextStats;
+              setStats(nextStats);
+            }}
+            onShareResult={text => {
+              navigator.clipboard.writeText(text)
+                .then(() => showToast('Copied Higher/Lower score to clipboard! 📋'))
+                .catch(() => showToast('Could not copy the result.'));
+            }}
+          />
+        )}
+
+        {currentMode === 'item' && (
+          <ItemMode
+            key={`${playType}-item`}
+            allItems={items}
+            playType={playType}
+            dateStr={getTodayDateString()}
+            onRoundComplete={guessCount => {
+              const nextStats = recordWin(statsRef.current, playType, 'item', Math.max(1, guessCount));
+              statsRef.current = nextStats;
+              setStats(nextStats);
+            }}
+            onShareResult={text => {
+              navigator.clipboard.writeText(text)
+                .then(() => showToast('Copied Item Mode result to clipboard! 📋'))
+                .catch(() => showToast('Could not copy the result.'));
+            }}
           />
         )}
       </main>

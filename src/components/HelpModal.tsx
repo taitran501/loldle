@@ -105,6 +105,8 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
               <li><strong className="text-[#f0e6d2]">Ability:</strong> Identify the champion by their skill icon. Key hint unlocks after 3 guesses.</li>
               <li><strong className="text-[#f0e6d2]">Splash:</strong> Zooms out from over 2,000+ official skins with each guess.</li>
               <li><strong className="text-[#f0e6d2]">Emoji:</strong> Guess the champion from a curated, source-backed sequence of {EMOJI_MIN_CLUES}-{EMOJI_MAX_CLUES} thematic emoji clues. Each champion can use a different number of clues.</li>
+              <li><strong className="text-[#f0e6d2]">Higher/Lower:</strong> Compare two champions head-to-head across Total Skins, Release Year, Attack Range, or Days Since Last Skin to build your streak!</li>
+              <li><strong className="text-[#f0e6d2]">Items:</strong> Uncover the completed Shop item from its progressive recipe tree components and pick the right item card from the candidates!</li>
             </ul>
           </div>
 
