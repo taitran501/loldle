@@ -4,6 +4,16 @@ All notable changes, new game modes, dataset updates, and UX improvements to **L
 
 ---
 
+## [1.2.1] - 2026-09-26
+
+### Fixed & Enhanced
+- **Game State Persistence & Randomized Seeds** ([PR #9](https://github.com/taitran501/loldle/pull/9)):
+  - Added robust `localStorage` persistence for **High/Low Mode** (`loldle_higherlower_state_v2`) and **Item Shop Mode** (`loldle_item_state_v2`).
+  - Active rounds, current champion pairs, match history, guesses, and streak progress are seamlessly preserved when switching between mode tabs or refreshing the browser.
+  - In Unlimited mode, new rounds now roll truly randomized item and champion targets (`getRandomItemTarget`, `Math.random() * 1_000_000` + `Date.now()`) instead of resetting to a static seed on remount.
+
+---
+
 ## [1.2.0] - 2026-09-26
 
 ### Added
